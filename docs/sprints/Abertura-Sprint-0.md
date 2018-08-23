@@ -55,7 +55,7 @@
 
 ## 5. Sprint Backlog
 
-A Milestone desta Sprint encontra-se neste [link]()
+A Milestone desta Sprint encontra-se neste [link](https://github.com/fga-eps-mds/2018.2-Grupo2/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Sprint+0%22)
 
 -------
 
