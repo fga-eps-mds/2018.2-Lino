@@ -59,7 +59,7 @@ Os usuários realizarão a interação com o Bot por meio do Telegram, serviço 
 
 ### 3.5.1 Equipe de Desenvolvimento de *Software*
 Perfil|
-:-:|:-:
+:-:|:-
 Representantes|Gabriel Braga Mendes, Gabriel Filipe Manso Araujo, Guilherme Marques Rosa, Matheus Salles Blanco, Pedro Rodrigues Pereira.
 Descrição|Desenvolvimento do *Software*.
 Tipo|Estudantes da Universidade de Brasília, da disciplina de Métodos de Desenvolvimento de *Software*.|
@@ -71,7 +71,7 @@ Problemas/Comentários|Desenvolver o software no tempo estabelecido pela equipe 
 ### 3.5.2 Equipe de Engenharia de Produto de *Software*
 
 Perfil|
-:-:|:-:
+:-:|:-
 Representantes|Gabriel Braga Mendes, Gabriel Filipe Manso Araujo, Guilherme Marques Rosa, Matheus Salles Blanco, Pedro Rodrigues Pereira.
 Descrição|Gerenciamento do Projeto.
 Tipo|Estudantes da Universidade de Brasília, da disciplina de Engenharia de Produto de *Software*.|
@@ -79,3 +79,17 @@ Responsabilidades|Monitorar, motivar, orientar e preparar a equipe de desenvolvi
 Critérios de Sucesso|Manter os prazos estabelecidos sem atraso, e gerenciar a qualidade do *software* em desenvolvimento, finalizando o projeto no tempo estipulado.
 Envolvimento|Alto.
 Problemas/Comentários|Organizar prazos e metas de acordo com o tempo disponível.
+
+## 3.6 Perfis dos Usuários
+
+### 3.6.1 Alunos
+
+Perfil|
+:-:|:-
+Representantes|Alunos da Universidade de Brasilia, no campus Faculdade do Gama (FGA - UnB).
+Descrição|Alunos que tenham dúvidas acerca da Faculdade.
+Tipo|Estudantes da Universidade que tenham dúvidas e necessitem de notificações sobre o calendário do semestre.|
+Responsabilidades|Interagir com o Bot por meio do Telegram, retirar dúvidas e receber notificações.
+Critérios de Sucesso|Realizar interações flúidas com o Bot.
+Envolvimento|Alto.
+Problemas/Comentários|Não possuir cadastro no Telegram.
