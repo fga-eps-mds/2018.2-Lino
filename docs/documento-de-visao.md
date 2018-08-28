@@ -108,5 +108,15 @@ Problemas/Comentários|Não possuir cadastro no Telegram.
 | Benefício para o Cliente | Recursos de suporte |
 |:---:|:---:|
 |Fornece avisos sobre datas de eventos e prazos de inscrição|O assistente Lino utiliza informações públicas da universidade para gerar os avisos para o usuário, ainda estes combinando de acordo com o assunto que o usuário deseja receber|
-|Capacida de interação entre usuário e o Lino|A partir de um fluxo de diálogo, Lino é capaz de sguir uma conversa não linear e interagir de forma descontraída e informativa|
+|Capacidade de interação entre usuário e o Lino|A partir de um fluxo de diálogo, Lino é capaz de sguir uma conversa não linear e interagir de forma descontraída e informativa|
 |Facilidade em emissão de documentos universitários|Lino quando questionado sobre documentos prontamente demonstra de forma prática como emitir e obter os documentos a partir das plataformas online da universidade|
+
+# 5. Recursos do Produto
+
+O Assistente Virtual Lino é capaz de:
+
+* Avisos prévios de eventos;
+* Avisos prévios de prazos de inscrição;
+* Resposta a dúvidas comuns entre os alunos;
+* Fluxo de conversa com o usuário;
+* Tutoriais para emissão de documentos universitários;
