@@ -96,3 +96,17 @@ Responsabilidades|Interagir com o Bot por meio do Telegram, retirar dúvidas e r
 Critérios de Sucesso|Realizar interações flúidas com o Bot.
 Envolvimento|Alto.
 Problemas/Comentários|Não possuir cadastro no Telegram.
+
+# 4.Descrição da Solução
+
+## 4.1 Perpectiva do Produto
+
+<p align="justify"> &emsp;&emsp;O ChatBot Lino tem como objetivo automatizar operações de secretariado, permitindo a redistribuição de informações universitárias como datas e prazos de incrição. Ainda é capaz de ensinar o usuário um caminho pra facilitar uma emissão de um documento Universitário e avisar periodicamente eventos de forma prévia.</p>
+
+## 4.2 Resumo dos recursos
+
+| Benefício para o Cliente | Recursos de suporte |
+|:---:|:---:|
+|Fornece avisos sobre datas de eventos e prazos de inscrição|O assistente Lino utiliza informações públicas da universidade para gerar os avisos para o usuário, ainda estes combinando de acordo com o assunto que o usuário deseja receber|
+|Capacida de interação entre usuário e o Lino|A partir de um fluxo de diálogo, Lino é capaz de sguir uma conversa não linear e interagir de forma descontraída e informativa|
+|Facilidade em emissão de documentos universitários|Lino quando questionado sobre documentos prontamente demonstra de forma prática como emitir e obter os documentos a partir das plataformas online da universidade|
