@@ -30,6 +30,9 @@
 
 >FREIRE, Thiago; OLIVEIRA, Rodrigo; MORENO, Augusto; NASCIMENTO, Josué; AUGUSTO, Marcelo. <b>Projeto WikiLegis:</b> Documento de Visão. Disponível em: <a href="https://github.com/fga-gpp-mds/2016.2-WikiLegis/wiki" target="_blank">https://github.com/fga-gpp-mds/2016.2-WikiLegis/wiki</a>. Acesso em 15 mar. 2017;
 
+>DOCUMENTO de Visão. 2017. Disponível em: <a href="https://github.com/fga-eps-mds/2017.1-Trezentos/wiki/Documento-de-Vis%C3%A3o#3-partes-envolvidas" target="_blank">https://github.com/fga-eps-mds/2017.1-Trezentos/wiki/Documento-de-Vis%C3%A3o#3-partes-envolvidas</a>. Acesso em 15 mar. 2017;
+
+
 # 3. Descrições dos Envolvidos e dos Usuários
 
 Os principais Envolvidos neste projeto serão por parte da equipe de desenvolvimento, programadores, gestores e monitores, sendo que esses não necessariamente irão ser usuários do aplicativo.
