@@ -113,7 +113,7 @@ Problemas/Comentários|Não possuir cadastro no Telegram.
 
 # 5. Recursos do Produto
 
-O Assistente Virtual Lino é capaz de:
+O Assistente Virtual Lino é capaz de realizar:
 
 * Avisos prévios de eventos;
 * Avisos prévios de prazos de inscrição;
