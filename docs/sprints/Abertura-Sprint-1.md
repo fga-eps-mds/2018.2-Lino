@@ -6,6 +6,7 @@
 - Definir escopo e desenvolver documentos relacionados, como EAP e TAP
 - Criar documentação acerca da metodologia do projeto
 - Levantar requisitos do projeto
+- Estabelecer tecnologias do projeto
 
 ## 2. Papéis
 
