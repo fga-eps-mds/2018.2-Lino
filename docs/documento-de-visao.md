@@ -87,6 +87,7 @@
     <td class="tg-s6z2">Nosso produto</td>
     <td class="tg-031e">Instruciona alunos e fornece informações em menor tempo a cerca da Universidade                                                                                  </td>
   </tr>
+</table>
 
 
 # 3. Descrições dos Envolvidos e dos Usuários
