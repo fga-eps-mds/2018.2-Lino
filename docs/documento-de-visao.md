@@ -100,9 +100,10 @@ Os principais artefatos que o Bot Lino propõe é a maior agilidade e facilidade
 ## 3.2 Resumo dos Envolvidos
 
 |Nome|Descrição|Responsabilidades|
-|:---:|:---:|:---:|
+|:----:|:----:|:----:|
 |Equipe de desenvolvimento de *Software*|Estudantes da Disciplina Métodos de Desenvolvimento de *Software*|Desenvolvimento e Testes do *Software* descrito no documento|
 |Equipe de Engenharia de Produto de *Software*|Estudantes da Disciplina Engenharia de Produto de *Software*|Gestão da Equipe de Desenvolvimento, bem como manutenção de ambientes e entrega contínua|
+|Orientador|Professora na Universidade de Brasília, no campus Faculdade Gama (FGA - UnB), atual professora das disciplinas Métodos de Desenvolvimento de *Software* e Engenharia de Produto de *Software*.|Orientar as equipe de desenvolvimento e gestão em eventuais dúvidas.|
 
 ## 3.3 Resumo dos Usuários
 
@@ -117,41 +118,60 @@ Os usuários realizarão a interação com o Bot por meio do Telegram, serviço 
 ## 3.5 Perfis dos Envolvidos
 
 ### 3.5.1 Equipe de Desenvolvimento de *Software*
-Perfil|
-:-:|:-
-Representantes|Gabriel Braga Mendes, Gabriel Filipe Manso Araujo, Guilherme Marques Rosa, Matheus Salles Blanco, Pedro Rodrigues Pereira.
-Descrição|Desenvolvimento do *Software*.
-Tipo|Estudantes da Universidade de Brasília, da disciplina de Métodos de Desenvolvimento de *Software*.|
-Responsabilidades|Desenvolver, testar e implantar o *software*.
-Critérios de Sucesso|Finalizar o desenvolvimento e realizar a entrega do bot no tempo estipulado.
-Envolvimento|Alto.
-Problemas/Comentários|Desenvolver o software no tempo estabelecido pela equipe de EPS. Inexperiência da equipe com a linguagem de programação utilizada para desenvolver o software.
+|Perfil|--|
+|:-:|:-|
+|Representantes|Gabriel Braga Mendes, Gabriel Filipe Manso Araujo, Guilherme Marques Rosa, Matheus Salles Blanco, Pedro Rodrigues Pereira.|
+|Descrição|Desenvolvimento do *Software*.|
+|Tipo|Estudantes da Universidade de Brasília, da disciplina de Métodos de Desenvolvimento de *Software*.|
+|Responsabilidades|Desenvolver, testar e implantar o *software*.|
+|Critérios de Sucesso|Finalizar o desenvolvimento e realizar a entrega do bot no tempo estipulado.|
+|Envolvimento|Alto.|
+|Problemas/Comentários|Desenvolver o software no tempo estabelecido pela equipe de EPS. Inexperiência da equipe com a linguagem de programação utilizada para desenvolver o software.|
 
 ### 3.5.2 Equipe de Engenharia de Produto de *Software*
 
-Perfil|
-:-:|:-
-Representantes|Gabriel Braga Mendes, Gabriel Filipe Manso Araujo, Guilherme Marques Rosa, Matheus Salles Blanco, Pedro Rodrigues Pereira.
-Descrição|Gerenciamento do Projeto.
-Tipo|Estudantes da Universidade de Brasília, da disciplina de Engenharia de Produto de *Software*.|
-Responsabilidades|Monitorar, motivar, orientar e preparar a equipe de desenvolvimento. Definir prazos para as atividades propostas.
-Critérios de Sucesso|Manter os prazos estabelecidos sem atraso, e gerenciar a qualidade do *software* em desenvolvimento, finalizando o projeto no tempo estipulado.
-Envolvimento|Alto.
-Problemas/Comentários|Organizar prazos e metas de acordo com o tempo disponível.
+|Perfil|--|
+|:-:|:-|
+|Representantes|Bruna Pinos de Oliveira, Guilherme Augusto Nunes Silva, Guilherme Guimarães Lacerda, Ícaro Pereira de Oliveira, Letícia de Souza Santos.|
+|Descrição|Gerenciamento do Projeto.|
+|Tipo|Estudantes da Universidade de Brasília, da disciplina de Engenharia de Produto de *Software*.|
+|Responsabilidades|Monitorar, motivar, orientar e preparar a equipe de desenvolvimento. Definir prazos para as atividades propostas.|
+|Critérios de Sucesso|Manter os prazos estabelecidos sem atraso, e gerenciar a qualidade do *software* em desenvolvimento, finalizando o projeto no tempo estipulado.|
+|Envolvimento|Alto.|
+|Problemas/Comentários|Organizar prazos e metas de acordo com o tempo disponível.|
+
+### 3.5.3 Orientador
+
+|Perfil|--|
+|:-:|:-|
+|Representantes|Professora Carla Silva Rocha Aguiar|
+|Descrição|Professora na Universidade de Brasília, no campus Faculdade Gama (FGA - UnB), atual professora das disciplinas Métodos de Desenvolvimento de *Software* e Engenharia de Produto de *Software*.|
+|Tipo|Orientadora e avaliadora que dará suporte a respeito do desenvolvimento do Bot.|
+|Responsabilidades|Avaliar a equipe de desenvolvimento e gestão e orientá-los em eventuais dúvidas.|
+|Critérios de Sucesso|Observar o sucesso da equipe de desenvolvimento.|
+|Envolvimento|Médio.|
+|Problemas/Comentários|--|
 
 ## 3.6 Perfis dos Usuários
 
 ### 3.6.1 Alunos
 
-Perfil|
-:-:|:-
-Representantes|Alunos da Universidade de Brasilia, no campus Faculdade do Gama (FGA - UnB).
-Descrição|Alunos que tenham dúvidas acerca da Faculdade.
-Tipo|Estudantes da Universidade que tenham dúvidas e necessitem de notificações sobre o calendário do semestre.|
-Responsabilidades|Interagir com o Bot por meio do Telegram, retirar dúvidas e receber notificações.
-Critérios de Sucesso|Realizar interações flúidas com o Bot.
-Envolvimento|Alto.
-Problemas/Comentários|Não possuir cadastro no Telegram.
+|Perfil|--|
+|:-:|:-|
+|Representantes|Alunos da Universidade de Brasilia, no campus Faculdade do Gama (FGA - UnB).|
+|Descrição|Alunos que tenham dúvidas acerca da Faculdade.|
+|Tipo|Estudantes da Universidade que tenham dúvidas e necessitem de notificações sobre o calendário do semestre.|
+|Responsabilidades|Interagir com o Bot por meio do Telegram ou Messenger, retirar dúvidas e receber notificações.|
+|Critérios de Sucesso|Realizar interações flúidas com o Bot.|
+|Envolvimento|Alto.|
+|Problemas/Comentários|Não possuir cadastro no Telegram.|
+
+## 3.7 Principais Necessidades dos Usuários ou dos Envolvidos
+
+|Necessidade|Prioridade|Preocupação|Solução Proposta|Solução Atual|
+|:---|:---|:---|:---|:---|
+|Retirar dúvidas frequentes de alunos da Universidade.|Alta.|Falta de interação com o Bot.|Um ChatBot de Telegram e Messenger que responda as dúvidas trazidas por alunos.|Perguntar diretamente na Secretaria da Faculdade.|
+|Receber notificações sobre o calendário de atividades da Faculdade.|Alta.|Notificações ignoradas.|Mensagens enviadas pelo ChatBot, avisando de eventos e datas importantes durante o semestre.|Pesquisas e avisos em grupos de Facebook.|
 
 # 4.Descrição da Solução
 
