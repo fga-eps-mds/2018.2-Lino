@@ -32,6 +32,62 @@
 
 >DOCUMENTO de Visão. 2017. Disponível em: <a href="https://github.com/fga-eps-mds/2017.1-Trezentos/wiki/Documento-de-Vis%C3%A3o#3-partes-envolvidas" target="_blank">https://github.com/fga-eps-mds/2017.1-Trezentos/wiki/Documento-de-Vis%C3%A3o#3-partes-envolvidas</a>. Acesso em 15 mar. 2017;
 
+# 2. Posicionamento
+## 2.1 Oportunidade de Negócio
+
+<p align="justify"> &emsp;&emsp;Atualmente, as informações são repassadas para os estudantes através dos murais e redes sociais da Universidade. Para obter tais informações, deve-se acessar o portal Matrícula Web e em alguns casos comparecer na secretaria para retirada.</p>
+
+<p align="justify"> &emsp;&emsp;O assistente virtual oferecerá o serviço automatizado de alertar os alunos a cerca de informações importantes sobre a universidade, além de fornecer instruções necessárias para a visualização e retirada de documentos. Dessa forma, aumenta-se a velocidade de acesso à documentação e informação, atualmente fornecida pela secretaria.</p>
+
+## 2.2 Descrição do Problema 
+<table class="tg">
+  <tr>
+    <td class="tg-s6z2">O problema de</td>
+    <td class="tg-031e">Desatualização dos estudantes e demora para retirada de documentos</td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">Afeta</td>
+    <td class="tg-031e">Agilidade de atualização</td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">Cujo impacto é</td>
+    <td class="tg-031e">Falta de informação e atraso</td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">Uma boa solução seria</td>
+    <td class="tg-031e">Automatização de todo o processo</td>
+  </tr>
+</table>
+
+
+## 2.3 Sentença de Posição do Produto
+
+<table class="tg">
+  <tr>
+    <td class="tg-s6z2">Para</td>
+    <td class="tg-031e">Universidades</td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">Que</td>
+    <td class="tg-031e">Desejam acelerar o fornecimento de documentos e informação aos estudantes</td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">O LinoBot</td>
+    <td class="tg-031e">É um assistente virtual</td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">Que</td>
+    <td class="tg-031e">Visa facilitar a interação entre Universidade e Aluno                                                                                 </td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">Diferente de</td>
+    <td class="tg-031e">Paginas em rede sociais</i>                                                                                 </td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">Nosso produto</td>
+    <td class="tg-031e">Instruciona alunos e fornece informações em menor tempo a cerca da Universidade                                                                                  </td>
+  </tr>
+
 
 # 3. Descrições dos Envolvidos e dos Usuários
 
