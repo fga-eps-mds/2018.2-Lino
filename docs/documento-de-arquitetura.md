@@ -38,3 +38,17 @@ Estrutura do documento:
 
 
 > Universidade Federal do Paraná, FUNPAR. <b>RUP - Especificação de Casos de Uso:</b> Template base para construção do documento de arquitetura. Disponível em: <http://www.funpar.ufpr.br:8080/rup/webtmpl/templates/a_and_d/rup_sad.htm>.
+
+# 5 Visão Lógica
+
+## 5.1 Diagrama de Pacotes
+
+[comment]: <> (![diagrama de pacotes](https://cloud.githubusercontent.com/assets/26308278/24575617/81346186-1681-11e7-8e9e-22b94584f9d9.jpg))
+
+<p align="justify"> &emsp;&emsp;Neste tópico se encontram o diagrama de pacotes bem como suas explicações e utilidades.</p>
+
+* O pacote <i>2018.2-Lino</i> é o pacote principal do projeto e conterá todos os outros sub-pacotes e documentos existentes no projeto.
+
+* No pacote <i>docs</i>, serão apresentados os documentos necessários para a compreensão do projeto, bem como pacote <i>policies</i>.
+
+* No pacote <i>Policies</i> estão contidas as políticas de boas práticas de programação e uso da plataforma <i>GitHub</i>.
