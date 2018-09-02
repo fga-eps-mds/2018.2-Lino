@@ -8,13 +8,12 @@
 
 ## 1.1 Finalidade 
 
-<p aligng="justify"> &emsp;&emsp;O documento presente tem, por finalidade, apresentar e estabelecer uma visão ampla sobre o Bot Lino, para Telegram, de modo que deixe claro sua proposta, características, utilidades e funcionalidades.</p>
+<p aligng="justify"> &emsp;&emsp;O documento presente tem, por finalidade, apresentar e estabelecer uma visão ampla sobre o ChatBot Lino de modo que deixe claro sua proposta, características, utilidades e funcionalidades.</p>
 
 ## 1.2 Escopo 
 
-<p aligng="justify"> &emsp;&emsp;O ChatBot Lino é um projeto realizado para a disciplina Métodos de Desenvolvimento de <i>Software</i> (MDS), do curso Engenharia de <i>Software</i> da Faculdade UnB Gama (FGA) da Universidade de Brasília (UnB). O projeto será desenvolvido pelos alunos do grupo 4 de mencionada disciplina, com gestão e orientação dos alunos da disciplina Engenharia de Produto de <i>Software</i> (EPS) e supervisão da professora Carla Rocha.</p>
-<p aligng="justify"> &emsp;&emsp;O ChatBot, planejado e desenvolvido para ser usado na plataforma de comunicação open-source Telegram, terá como utilidade a comunicação com o usuário, o qual foi definido principalmente como aluno da universidade, de maneira a receber pedidos de ajuda para a emissão da documentação necessária para o aluno durante o período em seu respectivo curso. O ChatBot dará, a partir das necessidades do aluno, o apresentára com ajuda e passo-a-passo do processo de emissão de determinado documento.</p> 
-<p aligng="justify"> &emsp;&emsp;O projeto irá receber, durante o desenvolvimento, as diretrizes e passos necessários para a emissão dos documentos e serviços, facilitando para o aluno o entendimento e execução dos processos.</p> 
+<p aligng="justify"> &emsp;&emsp;O ChatBot Lino é um projeto realizado para as disciplinas Métodos de Desenvolvimento de <i>Software</i> (MDS) e Engenharia de Produto de <i>Software</i> (EPS), do curso Engenharia de <i>Software</i> da Faculdade UnB Gama (FGA) da Universidade de Brasília (UnB).</p> 
+<p aligng="justify"> &emsp;&emsp;O projeto, a ser realizado pela equipe 4, composta por alunos das duas disciplinas, e com orientação da professora Carla Rocha possui como objetivo a comunicação direta com o aluno matriculado na instituição de ensino superior. A partir da interação com o ChatBot, o usuário poderá requisitar deste serviços, ajudas, notícias e informes relacionados à faculdade e à universidade, como o passo-a-passo necessário para a emissão de determinado documento ou informações sobre a alimentação provida pelo Restaurante Universitário.
 
 ## 1.3 Definições, Acrônimos e Abreviações
 
@@ -26,18 +25,18 @@
 
 ## 1.4 Referências
 
-><i>IBM Knowledge Center</i> - <b>Documento de Visão:</b> A estrutura de tópicos do documento de visão. Disponível em: <a href="https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_3.0.1/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.htm" target="_blank">https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_3.0.1/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.htm</a>. Acesso em: .17 mar. 2017;
+>MINISTÉRIO DA SAÚDE - DEPARTAMENTO DE INFORMÁTICA. Coordenação-Geral de Análise e Manutenção. Guia de Preenchimento: Documento de Visão de Sistema. [S.l.: s.n.], 2018. 1 p;
 
->FREIRE, Thiago; OLIVEIRA, Rodrigo; MORENO, Augusto; NASCIMENTO, Josué; AUGUSTO, Marcelo. <b>Projeto WikiLegis:</b> Documento de Visão. Disponível em: <a href="https://github.com/fga-gpp-mds/2016.2-WikiLegis/wiki" target="_blank">https://github.com/fga-gpp-mds/2016.2-WikiLegis/wiki</a>. Acesso em 15 mar. 2017;
+>DOCUMENTO de Visão. 2017. Disponível em: <a href="https://github.com/fga-eps-mds/2017.1-Trezentos/wiki/Documento-de-Vis%C3%A3o#3-partes-envolvidas" target="_blank">https://github.com/fga-eps-mds/2017.1-Trezentos/wiki/Documento-de-Vis%C3%A3o#3-partes-envolvidas</a>. Acesso em: 2 de set. 2018
 
->DOCUMENTO de Visão. 2017. Disponível em: <a href="https://github.com/fga-eps-mds/2017.1-Trezentos/wiki/Documento-de-Vis%C3%A3o#3-partes-envolvidas" target="_blank">https://github.com/fga-eps-mds/2017.1-Trezentos/wiki/Documento-de-Vis%C3%A3o#3-partes-envolvidas</a>. Acesso em 15 mar. 2017;
+>2018.1-DR-DOWN: Documento de Visão. 2018. Disponível em: <a href="https://github.com/fga-eps-mds/2018.1-Dr-Down/blob/develop/docs/mds/VISION_DOCUMENT.md"target="_blank">https://github.com/fga-eps-mds/2018.1-Dr-Down/blob/develop/docs/mds/VISION_DOCUMENT.md</a>. Acesso em: 2 de set. 2018;
 
 # 2. Posicionamento
 ## 2.1 Oportunidade de Negócio
 
 <p align="justify"> &emsp;&emsp;Atualmente, as informações são repassadas para os estudantes através dos murais e redes sociais da Universidade. Para obter tais informações, deve-se acessar o portal Matrícula Web e em alguns casos comparecer na secretaria para retirada.</p>
 
-<p align="justify"> &emsp;&emsp;O assistente virtual oferecerá o serviço automatizado de alertar os alunos a cerca de informações importantes sobre a universidade, além de fornecer instruções necessárias para a visualização e retirada de documentos. Dessa forma, aumenta-se a velocidade de acesso à documentação e informação, atualmente fornecida pela secretaria.</p>
+<p align="justify"> &emsp;&emsp;O ChatBot oferecerá o serviço automatizado de alertar os alunos a cerca de informações importantes sobre a universidade, além de fornecer instruções necessárias para a visualização e retirada de documentos. Dessa forma, aumenta-se a velocidade de acesso à documentação e informação, atualmente fornecida pela secretaria.</p>
 
 ## 2.2 Descrição do Problema 
 <table class="tg">
@@ -73,7 +72,7 @@
   </tr>
   <tr>
     <td class="tg-s6z2">O LinoBot</td>
-    <td class="tg-031e">É um assistente virtual</td>
+    <td class="tg-031e">É um ChatBot</td>
   </tr>
   <tr>
     <td class="tg-s6z2">Que</td>
@@ -184,13 +183,13 @@ Os usuários realizarão a interação com o Bot por meio do Telegram, serviço 
 
 | Benefício para o Cliente | Recursos de suporte |
 |:---:|:---:|
-|Fornece avisos sobre datas de eventos e prazos de inscrição|O assistente Lino utiliza informações públicas da universidade para gerar os avisos para o usuário, ainda estes combinando de acordo com o assunto que o usuário deseja receber|
+|Fornece avisos sobre datas de eventos e prazos de inscrição|O ChatBot Lino utiliza informações públicas da universidade para gerar os avisos para o usuário, ainda estes combinando de acordo com o assunto que o usuário deseja receber|
 |Capacidade de interação entre usuário e o Lino|A partir de um fluxo de diálogo, Lino é capaz de sguir uma conversa não linear e interagir de forma descontraída e informativa|
 |Facilidade em emissão de documentos universitários|Lino quando questionado sobre documentos prontamente demonstra de forma prática como emitir e obter os documentos a partir das plataformas online da universidade|
 
 # 5. Recursos do Produto
 
-O Assistente Virtual Lino é capaz de realizar:
+O ChatBot Lino é capaz de realizar:
 
 * Avisos prévios de eventos;
 * Avisos prévios de prazos de inscrição;
