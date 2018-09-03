@@ -1,6 +1,11 @@
+# Histórico de Revisão
+
 | Data | Versão | Modificação | Autor |
 |:---:|:--:|:---:|:---:|
 | 30/08/2018 | 1.0 | criação do documento e adição do tópico 1 | Pedro R. |
+| 31/08/2018 | 1.1 | Adição do Tópico 5 | Matheus Blanco |
+| 03/09/2018 | 1.2 | Adição do tópico 4.1 | Matheus Blanco |
+
 
 # 1. Introdução
 
@@ -39,7 +44,22 @@ Estrutura do documento:
 
 > Universidade Federal do Paraná, FUNPAR. <b>RUP - Especificação de Casos de Uso:</b> Template base para construção do documento de arquitetura. Disponível em: <http://www.funpar.ufpr.br:8080/rup/webtmpl/templates/a_and_d/rup_sad.htm>.
 
-# 5 Visão Lógica
+# 2. Representação da Arquitetura
+
+# 3. Metas e Restrições de Arquitetura
+
+# 4. Visão de Casos de Uso
+
+## 4.1 Atores
+
+* Usuário: Todos os tipos de usuários são capazes de se comunicarem com o ChatBot, pedir informações, ajudas, dados universitários e notícias da comunidade.
+* ChatBot: É o responsável pela boa comunicação com o usuário, envio de informações, processamento dos dados requisitados e do aluno e do professor.
+
+## 4.2 Diagrama de Casos de Uso
+
+## 4.3 Descrição de Casos de Uso
+
+# 5. Visão Lógica
 
 ## 5.1 Diagrama de Pacotes
 
