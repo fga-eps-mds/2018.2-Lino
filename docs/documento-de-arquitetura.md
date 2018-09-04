@@ -1,15 +1,11 @@
 
 # Histórico de Revisão
 
-| Data | Versão | Modificação | Autor |
-
-|:---:|:--:|:---:|:---:|
-
-| 30/08/2018 | 1.0 | criação do documento e adição do tópico 1 | Pedro R. |
-
-| 31/08/2018 | 1.1 | Adição do Tópico 5 | Matheus Blanco |
-
-| 03/09/2018 | 1.2 | Adição do tópico 4.1 | Matheus Blanco |
+| Data |Versão|Modificação|Autor|
+|:-----|:-----|:----------|:----|
+|30/08/2018|1.0|Criação do documento e adição do tópico 1|Pedro Rodrigues|
+|31/09/2018|1.1|Adição do tópico 5|Matheus Blanco|
+|04/09/2018|1.2|Adição do tópico 2|Gabriel Braga, Matheus Blanco|
 
 
 # 1. Introdução  
