@@ -6,6 +6,7 @@
 | 03/09/2018 | 1.3 | Modificação de tópicos pela mudança do escopo | Guilherme Augusto e Ícaro Oliveira |
 | 03/09/2018 | 1.4 | Melhoras nos tópicos com atualização do novo escopo | Ícaro Oliveira |
 | 04/09/2018 | 1.5 | Melhoras no tópico 4 | Guilherme Augusto |
+| 04/09/2018 | 1.6 | Construção inicial do tópico 9.2 | Guilherme Augusto |
 
 # Termo de abertura de Projeto
 
@@ -48,6 +49,19 @@ Estão entre os requisitos e alto nível:
 ### 9.1. Usuários
 
 ### 9.2. Equipe
+
+| Nome                          | Papel              |       Github       |
+|:-----------------------------:|:------------------:|:------------------:|
+| Bruna Pinos de Oliveira       | Gerente de Projeto | @brunapinos        |
+| Guilherme Augusto Nunes Silva | Gerente de Projeto | @guiaugusto        |
+| Guilherme Guimarães Lacerda   | Gerente de Projeto | @guilacerda        |
+| Ícaro Pereira de Oliveira     | Gerente de Projeto | @icarooliv         |
+| Letícia de Souza Santos       | Gerente de Projeto | @leticiadesouza    |
+| Gabriel Braga Mendes          | Desenvolvedor      | @braga9            |
+| Gabriel Filipe Manso Araújo   | Desenvolvedor      | @gabrielfilipe7unb |
+| Guilherme Marques Rosa        | Desenvolvedor      | @guilhesme23       |
+| Matheus Salles Blanco         | Desenvolvedor      | @MatheusBlanco     |
+| Pedro Rodrigues Pereira       | Desenvolvedor      | @pedro-prp         |
 
 ## 10. Requisitos para a aprovação
 
