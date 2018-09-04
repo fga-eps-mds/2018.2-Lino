@@ -5,6 +5,7 @@
 | 01/09/2018 | 1.2 | Construção inicial do tópico 3, 4 e 5 | Guilherme Augusto |
 | 03/09/2018 | 1.3 | Modificação de tópicos pela mudança do escopo | Guilherme Augusto e Ícaro Oliveira |
 | 03/09/2018 | 1.4 | Melhoras nos tópicos com atualização do novo escopo | Ícaro Oliveira |
+| 04/09/2018 | 1.5 | Melhoras no tópico 4 | Guilherme Augusto |
 
 # Termo de abertura de Projeto
 
@@ -24,7 +25,7 @@ Logo, é ideal propor uma solução com foco em ter uma melhor experiência de u
 
 ## 4. Objetivos
 
-O Bot Lino visa facilitar o processo para tirar dúvidas frequentes da comunidade, tendo uma interação direta para que as dúvidas sejam supridas pelo Bot para economia de tempo e esforço de seus usuários. Também vale ressaltar que a proposta é também facilitar a comunicação entre o professor e o aluno através de mensagens rápidas disponibilizadas via mensageiros como o _messenger_ do _Facebook_ e o _chat_ do _Telegram_.
+O Bot Lino visa facilitar o processo para tirar dúvidas frequentes da comunidade, tendo uma interação direta para que as dúvidas sejam supridas pelo Bot para economia de tempo e esforço de seus usuários, propondo também facilitar a comunicação entre o professor e o aluno através de mensagens rápidas.
 
 ## 5. Requisitos de Alto Nível
 
