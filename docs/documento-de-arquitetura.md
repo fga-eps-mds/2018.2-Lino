@@ -59,7 +59,7 @@ Estrutura do documento:
 <p  align="justify">  &emsp;&emsp;A arquitetura pensada para este projeto fará a utilização de microsserviços, os quais irão girar e trabalhar em cima das funcionalidades da tecnologia <i>Rasa NLU</i>. Esta tecnologia trabalha com o processamento natural de linguagem, a partir dela o desenvolvedor abre portas relacionadas a processamento de texto que o permitem criar um ambiente de comunicação mais interativo e humano, podendo assim criar uma comunicação mais fluida e dinâmica com o usuário.</p>
 <p  align="justify">  &emsp;&emsp;A utilzação da tecnologia no desenvolvimento de um ChatBot permite a implementação de uma comunicação mais humanizada, permitindo assim uma maior interatividade com o usuário. Com o tempo, a interação com o usuário permitirá ao programa um treinamento dele mesmo para melhor se comunicar com o exterior. Este é o principal objetivo da utilização do <i>Rasa NLU</i> para o processamento de linguagem do projeto em questão.</p>
 <p  align="justify">  &emsp;&emsp;Algumas dos principais benefícios da tecnologia são:</p>
- 
+
 *  Manuseio de conversação com <i>deep learning</i> para auto-evolução;
 *  <i>Open source</i> e customizável para o panorama do projeto;
 *  <i>Machine learning</i> integrado para melhores resultados.
@@ -100,17 +100,29 @@ Estrutura do documento:
 
 # 3. Metas e Restrições de Arquitetura
 
+<p  align="justify">  &emsp;&emsp;As restrições de arquitetura do projeto são:</p>
+
+* Utilização de um Banco de Dados <i>MONGODB</i>.
+
+* Conexão com a internet necessária.
+
+<p  align="justify">  &emsp;&emsp;As metas do projeto são:</p>
+
+* Disponibilizar um fluxo de conversa com o usuário afim de atender/suprir as dúvidas em relação à procedimentos voltados à comunidade acadêmica realizados na Universidade de Brasília e notificações sobre o cardápio do <i>RU</i> (Restaurante Universitário).
+* O software também terá como uma de suas metas alertar a comunidade acadêmica à respeito de prazos e avisos importantes, ex.: data de matrícula.
+* Disponibilizar o sistema 24 horas por dia, durante 7 dias na semana.
+
 # 4. Visão Lógica
 
 ## 4.1 Diagrama de Pacotes
 
 <p  align="justify">  &emsp;&emsp;Neste tópico se encontram o diagrama de pacotes bem como suas explicações e utilidades.</p>
 
-  
+
 * O pacote <i>2018.2-Lino</i> é o pacote principal do projeto e conterá todos os outros sub-pacotes e documentos existentes no projeto.
 
-  
+
 * No pacote <i>docs</i>, serão apresentados os documentos necessários para a compreensão do projeto, bem como pacote <i>policies</i>.
 
-  
+
 * No pacote <i>Policies</i> estão contidas as políticas de boas práticas de programação e uso da plataforma <i>GitHub</i>.
