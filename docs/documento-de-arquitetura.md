@@ -66,7 +66,7 @@ Estrutura do documento:
 
 <p  align="justify">  &emsp;&emsp;A tecnologia irá se comunicar com outras com o intuito de captar e processar informações do exterior, de acordo com as necessidades do usuário. Na próxima seção serão descritas as tecnologias utilizadas e como elas se relacionam com o <i>Rasa NLU</i>.</p>
 
-## 2.2 Técnologias
+## 2.2 Tecnologias
 
 ## 2.2.1 API Telegram e API Facebook - Messenger
 
