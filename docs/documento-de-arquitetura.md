@@ -48,9 +48,6 @@ Estrutura do documento:
 
 > André; Gabriel; Guilherme; ALMEIDA; Weyler. <b>Cidade Democrática:</b> Documento de Arquitetura. Disponível em: <https://github.com/fga-gpp-mds/2016.2-CidadeDemocratica/wiki/Documento-de-Arquitetura>.
 
-  
-> Universidade Federal do Paraná, FUNPAR. <b>RUP - Especificação de Casos de Uso:</b> Template base para construção do documento de arquitetura. Disponível em: <http://www.funpar.ufpr.br:8080/rup/webtmpl/templates/a_and_d/rup_sad.htm>.
-
 
 # 2. Representação da Arquitetura
 
@@ -59,13 +56,45 @@ Estrutura do documento:
 
 ![enter image description here](https://lh3.googleusercontent.com/nMYBeLvvaVKwu2c-waT1X-9L6UVI-J-NqWhznjnaZJVtrsP77vP_tuNlgxYyBoGlYrMDokhxp3vF=s2000 "Diagrama de Relações")
 
-  
+<p  align="justify">  &emsp;&emsp;A arquitetura pensada para este projeto fará a utilização de microsserviços, os quais irão girar e trabalhar em cima das funcionalidades da tecnologia <i>Rasa NLU</i>. Esta tecnologia trabalha com o processamento natural de linguagem, a partir dela o desenvolvedor abre portas relacionadas a processamento de texto que o permitem criar um ambiente de comunicação mais interativo e humano, podendo assim criar uma comunicação mais fluida e dinâmica com o usuário.</p>
+<p  align="justify">  &emsp;&emsp;A utilzação da tecnologia no desenvolvimento de um ChatBot permite a implementação de uma comunicação mais humanizada, permitindo assim uma maior interatividade com o usuário. Com o tempo, a interação com o usuário permitirá ao programa um treinamento dele mesmo para melhor se comunicar com o exterior. Este é o principal objetivo da utilização do <i>Rasa NLU</i> para o processamento de linguagem do projeto em questão.</p>
+<p  align="justify">  &emsp;&emsp;Algumas dos principais benefícios da tecnologia são:</p>
+ 
+*  Manuseio de conversação com <i>deep learning</i> para auto-evolução;
+*  <i>Open source</i> e customizável para o panorama do projeto;
+*  <i>Machine learning</i> integrado para melhores resultados.
+
+<p  align="justify">  &emsp;&emsp;A tecnologia irá se comunicar com outras com o intuito de captar e processar informações do exterior, de acordo com as necessidades do usuário. Na próxima seção serão descritas as tecnologias utilizadas e como elas se relacionam com o <i>Rasa NLU</i>.</p>
+
+## 2.2 Técnologias
+
+## 2.2.1 API Telegram e API Facebook - Messenger
+
+<p  align="justify">  &emsp;&emsp;Telegram e Messenger são dois aplicativos de comunicação e  bate-papo, comumente utilizados para a conversação em grupo ou de uma pessoa com outra. Os dois aplicativos proveêm aos seus usuários desenvolvedores a possibilidade de implementarem diferentes funcionalidades e <i>bots</i>, a partir de suas APIs.</p>
+
+<p  align="justify">  &emsp;&emsp;As APIs dessas duas plataformas serão as pontes de comunicação com o usuário. A partir da implementação e integração do código-fonte com o <i>Rasa NLU</i>, o Telegram e o Messenger irão interagir com o aluno, recebendo suas mensagens e respondendo apropriadamente.</p>
+
+## 2.2.2 MongoDB
+
+<p  align="justify">  &emsp;&emsp;A tecnologia MongoDB é um banco de dados <i>open-source</i> orientado a documentos. Classificado como NoSQL, a tecnologia utiliza documentos com padrão JSON.</p>
+
+<p  align="justify">  &emsp;&emsp;Esta tecnologia se comunicará com o projeto de maneira que receberá os dados fornecidos pelas conversas e interações realizadas no ChatBot e as armazenará em um banco de dados, para posteriormente serem usadas na metrificação da utilização do ChatBot.</p>
+
+## 2.2.3 Web crawler
+
+<p  align="justify">  &emsp;&emsp;Um <i>web crawler</i> é um Bot de internet utilizado para buscar e atualizar informações específicas de sites espalhados pela internet de maneira sistemática.</p>
+
+<p  align="justify">  &emsp;&emsp;No projeto, o <i>Web crawler</i> será utilizado para buscar e processar as informações requisitadas pelo usuário. A partir da ação identificada pelo <i>Rasa</i>, o <i>crawler</i> irá entrar no website do restaurante universitário e de lá, procurar e extrair as informações sobre o cardápio do dia. Além disso, o <i>crawler</i> irá trabalhar com a API do servidor Gmail e de lá irá extrair os informes e e-mails enviados pelos professores, exibindo-os para os alunos.</p>
+
+## 2.2.4 Kibana
+
+## 2.2.5 Elastic Search
+
 # 3. Metas e Restrições de Arquitetura
 
-# 5. Visão Lógica
+# 4. Visão Lógica
 
-  
-## 5.1 Diagrama de Pacotes
+## 4.1 Diagrama de Pacotes
 
 <p  align="justify">  &emsp;&emsp;Neste tópico se encontram o diagrama de pacotes bem como suas explicações e utilidades.</p>
 
