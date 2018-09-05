@@ -66,7 +66,7 @@ Estrutura do documento:
 
 <p  align="justify">  &emsp;&emsp;A tecnologia irá se comunicar com outras com o intuito de captar e processar informações do exterior, de acordo com as necessidades do usuário. Na próxima seção serão descritas as tecnologias utilizadas e como elas se relacionam com o <i>Rasa NLU</i>.</p>
 
-## 2.2 Técnologias
+## 2.2 Tecnologias
 
 ## 2.2.1 API Telegram e API Facebook - Messenger
 
@@ -86,9 +86,17 @@ Estrutura do documento:
 
 <p  align="justify">  &emsp;&emsp;No projeto, o <i>Web crawler</i> será utilizado para buscar e processar as informações requisitadas pelo usuário. A partir da ação identificada pelo <i>Rasa</i>, o <i>crawler</i> irá entrar no website do restaurante universitário e de lá, procurar e extrair as informações sobre o cardápio do dia. Além disso, o <i>crawler</i> irá trabalhar com a API do servidor Gmail e de lá irá extrair os informes e e-mails enviados pelos professores, exibindo-os para os alunos.</p>
 
-## 2.2.4 Kibana
+## 2.2.4 Elasticsearch
 
-## 2.2.5 Elastic Search
+<p  align="justify">  &emsp;&emsp;<i>Elasticsearch</i> é um mecanismo de pesquisa baseado em <i>Representational state transfer</i>(REST) capaz de processar dados, tirados do banco de dados , podendo metrificá-los, funcionando no <i>back-end</i> de m projeto.</p>
+
+<p  align="justify">  &emsp;&emsp;No projeto, o <i>Elasticsearch</i> ira captar os dados armazenados no banco de dados, realizando seu processamento e metrificação para a chegada em conclusões.</p>
+
+## 2.2.5 Kibana
+
+<p  align="justify">  &emsp;&emsp;<i>Kibana</i> é uma ferramenta de visualização que transforma o código de <i>back-end</i> do <i>Elasticsearch</i> em gráficos visualizáveis.</p>
+
+<p  align="justify">  &emsp;&emsp;A ferramenta irá abstrair os dados metrificados captados do <i>Elasticsearch</i> e os transformará em gráficos de fácil análise, agindo como o <i>front-end</i> das metrificações.</p>
 
 # 3. Metas e Restrições de Arquitetura
 
