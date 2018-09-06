@@ -109,7 +109,9 @@ Estrutura do documento:
 <p  align="justify">  &emsp;&emsp;As metas do projeto são:</p>
 
 * Disponibilizar um fluxo de conversa com o usuário afim de atender/suprir as dúvidas em relação à procedimentos voltados à comunidade acadêmica realizados na Universidade de Brasília e notificações sobre o cardápio do <i>RU</i> (Restaurante Universitário).
+
 * O software também terá como uma de suas metas alertar a comunidade acadêmica à respeito de prazos e avisos importantes, ex.: data de matrícula.
+
 * Disponibilizar o sistema 24 horas por dia, durante 7 dias na semana.
 
 # 4. Visão Lógica
