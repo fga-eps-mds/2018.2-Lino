@@ -55,8 +55,7 @@ Estrutura do documento:
 
 
 ## 2.1 Diagrama de Relações
-
-![enter image description here](https://lh3.googleusercontent.com/nMYBeLvvaVKwu2c-waT1X-9L6UVI-J-NqWhznjnaZJVtrsP77vP_tuNlgxYyBoGlYrMDokhxp3vF=s2000 "Diagrama de Relações")
+![enter image description here](https://lh3.googleusercontent.com/jwCBLJTnFdvGMROGYgvyPLIR8osCUmrYvb4vfOe4RBdNCwekRP_7Tx_bkf-8h81PuuxjK43GA-Lx "Diagrama de Relações")
 
 <p  align="justify">  &emsp;&emsp;A arquitetura pensada para este projeto fará a utilização de microsserviços, os quais irão girar e trabalhar em cima das funcionalidades da tecnologia <i>Rasa NLU</i>. Esta tecnologia trabalha com o processamento natural de linguagem, a partir dela o desenvolvedor abre portas relacionadas a processamento de texto que o permitem criar um ambiente de comunicação mais interativo e humano, podendo assim criar uma comunicação mais fluida e dinâmica com o usuário.</p>
 <p  align="justify">  &emsp;&emsp;A utilzação da tecnologia no desenvolvimento de um ChatBot permite a implementação de uma comunicação mais humanizada, permitindo assim uma maior interatividade com o usuário. Com o tempo, a interação com o usuário permitirá ao programa um treinamento dele mesmo para melhor se comunicar com o exterior. Este é o principal objetivo da utilização do <i>Rasa NLU</i> para o processamento de linguagem do projeto em questão.</p>
