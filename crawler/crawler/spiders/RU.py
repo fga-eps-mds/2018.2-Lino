@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from pprint import pprint
+from crawler.items import CrawlerItem
 
 
 class RuSpider(scrapy.Spider):
@@ -11,9 +11,11 @@ class RuSpider(scrapy.Spider):
     def parse(self, response):
         result = []
         for element in response.css(".container .item-page p"):
-            link = element.css("a::attr(href)").extract_first()
+            path = element.css("a::attr(href)").extract_first()
             text = element.css("a::text").extract_first()
             if not text:
                 text = element.css("a span span::text").extract_first()
-            if link:
-                yield {'link': link, 'text': text}
+            if path:
+                pdf = response.follow(path).url
+                item = CrawlerItem(text=text, path=path, url=pdf)
+                yield item
