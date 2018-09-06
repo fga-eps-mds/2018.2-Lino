@@ -7,14 +7,15 @@
 &emsp;&emsp;Para a criação de um _pull request_ direcionado a branch _master_, deve-se seguir os seguintes passos:
 
 
-### Passo 1   
+### Passo 1
 
-* Preencha os campos de título e a descrição, de maneira a indicar o que este _pull request_ adiciona ou retira.
+* Assim que for definido a issue de sua responsabilidade, e ocorrer a primeira alteração, crie o _pull request_ da branch, da seguinte maneira
+* Preencha os campos de título com a tag **WIP** (ou seja _work in progress_) e a descrição, de maneira a indicar o que este _pull request_ adiciona ou retira.
 * Utilize o _template_ de _issue_ destinada ao _pull request_.
 * Lembrando que o _pull request_ tem a _branch_ base a **_master_** e a _compare_ a branch que se deseja juntar.
+* **Lembrando**: assim que for realmente finalizado as alterações referentes ao _pull request_, deve-se retirar a tag **WIP**.
 
-![](https://user-images.githubusercontent.com/18364727/44523660-09e19100-a6b1-11e8-9556-782f296aa2a3.png)
-
+![](https://user-images.githubusercontent.com/18364727/44760738-99a29780-ab16-11e8-8735-70ec8745971c.png)
  
 ### Passo 2
 
