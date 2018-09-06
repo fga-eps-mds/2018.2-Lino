@@ -6,23 +6,26 @@
 |30/08/2018|1.0|Criação do documento e adição do tópico 1|Pedro Rodrigues|
 |31/09/2018|1.1|Adição do tópico 5|Matheus Blanco|
 |04/09/2018|1.2|Adição do tópico 2|Gabriel Braga, Matheus Blanco|
+|05/09/2018|1.3|Adição dos tópicos 2.2|Matheus Blanco, Gabriel Braga|
+|05/09/2018|1.4|Adição do tópico 3|Gabriel Filipe|
+|06/09/2018|1.5|Atualiza tópicos 1 e 3|Matheus Blanco|
 
 
 # 1. Introdução  
 
-<p  align="justify">  &emsp;&emsp;Este documento visa apresentar a arquitetura de software aplicada no desenvolvimento do Assistente Virtual Lino, garantindo uma facilidade de visualização dos requisitos e da estrutura para com os desenvolvedores.</p>
+<p  align="justify">  &emsp;&emsp;Este documento visa apresentar a arquitetura de software aplicada no desenvolvimento do ChatBot Lino, garantindo uma facilidade de visualização dos requisitos e da estrutura para com os desenvolvedores.</p>
 
 ## 1.1 Finalidade  
 
-<p  align="justify">  &emsp;&emsp;Este documento trata de uma visão ampla da arquitetura do Asistente Virtual e esboça os aspectos do mesmo. Ele visa transparecer as decisões arquiteturais que foram tomadas em relação ao software.</p>
+<p  align="justify">  &emsp;&emsp;Este documento trata de uma visão ampla da arquitetura do ChatBot e esboça os aspectos do mesmo. Ele visa transparecer as decisões arquiteturais que foram tomadas em relação ao software.</p>
 
 ## 1.2 Escopo
 
-<p  align="justify">  &emsp;&emsp;O Assistente Virtual Lino tem como principal objetivo servir a comunidade do Campus do Gama da UnB(FGA). Toda parte arquitetural do projeto será tratada neste documento e as decisões a serem tomadas acerca do mesmo serão administradas pelos alunos da matéria de Métodos de Desenvolvimento de Software, Alunos da matéria de Engenharia de Produto de Software e a professora da UnB Carla.</p>
+<p  align="justify">  &emsp;&emsp;O ChatBot Lino tem como principal objetivo servir a comunidade do Campus do Gama da UnB(FGA). A partir da utilização de tecnologias de fluxo de conversa, pesquisa na internet e bancos de dados, o ChatBot irá servir como um assistente para a comunidade, enviando alertas, novidades e e-mails, além de ser capaz de informar aos alunos certos procedimentos para retirada de documentos. Toda parte arquitetural do projeto será tratada neste documento e as decisões a serem tomadas acerca do mesmo serão administradas pelos alunos da matéria de Métodos de Desenvolvimento de Software, Alunos da matéria de Engenharia de Produto de Software e a professora da UnB Carla.</p>
 
 ## 1.3 Visão Geral
 
-<p  align="justify">  &emsp;&emsp;O documento através de 5 principais tópicos e suas ramificações visa detalhar a arquitetura e os requisitos do software. Facilitando o desenvolvimento e esclarecendo dúvidas.</p>
+<p  align="justify">  &emsp;&emsp;O documento através de 4 principais tópicos e suas ramificações visa detalhar a arquitetura e os requisitos do software. Facilitando o desenvolvimento e esclarecendo dúvidas.</p>
 
 Estrutura do documento:  
 
@@ -32,13 +35,12 @@ Estrutura do documento:
 
 * Metas e Restrições de Arquitetura;
 
-* Visão de Casos de Uso;
-
 * Visão lógica;  
 
 ## 1.4 Definições, Acrônimos e Abreviações
 
 * API: Application Programming Interface
+* DB: Banco de Dados, <i>DataBase</i> 
 
 ## 1.5 Referências
 
@@ -102,15 +104,17 @@ Estrutura do documento:
 
 <p  align="justify">  &emsp;&emsp;As restrições de arquitetura do projeto são:</p>
 
-* Utilização de um Banco de Dados <i>MONGODB</i>.
+* Utilização de um Banco de Dados <i>MongoDB</i>.
 
 * Conexão com a internet necessária.
 
 <p  align="justify">  &emsp;&emsp;As metas do projeto são:</p>
 
-* Disponibilizar um fluxo de conversa com o usuário afim de atender/suprir as dúvidas em relação à procedimentos voltados à comunidade acadêmica realizados na Universidade de Brasília e notificações sobre o cardápio do <i>RU</i> (Restaurante Universitário).
+* Disponibilizar um fluxo de conversa com o usuário afim de atender/suprir as dúvidas em relação à procedimentos voltados à comunidade acadêmica realizados na Universidade de Brasília.
 
-* O software também terá como uma de suas metas alertar a comunidade acadêmica à respeito de prazos e avisos importantes, ex.: data de matrícula.
+* Fornecer aos alunos informações a respeito do cardápio do <i>RU</i> (Restaurante Universitário).
+
+* Alertar a comunidade acadêmica à respeito de prazos e avisos importantes, ex.: data de matrícula.
 
 * Disponibilizar o sistema 24 horas por dia, durante 7 dias na semana.
 
