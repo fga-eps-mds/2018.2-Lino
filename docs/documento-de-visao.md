@@ -6,13 +6,13 @@
 
 <p aligng="justify"> &emsp;&emsp;O documento de visão define o escopo de alto nível e o propósito do software a ser desenvolvido. Esse visa estabelecer as expectativas e reduzir os riscos do produto protegendo o cliente e os desenvolvedores do projeto.</p>
 
-## 1.1 Finalidade 
+## 1.1 Finalidade
 
 <p aligng="justify"> &emsp;&emsp;O documento presente tem, por finalidade, apresentar e estabelecer uma visão ampla sobre o ChatBot Lino de modo que deixe claro sua proposta, características, utilidades e funcionalidades.</p>
 
-## 1.2 Escopo 
+## 1.2 Escopo
 
-<p aligng="justify"> &emsp;&emsp;O ChatBot Lino é um projeto realizado para as disciplinas Métodos de Desenvolvimento de <i>Software</i> (MDS) e Engenharia de Produto de <i>Software</i> (EPS), do curso Engenharia de <i>Software</i> da Faculdade UnB Gama (FGA) da Universidade de Brasília (UnB).</p> 
+<p aligng="justify"> &emsp;&emsp;O ChatBot Lino é um projeto realizado para as disciplinas Métodos de Desenvolvimento de <i>Software</i> (MDS) e Engenharia de Produto de <i>Software</i> (EPS), do curso Engenharia de <i>Software</i> da Faculdade UnB Gama (FGA) da Universidade de Brasília (UnB).</p>
 <p aligng="justify"> &emsp;&emsp;O projeto, a ser realizado pela equipe 4, composta por alunos das duas disciplinas, e com orientação da professora Carla Rocha possui como objetivo a comunicação direta com o aluno matriculado na instituição de ensino superior. A partir da interação com o ChatBot, o usuário poderá requisitar deste serviços, ajudas, notícias e informes relacionados à faculdade e à universidade, como o passo-a-passo necessário para a emissão de determinado documento ou informações sobre a alimentação provida pelo Restaurante Universitário.
 
 ## 1.3 Definições, Acrônimos e Abreviações
@@ -38,7 +38,7 @@
 
 <p align="justify"> &emsp;&emsp;O ChatBot oferecerá o serviço automatizado de alertar os alunos a cerca de informações importantes sobre a universidade, além de fornecer instruções necessárias para a visualização e retirada de documentos. Dessa forma, aumenta-se a velocidade de acesso à documentação e informação, atualmente fornecida pela secretaria.</p>
 
-## 2.2 Descrição do Problema 
+## 2.2 Descrição do Problema
 <table class="tg">
   <tr>
     <td class="tg-s6z2">O problema de</td>
@@ -196,3 +196,25 @@ O ChatBot Lino é capaz de realizar:
 * Resposta a dúvidas comuns entre os alunos;
 * Fluxo de conversa com o usuário;
 * Tutoriais para emissão de documentos universitários;
+
+# 6. Requisitos Funcionais
+
+# 7. Restrições
+
+*	Uso da Internet.
+* Projeto deve ser finalizado até 29/11/2018.
+* Conhecimento básico da Português.
+* Conhecimento básico de Inglês.
+
+# 8. Intervalos de qualidade
+
+## 8.1 Requisitos de Implementação
+
+
+## 8.2 Requisitos de Sistema
+
+*  Esta aplicação deverá ser acessada através de dispositivos que possuem as aplicações <i>Messenger</i> e <i>Telegram</i> em que o sistema operacional é variável de acordo com o dispositivo de utilização, podendo ser: <i>Android</i>, <i>iOS</i>, <i>Windows</i>, <i>Linux</i>...
+
+## 8.3 Requisitos de Design
+
+* A composição deste <i>software</i> será feita de maneira a tornar sua utilização autoexplicativa e fácil, para acesso em tempo real, ou seja, atendendo todas as especificações de boas práticas referentes à experiência de usuário.
