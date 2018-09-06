@@ -1,18 +1,30 @@
 |Data| Versão |Modificação|Autor|
 |:---:|:---:|:---:|:--:|
 | 25/08/2018 |   1.0  | Criação do Documento| MDS (todos) |
+| 27/08/2018 |   1.1  | Adição dos tópicos 3, 3.2, 3.3 e 3.4 | Guilherme Marques |
+| 28/08/2018 |   1.2  | Adição da seção Introdução | Matheus Blanco |
+| 28/08/2018 |   1.3  | Adição dos tópicos 3.5.1 e 3.5.2 | Guilherme Marques |
+| 28/08/2018 |   1.4  | Revisão do tópico 1.4 | Matheus Blanco |
+| 28/08/2018 |   1.5  | Adição do tópico 3.6 | Guilherme Marques |
+| 28/08/2018 |   1.6  | Adição dos tópicos 4, 4.1 e 4.2 | Pedro Rodrigues |
+| 28/08/2018 |   1.7  | Adição dos tópicos 5 | Pedro Rodrigues |
+| 28/08/2018 |   1.8  | Revisão dos tópicos 4.2 e 5 | Pedro Rodrigues |
+| 29/08/2018 |   1.9  | Adição do tópico 3.7 e revisão dos tópicos 3.5 e 3.6 | Guilherme Marques |
+| 28/08/2018 |   1.10  | Adição do tópico 2 | Gabriel Braga |
+| 28/08/2018 |   1.11  | Revisão do tópico 2.3 | Gabriel Braga |
+| 06/09/2018 |   2.0  | Revisão do tópico 2.1, 3, 3.4, 8.1, 8.2 | Matheus Blanco |
 
 # 1. Introdução
 
 <p aligng="justify"> &emsp;&emsp;O documento de visão define o escopo de alto nível e o propósito do software a ser desenvolvido. Esse visa estabelecer as expectativas e reduzir os riscos do produto protegendo o cliente e os desenvolvedores do projeto.</p>
 
-## 1.1 Finalidade 
+## 1.1 Finalidade
 
 <p aligng="justify"> &emsp;&emsp;O documento presente tem, por finalidade, apresentar e estabelecer uma visão ampla sobre o ChatBot Lino de modo que deixe claro sua proposta, características, utilidades e funcionalidades.</p>
 
-## 1.2 Escopo 
+## 1.2 Escopo
 
-<p aligng="justify"> &emsp;&emsp;O ChatBot Lino é um projeto realizado para as disciplinas Métodos de Desenvolvimento de <i>Software</i> (MDS) e Engenharia de Produto de <i>Software</i> (EPS), do curso Engenharia de <i>Software</i> da Faculdade UnB Gama (FGA) da Universidade de Brasília (UnB).</p> 
+<p aligng="justify"> &emsp;&emsp;O ChatBot Lino é um projeto realizado para as disciplinas Métodos de Desenvolvimento de <i>Software</i> (MDS) e Engenharia de Produto de <i>Software</i> (EPS), do curso Engenharia de <i>Software</i> da Faculdade UnB Gama (FGA) da Universidade de Brasília (UnB).</p>
 <p aligng="justify"> &emsp;&emsp;O projeto, a ser realizado pela equipe 4, composta por alunos das duas disciplinas, e com orientação da professora Carla Rocha possui como objetivo a comunicação direta com o aluno matriculado na instituição de ensino superior. A partir da interação com o ChatBot, o usuário poderá requisitar deste serviços, ajudas, notícias e informes relacionados à faculdade e à universidade, como o passo-a-passo necessário para a emissão de determinado documento ou informações sobre a alimentação provida pelo Restaurante Universitário.
 
 ## 1.3 Definições, Acrônimos e Abreviações
@@ -36,9 +48,11 @@
 
 <p align="justify"> &emsp;&emsp;Atualmente, as informações são repassadas para os estudantes através dos murais e redes sociais da Universidade. Para obter tais informações, deve-se acessar o portal Matrícula Web e em alguns casos comparecer na secretaria para retirada.</p>
 
-<p align="justify"> &emsp;&emsp;O ChatBot oferecerá o serviço automatizado de alertar os alunos a cerca de informações importantes sobre a universidade, além de fornecer instruções necessárias para a visualização e retirada de documentos. Dessa forma, aumenta-se a velocidade de acesso à documentação e informação, atualmente fornecida pela secretaria.</p>
+<p align="justify"> &emsp;&emsp;Isso configura uma situação de dificuldade na obtenção das determinadas informações. Muitas vezes o aluno não tem a disponibilidade de comparecer ao local onde se encontram as informações, perdendo-as desta maneira. A forma do aluno se comunicar com a faculdade e os professores ainda não é realizada de maneira fácil e dinâmica. Dessa forma, o ChatBot se propôe a solucionar tais desafios.</p>
 
-## 2.2 Descrição do Problema 
+<p align="justify"> &emsp;&emsp;O ChatBot oferecerá o serviço automatizado de alertar os alunos a cerca de informações importantes sobre a universidade, além de fornecer instruções necessárias para a visualização e retirada de documentos. Dessa forma, aumenta-se a velocidade e a facilidade de acesso à documentação e informação, atualmente fornecida pela secretaria.</p>
+
+## 2.2 Descrição do Problema
 <table class="tg">
   <tr>
     <td class="tg-s6z2">O problema de</td>
@@ -71,7 +85,7 @@
     <td class="tg-031e">Desejam acelerar o fornecimento de documentos e informação aos estudantes</td>
   </tr>
   <tr>
-    <td class="tg-s6z2">O LinoBot</td>
+    <td class="tg-s6z2">O Lino</td>
     <td class="tg-031e">É um ChatBot</td>
   </tr>
   <tr>
@@ -91,7 +105,7 @@
 
 # 3. Descrições dos Envolvidos e dos Usuários
 
-Os principais Envolvidos neste projeto serão por parte da equipe de desenvolvimento, programadores, gestores e monitores, sendo que esses não necessariamente irão ser usuários do aplicativo.
+Os principais Envolvidos neste projeto serão por parte da equipe de desenvolvimento, gestores e monitores, sendo que esses não necessariamente irão ser usuários do aplicativo.
 
 Já os usuários que irão interagir são alunos da Fga, sejam eles de graduação ou pós-graduação.
 
@@ -113,7 +127,7 @@ Os principais artefatos que o Bot Lino propõe é a maior agilidade e facilidade
 
 ## 3.4 Principais Necessidades dos Usuários e dos Envolvidos
 
-Os usuários realizarão a interação com o Bot por meio do Telegram, serviço de mensagens instantâneas, a qualquer momento que tenham questões sobre procedimentos da Faculdade, e receberão notificações sobre o calendário do semestre.
+Os usuários realizarão a interação com o Bot por meio do Telegram e Messenger do Facebook, serviços de mensagens instantâneas, a qualquer momento que tenham questões sobre procedimentos da Faculdade, e receberão notificações sobre o calendário do semestre.
 
 ## 3.5 Perfis dos Envolvidos
 
@@ -196,3 +210,26 @@ O ChatBot Lino é capaz de realizar:
 * Resposta a dúvidas comuns entre os alunos;
 * Fluxo de conversa com o usuário;
 * Tutoriais para emissão de documentos universitários;
+
+# 6. Requisitos Funcionais
+
+# 7. Restrições
+
+*	Uso da Internet.
+* Projeto deve ser finalizado até 29/11/2018.
+* Conhecimento básico da Português.
+* Conhecimento básico de Inglês.
+
+# 8. Intervalos de qualidade
+
+## 8.1 Requisitos de Implementação
+
+Para maior eficiência, o ChatBot será desenvolvido para ser utilizado em conjunto das plataformas <i>Messenger</i> e <i>Telegram</i>, dois programas largamente utilizados pela comunidade para a comunicação, onde a implementação de funcionalidades se mostra viável.
+
+## 8.2 Requisitos de Sistema
+
+<p align="justify"> &emsp;&emsp;Esta aplicação deverá ser acessada através de dispositivos que possuem as aplicações <i>Messenger</i> e <i>Telegram</i> em que o sistema operacional é variável de acordo com o dispositivo de utilização, podendo ser: <i>Android</i>, <i>iOS</i>, <i>Windows</i>, <i>Linux</i>, <i>ChromeOS</i>...</p>
+
+## 8.3 Requisitos de Design
+
+<p align="justify"> &emsp;&emsp;A composição deste <i>software</i> será feita de maneira a tornar sua utilização autoexplicativa e fácil, para acesso em tempo real, ou seja, atendendo todas as especificações de boas práticas referentes à experiência de usuário.</p>
