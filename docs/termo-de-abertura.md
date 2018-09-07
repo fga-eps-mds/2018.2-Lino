@@ -7,6 +7,7 @@
 | 03/09/2018 | 1.4 | Melhoras nos tópicos com atualização do novo escopo | Ícaro Oliveira |
 | 04/09/2018 | 1.5 | Melhoras no tópico 4 | Guilherme Augusto |
 | 04/09/2018 | 1.6 | Construção inicial do tópico 9.2 | Guilherme Augusto |
+| 07/09/2018 | 1.7 | Construção do tópico 9.1 | Guilherme Augusto |
 
 # Termo de abertura de Projeto
 
@@ -47,6 +48,10 @@ Estão entre os requisitos e alto nível:
 ## 9. Partes Interessadas
 
 ### 9.1. Usuários
+
+- Discentes
+- Doscentes
+- Servidores
 
 ### 9.2. Equipe
 
