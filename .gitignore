@@ -2,3 +2,4 @@
 rasa/models
 *.log
 .vscode
+crawler/result.json

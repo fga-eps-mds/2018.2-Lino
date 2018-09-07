@@ -10,12 +10,14 @@ class RuSpider(scrapy.Spider):
 
     def parse(self, response):
         result = []
-        for element in response.css(".container .item-page p"):
+        for element in response.css(".container .item-page p a"):
             path = element.css("a::attr(href)").extract_first()
             text = element.css("a::text").extract_first()
+            if len(text) <= 1:
+                text = element.css("a>span::text").extract_first()
             if not text:
-                text = element.css("a span span::text").extract_first()
-            if path:
+                text = element.css("a>span>span::text").extract_first()
+            if path and text:
                 pdf = response.follow(path).url
                 item = CrawlerItem(text=text, path=path, url=pdf)
                 yield item
