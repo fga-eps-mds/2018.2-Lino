@@ -40,6 +40,55 @@ Estão entre os requisitos e alto nível:
 - [ ] A coleta de métricas para evolução do Bot
 
 ## 6. Riscos
+Na estimativa de riscos deste projeto, opta-se por estipular um padrão para a avaliação de probabilidade e impacto, servindo assim na priorização de riscos. Sendo assim, seguem-se as tabelas:
+
+| Probabilidade (P)         | Peso |
+|:---------------------:|:----:|
+|Raro (< 10%)	        |     1|
+|Improvável (10% - 25%) | 	  2|
+|Moderado (25% - 50%)   |	  3|
+|Provável (50% - 75%)   |	  4|
+|Quase Certo (> 75%)    |	  5|
+
+
+| Impacto (I)   |                   Descrição                       | Peso |
+|:-------------:|:-------------------------------------------------:|:----:|
+|Insignificante | Quase que imperceptível ao projeto                |	1  |
+|Baixo	        | Pouca influência no desenvolvimento do projeto    |   2  |
+|Moderado	    | Notável ao projeto, mas sem grandes consequências |   3  |
+|Alto	        | Dificulta o desenvolvimento do projeto	        |   4  |
+|Catastrófico	| Impossibilita o prosseguimento do projeto	5       |   5  |
+
+A fórmula para o cálculo do Score (S) de cada risco é calculada: `S = P x I` e o Score de cada Sprint é dado pela soma dos Scores dos riscos identificados nesta.
+
+Ao início de cada Sprint, cada risco é calculado com base nas tabelas apresentadas. Ou seja, a cada nova iteração, um risco conhecido e bem mitigado nas sprints anteriores tende sempre a diminuir. Levando isso em conta, riscos identificados ao decorrer do projeto tendem a ter impacto elevado e necessitam de medidas preventivas rápidas e precisas.
+
+A seguir, a tabela para os riscos identificados:
+
+| Risco | Resposta ao risco |
+|:------:|:--------------------:|:-------|
+|Integração do time|Realizar feedbacks constantes para facilitar a comunicação e o acompanhamento constante dos membros;<br> Realização de dailys presenciais e remotas|
+|Configuração de ambiente|Auxiliar a equipe de desenvolvimento na configuração de suas máquinas;<br> Utilização do Docker| 
+|Integração entre os serviços|Treinamento sobre as tecnologias utilizadas; <br> Auxílio técnico da equipe de EPS<br> |
+|Greve na Universidade|Continuar o desenvolvimento;<br> Replanejar o cronograma |
+|Indisponibilidade temporária de integrantes (doença, viagem)|Manter cronograma atualizado com as viagens anunciadas com antecedência;<br> Replanejar pareamento e/ou atividades do(s) membro(s) indisponíveis|
+|Grade Horária|Manter comunicação entre os membros para manter-se atualizado da agenda destes;<br> Planejar pareamento entre pessoas que tiverem grade horária parecida|
+|Falta de planejamento por parte de EPS|Manter feedback e transparência constante entre os membros;<br> Dividir atividades para não sobrecarregar ninguém;<br> Pedir auxílio para a professora e/ou monitores|
+|Descomprometimento da equipe|Auxiliar equipe a manter-se comprometida; <br> Aumentar o senso de integração entre os membros; <br> Tratar individualmente com o membro;<br> Comunicar a professora em casos extremos|
+|Mudança de escopo|Feedback constante com o cliente, por meio de reuniões; <br> Buscar novas alternativas para elicitação de requisitos|
+|Mudança de arquitetura|Preparar uma arquitetura adaptável, que permita mudanças sem grandes prejuízos|
+|Indefinição do escopo|Feedback com o cliente; <br> Utilização de ferramentas para visualizá-lo melhor, como mapas mentais, Canvas etc|
+|Desistência da disciplina|Comunicação entre os integrantes para integrar o time; <br> Transparência com os membros da equipe; <br> Replanejamento de escopo para adequação à capacidade de produtividade restante|
+|Atrasos nas reuniões|Comunicação constante entre os membros; <br> Marcar reuniões antecipadamente para evitar chocar horário com compromissos de outros membros; <br> Conversa individual; <br> Comunicar à professora|
+|Atrasos nas entregas (dívida técnica)|Auxílio técnico de EPS; <br> Organizar pareamento para transferência de conhecimento; <br> Evitar que as entregas atrasem pois os membros não tinham conhecimento suficiente para realizá-las|
+|Entrega contínua|Definir pipeline; <br> Treinamento dos membros com as ferramentas de CD|
+|Integração contínua|Definir pipeline;<br> Treinamento dos membros com as ferramentas de CI|
+|Performance do produto|Monitorar a atividade do bot através do ElasticSearch e Kibana; <br> Refatoração constante; <br> Utilização de padrões de desenvolvimento para evitar o aumento de complexidade e lentidão no sistema|
+|Qualidade da interação do bot|Monitorar a atividade do bot através do ElasticSearch e Kibana; <br> Atentar para feedback dos usuários; <br> Remodelar os fluxos de conversa que estejam causando gatilhos de confusão|
+|Adicionar dificuldade técnica no decorrer do projeto|Treinamento da equipe; <br> Comunicação constante; <br> Escolher ferramentas que possuem boa documentação e rápida curva de aprendizado|
+|MDS depender muito de EPS para realizar atividades propostas|Permitir a rápida comunicação entre os membros; <br> Disponibilização de material e treinamento suficiente para MDS conseguir trabalhar sem o auxílio constante de EPS|
+|EPS não disponibilizar condições necessárias para MDS trabalhar|Dividir o trabalho entre os membros de EPS para; <br> Comunicação constante entre os membros; Identificação e correção de gargalos na disponibilização de ambiente, conhecimento e treinamento dos membros de MDS |
+|Falta de métodos tradicionais para garantir qualidade (testes)|Coleta de dados e utilização de painéis para acompanhamento em uso para fornecer insights sobre a qualidade do bot (Kibana e ElasticSearch)|
 
 ## 7. Entregas do Produto
 
