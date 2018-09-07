@@ -64,6 +64,8 @@ numpy==1.15.1
 packaging==17.1
 parsel==1.5.0
 pathlib==1.0.1
+pdfminer2==20151206
+pdfx==1.3.0
 pika==0.11.2
 pkg-resources==0.0.0
 plac==0.9.6
