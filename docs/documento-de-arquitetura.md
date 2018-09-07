@@ -9,7 +9,8 @@
 |05/09/2018|1.3|Adição dos tópicos 2.2|Matheus Blanco, Gabriel Braga|
 |05/09/2018|1.4|Adição do tópico 3|Gabriel Filipe|
 |06/09/2018|1.5|Atualiza tópicos 1 e 3|Matheus Blanco|
-
+|06/09/2018|1.6|Revisão do Diagrama de Relações e do tópico 2.1|Matheus Blanco, Gabriel Braga|
+|07/09/2018|1.6|Revisão do tópico 2.1|Matheus Blanco|
 
 # 1. Introdução  
 
@@ -53,11 +54,18 @@ Estrutura do documento:
 
 # 2. Representação da Arquitetura
 
-
 ## 2.1 Diagrama de Relações
 ![enter image description here](https://lh3.googleusercontent.com/jwCBLJTnFdvGMROGYgvyPLIR8osCUmrYvb4vfOe4RBdNCwekRP_7Tx_bkf-8h81PuuxjK43GA-Lx "Diagrama de Relações")
 
-<p  align="justify">  &emsp;&emsp;A arquitetura pensada para este projeto fará a utilização de microsserviços, os quais irão girar e trabalhar em cima das funcionalidades da tecnologia <i>Rasa NLU</i>. Esta tecnologia trabalha com o processamento natural de linguagem, a partir dela o desenvolvedor abre portas relacionadas a processamento de texto que o permitem criar um ambiente de comunicação mais interativo e humano, podendo assim criar uma comunicação mais fluida e dinâmica com o usuário.</p>
+<p  align="justify">  &emsp;&emsp;A arquitetura pensada para este projeto será a arquitetura de repositório. Esta, também conhecida como <i>Blackboard</i> trabalha de maneira que todos os subsistemas manipulam a mesma base de dados. É utilizada principalmente em projetos onde grandes quantidades de dados são manuseados. Suas vantagens são:</p>
+
+* Compartilhamento eficiente de dados;
+* <i>Backup</i> centralizado;
+* Possibilidade de implementação de proteção de dados;
+* Os subsistemas gravadores de dados não precisam saber quem os utilizará;
+* Fácil integração de subsistemas.
+
+<p  align="justify">  &emsp;&emsp;A principal tecnologia do ChatBot é o <i>Rasa NLu</i>. Esta tecnologia trabalha com o processamento natural de linguagem, a partir dela o desenvolvedor abre portas relacionadas a processamento de texto que o permitem criar um ambiente de comunicação mais interativo e humano, podendo assim criar uma comunicação mais fluida e dinâmica com o usuário.</p>
 <p  align="justify">  &emsp;&emsp;A utilzação da tecnologia no desenvolvimento de um ChatBot permite a implementação de uma comunicação mais humanizada, permitindo assim uma maior interatividade com o usuário. Com o tempo, a interação com o usuário permitirá ao programa um treinamento dele mesmo para melhor se comunicar com o exterior. Este é o principal objetivo da utilização do <i>Rasa NLU</i> para o processamento de linguagem do projeto em questão.</p>
 <p  align="justify">  &emsp;&emsp;Algumas dos principais benefícios da tecnologia são:</p>
 
