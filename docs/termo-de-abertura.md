@@ -8,6 +8,9 @@
 | 04/09/2018 | 1.5 | Melhoras no tópico 4 | Guilherme Augusto |
 | 04/09/2018 | 1.6 | Construção inicial do tópico 9.2 | Guilherme Augusto |
 | 07/09/2018 | 1.7 | Construção do tópico 9.1 | Guilherme Augusto |
+| 07/09/2018 | 1.8 | Construção do tópico 6 | Ícaro Oliveira |
+| 08/09/2018 | 1.9 | Construção do tópico 8 | Ícaro Oliveira |
+
 
 # Termo de abertura de Projeto
 
@@ -66,7 +69,7 @@ Ao início de cada Sprint, cada risco é calculado com base nas tabelas apresent
 A seguir, a tabela para os riscos identificados:
 
 | Risco | Resposta ao risco |
-|:------:|:--------------------:|:-------|
+|:------:|:--------------------:|
 |Integração do time|Realizar feedbacks constantes para facilitar a comunicação e o acompanhamento constante dos membros;<br> Realização de dailys presenciais e remotas|
 |Configuração de ambiente|Auxiliar a equipe de desenvolvimento na configuração de suas máquinas;<br> Utilização do Docker| 
 |Integração entre os serviços|Treinamento sobre as tecnologias utilizadas; <br> Auxílio técnico da equipe de EPS<br> |
@@ -93,7 +96,59 @@ A seguir, a tabela para os riscos identificados:
 ## 7. Entregas do Produto
 
 ## 8. Estimativa de Custo
+O cálculo de custos leva em conta três fatores: aquisição, pessoal e ferramentas. Desta forma é levado em conta os custos reais de mercado: desde o custo com energia e aluguel de sala, até as ferramentas utilizadas pelos membros.
 
+### 8.1 Custo de aquisição
+## 8. Estimativa de Custo
+
+O cálculo de custos leva em conta três fatores: aquisição, pessoal e ferramentas. Desta forma é levado em conta os custos reais de mercado: desde o custo com energia e aluguel de sala, até as ferramentas utilizadas pelos membros.
+
+### 8.1 Custo de aquisição
+Nesse fator, são considerados os seguintes tópicos: custos de equipamentos e aluguel de uma sala em um coworking na cidade de Brasília - DF.
+
+|Equipamento|Quantidade |Finalidade|Valor unitário|Preço|
+|:------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+|Notebooks|10 unidades|Desenvolvimento e planejamento|R$ 3.000|R$ 30.000|
+|Aluguel de espaço físico em um coworking*|5 dias úteis|Alocação de pessoal|R$150** |R$ 24.000*** |
+|Transporte e alimentação|4 passagens diárias + R$10 alimentação|Transporte e alimentaçao|R$ 20/dia|R$ 16.000***
+
+*resultado com base no preço médio de um Coworking em Brasília, em set/2018. Internet, água e luz inclusas.
+**por semana, individual.
+***valor resultante para 10 membros, durante 16 sprints com duração de uma semana.
+
+### 8.2 Custo de pessoal
+
+Nesse caso, foram levados em conta o valor médio por hora de um desenvolvedor Python Júnior, para a equipe de MDS e do valor médio entre desenvolvedores Plenos, Scrum Master e Analista de BI Júnior para a equipe de EPS.
+
+|Cargo|Quantidade|Salário/mês (160h total)|Salário/hora|Total|
+|:------:|:------:|:------:|:------:|:------:|
+|Deselvolvedor Python Jr|5|R$ 3.000|R$18,75|R$ 15.000*|
+|Analista BI, Arquiteto, Scrum Master e PO**|5|R$ 6.000|R$ 37,50|R$ 60.000*| 
+ 
+*preço resultante para 5 membros, trabalhando 10h por semana, durante 16 sprints com duração de uma semana.
+**uma vez que a equipe de EPS não possui apenas um único papel, foi calculado um preço médio de cada profissional da área
+
+### 8.3 Custo de Ferramentas
+
+|Ferramenta|Finalidade|Preço total
+|:------:|:------:|:------:|
+|Google Drive|Compartilhamento de arquivos|R$ 0|
+|Editor de Texto|Elaboração de documentos e código|R$ 0|
+|GitHub|Versionamento de arquivos|R$ 0|
+|Telegram|Comunicação entre os membros|R$ 0|
+|Python, Rasa, API Telegram, ElasticSearch, Kibana, MongoDB|Tecnologias utilizadas para desenvolvimento|R$ 0
+
+### 8.4 Custo total
+|Custo|Valor total
+|:------:|:------:
+|Aquisição|R$ 43.000|
+|Pessoal|R$ 75.000|
+|Ferramentas|R$ 0|
+
+O valor total estimado dos custos informados é de R$118.000.
+Levando em conta 10% de risco, **o valor final para a estimativa de custo é de R$129.800**.
+
+### 8.1 
 ## 9. Partes Interessadas
 
 ### 9.1. Usuários
