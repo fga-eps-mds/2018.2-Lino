@@ -52,5 +52,7 @@
 |US18|Funcional|Analista de Dados|visualizar a métrica Gatilhos de confusão|analisar o desempenho do Lino|_Could Have_|FT10|
 |US19|Funcional|Analista de Dados|visualizar a métrica Número de usuários|analisar o impacto do Lino na comunidade|_Could Have_|FT10|
 |US20|Funcional|Analista de Dados|visualizar a métrica Taxa de satisfação|analisar o impacto do Lino na comunidade|_Could Have_|FT10|
+|US21|Não Funcional|Lino|ter uma identidade visual |me mostrar ao mundo|_Should Have_|FT01|
+|US22|Funcional|Lino|ter um fluxo de conversa sobre o cardápio do RU|alertar os usuários sobre as informações do cardápio diário ou semanal|_Should Have_|FT01|
 
 ## Intents
