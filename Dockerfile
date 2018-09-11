@@ -1,22 +1,22 @@
-from python:3.6
+FROM python:3.6
 
-run apt-get install -y git
+RUN apt-get install -y git
 
-run pip install rasa_core==0.10.3
+RUN pip install rasa_core==0.10.3
 
-run pip install rasa_nlu[spacy] && \
-    python -m spacy download en_core_web_md && \
-    python -m spacy link en_core_web_md en
+RUN pip install rasa_nlu[spacy] && \
+    python -m spacy download pt && \
+    python -m spacy download en
 
-run pip install rasa_nlu[tensorflow]
+RUN pip install rasa_nlu[tensorflow]
 
-run mkdir /2018.2-Lino
+RUN mkdir /2018.2-Lino
 
-copy . .
+ADD . /2018.2-Lino
 
-workdir /2018.2-Lino
+WORKDIR /2018.2-Lino/rasa
 
-# env TRAINING_EPOCHS=300 \
-#     CREDENTIALS="./rasa/credentials.yml"
+ENV TRAINING_EPOCHS=300 \
+    CREDENTIALS="./rasa/credentials.yml"
 
-cmd sleep infinity
+CMD python train.py all
