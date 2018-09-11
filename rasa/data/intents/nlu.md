@@ -1,5 +1,5 @@
 ## intent:greet
-- hey
+- oi 
 - hello
 - hi
 - good morning
