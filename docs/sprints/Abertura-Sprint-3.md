@@ -71,25 +71,27 @@
 
 |-|Bruna Pinos| Guilherme Augusto | Guilherme Lacerda | Ícaro Oliveira | Letícia de Souza|Gabriel Braga| Gabriel Filipe| Guilherme Marques|Matheus Salles| Pedro Rodrigues|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|**Bruna Pinos**        |-||||**6**||||||
-|**Guilherme Augusto**  ||-||**4** e **5**|||||||
+|**Bruna Pinos**        |-||**4**||||||||
+|**Guilherme Augusto**  ||-||**3**|||||||
 |**Guilherme Lacerda**  |||-||||||**7**||
 |**Ícaro Oliveira**     ||||-|||||||
-|**Letícia de Souza**   |||||-||||||
-|**Gabriel Braga**      ||||||-||**1** e **2**|||
-|**Gabriel Filipe**     |||||||-|||**3**|
+|**Letícia de Souza**   |||||-||||**5**||
+|**Gabriel Braga**      ||||||-||**1**|||
+|**Gabriel Filipe**     |||||||-|||**2**|
 |**Guilherme Marques**  ||||||||-|||
 |**Matheus Salles**     |||||||||-||
 |**Pedro Rodrigues**    ||||||||||-|
 
 ### Trabalhos dedicados às duplas
-**1**: US05 
-**2**: US06
-**3**: US07
-**4**: Viabilidade de Kibana e ElasticSearch
-**5**: Modelagem do Banco de Dados
-**6**: Roadmap e Backlog
-**7**: Identidade Visual
+**1**: US05 e US06
+
+**2**: US07
+
+**3**: Viabilidade de Kibana e ElasticSearch, Modelagem do Banco de Dados
+
+**4**: Backlog do Produto, Folha de Estilo e Pipeline DevOps
+
+**5**: Identidade Visual e Roadmap
 
 ## 6. Sprint Backlog
 
