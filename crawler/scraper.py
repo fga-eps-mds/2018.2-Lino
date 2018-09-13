@@ -41,10 +41,22 @@ class PdfReader():
                     f'{DOWNLOAD_PATH}{fileName}',
                     f'{OUTPUT_PATH}{name}.tsv',
                     output_format='tsv')
-    
-    def readTsv(self):
+
+    def genQuerry(self, df):
+        cols = list(df.columns.values)
+        q = {}
+        q['segunda'] = df[cols[0]] + df[cols[1]]
+        q['terca'] = df[cols[2]] + df[cols[3]]
+        q['quarta'] = df[cols[4]] + df[cols[5]]
+        q['quinta'] = df[cols[6]]
+        q['sexta'] = df[cols[7]] + df[cols[8]]
+        q['sabado'] = df[cols[9]] + df[cols[10]]
+        q['domingo'] = df[cols[11]] + df[cols[12]]
+        return q
+
+    def readTable(self, fileName):
         df = pd.read_table(
-            './outputs/FGA0.tsv',
+            f'./outputs/{fileName}.tsv',
             sep='\t',
             index_col=0,
             na_filter=False,
@@ -53,10 +65,12 @@ class PdfReader():
             dayfirst=True,
             parse_dates=True,
             engine='python')
-        print(df)
+        q = self.genQuerry(df)
+        search = input('Insira a pesquisa: ')
+        print(q[search])
 
 #crawl = TheCrawler()
 #crawl.runCrawler()
 p = PdfReader()
-p.readTsv()
+p.readTable('FGA0')
 #p.downloadMenu('FGA')
