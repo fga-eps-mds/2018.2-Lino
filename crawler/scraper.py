@@ -1,6 +1,7 @@
 import scrapy
 import pdfx
 import json
+import pandas as pd
 from tabula import convert_into
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
@@ -40,8 +41,22 @@ class PdfReader():
                     f'{DOWNLOAD_PATH}{fileName}',
                     f'{OUTPUT_PATH}{name}.tsv',
                     output_format='tsv')
+    
+    def readTsv(self):
+        df = pd.read_table(
+            './outputs/FGA0.tsv',
+            sep='\t',
+            index_col=0,
+            na_filter=False,
+            header=1,
+            skipfooter=3,
+            dayfirst=True,
+            parse_dates=True,
+            engine='python')
+        print(df)
 
-crawl = TheCrawler()
-crawl.runCrawler()
+#crawl = TheCrawler()
+#crawl.runCrawler()
 p = PdfReader()
-p.downloadMenu('FGA')
+p.readTsv()
+#p.downloadMenu('FGA')
