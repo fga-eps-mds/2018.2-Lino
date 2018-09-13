@@ -4,3 +4,4 @@ rasa/models
 .vscode
 crawler/result.json
 crawler/downloads
+__pycache__

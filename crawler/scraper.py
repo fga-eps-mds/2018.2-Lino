@@ -1,6 +1,7 @@
 import scrapy
 import pdfx
 import json
+from tabula import convert_into
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 
@@ -24,7 +25,17 @@ class PdfReader():
     
     def downloadMenu(self, campus):
         data = self.data
+        n = 0
         for item in data.body:
             if campus in item['text']:
                 pdf = pdfx.PDFx(item['url'])
                 pdf.download_pdfs('./downloads/')
+                name = campus + str(n)
+                n += 1
+                fileName = item['url'].split('/')
+                fileName = fileName.pop()
+                convert_into(f'./downloads/{fileName}',f'{name}.tsv',output_format='tsv')
+
+p = PdfReader()
+
+p.downloadMenu('FGA')
