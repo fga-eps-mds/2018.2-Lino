@@ -2,6 +2,7 @@ import scrapy
 import pdfx
 import json
 import pandas as pd
+from pprint import pprint
 from tabula import convert_into
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
@@ -45,32 +46,62 @@ class PdfReader():
     def genQuerry(self, df):
         cols = list(df.columns.values)
         q = {}
-        q['segunda'] = df[cols[0]] + df[cols[1]]
-        q['terca'] = df[cols[2]] + df[cols[3]]
-        q['quarta'] = df[cols[4]] + df[cols[5]]
-        q['quinta'] = df[cols[6]]
-        q['sexta'] = df[cols[7]] + df[cols[8]]
-        q['sabado'] = df[cols[9]] + df[cols[10]]
-        q['domingo'] = df[cols[11]] + df[cols[12]]
+        q['legenda'] = df[cols[0]]
+        q['segunda'] = df[cols[1]] + df[cols[2]]
+        q['terca'] = df[cols[3]] + df[cols[4]]
+        q['quarta'] = df[cols[5]] + df[cols[6]]
+        q['quinta'] = df[cols[7]]
+        q['sexta'] = df[cols[8]] + df[cols[9]]
+        q['sabado'] = df[cols[10]] + df[cols[11]]
+        q['domingo'] = df[cols[12]] + df[cols[13]]
         return q
 
-    def readTable(self, fileName):
+    def getDayMenu(self, fileName, day):
         df = pd.read_table(
             f'./outputs/{fileName}.tsv',
             sep='\t',
-            index_col=0,
+            # index_col=0,
             na_filter=False,
             header=1,
             skipfooter=3,
             dayfirst=True,
             parse_dates=True,
             engine='python')
+        # rows = list(df.index.values)
+        # print(rows)
         q = self.genQuerry(df)
-        search = input('Insira a pesquisa: ')
-        print(q[search])
+        # leg = list(q['legenda'].values)
+        # print(leg)
+        return(q[day])
+
+    def genJson(self):
+        leg = self.getDayMenu('FGA1','legenda')
+        data = self.getDayMenu('FGA1','sexta')
+        rows = list(data.index.values)
+        obj = {}
+        obj['DESJEJUM'] = {}
+        obj['ALMOÇO'] = {}
+        obj['JANTAR'] = {}
+        for item in rows:
+            if leg[item] == 'DESJEJUM':
+                flag = leg[item]
+                continue
+            elif leg[item] == 'ALMOÇO':
+                flag = leg[item]
+                continue
+            elif leg[item] == 'JANTAR':
+                flag = leg[item]
+                continue
+            elif leg[item] == '':
+                leg[item] == 'Pão:'
+            else:
+                obj[flag][leg[item]] = data[item]
+        pprint(obj)
+
 
 #crawl = TheCrawler()
 #crawl.runCrawler()
 p = PdfReader()
-p.readTable('FGA0')
-#p.downloadMenu('FGA')
+# p.downloadMenu('FGA')
+# p.getDayMenu('FGA1', 'sexta')
+p.genJson()
