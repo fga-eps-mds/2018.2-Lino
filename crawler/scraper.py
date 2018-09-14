@@ -60,18 +60,13 @@ class PdfReader():
         df = pd.read_table(
             f'./outputs/{fileName}.tsv',
             sep='\t',
-            # index_col=0,
             na_filter=False,
             header=1,
             skipfooter=3,
             dayfirst=True,
             parse_dates=True,
             engine='python')
-        # rows = list(df.index.values)
-        # print(rows)
         q = self.genQuerry(df)
-        # leg = list(q['legenda'].values)
-        # print(leg)
         return(q[day])
 
     def genJson(self):
@@ -93,15 +88,17 @@ class PdfReader():
                 flag = leg[item]
                 continue
             elif leg[item] == '':
-                leg[item] == 'Pão:'
+                leg[item] = 'Pão:'
+                obj[flag][leg[item]] = data[item]
             else:
                 obj[flag][leg[item]] = data[item]
-        pprint(obj)
+        f = open('menu.json','w')
+        f.write(json.dumps(obj, indent=4, ensure_ascii=False))
+        f.close()
 
 
-#crawl = TheCrawler()
-#crawl.runCrawler()
+crawl = TheCrawler()
+crawl.runCrawler()
 p = PdfReader()
-# p.downloadMenu('FGA')
-# p.getDayMenu('FGA1', 'sexta')
+p.downloadMenu('FGA')
 p.genJson()
