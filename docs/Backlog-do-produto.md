@@ -54,6 +54,8 @@
 |US20|Funcional|Analista de Dados|visualizar a métrica Taxa de satisfação|analisar o impacto do Lino na comunidade|_Could Have_|FT10|
 |US21|Não Funcional|Lino|ter uma identidade visual |me mostrar ao mundo|_Should Have_|FT01|
 |US22|Funcional|Lino|ter um fluxo de conversa sobre o cardápio do RU|alertar os usuários sobre as informações do cardápio diário ou semanal|_Should Have_|FT01|
+|US23|Não Funcional|Lino|buscar as informações sobre calendário da UnB no semestre| para transferir a informação ao usuário solicitante|_Must Have_|FT03, FT04, FT05, FT06 & FT07|
+|US24|Não Funcional|Lino|transformar o PDF do cardápio em texto| para informar o usuário| _Must Have_|FT03, FT04, FT05, FT06 & FT07|
 
 ## Intents
 
