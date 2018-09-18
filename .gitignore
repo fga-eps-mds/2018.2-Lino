@@ -1,0 +1,8 @@
+.env
+rasa/models
+*.log
+.vscode
+crawler/result.json
+crawler/menu.json
+crawler/downloads
+__pycache__
