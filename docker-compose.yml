@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+    lino:
+        build: .
+        ports:
+            - 5005:5005
+        volumes:
+            - .:/2018.2-Lino

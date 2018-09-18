@@ -13,7 +13,7 @@ class RuSpider(scrapy.Spider):
         for element in response.css(".container .item-page p a"):
             path = element.css("a::attr(href)").extract_first()
             text = element.css("a::text").extract_first()
-            if len(text) <= 1:
+            if not text or len(text) <= 1:
                 text = element.css("a>span::text").extract_first()
             if not text:
                 text = element.css("a>span>span::text").extract_first()
