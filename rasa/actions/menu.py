@@ -8,13 +8,17 @@ class ActionDailyMenu(Action):
         return "action_daily_menu"
     
     def run(self, dispatcher, tracker, domain):
+        messages = []
         period = tracker.get_slot('period')
         meal = tracker.get_slot('meal')
         day = time.strftime('%A',time.localtime())
         response = requests.get(
             f'https://3cbf5110.ngrok.io/cardapio/{day}').json()
-        print(period)
-        dispatcher.utter_message(response['ALMOÇO'])
+        messages.append('Olá! Para o almoço de hoje nós teremos: ')
+        for label in response['ALMOÇO']:
+            messages.append(label + ' ' + response['ALMOÇO'][label])
+        for message in messages:
+            dispatcher.utter_message(message)
         return []
 
 class ActionWeeklyMenu(Action):
