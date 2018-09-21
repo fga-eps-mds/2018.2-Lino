@@ -57,18 +57,19 @@ def train_nlu():
 
     return model_directory
 
-
-def run(serve_forever=True):
-    interpreter = RasaNLUInterpreter('models/nlu/default/current')
+def run_facebook():
     agent = Agent.load("models/dialogue", interpreter=RegexInterpreter())
 
-     input_channel = FacebookInput(
+    input_channel = FacebookInput(
         fb_verify=fb_credentials.verify,
         fb_secret=fb_credentials.secret, 
         fb_access_token=fb_credentials.page_access_token
     )
-
     agent.handle_channel(HttpInputChannel(5002, "/app", input_channel))
+
+
+def run(serve_forever=True):
+    interpreter = RasaNLUInterpreter('models/nlu/default/current')
 
 if __name__ == '__main__':
     utils.configure_colored_logging(loglevel='DEBUG')
@@ -78,7 +79,7 @@ if __name__ == '__main__':
 
     parser.add_argument(
             'task',
-            choices=['train-nlu', 'train-dialogue', 'run', 'all'],
+            choices=['train-nlu', 'train-dialogue', 'run', 'run-facebook', 'all'],
             help='what the bot should do - e.g. run or train?')
     task = parser.parse_args().task
 
@@ -89,6 +90,11 @@ if __name__ == '__main__':
         train_dialogue()
     elif task == 'run':
         run()
+    elif task == 'run-facebook':
+        train_nlu()
+        train_dialogue()
+        run()
+        run_facebook()
     elif task == 'all':
         train_nlu()
         train_dialogue()
