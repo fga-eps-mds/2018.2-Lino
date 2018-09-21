@@ -1,11 +1,11 @@
 train-nlu:
-	python -m rasa_nlu.train -c nlu_config.yml --data data/nlu.md -o models --fixed_model_name nlu --project current --verbose
+	python -m rasa_nlu.train -c nlu_config.yml --data data/intents/nlu.md -o models --fixed_model_name nlu --project current --verbose
 
 train-core:
-	python -m rasa_core.train -d domain.yml -s data/stories.md -o models/dialogue
+	python -m rasa_core.train -d domain.yml -s data/stories/stories.md -o models/dialogue
 
 run-telegram:
 	python -m rasa_core.run -d models/dialogue -u models/current/nlu --port 5002 -c telegram --credentials credentials.yml
 
 run-facebook:
-	python -m rasa_core.run -d models/dialogue/ -u models/nlu/default/current/ --port 5005 -c facebook --credentials fb_credentials.yml
+	python train.py all
