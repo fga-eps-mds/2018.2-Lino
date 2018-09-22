@@ -1,10 +1,13 @@
 intents:
-  - greet
-  - goodbye
-  - mood_affirm
-  - mood_deny
-  - mood_great
-  - mood_unhappy
+  - asks_daily_menu
+
+slots:
+  period:
+    type: "text"
+    initial_value: ""
+  meal:
+    type: "text"
+    initial_value: ""
 
 actions:
 - utter_greet
@@ -12,6 +15,7 @@ actions:
 - utter_did_that_help
 - utter_happy
 - utter_goodbye
+- actions.menu.ActionDailyMenu
 
 templates:
   utter_greet:

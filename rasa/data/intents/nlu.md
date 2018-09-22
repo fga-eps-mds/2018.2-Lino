@@ -1,50 +1,13 @@
-## intent:greet
-- oi 
-- hello
-- hi
-- good morning
-- good evening
-- hey there
-
-## intent:goodbye
-- bye
-- goodbye
-- see you around
-- see you later
-
-## intent:mood_affirm
-- yes
-- indeed
-- of course
-- that sounds good
-- correct
-
 ## intent:mood_deny
-- no
-- never
-- I don't think so
-- don't like that
-- no way
-- not really
+- não
+- nunca
+- Acho que não
+- Não gosto disso
+- Sem chance
+- Não mesmo
 
-## intent:mood_great
-- perfect
-- very good
-- great
-- amazing
-- wonderful
-- I am feeling very good
-- I am great
-- I'm good
-
-## intent:mood_unhappy
-- sad
-- very sad
-- unhappy
-- bad
-- very bad
-- awful
-- terrible
-- not very good
-- extremly sad
-- so sad
+## intent:asks_daily_menu
+- Me fala o cardápio de [hj](period)
+- Me fala o cardápio de [hoje](period)
+- O que tem pra comer [hoje](period)
+- Qual é o cardápio de [hoje](period)
