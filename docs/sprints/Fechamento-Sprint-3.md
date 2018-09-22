@@ -59,11 +59,10 @@ Todos esses documentos se tornaram débito técnico, pois ocorreram atrasos devi
 
 ------------
 ## 3. _Burndown Chart_
-
+![](https://i.imgur.com/ZQrxPKW.png)
 ------------
-
 ## 4. Velocity
-
+![](https://i.imgur.com/5kQfe4C.png)
 ------------
 
 ## 5. Retrospectiva da _Sprint_
@@ -84,7 +83,7 @@ Todos esses documentos se tornaram débito técnico, pois ocorreram atrasos devi
 ## 6. Quadro de Conhecimento
 
 
-
+![](https://i.imgur.com/qPoM5oD.png)
 
 ------------
 
