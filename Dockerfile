@@ -19,4 +19,4 @@ WORKDIR /2018.2-Lino/rasa
 ENV TRAINING_EPOCHS=300 \
     CREDENTIALS="./rasa/credentials.yml"
 
-CMD python train.py all
+CMD sleep infinity

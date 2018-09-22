@@ -1,4 +1,4 @@
-language : "en"
+language : "pt"
 pipeline:
   - name: "nlp_spacy"
   - name: "tokenizer_spacy"
