@@ -1,6 +1,7 @@
 import argparse
 import logging
 import os
+import fb_credentials
 
 from rasa_core import utils
 from rasa_core.agent import Agent
@@ -9,6 +10,11 @@ from rasa_core.interpreter import RasaNLUInterpreter
 from rasa_core.policies.fallback import FallbackPolicy
 from rasa_core.policies.keras_policy import KerasPolicy
 from rasa_core.policies.memoization import MemoizationPolicy
+
+from rasa_core.channels import HttpInputChannel
+from rasa_core.channels.facebook import FacebookInput
+from rasa_core.agent import Agent
+from rasa_core.interpreter import RegexInterpreter
 
 logger = logging.getLogger(__name__)
 TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 300))
@@ -51,15 +57,19 @@ def train_nlu():
 
     return model_directory
 
+def run_facebook():
+    agent = Agent.load("models/dialogue", interpreter=RegexInterpreter())
+
+    input_channel = FacebookInput(
+        fb_verify=fb_credentials.verify,
+        fb_secret=fb_credentials.secret, 
+        fb_access_token=fb_credentials.page_access_token
+    )
+    agent.handle_channel(HttpInputChannel(5002, "/app", input_channel))
+
 
 def run(serve_forever=True):
     interpreter = RasaNLUInterpreter('models/nlu/default/current')
-    agent = Agent.load('models/dialogue', interpreter=interpreter)
-
-    if serve_forever:
-        agent.handle_channel(ConsoleInputChannel())
-    return agent
-
 
 if __name__ == '__main__':
     utils.configure_colored_logging(loglevel='DEBUG')
@@ -69,7 +79,7 @@ if __name__ == '__main__':
 
     parser.add_argument(
             'task',
-            choices=['train-nlu', 'train-dialogue', 'run', 'all'],
+            choices=['train-nlu', 'train-dialogue', 'run', 'run-facebook', 'all'],
             help='what the bot should do - e.g. run or train?')
     task = parser.parse_args().task
 
@@ -80,6 +90,11 @@ if __name__ == '__main__':
         train_dialogue()
     elif task == 'run':
         run()
+    elif task == 'run-facebook':
+        train_nlu()
+        train_dialogue()
+        run()
+        run_facebook()
     elif task == 'all':
         train_nlu()
         train_dialogue()
