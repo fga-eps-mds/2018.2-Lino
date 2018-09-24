@@ -1,5 +1,7 @@
 intents:
+  - greet
   - asks_daily_menu
+  - goodbye
 
 slots:
   period:
@@ -11,25 +13,14 @@ slots:
 
 actions:
 - utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
 - actions.menu.ActionDailyMenu
+- utter_goodbye
 
 templates:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great carry on!"
-
+    - text: "Oi! Eu sou o Lino, seu assistente de sobrevivência da FGA. Dentre 
+      minhas incríveis habilidades, constam tirar as suas dúvidas da
+      faculdade e te avisar quando você estiver perdendo aquela
+      carne de sol do R.U."
   utter_goodbye:
-  - text: "Bye"
+    - text: "Espero ter ajudado! Quando precisar de ajuda, já sabe onde procurar!"
