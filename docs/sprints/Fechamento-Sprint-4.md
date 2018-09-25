@@ -10,7 +10,7 @@
 
 >[5. Retrospectiva da Sprint](#5-retrospectiva-da-sprint)
 
->[6. Quadro de Conhecimento](#6-quadro-de-conhecimentos)
+>[6. Quadro de Conhecimento](#6-quadro-de-conhecimento)
 
 >[7. Quadro de Presença Daily](#7-quadro-de-presença-daily)
 
@@ -65,7 +65,7 @@ Todos esses documentos se tornaram débito técnico, pois ocorreram atrasos devi
 ## 5. Retrospectiva da _Sprint_
 
 | Pontos Positivos                           | Pontos Negativos           | Pontos a Melhorar                 |
-|-:-:----------------------------------------|-:-:------------------------|-:-:-------------------------------|
+|:------------------------------------------:|:--------------------------:|:---------------------------------:|
 | Aprendizado NFR                            | Organização do Tech Lead   | Constância do fechamento de issue |
 | Conhecimento Python, Node, Rasa, API Gmail | Zenhub                     | A melhorar o quadro de negativo   |
 | Organização                                | Falta da dupla             |                                   |
@@ -78,8 +78,6 @@ Todos esses documentos se tornaram débito técnico, pois ocorreram atrasos devi
 
 ------------
 ## 6. Quadro de Conhecimento
-
-
 ![](https://i.imgur.com/xjFPtQT.png)
 ------------
 
