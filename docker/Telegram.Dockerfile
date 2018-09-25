@@ -17,6 +17,6 @@ WORKDIR /2018.2-Lino/rasa
 ENV TRAINING_EPOCHS=300 \
     CREDENTIALS="credentials.yml"
 
-# EXPOSE 5002:5002
+EXPOSE 5002:5002
 
 CMD python3 train-telegram.py all
