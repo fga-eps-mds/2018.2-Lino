@@ -1,12 +1,12 @@
 FROM python:3.6
 
-RUN pip install rasa_core==0.10.3
+ADD ./requirements.txt /tmp
 
-RUN pip install rasa_nlu[spacy] && \
+RUN pip install -r /tmp/requirements.txt  && \
     python -m spacy download pt && \
     python -m spacy download en
 
-RUN pip install rasa_nlu[tensorflow]
+RUN pip uninstall -y tensorflow && pip install tensorflow==1.5
 
 RUN mkdir /2018.2-Lino
 
