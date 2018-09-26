@@ -1,0 +1,1 @@
+* * * * * curl webcrawler:5000/cardapio/Monday > /home/out_cron.json
