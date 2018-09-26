@@ -1,11 +1,9 @@
-## greet
+## path_daily_meal.1
 * greet
   - utter_greet
-
-## path_daily_meal
+* affirm
+  - utter_affirm
 * asks_daily_menu{"period": "hoje", "meal": ""}
   - action_daily_menu
-
-## goodbye
 * goodbye
   - utter_goodbye

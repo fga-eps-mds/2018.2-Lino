@@ -13,6 +13,19 @@
 - Oi migx
 - Oioi
 - Eae parça
+- yo
+- Oi Lino
+
+## intent:affirm
+- Legal
+- legal
+- Legau
+- Cool
+- Sim
+- Bem legal
+- Meh
+- ata
+- Wte
 
 ## intent:mood_deny
 - não
@@ -39,3 +52,5 @@
 - Smell ya later
 - Te vejo mais tarde
 - Volto depois
+- Tchau, obrigado
+- vlw flw
