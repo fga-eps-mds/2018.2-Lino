@@ -1,10 +1,16 @@
-
 stages:
+  - test
   - build
   - deploy
 
 variables:
   LINO_LATEST_IMAGE: $DOCKER_USER/lino:latest
+
+test_flake8:
+  image: ejplatform/python:alpine
+  stage: test
+  script:
+    - flake8
 
 build lino:
   image: docker:latest
@@ -18,9 +24,10 @@ build lino:
   only:
     - /master/
     - /devel/
+    - /Issue_94-PipelineDeploy/
   environment: production
 
-deploy_to_rancher:
+deploy_production:
   image: cdrx/rancher-gitlab-deploy
   stage: deploy
   script:
@@ -31,3 +38,6 @@ deploy_to_rancher:
             --rancher-key $RANCHER_ACCESS_KEY
             --rancher-secret $RANCHER_SECRET_KEY
             --rancher-url $RANCHER_URL"
+  only:
+    - /master/
+    - /Issue_94-PipelineDeploy/
