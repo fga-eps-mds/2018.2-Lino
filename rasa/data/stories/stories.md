@@ -5,3 +5,7 @@
 ## path_start
 * start
   - custom_start
+
+## path_ask_notification
+* notification
+  - action_ask_notification
