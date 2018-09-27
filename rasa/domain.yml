@@ -1,7 +1,9 @@
 intents:
-  - greet
   - affirm
   - goodbye
+  - asks_daily_menu
+  - greet
+  - start
 
 slots:
   period:
@@ -15,6 +17,9 @@ actions:
 - utter_greet
 - utter_affirm
 - utter_goodbye
+- actions.menu.ActionDailyMenu
+- actions.notifications.ActionHello
+- actions.notifications.ActionStart
 
 templates:
   utter_default:
