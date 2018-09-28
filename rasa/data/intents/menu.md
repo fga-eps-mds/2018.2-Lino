@@ -1,0 +1,14 @@
+## intent:asks_daily_menu
+- Me fala o cardápio de [hj](period)
+- Me fala o cardápio de [hoje](period)
+- O que tem pra comer [hoje](period)
+- Qual é o cardápio de [hoje](period)
+- Me passa o cardápio de [hoje](period)
+- Me fale sobre o ru
+- Quero saber a comida de [hoje](period)
+- RU [hoje](period)
+- RU
+- fome [hoje](period)
+- fome RU [hoje](period)
+- comida ru [hoje](period)
+- rango ru
