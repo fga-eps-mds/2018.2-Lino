@@ -1,6 +1,10 @@
 intents:
   - asks_daily_menu
 
+entities: 
+  - period
+  - meal
+
 slots:
   period:
     type: "text"
@@ -17,8 +21,8 @@ actions:
 templates:
   utter_default:
   - text: |
-    Desculpe, não entendi muito bem. Pode repetir?
+      Desculpe, não entendi muito bem. Pode repetir?
 
   utter_restart:
   - text: |
-    reeeeiniciandooo =>
+      reeeeiniciandooo =>
