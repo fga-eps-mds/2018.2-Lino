@@ -1,1 +1,1 @@
-* * * * * curl webcrawler:5000/cardapio/Monday > /home/out_cron.json
+0 7 * * 1-5 /notify.sh >> /home/out_cron.log 2>&1
