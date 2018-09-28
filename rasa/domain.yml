@@ -1,6 +1,10 @@
 intents:
   - asks_daily_menu
 
+entities: 
+  - period
+  - meal
+
 slots:
   period:
     type: "text"
