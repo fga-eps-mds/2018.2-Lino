@@ -1,10 +1,12 @@
-version: '2'
+version: '3'
 
 services:
     lino:
-        build: .
+        build:
+            context: .
+            dockerfile: docker/Telegram.Dockerfile
         ports:
-            - 5005:5005
+            - 5002:5002
         volumes:
             - .:/2018.2-Lino
     debian:
