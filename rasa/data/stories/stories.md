@@ -1,27 +1,11 @@
-## happy path
+## path_greey
 * greet
-  - utter_greet
-* mood_great
-  - utter_happy
+  - custom_greet
 
-## sad path 1
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* mood_affirm
-  - utter_happy
+## path_start
+* start
+  - custom_start
 
-## sad path 2
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* mood_deny
-  - utter_goodbye
-
-## say goodbye
-* goodbye
-  - utter_goodbye
+## path_ask_notification
+* notification
+  - action_ask_notification

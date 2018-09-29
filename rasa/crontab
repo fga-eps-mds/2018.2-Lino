@@ -1,0 +1,1 @@
+0 7 * * 1-5 /notify.sh >> /home/out_cron.log 2>&1

@@ -9,5 +9,19 @@ services:
             - 5002:5002
         volumes:
             - .:/2018.2-Lino
-        stdin_open: true
-        tty: true
+    debian:
+        build:
+            context: .
+            dockerfile: ./cronjob.Dockerfile
+        volumes:
+            - ./outputs:/home
+        depends_on:
+            - webcrawler
+    webcrawler:
+        build:
+            context: ../Lino-WebCrawler
+            dockerfile: Dockerfile
+        ports:
+            - 5000:5000
+        volumes:
+            - ../Lino-WebCrawler:/Lino-WebCrawler
