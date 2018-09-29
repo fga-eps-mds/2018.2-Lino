@@ -1,4 +1,3 @@
-FROM debian:latest
 FROM python:3.6
 
 RUN apt-get update && apt-get install --reinstall -y locales tzdata
@@ -18,6 +17,16 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN dpkg-reconfigure -f noninteractive tzdata
 
 RUN apt-get update && apt-get -y install cron
+
+ADD cron.requirements.txt .
+
+RUN pip install -r cron.requirements.txt
+
+ADD /rasa/notify.sh .
+RUN chmod +x notify.sh
+
+ADD /rasa/notifier.py .
+ADD /rasa/notification_config.py .
 
 ADD /rasa/crontab /etc/cron.d/menu-cron
 

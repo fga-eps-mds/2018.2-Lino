@@ -1,5 +1,8 @@
 intents:
   - asks_daily_menu
+  - greet
+  - start
+  - notification
 
 slots:
   period:
@@ -16,6 +19,9 @@ actions:
 - utter_happy
 - utter_goodbye
 - actions.menu.ActionDailyMenu
+- actions.notifications.ActionHello
+- actions.notifications.ActionStart
+- actions.notifications.ActionAskNotification
 
 templates:
   utter_greet:
