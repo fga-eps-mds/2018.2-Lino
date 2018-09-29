@@ -21,7 +21,7 @@ TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 300))
 
 def train_dialogue(domain_file='domain.yml',
                    model_path='models/dialogue',
-                   training_data_file='data/stories'):
+                   training_data_file='data/stories/'):
     fallback = FallbackPolicy(fallback_action_name="action_default_fallback",
                               core_threshold=0.12,
                               nlu_threshold=0.12)

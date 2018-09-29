@@ -9,6 +9,8 @@ services:
             - 5002:5002
         volumes:
             - .:/2018.2-Lino
+        depends_on:
+            - mongo_ru
     debian:
         build:
             context: .
@@ -25,3 +27,9 @@ services:
             - 5000:5000
         volumes:
             - ../Lino-WebCrawler:/Lino-WebCrawler
+    mongo_ru:
+        image: mongo:latest
+        volumes:
+            - /data/db
+        ports:
+            - 27017:27017

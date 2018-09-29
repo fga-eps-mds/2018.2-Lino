@@ -1,6 +1,8 @@
 ## path_starts_session.1
 * greet
   - utter_greet
+  - custom_start
+  - action_ask_notification
 * affirm
   - utter_affirm
 * goodbye
