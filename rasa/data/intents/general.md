@@ -26,6 +26,10 @@
 - Meh
 - ata
 - Wte
+- Show
+- Top
+- Daora
+- Pode pa
 
 ## intent:goodbye
 - Tchau tchau

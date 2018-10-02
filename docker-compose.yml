@@ -2,26 +2,38 @@ version: '3'
 
 services:
     lino:
-        build:
-            context: .
-            dockerfile: docker/Telegram.Dockerfile
+        image: guila/lino:latest
         ports:
             - 5002:5002
         volumes:
             - .:/2018.2-Lino
-    debian:
-        build:
-            context: .
-            dockerfile: ./cronjob.Dockerfile
+        stdin_open: true
+        tty: true
+        environment:
+          - ACCESS_TOKEN: ${ACCESS_TOKEN}
+          - VERIFY: ${VERIFY}
+          - WEBHOOK_URL: ${WEBHOOK_URL}
+        depends_on:
+            - cronjob
+
+    cronjob:
+        image: guila/cronjob:latest
         volumes:
             - ./outputs:/home
         depends_on:
             - webcrawler
+
+
     webcrawler:
-        build:
-            context: ../Lino-WebCrawler
-            dockerfile: Dockerfile
+        image: guila/webcrawler:latest
         ports:
             - 5000:5000
+        depends_on:
+            - mongo_ru
+
+    mongo_ru:
+        image: mongo:latest
         volumes:
-            - ../Lino-WebCrawler:/Lino-WebCrawler
+            - /l/crawler/crawler_db:/data/db
+        ports:
+            - 27014:27014

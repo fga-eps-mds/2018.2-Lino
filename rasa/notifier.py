@@ -5,7 +5,7 @@ from pymongo import MongoClient
 from pprint import pprint
 from notification_config import db_user, db_password, telegram_token
 
-client = MongoClient('mongodb://{}:{}@ds239930.mlab.com:39930/lino_ru'.format(db_user, db_password))
+client = MongoClient('mongo_ru', 27017)
 db = client.lino_ru
 
 def getUsers():

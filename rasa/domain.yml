@@ -19,7 +19,7 @@ actions:
 - utter_affirm
 - utter_goodbye
 - actions.menu.ActionDailyMenu
-- actions.notifications.ActionHello
+# - actions.notifications.ActionHello
 - actions.notifications.ActionStart
 - actions.notifications.ActionAskNotification
 
