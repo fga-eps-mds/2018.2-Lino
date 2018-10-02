@@ -12,9 +12,6 @@ test_flake8:
   stage: test
   script:
     - flake8
-  only:
-    - /master/
-    - /devel/
 
 build lino-telegram:
   image: docker:latest
@@ -27,8 +24,6 @@ build lino-telegram:
     - docker push $LINO_LATEST_IMAGE
   only:
     - /master/
-    - /devel/
-    - /Issue_94-PipelineDeploy/
   environment: production
 
 build cronjob:
@@ -42,8 +37,6 @@ build cronjob:
     - docker push $CRONJOB_LATEST_IMAGE
   only:
     - /master/
-    - /devel/
-    - /Issue_94-PipelineDeploy/
   environment: production
 
 deploy lino-telegram:
@@ -57,6 +50,8 @@ deploy lino-telegram:
             --rancher-key $RANCHER_ACCESS_KEY
             --rancher-secret $RANCHER_SECRET_KEY
             --rancher-url $RANCHER_URL"
+  only:
+    - /master/
 
 deploy cronjob:
   image: cdrx/rancher-gitlab-deploy
@@ -71,4 +66,3 @@ deploy cronjob:
             --rancher-url $RANCHER_URL"
   only:
     - /master/
-    - /Issue_94-PipelineDeploy/
