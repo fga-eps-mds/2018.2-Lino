@@ -2,34 +2,53 @@ version: '3'
 
 services:
     lino:
-        build:
-            context: .
-            dockerfile: docker/Telegram.Dockerfile
+        image: guila/lino:latest
         ports:
             - 5002:5002
         volumes:
             - .:/2018.2-Lino
         depends_on:
-            - mongo_ru
-    debian:
-        build:
-            context: .
-            dockerfile: ./cronjob.Dockerfile
+            - cronjob
+
+    cronjob:
+        image: guila/cronjob:latest
         volumes:
             - ./outputs:/home
         depends_on:
             - webcrawler
+
+
     webcrawler:
-        build:
-            context: ../Lino-WebCrawler
-            dockerfile: Dockerfile
+        image: guila/webcrawler:latest
         ports:
             - 5000:5000
-        volumes:
-            - ../Lino-WebCrawler:/Lino-WebCrawler
+        depends_on:
+            - mongo_ru
+
+
+    # alerta_gmail:
+    #     build:
+    #         context: ../Lino-Alerta
+    #         dockerfile: ../2018.2-Lino/Dockerfile
+    #     ports:
+    #         - 5001:5001
+    #     volumes:
+    #         - ../Lino-Alerta:/Lino-Alerta
+    #     depends_on:
+    #         - mongo_alert
+
+
     mongo_ru:
         image: mongo:latest
         volumes:
-            - /data/db
+            - /l/crawler/crawler_db:/data/db
         ports:
-            - 27017:27017
+            - 27014:27014
+
+
+    # mongo_alert:
+    #     image: mongo:latest
+    #     volumes:
+    #         - /l/gmail/gmail_db:/data/db
+    #     ports:
+    #         - 27016:27016
