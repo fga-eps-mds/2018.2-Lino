@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 import requests
 import time
+import os
 from pymongo import MongoClient
 from pprint import pprint
-from notification_config import db_user, db_password, telegram_token
 
-client = MongoClient('mongo_ru', 27017)
+client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
 db = client.lino_ru
+telegram_token = os.getenv('ACCESS_TOKEN', '')
 
 def getUsers():
     notifications = db.notifications
@@ -16,7 +17,7 @@ def getUsers():
 
 def getMenu():
     day = time.strftime('%A',time.localtime())
-    response = requests.get('http://webcrawler:5000/cardapio/{}'.format(day)).json()
+    response = requests.get('http://webcrawler-ru.lappis.rocks/cardapio/{}'.format(day)).json()
     return response
 
 def parseJson(res):
