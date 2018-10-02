@@ -1,6 +1,8 @@
 ## path_daily_meal
 * greet
   - utter_greet
+  - custom_start
+  - action_ask_notification
 * affirm
   - utter_affirm
 * asks_about_menu

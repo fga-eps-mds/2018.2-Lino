@@ -1,0 +1,45 @@
+stages:
+  - test
+  - build
+  - deploy
+
+variables:
+  LINO_LATEST_IMAGE: $DOCKER_USER/lino:latest
+
+test_flake8:
+  image: ejplatform/python:alpine
+  stage: test
+  script:
+    - flake8
+  only:
+    - /master/
+
+build lino:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - docker build -f docker/Telegram.Dockerfile -t $LINO_LATEST_IMAGE .
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - docker push $LINO_LATEST_IMAGE
+  only:
+    - /master/
+    - /devel/
+    - /Issue_86-DailyMenu/
+  environment: production
+
+deploy_production:
+  image: cdrx/rancher-gitlab-deploy
+  stage: deploy
+  script:
+    - "upgrade
+            --service lino-telegram
+            --environment $RANCHER_ENVIRONMENT
+            --stack $RANCHER_STACK
+            --rancher-key $RANCHER_ACCESS_KEY
+            --rancher-secret $RANCHER_SECRET_KEY
+            --rancher-url $RANCHER_URL"
+  only:
+    - /master/
+    - /Issue_86-DailyMenu/
