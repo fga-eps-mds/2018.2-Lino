@@ -6,12 +6,15 @@ stages:
 variables:
   LINO_LATEST_IMAGE: $DOCKER_USER/lino:latest
   CRONJOB_LATEST_IMAGE: $DOCKER_USER/cronjob:latest
+  LINO_LATEST_IMAGE_FACEBOOK: $DOCKER_USER/lino-facebook:latest
 
 test_flake8:
   image: ejplatform/python:alpine
   stage: test
   script:
     - flake8
+  only:
+    - /master/
 
 build lino-telegram:
   image: docker:latest
@@ -66,3 +69,42 @@ deploy cronjob:
             --rancher-url $RANCHER_URL"
   only:
     - /master/
+
+
+
+
+
+
+
+
+
+
+
+build lino-facebook:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - docker build -f docker/Messenger.Dockerfile -t $LINO_LATEST_IMAGE_FACEBOOK .
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - docker push $LINO_LATEST_IMAGE_FACEBOOK
+  only:
+    - /master/
+    - /Issue_94-PipelineDeploy/
+  environment: production
+
+deploy lino-facebook:
+  image: cdrx/rancher-gitlab-deploy
+  stage: deploy
+  script:
+    - "upgrade
+            --service lino-messenger
+            --environment $RANCHER_ENVIRONMENT
+            --stack $RANCHER_STACK
+            --rancher-key $RANCHER_ACCESS_KEY
+            --rancher-secret $RANCHER_SECRET_KEY
+            --rancher-url $RANCHER_URL"
+  only:
+    - /master/
+    - /Issue_94-PipelineDeploy/
