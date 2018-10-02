@@ -5,14 +5,18 @@ stages:
 
 variables:
   LINO_LATEST_IMAGE: $DOCKER_USER/lino:latest
+  CRONJOB_LATEST_IMAGE: $DOCKER_USER/cronjob:latest
 
 test_flake8:
   image: ejplatform/python:alpine
   stage: test
   script:
     - flake8
+  only:
+    - /master/
+    - /devel/
 
-build lino:
+build lino-telegram:
   image: docker:latest
   stage: build
   services:
@@ -27,12 +31,39 @@ build lino:
     - /Issue_94-PipelineDeploy/
   environment: production
 
-deploy_production:
+build cronjob:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - docker build . -t $CRONJOB_LATEST_IMAGE -f docker/Cronjob.Dockerfile
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - docker push $CRONJOB_LATEST_IMAGE
+  only:
+    - /master/
+    - /devel/
+    - /Issue_94-PipelineDeploy/
+  environment: production
+
+deploy lino-telegram:
   image: cdrx/rancher-gitlab-deploy
   stage: deploy
   script:
     - "upgrade
             --service lino-telegram
+            --environment $RANCHER_ENVIRONMENT
+            --stack $RANCHER_STACK
+            --rancher-key $RANCHER_ACCESS_KEY
+            --rancher-secret $RANCHER_SECRET_KEY
+            --rancher-url $RANCHER_URL"
+
+deploy cronjob:
+  image: cdrx/rancher-gitlab-deploy
+  stage: deploy
+  script:
+    - "upgrade
+            --service cronjob-lino
             --environment $RANCHER_ENVIRONMENT
             --stack $RANCHER_STACK
             --rancher-key $RANCHER_ACCESS_KEY
