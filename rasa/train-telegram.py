@@ -1,6 +1,5 @@
 import logging
 import os
-import yaml
 import train
 
 from rasa_core import utils
@@ -13,23 +12,24 @@ from rasa_core.channels.telegram import TelegramInput
 
 logger = logging.getLogger(__name__)
 
-CREDENTIALS = os.getenv('CREDENTIALS', 'credentials.yml')
-# LINO_PORT = int(os.getenv('LINO_PORT', 5005))
+ACCESS_TOKEN = os.getenv('ACCESS_TOKEN', '')
+VERIFY = os.getenv('VERIFY', '')
+WEBHOOK_URL = os.getenv('WEBHOOK_URL', '')
+
 
 def run():
-    interpreter = RasaNLUInterpreter('models/nlu/default/current')
-
-    configs = yaml.load(open(CREDENTIALS))
+    RasaNLUInterpreter('models/nlu/default/current')
 
     agent = Agent.load('models/dialogue', interpreter=RegexInterpreter())
 
     input_channel = TelegramInput(
-        access_token=configs['access_token'],
-        verify=configs['verify'],
-        webhook_url=configs['webhook_url']
+        access_token=ACCESS_TOKEN,
+        verify=VERIFY,
+        webhook_url=WEBHOOK_URL
     )
 
-    agent.handle_channel(HttpInputChannel(5002, "" , input_channel))
+    agent.handle_channel(HttpInputChannel(5002, "", input_channel))
+
 
 if __name__ == '__main__':
     utils.configure_colored_logging(loglevel='DEBUG')

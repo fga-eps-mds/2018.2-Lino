@@ -19,6 +19,7 @@ from rasa_core.interpreter import RegexInterpreter
 logger = logging.getLogger(__name__)
 TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 300))
 
+
 def train_dialogue(domain_file='domain.yml',
                    model_path='models/dialogue',
                    training_data_file='data/stories/'):
@@ -30,7 +31,6 @@ def train_dialogue(domain_file='domain.yml',
         domain_file,
         policies=[MemoizationPolicy(max_history=3), KerasPolicy(), fallback]
     )
-
 
     training_data = agent.load_data(training_data_file)
     agent.train(
