@@ -13,7 +13,7 @@ class ActionDailyMenu(Action):
         meal = tracker.get_slot('meal')
         day = time.strftime('%A',time.localtime())
         response = requests.get(
-            f'https://e0634282.ngrok.io/cardapio/{day}').json()
+            f'https://webcrawler-ru.lappis.rocks/cardapio/{day}').json()
         messages.append('Olá! Para o café de hoje nós teremos: ')
         for label in response['DESJEJUM']:
             messages.append(label + ' ' + response['DESJEJUM'][label])

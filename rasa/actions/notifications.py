@@ -20,7 +20,7 @@ class ActionHello(Action):
         messages = []
         a = tracker.current_state()
         print(a)
-        messages.append('Hello baby!')
+        messages.append('Yeaaaah!')
         messages.append('Seu id é: ' + str(a['sender_id']))
         for message in messages:
             dispatcher.utter_message(message)
@@ -34,7 +34,7 @@ class ActionStart(Action):
         messages = []
         a = tracker.current_state()
         id = a['sender_id']
-        text = 'Olá'
+        text = 'Ta-daaah'
         configs = yaml.load(open(CREDENTIALS))
         token = configs['access_token']
         data = requests.get(
@@ -71,7 +71,7 @@ class ActionAskNotification(Action):
             db.notifications.update_one({'id': 1}, {
                 '$set': {'users_list': user_list}
             })
-            messages.append('A partir de agora vc receberá notificações do RU')
+            messages.append('A partir de agora vc receberá notificações do RU!')
             print('SAVED IN DATABASE')
         else:
             messages.append('Você já está na lista de usuários cadastrados!')

@@ -19,17 +19,52 @@ slots:
     initial_value: ""
 
 actions:
-  - utter_default
-  - utter_restart
-  - utter_greet
-  - utter_affirm
-  - utter_goodbye
+  - utter_default #done
+  - utter_restart #done
+  - utter_greet #done
+  - utter_affirm #done
+  - utter_goodbye #done
+  - utter_menu #done
+  - utter_weekmenu #done
+  - utter_documents #done
+  - utter_notifications #done
+  - utter_gmail #done
   - actions.menu.ActionDailyMenu
   - actions.notifications.ActionHello
   - actions.notifications.ActionStart
   - actions.notifications.ActionAskNotification
 
 templates:
+  utter_menu:
+    - text: |
+        Ahh, tá na hora de comer né? 
+
+        É pra já, você quer saber o rango de hoje ou da semana?
+
+  utter_weekmenu:
+    - text: |
+        Eita, desculpa amigx. Ainda não consigo te falar o cardápio da semana
+
+        Mas relaxa que jaja eu consigo.
+
+  utter_documents:
+    - text: |
+        Eita, tá precisando de algum documento específico?
+
+        Mas sorry jovem, ainda não aprendi a fazer isso. Coming soon...
+
+  utter_notifications:
+    - text: |
+        Queres receber notificações sobre o cardápio do dia??
+  
+  utter_gmail:
+    - text: |
+        Não seria ótimo receber todos os e-mails dos professores por aqui mesmo?
+
+        Eu iria adorar
+
+        Mas vou ficar te devendo essa, sou bot baby ainda kkkkk        
+  
   utter_default:
     - text: |
         Não entendi muito bem.
