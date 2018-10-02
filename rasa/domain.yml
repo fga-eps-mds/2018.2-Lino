@@ -1,10 +1,15 @@
 intents:
   - affirm
   - goodbye
-  - asks_daily_menu
   - greet
   - start
   - notification
+  - asks_about_menu
+  - asks_daily_menu
+  - asks_weekly_menu
+  - asks_about_documents
+  - asks_about_notifications
+  - asks_about_gmail
 
 entities: 
   - period
