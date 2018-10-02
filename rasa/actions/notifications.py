@@ -7,15 +7,15 @@ from pymongo import MongoClient
 from rasa_core.actions.action import Action
 from rasa_core.events import UserUtteranceReverted
 
-CREDENTIALS = os.getenv('CREDENTIALS', '../credentials.yml')
-
-client = MongoClient('mongo_ru', 27017)
+client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
 db = client.lino_ru
+
+telegram_token = os.getenv('ACCESS_TOKEN', '')
 
 class ActionHello(Action):
     def name(self):
         return "custom_greet"
-    
+
     def run(self, dispatcher, tracker, domain):
         messages = []
         a = tracker.current_state()
@@ -29,16 +29,14 @@ class ActionHello(Action):
 class ActionStart(Action):
     def name(self):
         return "custom_start"
-    
+
     def run(self, dispatcher, tracker, domain):
         messages = []
         a = tracker.current_state()
         id = a['sender_id']
         text = 'Olá'
-        configs = yaml.load(open(CREDENTIALS))
-        token = configs['access_token']
         data = requests.get(
-                f'https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text={text}').json()
+                f'https://api.telegram.org/bot{telegram_token}/sendMessage?chat_id={id}&text={text}').json()
         print('SAVING IN THE DATABASE')
         new_user = {}
         id_user = {}
@@ -57,7 +55,7 @@ class ActionStart(Action):
 class ActionAskNotification(Action):
     def name(self):
         return "action_ask_notification"
-    
+
     def run(self, dispatcher, tracker, domain):
         messages = []
         a = tracker.current_state()
