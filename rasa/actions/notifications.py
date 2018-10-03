@@ -7,24 +7,12 @@ from pymongo import MongoClient
 from rasa_core.actions.action import Action
 from rasa_core.events import UserUtteranceReverted
 
-CREDENTIALS = os.getenv('CREDENTIALS', '../rasa/credentials.yml')
 
-client = MongoClient(f'mongodb://test:test2018@ds239930.mlab.com:39930/lino_ru')
+client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
 db = client.lino_ru
 
-class ActionHello(Action):
-    def name(self):
-        return "custom_greet"
+telegram_token = os.getenv('ACCESS_TOKEN', '')
 
-    def run(self, dispatcher, tracker, domain):
-        messages = []
-        a = tracker.current_state()
-        print(a)
-        messages.append('Yeaaaah!')
-        messages.append('Seu id é: ' + str(a['sender_id']))
-        for message in messages:
-            dispatcher.utter_message(message)
-        return []
 
 class ActionStart(Action):
     def name(self):
@@ -34,9 +22,11 @@ class ActionStart(Action):
         messages = []
         a = tracker.current_state()
         id = a['sender_id']
+
         token = os.getenv('ACCESS_TOKEN', '')
+
         data = requests.get(
-                f'https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text={text}').json()
+                f'https://api.telegram.org/bot{telegram_token}/sendMessage?chat_id={id}&text={text}').json()
         print('SAVING IN THE DATABASE')
         new_user = {}
         id_user = {}

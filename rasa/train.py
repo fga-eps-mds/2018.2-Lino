@@ -1,7 +1,6 @@
 import argparse
 import logging
 import os
-import fb_credentials
 
 from rasa_core import utils
 from rasa_core.agent import Agent
@@ -57,17 +56,6 @@ def train_nlu():
 
     return model_directory
 
-def run_facebook():
-    agent = Agent.load("models/dialogue", interpreter=RegexInterpreter())
-
-    input_channel = FacebookInput(
-        fb_verify=fb_credentials.verify,
-        fb_secret=fb_credentials.secret, 
-        fb_access_token=fb_credentials.page_access_token
-    )
-    agent.handle_channel(HttpInputChannel(5002, "/app", input_channel))
-
-
 def run(serve_forever=True):
     interpreter = RasaNLUInterpreter('models/nlu/default/current')
 
@@ -90,11 +78,6 @@ if __name__ == '__main__':
         train_dialogue()
     elif task == 'run':
         run()
-    elif task == 'run-facebook':
-        train_nlu()
-        train_dialogue()
-        run()
-        run_facebook()
     elif task == 'all':
         train_nlu()
         train_dialogue()
