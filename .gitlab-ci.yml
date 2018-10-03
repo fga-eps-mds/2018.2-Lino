@@ -1,0 +1,101 @@
+stages:
+  - test
+  - build
+  - deploy
+
+variables:
+  LINO_LATEST_IMAGE: $DOCKER_USER/lino:latest
+  CRONJOB_LATEST_IMAGE: $DOCKER_USER/cronjob:latest
+  LINO_LATEST_IMAGE_FACEBOOK: $DOCKER_USER/lino-facebook:latest
+
+test_flake8:
+  image: ejplatform/python:alpine
+  stage: test
+  script:
+    - flake8
+  only:
+    - /master/
+
+build lino-telegram:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - docker build -f docker/Telegram.Dockerfile -t $LINO_LATEST_IMAGE .
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - docker push $LINO_LATEST_IMAGE
+  only:
+    - /master/
+    - /devel/
+
+  environment: production
+
+build cronjob:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - docker build . -t $CRONJOB_LATEST_IMAGE -f docker/Cronjob.Dockerfile
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - docker push $CRONJOB_LATEST_IMAGE
+  only:
+    - /master/
+  environment: production
+
+deploy lino-telegram:
+  image: cdrx/rancher-gitlab-deploy
+  stage: deploy
+  script:
+    - "upgrade
+            --service lino-telegram
+            --environment $RANCHER_ENVIRONMENT
+            --stack $RANCHER_STACK
+            --rancher-key $RANCHER_ACCESS_KEY
+            --rancher-secret $RANCHER_SECRET_KEY
+            --rancher-url $RANCHER_URL"
+  only:
+    - /master/
+
+deploy cronjob:
+  image: cdrx/rancher-gitlab-deploy
+  stage: deploy
+  script:
+    - "upgrade
+            --service cronjob-lino
+            --environment $RANCHER_ENVIRONMENT
+            --stack $RANCHER_STACK
+            --rancher-key $RANCHER_ACCESS_KEY
+            --rancher-secret $RANCHER_SECRET_KEY
+            --rancher-url $RANCHER_URL"
+  only:
+    - /master/
+
+build lino-facebook:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - docker build -f docker/Messenger.Dockerfile -t $LINO_LATEST_IMAGE_FACEBOOK .
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - docker push $LINO_LATEST_IMAGE_FACEBOOK
+  only:
+    - /master/
+  environment: production
+
+deploy lino-facebook:
+  image: cdrx/rancher-gitlab-deploy
+  stage: deploy
+  script:
+    - "upgrade
+            --service lino-messenger
+            --environment $RANCHER_ENVIRONMENT
+            --stack $RANCHER_STACK_FACEBOOK
+            --rancher-key $RANCHER_ACCESS_KEY
+            --rancher-secret $RANCHER_SECRET_KEY
+            --rancher-url $RANCHER_URL"
+  only:
+    - /master/
+  

@@ -1,9 +1,39 @@
-version: '2'
+version: '3'
 
 services:
     lino:
-        build: .
+        image: guila/lino:latest
         ports:
-            - 5005:5005
+            - 5002:5002
         volumes:
             - .:/2018.2-Lino
+        stdin_open: true
+        tty: true
+        environment:
+          - ACCESS_TOKEN: ${ACCESS_TOKEN}
+          - VERIFY: ${VERIFY}
+          - WEBHOOK_URL: ${WEBHOOK_URL}
+        depends_on:
+            - cronjob
+
+    cronjob:
+        image: guila/cronjob:latest
+        volumes:
+            - ./outputs:/home
+        depends_on:
+            - webcrawler
+
+
+    webcrawler:
+        image: guila/webcrawler:latest
+        ports:
+            - 5000:5000
+        depends_on:
+            - mongo_ru
+
+    mongo_ru:
+        image: mongo:latest
+        volumes:
+            - /l/crawler/crawler_db:/data/db
+        ports:
+            - 27014:27014
