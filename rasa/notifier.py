@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 import requests
+import os
 import time
 from pymongo import MongoClient
 from pprint import pprint
-from notification_config import db_user, db_password, telegram_token
+from notification_config import db_user, db_password
 
-client = MongoClient('mongo_ru', 27017)
+client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
 db = client.lino_ru
+
+telegram_token = os.getenv('ACCESS_TOKEN', '')
 
 def getUsers():
     notifications = db.notifications
@@ -16,7 +19,7 @@ def getUsers():
 
 def getMenu():
     day = time.strftime('%A',time.localtime())
-    response = requests.get('http://webcrawler:5000/cardapio/{}'.format(day)).json()
+    response = requests.get('http://webcrawler-ru.lappis.rocks/cardapio/{}'.format(day)).json()
     return response
 
 def parseJson(res):
@@ -39,10 +42,10 @@ def notify(messages):
     for id in chats:
         for text in messages:
             a = requests.get(
-                'https://api.telegram.org/bot{}/sendChatAction?chat_id={}&action=typing'.format(telegram_token,id)).json()
+                'https://api.telegram.org/bot{}/sendChatAction?chat_id={}&action=typing'.format(telegram_token, id)).json()
             time.sleep(1)
             a = requests.get(
-                'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'.format(telegram_token,id,text)).json()
+                'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'.format(telegram_token, id, text)).json()
 
 res = getMenu()
 res = parseJson(res)
