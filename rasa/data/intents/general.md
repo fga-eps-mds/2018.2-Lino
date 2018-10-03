@@ -1,34 +1,33 @@
+## intent:out_of_scope
+- que
+- cade o estacionamento
+- to com frio
+- to com calor
+- cool
+- massa
+- sou abraçudo
+- preciso tirar SS
+- preciso passar na prova
+- ser ou não ser, cadê o bifão
+- última
+
 ## intent:greet
+- Oi
 - Olá
 - Iae
 - Fala meu compatriota
 - KKK eae man
-- kkk eae man
-- Ooi
-- Oii
-- Oi
 - Olar
 - Tudo bão?
 - Fala migx
 - Oi migx
-- Oioi
 - Eae parça
 - yo
 - Oi Lino
-
-## intent:affirm
-- Legal
-- legal
-- Legau
-- Cool
-- Sim
-- Bem legal
-- Meh
-- ata
-- Wte
+- hey
 
 ## intent:goodbye
-- Tchau tchau
+- Tchau 
 - Até mais
 - Tchau migx
 - Smell ya later

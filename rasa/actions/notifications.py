@@ -7,7 +7,7 @@ from pymongo import MongoClient
 from rasa_core.actions.action import Action
 from rasa_core.events import UserUtteranceReverted
 
-CREDENTIALS = os.getenv('CREDENTIALS', '../credentials.yml')
+CREDENTIALS = os.getenv('CREDENTIALS', '../rasa/credentials.yml')
 
 client = MongoClient(f'mongodb://test:test2018@ds239930.mlab.com:39930/lino_ru')
 db = client.lino_ru
