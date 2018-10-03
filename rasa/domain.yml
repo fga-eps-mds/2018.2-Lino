@@ -19,7 +19,6 @@ actions:
 - utter_affirm
 - utter_goodbye
 - actions.menu.ActionDailyMenu
-# - actions.notifications.ActionHello
 - actions.notifications.ActionStart
 - actions.notifications.ActionAskNotification
 
@@ -29,7 +28,7 @@ templates:
         Não entendi muito bem.
 
         Você poderia repetir, de outra maneira?
-        
+
   utter_restart:
     - text: |
         Reiniciando :)
@@ -44,10 +43,10 @@ templates:
   utter_affirm:
     - text: |
         Você gostaria de tirar alguma dúvida da faculdade, ver os avisos dos seus professores ou saber o que tá rolando no R.U.? Posso te ajudar nessas coisas.
-      
+
     - text: |
-        Você está precisando tirar alguma dúvida da UnB? Ou ver os e-mails dos seus professores ou saber o que tá rolando no R.U.? 
-        
+        Você está precisando tirar alguma dúvida da UnB? Ou ver os e-mails dos seus professores ou saber o que tá rolando no R.U.?
+
   utter_goodbye:
     - text: |
         Espero ter ajudado! Quando precisar de ajuda, já sabe onde procurar!

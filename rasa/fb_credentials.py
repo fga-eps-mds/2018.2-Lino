@@ -1,3 +1,0 @@
-verify = "lino"
-secret = "9faf1e57e1d429ac42473796a8eb0849"
-page_access_token = "EAANoEk6bk1MBACfBTZACN42HlDbVZCg5cRqoyZBwfZALh0mZCvd3hXDPuJl1bPijVQPXZBqfUvduVTKh96PFSKpGC2lrHhgb5kZCRMkkZByHtu0RQKUTM6P8OTnZCvGyfzinCsg64rbUoVN4MjaOBEblDzZBuSDyooMj98ZB5tJ3q8EXwZDZD"

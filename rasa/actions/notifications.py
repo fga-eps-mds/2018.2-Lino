@@ -12,19 +12,6 @@ db = client.lino_ru
 
 telegram_token = os.getenv('ACCESS_TOKEN', '')
 
-class ActionHello(Action):
-    def name(self):
-        return "custom_greet"
-
-    def run(self, dispatcher, tracker, domain):
-        messages = []
-        a = tracker.current_state()
-        print(a)
-        messages.append('Hello baby!')
-        messages.append('Seu id é: ' + str(a['sender_id']))
-        for message in messages:
-            dispatcher.utter_message(message)
-        return []
 
 class ActionStart(Action):
     def name(self):

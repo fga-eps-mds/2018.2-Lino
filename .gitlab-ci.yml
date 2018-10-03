@@ -27,6 +27,7 @@ build lino-telegram:
     - docker push $LINO_LATEST_IMAGE
   only:
     - /master/
+    - /Issue_94-PipelineDeploy/
   environment: production
 
 build cronjob:
@@ -55,6 +56,8 @@ deploy lino-telegram:
             --rancher-url $RANCHER_URL"
   only:
     - /master/
+    - /Issue_94-PipelineDeploy/
+
 
 deploy cronjob:
   image: cdrx/rancher-gitlab-deploy
@@ -69,16 +72,6 @@ deploy cronjob:
             --rancher-url $RANCHER_URL"
   only:
     - /master/
-
-
-
-
-
-
-
-
-
-
 
 build lino-facebook:
   image: docker:latest
@@ -101,7 +94,7 @@ deploy lino-facebook:
     - "upgrade
             --service lino-messenger
             --environment $RANCHER_ENVIRONMENT
-            --stack $RANCHER_STACK
+            --stack $RANCHER_STACK_FACEBOOK
             --rancher-key $RANCHER_ACCESS_KEY
             --rancher-secret $RANCHER_SECRET_KEY
             --rancher-url $RANCHER_URL"
