@@ -7,6 +7,7 @@ from pymongo import MongoClient
 from rasa_core.actions.action import Action
 from rasa_core.events import UserUtteranceReverted
 
+
 client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
 db = client.lino_ru
 
@@ -21,7 +22,9 @@ class ActionStart(Action):
         messages = []
         a = tracker.current_state()
         id = a['sender_id']
-        text = 'Olá'
+
+        token = os.getenv('ACCESS_TOKEN', '')
+
         data = requests.get(
                 f'https://api.telegram.org/bot{telegram_token}/sendMessage?chat_id={id}&text={text}').json()
         print('SAVING IN THE DATABASE')
@@ -66,7 +69,7 @@ class ActionAskNotification(Action):
             db.notifications.update_one({'id': 1}, {
                 '$set': {'users_list': user_list}
             })
-            messages.append('A partir de agora vc receberá notificações do RU')
+            messages.append('A partir de agora vc receberá notificações do RU!')
             print('SAVED IN DATABASE')
         else:
             messages.append('Você já está na lista de usuários cadastrados!')

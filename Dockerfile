@@ -2,13 +2,16 @@ FROM python:3.6
 
 RUN apt-get install -y git
 
-RUN pip install rasa_core==0.10.3
+RUN pip install rasa_core==0.10.4
 
 RUN pip install rasa_nlu[spacy] && \
     python -m spacy download pt && \
     python -m spacy download en
 
 RUN pip install rasa_nlu[tensorflow]
+
+RUN pip install pymongo
+RUN pip install requests
 
 RUN mkdir /2018.2-Lino
 
