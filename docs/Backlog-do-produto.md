@@ -40,7 +40,7 @@
 |US06|Não Funcional|Lino|transformar o PDF do cardápio em texto| para informar o usuário| _Must Have_|FT01|
 |US07|Não Funcional|Lino|me comunicar com os usuários pelo mensageiro Messenger|enviar mensagens a usuários dessa plataforma|_Must Have_|FT11|
 |US08|Não Funcional|Lino|me comunicar com os usuários pelo mensageiro Telegram|enviar mensagens a usuários dessa plataforma|_Must Have_|FT11|
-|US09|Funcional|Servidor|enviar uma mensagem via Lino|os usuários|_Must Have_|FT02|
+|US09|Funcional|Servidor | enviar uma mensagem via gmail | informar os usuarios via lino|_Must Have_|FT02|
 |US10|Não Funcional|Lino|desejo receber um email do Servidor(ator)|notificar os usuários|_Must Have_|FT02|
 |US11|Não Funcional|Lino|acessar a API do Gmail|enviar as mensagens recebidas aos usuários|_Must Have_|FT02|
 |US12|Não Funcional|Lino|armazenar o conteúdo das conversas em um banco de dados|fornecer métricas|_Could Have_|FT09 & FT10|
@@ -73,3 +73,20 @@
 | I10 | FT04 | Saber informações do funcionamento de estágio | No caso de estágios não obrigatórios, você deve fazer... Se for obrigatório, siga... | - | - | 
 | I11 | FT07 | Tirar duvida sobre o período de monitoria | O período de inscrição para monitoria é... | periodo, monitoria |Buscar período de monitoria e enviar ao solicitante |
 
+## Tasks
+|US|ID|Descrição|_Feature_|
+|:--:|:--:|:------------:|:-----------:|
+|US01|T01| Realizar o agendamento do envio do cardápio diário aos usuários do *Telegram* e do *Messenger*, informando-os, em um horário determinado| FT01|
+|US01|T02|Registrar usuário, do *Telegram* e do *Messenger* que queria receber a notificação do cardápio diário, no banco de dados| FT01|
+|US01|T03|Enviar através de mensagens para o usuário cadastrado no *Messenger* | FT01|
+|US01|T04|Enviar através de mensagens para o usuário cadastrado no *Telegram* | FT01|
+|US02|T01| Realizar o agendamento do envio do cardápio semanal aos usuários do *Telegram* e do *Messenger*, informando-os, em um horário determinado| FT01|
+|US02|T02|Registrar usuário, do *Telegram* e do *Messenger* que queria receber a notificação do cardápio semanal, no banco de dados| FT01|
+|US02|T03|Enviar através de mensagens do cardápio semanal para o usuário cadastrado no *Messenger* | FT01|
+|US02|T04|Enviar através de mensagens do cardápio semanal  para o usuário cadastrado no *Telegram* | FT01|
+|US04|T01| Determinar ação para que o usuário possa retirar ou adicionar permissão de notificação(diário e semanal) no *Messenger*| FT01 & FT02|
+|US04|T02|Determinar ação para que o usuário possa retirar ou adicionar permissão de notificação(diário e semanal) no *Telegramr*| FT01 & FT02|
+|US04|T03|Alterar permissões do usuário do *Messenger*, no banco de dados, de acordo com o recebido pelo Lino | FT01 & FT02|
+|US04|T04|Alterar permissões do usuário do *Telegram*, no banco de dados, de acordo com o recebido pelo Lino | FT01 & FT02|
+|US05|T01|Criar JSONs para cardápio semanal, diário e por cada refeição| FT01|
+|US05|T02|Fazer comunicação WebCrawler com Lino para recebimento de JSONs| FT01|
