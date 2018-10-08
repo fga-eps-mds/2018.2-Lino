@@ -42,7 +42,7 @@ class ActionStart(Action):
             print('ALREADY EXISTS')
         return []
 
-class ActionAskNotification(Action):
+class ActionAskNotificationGmail(Action):
     def name(self):
         return "action_ask_notification"
 
@@ -61,7 +61,7 @@ class ActionAskNotification(Action):
                 'description': 'menu_day',
                 'users_list': new_users
             })
-            messages.append('A partir de agora vc receberá notificações do RU')
+            messages.append('A partir de agora vc receberá notificações de email dos seus professores1')
         else:
             user_list = notifications['users_list']
         if id not in user_list:
@@ -69,7 +69,7 @@ class ActionAskNotification(Action):
             db.notifications.update_one({'id': 1}, {
                 '$set': {'users_list': user_list}
             })
-            messages.append('A partir de agora vc receberá notificações do RU!')
+            messages.append('A partir de agora vc receberá notificações de email dos seus professores!')
             print('SAVED IN DATABASE')
         else:
             messages.append('Você já está na lista de usuários cadastrados!')

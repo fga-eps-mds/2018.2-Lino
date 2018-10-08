@@ -40,12 +40,15 @@ actions:
   - utter_notifications 
   - actions.notifications.ActionHello
   - actions.notifications.ActionStart
-  - actions.notifications.ActionAskNotification
+  - actions.notifications.ActionAskNotificationRU
+  - actions.notifications.ActionAskNotificationGmail
 
   - utter_documents
 
-
-  - utter_gmail 
+  - utter_gmail
+  - actions.notifications.ActionHello
+  - actions.notifications.ActionStart
+  - actions.notifications.ActionAskNotificationGmail
   
   
 templates:

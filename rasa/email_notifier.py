@@ -8,8 +8,8 @@ from pprint import pprint
 from notification_config import db_user, db_password
 
 
-# client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
-# db = client.lino_ru
+client = MongoClient('mongodb://http://ds041831.mlab.com:41831/')
+db = client.ds041831
 telegram_token = os.getenv('ACCESS_TOKEN', '')
 
 telegram_token = os.getenv('ACCESS_TOKEN', '')
@@ -20,9 +20,11 @@ def getUsers():
     print(result)
     return result['users_list']
 
-def getMenu():
-    day = time.strftime('%A',time.localtime())
-    response = requests.get('http://webcrawler-ru.lappis.rocks/cardapio/{}'.format(day)).json()
+# def getMenu():
+#     day = time.strftime('%A',time.localtime())
+#     response = requests.get('http://'.format(day)).json()
+#     return response
+def getEmail():
     return response
 
 def parseJson(res):
@@ -50,6 +52,6 @@ def notify(messages):
             a = requests.get(
                 'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'.format(telegram_token, id, text)).json()
 
-res = getMenu()
+res = getEmail()
 res = parseJson(res)
 a = notify(res)

@@ -42,7 +42,7 @@ class ActionStart(Action):
             print('ALREADY EXISTS')
         return []
 
-class ActionAskNotification(Action):
+class ActionAskNotificationRU(Action):
     def name(self):
         return "action_ask_notification"
 
