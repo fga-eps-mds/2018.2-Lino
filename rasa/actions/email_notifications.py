@@ -8,8 +8,8 @@ from rasa_core.actions.action import Action
 from rasa_core.events import UserUtteranceReverted
 
 
-client = MongoClient('mongodb://http://ds041831.mlab.com:41831/')
-db = client.ds041831
+client = MongoClient('mongodb://http://ds041831.mlab.com:41831/newAlert')
+db = client.239258843822-cgk0toiq0bjuga3213t1qm0vhgh5gjh2.apps.googleusercontent.com
 
 telegram_token = os.getenv('ACCESS_TOKEN', '')
 
@@ -58,7 +58,7 @@ class ActionAskNotificationGmail(Action):
             new_users.append(id)
             db.notifications.insert_one({
                 'id': 1,
-                'description': 'menu_day',
+                'description': 'email',
                 'users_list': new_users
             })
             messages.append('A partir de agora vc receberá notificações de email dos seus professores1')
