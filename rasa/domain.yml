@@ -37,8 +37,7 @@ actions:
   - actions.menu.ActionDailyMenu
   - utter_weekmenu  
   
-  - utter_notifications 
-  - actions.notifications.ActionHello
+  - utter_notifications
   - actions.notifications.ActionStart
   - actions.notifications.ActionAskNotification
 
