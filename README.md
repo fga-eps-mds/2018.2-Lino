@@ -48,6 +48,49 @@
 
 As políticas de _branches_, _commits_, _pull requests_ e _issues_ se encontram [aqui](https://github.com/fga-eps-mds/2018.2-Lino/tree/master/docs/policies)
 
+#### Desenvolvimento
+
+Para começar a desenvolver precisamos fazer algumas mudanças no código para que funcione localmente.
+
+Todas as mudanças estão descritas no código onde deve ser alterado, só que você não vai precisar sair procurando, eu vou lhe dizer onde que é.
+
+1. Altere o banco que deseja utilizar no arquivo notifier.py e no notifications.py
+```
+# If you have your own database, changes to ('database', <PORT>)
+client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
+```
+
+2. Caso esteja trabalhando com o Telegram, adicione o token nos arquivos notifier e no notifications.py
+```
+# If you want to use your own bot to development add the bot token as
+# second parameters
+telegram_token = os.getenv('ACCESS_TOKEN', '')
+```
+
+3. Caso esteja rodando o webcrawler local, altere a URL no arquivo notifier e no menu.py
+```
+# Change the url if you have your own webcrawler server
+response = requests.get('http://<imagem_crawler>:<porta_crawler>/cardapio/{}'.format(day)).json()
+```
+
+4. Caso queira usar com os mensageiros o Lino, utilize o ngrok para expor para o mundo
+```
+./ngrok http <porta_bot>
+```
+
+5. Adicione as credenciais do bot no train-messenger ou no train-telegram (Exemplo abaixo sobre o Telegram)
+```
+# If you want to use your own bot to development
+# add the bot credentials as second parameters
+ACCESS_TOKEN = os.getenv('ACCESS_TOKEN', '')
+VERIFY = os.getenv('VERIFY', '')
+# the webhook URL is one that ngrok generates (https)
+WEBHOOK_URL = os.getenv('WEBHOOK_URL', '')
+```
+
+5. Agora está tudo certinho pra você começar a desenvolver e testar o bot :)
+
+
 #### Testando o Lino no Terminal
 
 Para testar as alterações feitas no Lino, execute os seguintes comandos no terminal:
@@ -59,7 +102,7 @@ sudo docker build -t lino .
 
 2. Inicialize o _container_:
 ```
-sudo docker run --rm -it -v $PWD:/2018.2-Lino lino
+sudo docker run --rm -it -p 5002:5002 -v $PWD:/2018.2-Lino lino
 ```
 
 3. Agora basta testar as novas alterações pelo terminal.
