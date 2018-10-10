@@ -28,26 +28,25 @@ slots:
     initial_value: ""
 
 actions:
-  - utter_default 
+  - utter_default
   - utter_restart
-  - utter_greet 
+  - utter_greet
   - utter_goodbye
-  
-  - utter_menu 
+
+  - utter_menu
   - actions.menu.ActionDailyMenu
-  - utter_weekmenu  
-  
-  - utter_notifications 
-  - actions.notifications.ActionHello
+  - utter_weekmenu
+
+  - utter_notifications
   - actions.notifications.ActionStart
   - actions.notifications.ActionAskNotification
 
   - utter_documents
 
 
-  - utter_gmail 
-  
-  
+  - utter_gmail
+
+
 templates:
   utter_default:
     - text: |

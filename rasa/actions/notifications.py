@@ -7,12 +7,13 @@ from pymongo import MongoClient
 from rasa_core.actions.action import Action
 from rasa_core.events import UserUtteranceReverted
 
-
+# If you have your own database, changes to ('database', <PORT>)
 client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
 db = client.lino_ru
 
+# If you want to use your own bot to development add the bot token as
+# second parameters
 telegram_token = os.getenv('ACCESS_TOKEN', '')
-
 
 class ActionStart(Action):
     def name(self):
@@ -22,8 +23,6 @@ class ActionStart(Action):
         messages = []
         a = tracker.current_state()
         id = a['sender_id']
-
-        token = os.getenv('ACCESS_TOKEN', '')
 
         data = requests.get(
                 f'https://api.telegram.org/bot{telegram_token}/sendMessage?chat_id={id}&text={text}').json()
