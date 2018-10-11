@@ -15,20 +15,19 @@ def getEmail():
 
 def parseJson(res):
     messages = []
-    for item in res:
-        if item.status == 200:
+    for response in res:
+        if response.get == 200:
             text = 'Você tem um novo e-mail!' + '\n'
             messages.append(text)
-        elif item.status == 404:
+        elif response.get == 404:
             text = 'Parece que ninguém te mandou nada. Try again later' + '\n'
         else:
             text = 'Amigo, não to te achando aqui na lista de e-mail' + '\n'
         messages.append(text)
         return messages
-        for text in messages:
 
 def notify(messages):
-    chats = getUsers()
+    chats = getEmail()
     for item in messages:
         item = item.replace(' ', '+')
     for id in chats:

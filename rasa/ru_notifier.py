@@ -12,8 +12,6 @@ client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
 db = client.lino_ru
 telegram_token = os.getenv('ACCESS_TOKEN', '')
 
-telegram_token = os.getenv('ACCESS_TOKEN', '')
-
 def getUsers():
     notifications = db.notifications
     result = notifications.find_one()
