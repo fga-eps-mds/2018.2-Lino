@@ -76,10 +76,10 @@
 ## Tasks
 |US|ID|Descrição|_Feature_| Pontuação |
 |:--:|:--:|:------------:|:-----------:|:--:|
-|US01|T01| Realizar o agendamento do envio do cardápio diário aos usuários do *Telegram* e do *Messenger*, informando-os, em um horário determinado| FT01|
-|US01|T02|Registrar usuário, do *Telegram* e do *Messenger* que queria receber a notificação do cardápio diário, no banco de dados| FT01|
-|US01|T03|Enviar através de mensagens para o usuário cadastrado no *Messenger* | FT01|
-|US01|T04|Enviar através de mensagens para o usuário cadastrado no *Telegram* | FT01|
+|US01|T01| Realizar o agendamento do envio do cardápio diário aos usuários do *Telegram* e do *Messenger*, informando-os, em um horário determinado| FT01| - |
+|US01|T02|Registrar usuário, do *Telegram* e do *Messenger* que queria receber a notificação do cardápio diário, no banco de dados| FT01| - |
+|US01|T03|Enviar através de mensagens para o usuário cadastrado no *Messenger* | FT01| - |
+|US01|T04|Enviar através de mensagens para o usuário cadastrado no *Telegram* | FT01| - |
 |US02|T01| Realizar o agendamento do envio do cardápio semanal aos usuários do *Telegram* e do *Messenger*, informando-os, em um horário determinado| FT01| 5 |
 |US02|T02|Registrar usuário, do *Telegram* e do *Messenger* que queria receber a notificação do cardápio semanal, no banco de dados| FT01| 8 |
 |US02|T03|Enviar através de mensagens do cardápio semanal para o usuário cadastrado no *Messenger* | FT01| 5 |
@@ -88,5 +88,5 @@
 |US04|T02|Determinar ação para que o usuário possa retirar ou adicionar permissão de notificação(diário e semanal) no *Telegramr*| FT01 & FT02| 5 |
 |US04|T03|Alterar permissões do usuário do *Messenger*, no banco de dados, de acordo com o recebido pelo Lino | FT01 & FT02| 13 |
 |US04|T04|Alterar permissões do usuário do *Telegram*, no banco de dados, de acordo com o recebido pelo Lino | FT01 & FT02| 13 |
-|US05|T01|Criar JSONs para cardápio semanal, diário e por cada refeição| FT01|
-|US05|T02|Fazer comunicação WebCrawler com Lino para recebimento de JSONs| FT01|
+|US05|T01|Criar JSONs para cardápio semanal, diário e por cada refeição| FT01| - |
+|US05|T02|Fazer comunicação WebCrawler com Lino para recebimento de JSONs| FT01| - |
