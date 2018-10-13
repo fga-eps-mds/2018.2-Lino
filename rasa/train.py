@@ -10,26 +10,21 @@ from rasa_core.policies.fallback import FallbackPolicy
 from rasa_core.policies.keras_policy import KerasPolicy
 from rasa_core.policies.memoization import MemoizationPolicy
 
-from rasa_core.channels import HttpInputChannel
-from rasa_core.channels.facebook import FacebookInput
-from rasa_core.agent import Agent
-from rasa_core.interpreter import RegexInterpreter
-
 logger = logging.getLogger(__name__)
 TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 300))
 
-
 def train_dialogue(domain_file='domain.yml',
                    model_path='models/dialogue',
-                   training_data_file='data/stories/'):
+                   training_data_file='data/stories'):
     fallback = FallbackPolicy(fallback_action_name="action_default_fallback",
                               core_threshold=0.12,
                               nlu_threshold=0.12)
 
     agent = Agent(
         domain_file,
-        policies=[MemoizationPolicy(max_history=6), KerasPolicy(), fallback]
+        policies=[MemoizationPolicy(max_history=3), KerasPolicy(), fallback]
     )
+
 
     training_data = agent.load_data(training_data_file)
     agent.train(
@@ -56,8 +51,15 @@ def train_nlu():
 
     return model_directory
 
+
 def run(serve_forever=True):
     interpreter = RasaNLUInterpreter('models/nlu/default/current')
+    agent = Agent.load('models/dialogue', interpreter=interpreter)
+
+    if serve_forever:
+        agent.handle_channel(ConsoleInputChannel())
+    return agent
+
 
 if __name__ == '__main__':
     utils.configure_colored_logging(loglevel='DEBUG')
@@ -67,7 +69,7 @@ if __name__ == '__main__':
 
     parser.add_argument(
             'task',
-            choices=['train-nlu', 'train-dialogue', 'run', 'run-facebook', 'all'],
+            choices=['train-nlu', 'train-dialogue', 'run', 'all'],
             help='what the bot should do - e.g. run or train?')
     task = parser.parse_args().task
 

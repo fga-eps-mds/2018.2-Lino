@@ -2,6 +2,8 @@ import requests
 import time
 from rasa_core.actions.action import Action
 from rasa_core.events import UserUtteranceReverted
+import logging
+from pprint import pprint
 
 class ActionDailyMenu(Action):
     def name(self):
@@ -12,8 +14,8 @@ class ActionDailyMenu(Action):
         period = tracker.get_slot('period')
         meal = tracker.get_slot('meal')
         day = time.strftime('%A',time.localtime())
-        response = requests.get(
-            f'https://webcrawler-ru.lappis.rocks/cardapio/{day}').json()
+        response = requests.get('http://webcrawler-ru.lappis.rocks/cardapio/{}'.format(day)).json()
+
         messages.append('Olá! Para o café de hoje nós teremos: ')
         for label in response['DESJEJUM']:
             messages.append(label + ' ' + response['DESJEJUM'][label])
