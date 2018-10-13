@@ -1,7 +1,5 @@
 FROM python:3.6
 
-RUN apt-get install -y git
-
 RUN pip install rasa_core==0.10.4
 
 RUN pip install rasa_nlu[spacy] && \

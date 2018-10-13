@@ -2,6 +2,8 @@ import requests
 import time
 from rasa_core.actions.action import Action
 from rasa_core.events import UserUtteranceReverted
+import logging
+from pprint import pprint
 
 class ActionDailyMenu(Action):
     def name(self):
