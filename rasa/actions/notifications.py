@@ -11,7 +11,7 @@ from rasa_core.events import UserUtteranceReverted
 client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
 db = client.lino_ru
 
-telegram_token = os.getenv('ACCESS_TOKEN', '445036585:AAFYeGa-B8dfjr4REXyosH2avrBkZxqb5pE')
+telegram_token = os.getenv('ACCESS_TOKEN', '')
 
 
 class ActionStart(Action):

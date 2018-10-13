@@ -1,35 +1,37 @@
 # -*- coding: utf-8 -*-
 import requests
+import urllib, json
 import os
 import time
 import os
-from pymongo import MongoClient
 from pprint import pprint
-from notification_config import db_user, db_password, telegram_token
 
 telegram_token = os.getenv('ACCESS_TOKEN', '')
 
+URL = 'http://localhost:3000/newAlert'
+
 def getEmail():
-    response = requests.get('http://localhost:3000/newAlert').json()
+    response = requests.get(url = URL)
+    data = response.json()
     return response
 
 def parseJson(res):
     messages = []
     for response in res:
         if response.get == 200:
-            text = 'Você tem um novo e-mail!' + '\n'
+            text = url.date + '\n' + url.name + '\n' + url.email + '\n' + url.subject + '\n' + url.message
             messages.append(text)
         elif response.get == 404:
             text = 'Parece que ninguém te mandou nada. Try again later' + '\n'
         else:
-            text = 'Amigo, não to te achando aqui na lista de e-mail' + '\n'
+            text = 'Jovem, não to te achando aqui na lista de e-mail' + '\n'
         messages.append(text)
         return messages
 
 def notify(messages):
     chats = getEmail()
-    for item in messages:
-        item = item.replace(' ', '+')
+    for response in messages:
+        response = response.replace(' ', '+')
     for id in chats:
             a = requests.get(
                 'https://api.telegram.org/bot{}/sendChatAction?chat_id={}&action=typing'.format(telegram_token, id)).json()

@@ -8,8 +8,7 @@ intents:
   - asks_weekly_menu
   
   - asks_about_notifications
-  - start
-  - notification
+  - action_ask_notification
 
   - asks_about_documents
   
@@ -37,18 +36,13 @@ actions:
   - actions.menu.ActionDailyMenu
   - utter_weekmenu  
   
-  - utter_notifications 
-  - actions.notifications.ActionHello
+  - utter_notifications
   - actions.notifications.ActionStart
-  - actions.notifications.ActionAskNotificationRU
-  - actions.notifications.ActionAskNotificationGmail
+  - actions.notifications.ActionAskNotification
 
   - utter_documents
 
   - utter_gmail
-  - actions.notifications.ActionHello
-  - actions.notifications.ActionStart
-  - actions.notifications.ActionAskNotificationGmail
   
   
 templates:
