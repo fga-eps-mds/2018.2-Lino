@@ -12,6 +12,7 @@ class ActionDailyMenu(Action):
         tracker.get_slot('period')
         tracker.get_slot('meal')
         day = time.strftime('%A', time.localtime())
+        # Change the url if you have your own webcrawler server
         response = requests.get(
             f'https://webcrawler-ru.lappis.rocks/cardapio/{day}').json()
 

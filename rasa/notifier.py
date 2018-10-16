@@ -6,8 +6,9 @@ from pymongo import MongoClient
 
 client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
 db = client.lino_ru
-telegram_token = os.getenv('ACCESS_TOKEN', '')
 
+# If you want to use your own bot to development add the bot token as
+# second parameters
 telegram_token = os.getenv('ACCESS_TOKEN', '')
 
 
@@ -22,6 +23,7 @@ def getUsers():
 
 def getMenu():
     day = time.strftime('%A', time.localtime())
+    # Change the url if you have your own webcrawler server
     response = requests.get(
                     'http://webcrawler-ru.lappis.rocks/cardapio/{}'
                     .format(day)
@@ -39,8 +41,10 @@ def parseJson(res):
             text = 'Para o ' + item.lower() + ':\n'
         else:
             text = 'Para o ' + 'café da manhã:' + '\n'
+
         for sub in res[item]:
             text += sub + ' ' + res[item][sub] + '\n'
+
         messages.append(text)
 
     return messages

@@ -11,6 +11,8 @@ from rasa_core.channels.telegram import TelegramInput
 
 logger = logging.getLogger(__name__)
 
+# If you want to use your own bot to development add the bot credentials as
+# second parameters
 ACCESS_TOKEN = os.getenv('ACCESS_TOKEN', '')
 VERIFY = os.getenv('VERIFY', '')
 WEBHOOK_URL = os.getenv('WEBHOOK_URL', '')
