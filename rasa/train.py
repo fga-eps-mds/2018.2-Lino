@@ -4,8 +4,6 @@ import os
 
 from rasa_core import utils
 from rasa_core.agent import Agent
-from rasa_core.channels import HttpInputChannel
-from rasa_core.interpreter import RegexInterpreter
 from rasa_core.interpreter import RasaNLUInterpreter
 from rasa_core.policies.fallback import FallbackPolicy
 from rasa_core.policies.keras_policy import KerasPolicy
@@ -16,6 +14,7 @@ from rasa_core.policies.memoization import MemoizationPolicy
 logger = logging.getLogger(__name__)
 
 TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 300))
+
 
 def train_dialogue(domain_file='domain.yml',
                    model_path='models/dialogue',
@@ -30,7 +29,6 @@ def train_dialogue(domain_file='domain.yml',
         domain_file,
         policies=[MemoizationPolicy(max_history=3), KerasPolicy(), fallback]
     )
-
 
     training_data = agent.load_data(training_data_file)
 
