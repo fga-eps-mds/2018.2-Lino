@@ -5,11 +5,7 @@ ADD ./requirements.txt /tmp
 RUN pip install -r /tmp/requirements.txt  && \
     python -m spacy download pt
 
-RUN pip install rasa_nlu[tensorflow]
-
-RUN pip install pymongo
-RUN pip install requests
-RUN pip install httpretty
+RUN pip uninstall -y tensorflow && pip install tensorflow==1.5
 
 RUN mkdir /2018.2-Lino
 
@@ -17,7 +13,7 @@ ADD . /2018.2-Lino
 
 WORKDIR /2018.2-Lino/rasa
 
-ENV TRAINING_EPOCHS=300 \
+ENV TRAINING_EPOCHS=450 \
     CREDENTIALS="credentials.yml"
 
-CMD python -m rasa_core.run -d models/dialogue -u models/nlu/default/current --port 5002 -c telegram --credentials credentials.yml
+CMD python train-telegram.py
