@@ -1,2 +1,0 @@
-* * * * * wget -O - -q -t 1 http://localhost:3000/newAlert
-0 11 * * 1-5 /notify_gmail.sh >> /home/out_cron.log 2>&1
