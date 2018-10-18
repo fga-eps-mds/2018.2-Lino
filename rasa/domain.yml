@@ -2,20 +2,20 @@ intents:
   - out_of_scope
   - greet
   - goodbye
-  
+
   - asks_about_menu
   - asks_daily_menu
   - asks_weekly_menu
-  
+
   - asks_about_notifications
   - start
   - notification
 
   - asks_about_documents
-  
+
   - asks_about_gmail
 
-entities: 
+entities:
   - period
   - meal
 
@@ -28,26 +28,25 @@ slots:
     initial_value: ""
 
 actions:
-  - utter_default 
+  - utter_default
   - utter_restart
-  - utter_greet 
+  - utter_greet
   - utter_goodbye
-  
-  - utter_menu 
+
+  - utter_menu
   - actions.menu.ActionDailyMenu
-  - utter_weekmenu  
-  
-  - utter_notifications 
-  - actions.notifications.ActionHello
+  - utter_weekmenu
+
+  - utter_notifications
   - actions.notifications.ActionStart
   - actions.notifications.ActionAskNotification
 
   - utter_documents
 
 
-  - utter_gmail 
-  
-  
+  - utter_gmail
+
+
 templates:
   utter_default:
     - text: |
@@ -61,7 +60,7 @@ templates:
 
   utter_menu:
     - text: |
-        Ahh, tá na hora de comer né? 
+        Ahh, tá na hora de comer né?
 
         É pra já, você quer saber o rango de hoje ou da semana?
 
@@ -80,21 +79,21 @@ templates:
   utter_notifications:
     - text: |
         Queres receber notificações sobre o cardápio do dia??
-  
+
   utter_gmail:
     - text: |
         Não seria ótimo receber todos os e-mails dos professores por aqui mesmo?
 
         Eu iria adorar(se tivesse professores, mas já que não tenho..)
 
-        Mas vou ficar te devendo essa, sou bot baby ainda kkkkk        
+        Mas vou ficar te devendo essa, sou bot baby ainda kkkkk
 
   utter_greet:
     - text: |
         Oi! Eu sou o Lino, seu assistente de sobrevivência da FGA. Dentre minhas incríveis habilidades, constam tirar as suas dúvidas da faculdade e te avisar quando você estiver perdendo aquela carne de sol do R.U. Legal, não é?
 
         Você gostaria de tirar alguma dúvida da faculdade, ver os avisos dos seus professores ou saber o que tá rolando no R.U.? Posso te ajudar nessas coisas.
-  
+
   utter_goodbye:
     - text: |
         Espero ter ajudado! Quando precisar de ajuda, já sabe onde procurar!
