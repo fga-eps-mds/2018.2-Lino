@@ -21,7 +21,7 @@ WEBHOOK_URL = os.getenv('WEBHOOK_URL', '')
 def run():
     interpreter = RasaNLUInterpreter('models/nlu/default/current')
 
-    agent = Agent.load('models/dialogue', interpreter)
+    agent = Agent.load('models/dialogue', interpreter=interpreter)
 
     input_channel = TelegramInput(
         access_token=ACCESS_TOKEN,
