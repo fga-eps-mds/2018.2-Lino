@@ -24,10 +24,10 @@
 
 ### Sobre o projeto
 
-<p align="justify"> &emsp;&emsp; 
+<p align="justify"> &emsp;&emsp;
   O projeto Lino é um bot que visa orientar, alertar e tirar dúvidas a respeito dos assuntos mais procurados na Universidade de Brasília - Campus FGA. Para apoio ao Bot, um painel de controle de métricas que acompanha sua eficiência durante seu uso em produção.</p>
 
-<p align="justify"> &emsp;&emsp; 
+<p align="justify"> &emsp;&emsp;
   Como principais funcionalidade, tem-se:
 </p>
 
@@ -48,31 +48,87 @@
 
 As políticas de _branches_, _commits_, _pull requests_ e _issues_ se encontram [aqui](https://github.com/fga-eps-mds/2018.2-Lino/tree/master/docs/policies)
 
-#### Testando o Lino
+#### Desenvolvimento
+
+Para começar a desenvolver precisamos fazer algumas mudanças no código para que funcione localmente.
+
+Todas as mudanças estão descritas no código onde deve ser alterado, só que você não vai precisar sair procurando, eu vou lhe dizer onde que é.
+
+1. Altere o banco que deseja utilizar no arquivo notifier.py e no notifications.py
+```
+# If you have your own database, changes to ('database', <PORT>)
+client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
+```
+
+2. Caso esteja trabalhando com o Telegram, adicione o token nos arquivos notifier e no notifications.py
+```
+# If you want to use your own bot to development add the bot token as
+# second parameters
+telegram_token = os.getenv('ACCESS_TOKEN', '')
+```
+
+3. Caso esteja rodando o webcrawler local, altere a URL no arquivo notifier e no menu.py
+```
+# Change the url if you have your own webcrawler server
+response = requests.get('http://<imagem_crawler>:<porta_crawler>/cardapio/{}'.format(day)).json()
+```
+
+4. Caso queira usar com os mensageiros o Lino, utilize o ngrok para expor para o mundo
+```
+./ngrok http <porta_bot>
+```
+
+5. Adicione as credenciais do bot no train-messenger ou no train-telegram (Exemplo abaixo sobre o Telegram)
+```
+# If you want to use your own bot to development
+# add the bot credentials as second parameters
+ACCESS_TOKEN = os.getenv('ACCESS_TOKEN', '')
+VERIFY = os.getenv('VERIFY', '')
+# the webhook URL is one that ngrok generates (https)
+WEBHOOK_URL = os.getenv('WEBHOOK_URL', '')
+```
+
+5. Agora está tudo certinho pra você começar a desenvolver e testar o bot :)
+
+
+#### Testando o Lino no Terminal
 
 Para testar as alterações feitas no Lino, execute os seguintes comandos no terminal:
 
-1. Crie a imagem do Lino dentro da raiz do repositório:
+1. Crie a imagem do Lino:
 ```
 sudo docker build -t lino .
 ```
 
 2. Inicialize o _container_:
 ```
-sudo docker run --rm -it -v $PWD:/2018.2-Lino lino
+sudo docker run --rm -it -p 5002:5002 -v $PWD:/2018.2-Lino lino
+```
+
+3. Agora basta testar as novas alterações pelo terminal.
+
+#### Testando o Lino nos Mensageiros
+
+1. Crie a imagem do Lino:
+```
+sudo docker build -t <imagem_nome> -f docker/<Mensageiro>.Dockerfile .
+```
+
+2. Inicialize o _container_:
+```
+sudo docker run --rm -it -v $PWD:/2018.2-Lino <imagem_nome>
 ```
 
 3. Agora basta testar as novas alterações pelo terminal.
 
 #### Container pra Desenvolvimento
 
-Caso queira inicilizar o container pra desenvolvimento sem testar no terminal
-
+1. Caso queira inicilizar um ambiente de desenvolvimento com todos os serviços
 ```
-sudo docker-compose up
+# Altere a imagem que deseja (qual mensageiro ou terminal) dentro do docker-compose
+sudo docker-compose up --build
 ```
 
 ### Licença
 
 <p align="justify">&emsp;&emsp; Lino é distribuído sob a licença <a href="https://opensource.org/licenses/MIT">MIT</a>. Consulte <a href="https://github.com/fga-eps-mds/2018.2-Lino/blob/master/LICENSE.md">LICENSE</a> para obter detalhes.</p>
-

@@ -2,6 +2,8 @@ version: '3'
 
 services:
     lino:
+        # If you want to development and use another image,
+        # change the image to the Dockerfile that corresponds to the one you want to use.
         image: guila/lino:latest
         ports:
             - 5002:5002
@@ -9,6 +11,9 @@ services:
             - .:/2018.2-Lino
         stdin_open: true
         tty: true
+
+        # If you want to development, remove the environment and set your own
+        # bot credentials in train.py or another train file.
         environment:
           - ACCESS_TOKEN: ${ACCESS_TOKEN}
           - VERIFY: ${VERIFY}
@@ -23,7 +28,6 @@ services:
         depends_on:
             - webcrawler
 
-
     webcrawler:
         image: guila/webcrawler:latest
         ports:
@@ -36,4 +40,4 @@ services:
         volumes:
             - /l/crawler/crawler_db:/data/db
         ports:
-            - 27014:27014
+            - 27017:27017
