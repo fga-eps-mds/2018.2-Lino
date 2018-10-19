@@ -42,10 +42,16 @@
 ### 2.3 Pontuação Final
 
 * __Pontuação Total:__ 31 Pontos Planejados
-* __Pontos Concluídos:__ 13 Pontos Concluídos
+* __Débitos Técnicos Adicionados:__ 8 Pontos 
+* __Pontos Concluídos:__ 21 Pontos Concluídos
 * __Pontos Não Agregados:__ 18 Pontos Não Agregados Nessa Sprint
 
-### Débitos Técnicos
+### Débitos Técnicos Sprint Anterior
+
+* Entrevistas abertas com funcionários técnicos: 3 pontos (Fechado)
+* Treinamento de Rasa: 5 pontos (Fechado)
+
+### Débitos Técnicos Gerados
 
 * Criar Documento de Arquitetura
 * Elaborar Plano de Abertura de Projeto (TAP)

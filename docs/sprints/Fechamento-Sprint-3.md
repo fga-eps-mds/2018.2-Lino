@@ -31,28 +31,31 @@
 
 | ID | História | Status | Pontos |
 |:--:| ------- | :----: | :----: |
-| ISSUE | [Viabilidade Técnica ELK Stack](https://github.com/fga-eps-mds/2018.2-Lino/issues/75) | Aberta | 2 
+| ISSUE | [Viabilidade Técnica ELK Stack](https://github.com/fga-eps-mds/2018.2-Lino/issues/75) | Aberta | 2 |
 | ISSUE | [Evoluir a Arquitetura do Projeto](https://github.com/fga-eps-mds/2018.2-Lino/issues/73) | Aberta | 5 |
+| ISSUE | [US07 - Comunicar o Lino com o mensageiro Messenger](https://github.com/fga-eps-mds/2018.2-Lino/issues/71) | Aberta | 3 |
 | ISSUE | [US06 - Transformar cardápio (PDF) em texto](https://github.com/fga-eps-mds/2018.2-Lino/issues/70) | Fechada| 5 |
-| ISSUE | [US07 - Comunicar o Lino com o mensageiro Messenger](https://github.com/fga-eps-mds/2018.2-Lino/issues/71) | Aberta | 3 
-| ISSUE | [Estudar a tecnologia RabbitMQ](https://github.com/fga-eps-mds/2018.2-Lino/issues/69) | Fechada| 2 
-| ISSUE | [US22 - Definição da identidade visual do Lino](https://github.com/fga-eps-mds/2018.2-Lino/issues/51)|Aberta| 8
-| ISSUE | [US05 - Buscar informações sobre o cardápio do RU](https://github.com/fga-eps-mds/2018.2-Lino/issues/49)|Aberta| 3
-| ISSUE | [Criar DockerFile para desenvolvimento](https://github.com/fga-eps-mds/2018.2-Lino/issues/53)|Fechada| 3
+| ISSUE | [Estudar a tecnologia RabbitMQ](https://github.com/fga-eps-mds/2018.2-Lino/issues/69) | Fechada| 2 |
+| ISSUE | [Criar DockerFile para desenvolvimento](https://github.com/fga-eps-mds/2018.2-Lino/issues/53)|Fechada| 3 |
  
 ### 2.3 Pontuação Final
 
-* __Pontuação Total:__ 31 Pontos Planejados
-* __Pontos Concluídos:__ 10 Pontos Concluídos
+* __Pontuação Total:__ 20 Pontos Planejados
+* __Débitos Técnicos Adicionados:__ 21 Pontos 
+* __Pontos Concluídos:__ 20 Pontos Concluídos
 * __Pontos Não Agregados:__ 21 Pontos Não Agregados Nessa Sprint
 
-### Débitos Técnicos
+### Débitos Técnicos da Sprint Anterior
 
-* US05 - Buscar informações sobre o Cardápio do RU
-* US22 - Definição da Identidade visual do Lino
+* US05 - Buscar informações sobre o Cardápio do RU: 3 pontos (Aberto)
+* US22 - Definição da Identidade visual do Lino: 8 pontos (Aberto)
+* Elaborar o Backlog de Produto: 5 pontos (Fechado)
+* Criar Dockerfile para Desenvolvimento: 5 pontos (Fechado)
+
+### Débitos Técnicos Gerados
+
 * Viabilidade Técnica ELK Stack
-*  Evoluir a Arquitetura do Projeto
-*  US22 - Definição da identidade visual do Lino
+* Evoluir a Arquitetura do Projeto
 * US07 - Comunicar o Lino com o mensageiro Messenger
 
 Todos esses documentos se tornaram débito técnico, pois ocorreram atrasos devido à configuração de ambiente de alguns membros, além de mudanças pontuais na definição da arquitetura e identidade visual.

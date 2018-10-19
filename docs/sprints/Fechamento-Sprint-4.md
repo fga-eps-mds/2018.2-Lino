@@ -32,25 +32,30 @@
 | ID | História | Status | Pontos |
 |:--:| ------- | :----: | :----: |
 |ISSUE|[US01 - Notificação sobre o cardápio diário do RU](https://github.com/fga-eps-mds/2018.2-Lino/issues/87)|Aberto|5|
-|ISSUE|[US05 - Task 2 - Fazer comunição webcrawler-Lino](https://github.com/fga-eps-mds/2018.2-Lino/issues/79)|Aberto|3|
-|ISSUE|[US12 - Armazenar o conteúdo das conversas em um banco de dados](https://github.com/fga-eps-mds/2018.2-Lino/issues/77)|Fechado|5|
 |ISSUE|[Aplicar Arquitetura do projeto e Aperfeiçoar DevOps para arquitetura](https://github.com/fga-eps-mds/2018.2-Lino/issues/73)|Aberto|5|
-|ISSUE|[US05 - Task 1 - Criar JSONs para retornar o cardápio semanal, e de cada refeição](https://github.com/fga-eps-mds/2018.2-Lino/issues/92)|Fechado|( )|
-|ISSUE|[Modelar o NFR](https://github.com/fga-eps-mds/2018.2-Lino/issues/85)|Fechado|( )|
-|ISSUE|[US07 - Conexao Lino-Messenger](https://github.com/fga-eps-mds/2018.2-Lino/issues/71)|Fechado|3|
 |ISSUE|[US11 - Conexao Lino-Gmail](https://github.com/fga-eps-mds/2018.2-Lino/issues/83)|Aberto|5|
-|ISSUE|[Viabilidade Técnica ELK Stack](https://github.com/fga-eps-mds/2018.2-Lino/issues/75)|Fechado|2|
+|ISSUE|[US12 - Armazenar o conteúdo das conversas em um banco de dados](https://github.com/fga-eps-mds/2018.2-Lino/issues/77)|Fechado|5|
+|ISSUE|[Modelar o NFR](https://github.com/fga-eps-mds/2018.2-Lino/issues/85)|Fechado| - |
 
 ### 2.3 Pontuação Final
 
-* __Pontuação Total:__ 28 Pontos Planejados
-* __Pontos Concluídos:__ 10 Pontos Concluídos
-* __Pontos Não Agregados:__  18 Pontos Não Agregados Nessa Sprint
+* __Pontuação Total:__ 20 Pontos Planejados
+* __Débitos Técnicos Adicionados:__ 21 Pontos 
+* __Pontos Concluídos:__ 26 Pontos Concluídos
+* __Pontos Não Agregados:__  15 Pontos Não Agregados Nessa Sprint
 
-### Débitos Técnicos
+### Débitos Técnicos da Sprint Anterior
+
+* US05 - Task 1 - Criar JSONs para retornar o cardápio semanal, e de cada refeição: Não pontuado (Aberto)
+* US22 - Definição da Identidade visual do Lino: 8 pontos (Fechado)
+* Viabilidade Técnica ELK Stack: 2 pontos (Fechado)
+* Evoluir a Arquitetura do Projeto: 5 pontos (Fechado)
+* US07 - Comunicar o Lino com o mensageiro Messenger: 3 pontos (Fechado)
+* US05 - Task 2 - Buscar informações sobre o Cardápio do RU: 3 pontos (Fechado)
+
+### Débitos Técnicos Gerados
 
 * Aplicar Arquitetura do projeto e Aperfeiçoar DevOps para arquitetura
-* US05 - Task 2 - Fazer comunição webcrawler-Lino
 * US01 - Notificação sobre o cardápio diário do RU
 * US11 - Conexao Lino-Gmail
   

@@ -43,11 +43,19 @@
 
 ### 2.3 Pontuação Final
 
-* __Pontuação Total:__ 29 Pontos Planejados
-* __Pontos Concluídos:__ 15 Pontos Concluídos
-* __Pontos Não Agregados:__ 14 Pontos Não Agregados Nessa Sprint
+* __Pontuação Total:__ 34 Pontos Planejados
+* __Débitos Técnicos Adicionados:__ 18 Pontos 
+* __Pontos Concluídos:__ 31 Pontos Concluídos
+* __Pontos Não Agregados:__ 21 Pontos Não Agregados Nessa Sprint
 
-### Débitos Técnicos
+### Débitos Técnicos da Sprint Anterior
+
+* Elaborar o Backlog de Produto: 5 pontos (Aberto)
+* Criar Documento de Arquitetura: 5 pontos (Fechado)
+* Elaborar Plano de Abertura de Projeto (TAP): 5 pontos (Fechado)
+* Elaborar a EAP(Estrutura Analítica de Projeto: 3 pontos (Fechado)
+
+### Débitos Técnicos Gerados
 
 * US05 - Buscar informações sobre o Cardápio do RU
 * US22 - Definição da Identidade visual do Lino

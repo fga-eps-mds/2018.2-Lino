@@ -65,7 +65,6 @@
 
 - US05 - Eu, como Lino desejo buscar as informações sobre o cardápio do RU na sua página oficial para para transferir a informação ao usuário solicitante.
 
-- US21 - Eu, como Lino desejo ter um fluxo de conversa para alertar os usuários sobre o cardápio do RU
 
 ## 5. Pareamento
 
@@ -84,7 +83,7 @@
 
 ### Trabalhos dedicados às duplas
 **1**: US05 e US08
-**2**: US21
+**2**: US22
 **3**: TAP, EAP e US22
 **4**: Refatoração dos documentos de Arquitetura e de Visão
 **5**: _pipeline_
