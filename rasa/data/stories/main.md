@@ -48,7 +48,16 @@
 * goodbye
   - utter_goodbye
   - utter_restart
- 
+
+## path_calendar
+* greet
+  - utter_greet
+* calendar
+  - utter_calendar
+* goodbye
+  - utter_goodbye
+  - utter_restart
+
 ## path_fallback
 * out_of_scope
   - utter_default
