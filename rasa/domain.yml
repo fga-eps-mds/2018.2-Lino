@@ -51,8 +51,6 @@ actions:
 
   - actions.calendar.ActionCalendar
 
-#  - actions.notifications.ActionCalendar
-
 templates:
   utter_default:
     - text: |

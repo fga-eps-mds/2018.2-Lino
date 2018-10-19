@@ -13,7 +13,7 @@ db = client.lino_ru
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('ACCESS_TOKEN', '625051845:AAGFkfemDjiriY4uRdIR7ayujxLdzwileLg')
+telegram_token = os.getenv('ACCESS_TOKEN', '')
 
 
 def getUsers():

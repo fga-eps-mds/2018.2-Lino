@@ -13,14 +13,14 @@ db = client.lino_ru
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('ACCESS_TOKEN', '625051845:AAGFkfemDjiriY4uRdIR7ayujxLdzwileLg')
+telegram_token = os.getenv('ACCESS_TOKEN', '')
 
 class ActionCalendar(Action):
     def name(self):
-        return "utter_calendar"
+        return "action_calendar"
 
     def run(self, dispatcher, tracker, domain):
         messages = []
-        messages.append('DEU BOM')
+        messages.append('Em breve você terá acesso aos dados sobre o período de MATRÍCULA!')
         for m in messages: dispatcher.utter_message(m)
         return []

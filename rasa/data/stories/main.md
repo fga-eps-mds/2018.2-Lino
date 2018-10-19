@@ -53,7 +53,7 @@
 * greet
   - utter_greet
 * calendar
-  - utter_calendar
+  - action_calendar
 * goodbye
   - utter_goodbye
   - utter_restart

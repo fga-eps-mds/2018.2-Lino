@@ -14,9 +14,9 @@ logger = logging.getLogger(__name__)
 
 # If you want to use your own bot to development add the bot credentials as
 # second parameters
-ACCESS_TOKEN = os.getenv('ACCESS_TOKEN', '625051845:AAGFkfemDjiriY4uRdIR7ayujxLdzwileLg')
-VERIFY = os.getenv('VERIFY', 'lininhofga_bot')
-WEBHOOK_URL = os.getenv('WEBHOOK_URL', 'https://d4a3b020.ngrok.io/webhook')
+ACCESS_TOKEN = os.getenv('ACCESS_TOKEN', '')
+VERIFY = os.getenv('VERIFY', '')
+WEBHOOK_URL = os.getenv('WEBHOOK_URL', '')
 
 
 def run():
