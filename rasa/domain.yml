@@ -49,7 +49,7 @@ actions:
 
   - utter_gmail
 
-  - utter_calendar
+  - actions.calendar.ActionCalendar
 
 #  - actions.notifications.ActionCalendar
 
@@ -93,11 +93,6 @@ templates:
         Eu iria adorar(se tivesse professores, mas já que não tenho..)
 
         Mas vou ficar te devendo essa, sou bot baby ainda kkkkk
-
-  utter_calendar:
-    - text: |
-        Aqui está um calendário maroto de matrículas pra vc.
-
 
   utter_greet:
     - text: |

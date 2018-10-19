@@ -13,7 +13,7 @@ ADD . /2018.2-Lino
 
 WORKDIR /2018.2-Lino/rasa
 
-ENV TRAINING_EPOCHS=450 \
+ENV TRAINING_EPOCHS=300 \
     CREDENTIALS="credentials.yml"
 
 CMD python train-telegram.py

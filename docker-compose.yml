@@ -4,7 +4,9 @@ services:
     lino:
         # If you want to development and use another image,
         # change the image to the Dockerfile that corresponds to the one you want to use.
-        image: guila/lino:latest
+        build:
+          context: .
+          dockerfile: docker/Telegram.Dockerfile
         ports:
             - 5002:5002
         volumes:
@@ -14,10 +16,10 @@ services:
 
         # If you want to development, remove the environment and set your own
         # bot credentials in train.py or another train file.
-        environment:
-          - ACCESS_TOKEN: ${ACCESS_TOKEN}
-          - VERIFY: ${VERIFY}
-          - WEBHOOK_URL: ${WEBHOOK_URL}
+        #environment:
+        #  - ACCESS_TOKEN: ${ACCESS_TOKEN}
+        #  - VERIFY: ${VERIFY}
+        #  - WEBHOOK_URL: ${WEBHOOK_URL}
         depends_on:
             - cronjob
 
