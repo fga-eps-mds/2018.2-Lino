@@ -11,3 +11,10 @@
 - me cadastra pra receber coisa do ru
 - quero receber notificações
 - notificações pretty please
+
+## intent:lunch_notification
+- Me cadastra pra receber o [almoço](notifications)
+- Quero receber sobre o [almoço](notifications)
+- notificações [almoço](notifications)
+- [almoço](notifications)
+- [almoço](notifications) pretty please

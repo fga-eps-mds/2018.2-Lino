@@ -17,13 +17,13 @@ intents:
 
 entities: 
   - period
-  - meal
+  - notification
 
 slots:
   period:
     type: "text"
     initial_value: ""
-  meal:
+  notification:
     type: "text"
     initial_value: ""
 
@@ -43,9 +43,7 @@ actions:
 
   - utter_documents
 
-
   - utter_gmail
-
 
 templates:
   utter_default:
