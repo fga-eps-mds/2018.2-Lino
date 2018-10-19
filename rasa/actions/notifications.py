@@ -141,13 +141,13 @@ class ActionStart(Action):
         # Build user structure and save in telegram database
         db_telegram.users.insert_one(user_data)
         logging.info('User save in telegram database')
-        return
+        return []
 
     def save_facebook_user(self, user_data, db_facebook):
         # Build user structure and save in facebook database
         db_facebook.users.insert_one(user_data)
         logging.info('User save in facebook database')
-        return
+        return []
 
 class ActionAskNotification(Action):
     def name(self):
@@ -159,7 +159,17 @@ class ActionAskNotification(Action):
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
 
-        notification = tracker.get_slot('notification')
+        text = tracker_state['latest_message']['text']
+
+        words_list = text.split(' ')
+        words_key_list = self.build_key_words()
+
+        notification = ""
+
+        for word in words_list:
+            if word in words_key_list:
+                notification = self.get_element_in_notification_map(word)
+                break
 
         user_telegram = self.check_telegram_valid_user(sender_id)
         user_facebook = self.check_facebook_valid_user(sender_id)
@@ -169,31 +179,78 @@ class ActionAskNotification(Action):
         else:
             self.update_facebook_user(user_facebook, notification)
 
-        print(notification)
-        messages.append('Agora você pode receber notificações do tipo!')
+        messages.append('Agora você pode receber notificações desse tipo...')
 
         for message in messages:
             dispatcher.utter_message(message)
 
         return []
 
+    def build_key_words(self):
+        return [
+            'café',
+            'almoço',
+            'jantar',
+            'dia',
+            'semana',
+            'comunidade'
+        ]
+
+    def get_element_in_notification_map(self, word):
+        notification_map = {
+            'dia': 'daily meal',
+            'semana': 'week meal',
+            'café': 'breakfast meal',
+            'almoço': 'lunch meal',
+            'jantar': 'dinner meal',
+            'comunidade': 'gmail alert'
+        }
+
+        return notification_map[word]
+
+
     def update_telegram_user(self, user_telegram, notification):
-        notification_list = user_telegram['notification']
-        self.update_notification(notification_list, notification)
+        URI = 'mongodb://mongo_telegram:27010/lino_telegram'
+        database = 'lino_telegram'
+
+        self.update_notification(
+            notification,
+            URI,
+            database,
+            user_telegram
+        )
+
         return []
 
     def update_facebook_user(self, user_facebook, notification):
-        notification_list = user_facebook['notification']
-        self.update_notification(notification_list, notification)
+        URI = 'mongodb://mongo_facebook:27011/lino_facebook'
+        database = 'lino_facebook'
+
+        self.update_notification(
+            notification,
+            URI,
+            database,
+            user_facebook
+        )
 
         return []
 
-    def update_notification(self, notification_list, notification):
-        for element in notification_list:
-            if element == notification:
-                element['value'] = True
+    def update_notification(self, notification, URI, database, user):
+        client = MongoClient(URI)
+        db = client[database]
 
-        return notification_list
+        notification_list = user['notification']
+
+        for element in notification_list:
+            if element['description'] == notification:
+                element['value'] = True
+                break
+
+        db.users.update({'sender_id': user['sender_id']},
+            {'$set': {'notification': notification_list}}
+        )
+
+        return []
 
     def check_telegram_valid_user(self, sender_id):
         client = MongoClient('mongodb://mongo_telegram:27010/lino_telegram')
