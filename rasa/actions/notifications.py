@@ -155,32 +155,66 @@ class ActionAskNotification(Action):
 
     def run(self, dispatcher, tracker, domain):
         messages = []
-        a = tracker.current_state()
-        id = a['sender_id']
-        print('SAVING IN THE DATABASE')
-        notifications = db.notifications.find_one()
-        user_list = []
-        if not notifications:
-            new_users = []
-            new_users.append(id)
-            db.notifications.insert_one({
-                'id': 1,
-                'description': 'menu_day',
-                'users_list': new_users
-            })
-            messages.append('A partir de agora vc receberá notificações do RU')
+
+        tracker_state = tracker.current_state()
+        sender_id = tracker_state['sender_id']
+
+        notification = tracker.get_slot('notification')
+
+        user_telegram = self.check_telegram_valid_user(sender_id)
+        user_facebook = self.check_facebook_valid_user(sender_id)
+
+        if user_telegram != {}:
+            self.update_telegram_user(user_telegram, notification)
         else:
-            user_list = notifications['users_list']
-        if id not in user_list:
-            user_list.append(id)
-            db.notifications.update_one({'id': 1}, {
-                '$set': {'users_list': user_list}
-            })
-            messages.append('A partir de agora vc receberá notificações do RU!')
-            print('SAVED IN DATABASE')
-        else:
-            messages.append('Você já está na lista de usuários cadastrados!')
-            print('ALREADY EXISTS')
-        dispatcher.utter_message('Okay!')
-        for m in messages: dispatcher.utter_message(m)
+            self.update_facebook_user(user_facebook, notification)
+
+        print(notification)
+        messages.append('Agora você pode receber notificações do tipo!')
+
+        for message in messages:
+            dispatcher.utter_message(message)
+
         return []
+
+    def update_telegram_user(self, user_telegram, notification):
+        notification_list = user_telegram['notification']
+        self.update_notification(notification_list, notification)
+        return []
+
+    def update_facebook_user(self, user_facebook, notification):
+        notification_list = user_facebook['notification']
+        self.update_notification(notification_list, notification)
+
+        return []
+
+    def update_notification(self, notification_list, notification):
+        for element in notification_list:
+            if element == notification:
+                element['value'] = True
+
+        return notification_list
+
+    def check_telegram_valid_user(self, sender_id):
+        client = MongoClient('mongodb://mongo_telegram:27010/lino_telegram')
+        db_telegram = client['lino_telegram']
+
+        user = {}
+        user = db_telegram.users.find_one({'sender_id': sender_id})
+
+        if user == None:
+            return {}
+        else:
+            return user
+
+    def check_facebook_valid_user(self, sender_id):
+        client = MongoClient('mongodb://mongo_facebook:27011/lino_facebook')
+        db_facebook = client['lino_facebook']
+
+        user = {}
+        user = db_facebook.users.find_one({'sender_id': sender_id})
+
+        if user == None:
+            return {}
+        else:
+            return user
