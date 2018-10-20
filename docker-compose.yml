@@ -18,6 +18,7 @@ services:
           - ACCESS_TOKEN: ${ACCESS_TOKEN}
           - VERIFY: ${VERIFY}
           - WEBHOOK_URL: ${WEBHOOK_URL}
+          - DB_URI: ${DB_URI}
         depends_on:
             - cronjob
 

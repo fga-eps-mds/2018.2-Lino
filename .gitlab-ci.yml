@@ -26,6 +26,7 @@ build lino-telegram:
   only:
     - /master/
     - /devel/
+    - /DeployFacebook/
 
   environment: production
 
@@ -40,6 +41,7 @@ build cronjob:
     - docker push $CRONJOB_LATEST_IMAGE
   only:
     - /master/
+    - /DeployFacebook/
   environment: production
 
 deploy lino-telegram:
@@ -55,6 +57,7 @@ deploy lino-telegram:
             --rancher-url $RANCHER_URL"
   only:
     - /master/
+    - /DeployFacebook/
 
 deploy cronjob-telegram:
   image: cdrx/rancher-gitlab-deploy
@@ -69,6 +72,7 @@ deploy cronjob-telegram:
             --rancher-url $RANCHER_URL"
   only:
     - /master/
+    - /DeployFacebook/
 
 build lino-facebook:
   image: docker:latest

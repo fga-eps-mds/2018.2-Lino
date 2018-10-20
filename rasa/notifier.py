@@ -4,8 +4,9 @@ import os
 import time
 from pymongo import MongoClient
 
-client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
-db = client.lino_ru
+DB_URI = os.getenv("DB_URI", "localhost")
+client = MongoClient(DB_URI)
+db = client.mongo_lino
 
 # If you want to use your own bot to development add the bot token as
 # second parameters

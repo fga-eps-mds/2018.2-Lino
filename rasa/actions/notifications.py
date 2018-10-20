@@ -4,8 +4,9 @@ from pymongo import MongoClient
 from rasa_core.actions.action import Action
 
 # If you have your own database, changes to ('database', <PORT>)
-client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
-db = client.lino_ru
+DB_URI = os.getenv("DB_URI", "localhost")
+client = MongoClient(DB_URI)
+db = client.mongo_lino
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
