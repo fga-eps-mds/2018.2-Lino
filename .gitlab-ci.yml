@@ -56,7 +56,7 @@ deploy lino-telegram:
   only:
     - /master/
 
-deploy cronjob:
+deploy cronjob-telegram:
   image: cdrx/rancher-gitlab-deploy
   stage: deploy
   script:
@@ -81,6 +81,7 @@ build lino-facebook:
     - docker push $LINO_LATEST_IMAGE_FACEBOOK
   only:
     - /master/
+    - /DeployFacebook/
   environment: production
 
 deploy lino-facebook:
@@ -96,3 +97,19 @@ deploy lino-facebook:
             --rancher-url $RANCHER_URL"
   only:
     - /master/
+    - /DeployFacebook/
+
+deploy cronjob-facebook:
+  image: cdrx/rancher-gitlab-deploy
+  stage: deploy
+  script:
+    - "upgrade
+            --service cronjob-lino
+            --environment $RANCHER_ENVIRONMENT
+            --stack $RANCHER_STACK_FACEBOOK
+            --rancher-key $RANCHER_ACCESS_KEY
+            --rancher-secret $RANCHER_SECRET_KEY
+            --rancher-url $RANCHER_URL"
+  only:
+    - /master/
+    - /DeployFacebook/
