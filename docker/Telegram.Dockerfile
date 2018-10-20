@@ -15,4 +15,4 @@ WORKDIR /2018.2-Lino/rasa
 
 ENV TRAINING_EPOCHS=300
 
-CMD python3 train-telegram.py all
+CMD python3 train-telegram.py

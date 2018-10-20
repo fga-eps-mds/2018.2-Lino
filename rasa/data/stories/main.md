@@ -44,20 +44,11 @@
 * asks_about_notifications
   - utter_notifications
 * register_notification
+  - custom_start
   - action_register_notification
 * goodbye
   - utter_goodbye
   - utter_restart
-
-## path_unregister_notification
-* greet
-  - utter_greet
-* unregister_notification
-  - action_unregister_notification
-* goodbye
-  - utter_goodbye
-  - utter_restart
-
 
 ## path_fallback
 * out_of_scope

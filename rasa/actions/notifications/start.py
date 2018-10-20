@@ -9,8 +9,8 @@ from rasa_core.events import UserUtteranceReverted
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
-PAGE_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
+telegram_token = os.getenv('TELEGRAM_ACCESS_TOKEN', '445036585:AAFYeGa-B8dfjr4REXyosH2avrBkZxqb5pE')
+PAGE_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', "EAANoEk6bk1MBACfBTZACN42HlDbVZCg5cRqoyZBwfZALh0mZCvd3hXDPuJl1bPijVQPXZBqfUvduVTKh96PFSKpGC2lrHhgb5kZCRMkkZByHtu0RQKUTM6P8OTnZCvGyfzinCsg64rbUoVN4MjaOBEblDzZBuSDyooMj98ZB5tJ3q8EXwZDZD")
 
 class ActionStart(Action):
     def name(self):
@@ -28,14 +28,14 @@ class ActionStart(Action):
         messenger = "None"
 
         # Message to send to the user
-        text = "Adoro conhecer pessoas novas! Calma aí rapidinho, vou anotar seu nome na minha agenda..."
+        text = "Espera um pouquinho... Vou ver se você está aqui na minha agenda"
 
         # Get users data to build a user to the database
         data = requests.get(
             f'https://api.telegram.org/bot{telegram_token}/sendMessage?chat_id={sender_id}&text={text}').json()
 
         # Check if user data was get succefully
-        if data['ok'] == False:
+        if not data['ok']:
             data = requests.get(
                 "https://graph.facebook.com/{}?fields=first_name,last_name&access_token={}".format(sender_id, PAGE_ACCESS_TOKEN)).json()
             client = MongoClient('mongodb://mongo_facebook:27011/lino_facebook')
@@ -55,6 +55,8 @@ class ActionStart(Action):
         for users in users_data:
             users_id.append(users['sender_id'])
 
+        print(users_id)
+
         if sender_id in users_id:
             # User found in the database
             messages.append('Eai! Já tenho você aqui na minha agenda, ' + \
@@ -65,6 +67,7 @@ class ActionStart(Action):
                 dispatcher.utter_message(message)
             return []
         else:
+            text = "Adoro conhecer pessoas novas! Calma aí rapidinho, vou anotar seu nome na minha agenda..."
             # New user to be registered
             if messenger == "Facebook":
                 messages.append(text)
@@ -72,13 +75,13 @@ class ActionStart(Action):
                 for message in messages:
                     dispatcher.utter_message(message)
 
-        # Difference user between avaiable messengers
-        if messenger is "Telegram":
-            new_data = self.build_telegram_user(data, sender_id)
-            self.save_telegram_user(new_data, db)
-        elif messenger is "Facebook":
-            new_data = self.build_facebook_user(data, sender_id)
-            self.save_facebook_user(new_data, db)
+            # Difference user between avaiable messengers
+            if messenger is "Telegram":
+                new_data = self.build_telegram_user(data, sender_id)
+                self.save_telegram_user(new_data, db)
+            elif messenger is "Facebook":
+                new_data = self.build_facebook_user(data, sender_id)
+                self.save_facebook_user(new_data, db)
 
         return []
 
@@ -102,8 +105,6 @@ class ActionStart(Action):
         }
 
     def build_facebook_user(self, data, sender_id):
-        print(data)
-
         first_name = ""
         last_name = ""
 
