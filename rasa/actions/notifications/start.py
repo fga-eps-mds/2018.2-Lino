@@ -9,8 +9,8 @@ from rasa_core.events import UserUtteranceReverted
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
-PAGE_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
+telegram_token = os.getenv('TELEGRAM_ACCESS_TOKEN', '445036585:AAFYeGa-B8dfjr4REXyosH2avrBkZxqb5pE')
+PAGE_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', "EAANoEk6bk1MBACfBTZACN42HlDbVZCg5cRqoyZBwfZALh0mZCvd3hXDPuJl1bPijVQPXZBqfUvduVTKh96PFSKpGC2lrHhgb5kZCRMkkZByHtu0RQKUTM6P8OTnZCvGyfzinCsg64rbUoVN4MjaOBEblDzZBuSDyooMj98ZB5tJ3q8EXwZDZD")
 
 class ActionStart(Action):
     def name(self):

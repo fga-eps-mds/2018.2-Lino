@@ -6,7 +6,7 @@ from pymongo import MongoClient
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('ACCESS_TOKEN', '445036585:AAFYeGa-B8dfjr4REXyosH2avrBkZxqb5pE')
+telegram_token = os.getenv('ACCESS_TOKEN', '')
 
 def get_telegram_users(message):
     client = MongoClient('mongodb://mongo_telegram:27010/lino_telegram')
@@ -29,8 +29,6 @@ def get_telegram_users(message):
 
 def get_daily_menu():
     day = time.strftime('%A',time.localtime())
-
-    day = 'Monday'
 
     if day in build_valid_days():
         # Change the url if you have your own webcrawler server
@@ -73,9 +71,7 @@ def notify_daily_meal(messages):
     for chat in chats:
         for message in messages:
 
-            print(chat['sender_id'])
-
-            a = requests.get(
+            requests.get(
                 'https://api.telegram.org/bot{}/sendChatAction?chat_id={}&action=typing'
                 .format(telegram_token, chat['sender_id'])).json()
 
