@@ -8,6 +8,7 @@ from pymongo import MongoClient
 # second parameters
 telegram_token = os.getenv('ACCESS_TOKEN', '')
 
+
 def get_telegram_users(message):
     client = MongoClient('mongodb://mongo_telegram:27010/lino_telegram')
     db = client['lino_telegram']
@@ -27,16 +28,21 @@ def get_telegram_users(message):
 
     return users
 
+
 def get_daily_menu():
-    day = time.strftime('%A',time.localtime())
+    day = time.strftime('%A', time.localtime())
 
     if day in build_valid_days():
         # Change the url if you have your own webcrawler server
-        response = requests.get('http://webcrawler-ru.lappis.rocks/cardapio/{}'.format(day)).json()
+        response = requests.get(
+            'http://webcrawler-ru.lappis.rocks/cardapio/{}'
+            .format(day)
+        ).json()
     else:
         response = None
 
     return response
+
 
 def build_valid_days():
     return [
@@ -46,6 +52,7 @@ def build_valid_days():
         'Thursday',
         'Friday'
     ]
+
 
 def parse_daily_notification_to_json(menu):
     messages = []
@@ -72,7 +79,8 @@ def notify_daily_meal(messages):
         for message in messages:
 
             requests.get(
-                'https://api.telegram.org/bot{}/sendChatAction?chat_id={}&action=typing'
+                'https://api.telegram.org/bot{}\
+                /sendChatAction?chat_id={}&action=typing'
                 .format(telegram_token, chat['sender_id'])).json()
 
             time.sleep(1)
