@@ -38,17 +38,27 @@
   - utter_goodbye
   - utter_restart
 
-## path_asks_notification
+## path_register_notification
 * greet
   - utter_greet
 * asks_about_notifications
   - utter_notifications
-* notification
-  - action_ask_notification
+* register_notification
+  - action_register_notification
 * goodbye
   - utter_goodbye
   - utter_restart
- 
+
+## path_unregister_notification
+* greet
+  - utter_greet
+* unregister_notification
+  - action_unregister_notification
+* goodbye
+  - utter_goodbye
+  - utter_restart
+
+
 ## path_fallback
 * out_of_scope
   - utter_default

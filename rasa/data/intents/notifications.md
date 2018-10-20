@@ -6,15 +6,38 @@
 - notificações pfvr
 - quero me informar sobre as notificações
 
-## intent:notification
+## intent:register_notification
 - me cadastra nas notificações por favor
 - me cadastra pra receber coisa do ru
 - quero receber notificações
 - notificações pretty please
-
-## intent:lunch_notification
-- Me cadastra pra receber o [almoço](notifications)
-- Quero receber sobre o [almoço](notifications)
-- notificações [almoço](notifications)
-- [almoço](notifications)
-- [almoço](notifications) pretty please
+- Me cadastra pra receber o almoço
+- Quero receber sobre o almoço
+- notificações almoço
+- almoço
+- almoço pretty please
+- Me cadastra pra receber o café da manhã
+- Quero receber sobre o café da manhã
+- notificações café da manhã
+- café da manhã
+- café pretty please
+- Me cadastra pra receber o jantar
+- Quero receber sobre o jantar
+- notificações jantar
+- jantar
+- jantar pretty please
+- Me cadastra pra receber os alertas
+- Quero receber sobre os alertas
+- notificações alertas
+- alertas
+- alertas pretty please
+- Me cadastra pra receber o cardápio do dia
+- Quero receber sobre o cardápio do dia
+- notificações cardápio do dia
+- cardápio do dia
+- cardápio do dia pretty please
+- Me cadastra pra receber o cardápio da semana
+- Quero receber sobre o cardápio da semana
+- notificações cardápio da semana
+- cardápio da semana
+- cardápio da semana pretty please

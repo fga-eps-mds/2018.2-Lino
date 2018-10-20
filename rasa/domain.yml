@@ -17,13 +17,9 @@ intents:
 
 entities: 
   - period
-  - notification
 
 slots:
   period:
-    type: "text"
-    initial_value: ""
-  notification:
     type: "text"
     initial_value: ""
 
@@ -38,8 +34,8 @@ actions:
   - utter_weekmenu
 
   - utter_notifications
-  - actions.notifications.ActionStart
-  - actions.notifications.ActionAskNotification
+  - actions.notifications.start.ActionStart
+  - actions.notifications.register_notification.ActionRegisterNotification
 
   - utter_documents
 
