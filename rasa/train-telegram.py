@@ -5,7 +5,6 @@ import train
 from rasa_core import utils
 from rasa_core.interpreter import RasaNLUInterpreter
 from rasa_core.agent import Agent
-from rasa_core.interpreter import RegexInterpreter
 from rasa_core.channels import HttpInputChannel
 from rasa_core.channels.telegram import TelegramInput
 
@@ -20,7 +19,9 @@ WEBHOOK_URL = os.getenv('WEBHOOK_URL', '')
 
 
 def run():
-    agent = Agent.load('models/dialogue', interpreter=RegexInterpreter())
+    interpreter = RasaNLUInterpreter('models/nlu/default/current')
+
+    agent = Agent.load('models/dialogue', interpreter=interpreter)
 
     input_channel = TelegramInput(
         access_token=ACCESS_TOKEN,

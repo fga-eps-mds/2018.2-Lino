@@ -1,18 +1,13 @@
 
 import logging
 import os
-import yaml
 import train
 
 from rasa_core import utils
 from rasa_core.interpreter import RasaNLUInterpreter
 from rasa_core.agent import Agent
-from rasa_core.interpreter import RegexInterpreter
 from rasa_core.channels import HttpInputChannel
 from rasa_core.channels.facebook import FacebookInput
-from rasa_core.policies.fallback import FallbackPolicy
-from rasa_core.policies.keras_policy import KerasPolicy
-from rasa_core.policies.memoization import MemoizationPolicy
 
 
 logger = logging.getLogger(__name__)
@@ -26,16 +21,17 @@ def run():
     # load your trained agent
     interpreter = RasaNLUInterpreter('models/nlu/default/current')
 
-    agent = Agent.load("models/dialogue", interpreter=RegexInterpreter())
+    agent = Agent.load("models/dialogue", interpreter)
 
     input_channel = FacebookInput(
-        fb_verify=VERIFY,  # you need tell facebook this token, to confirm your URL
+        fb_verify=VERIFY,  # you need tell facebook this token,
+                           # to confirm your URL
         fb_secret=SECRET,  # your app secret
-        fb_access_token=PAGE_ACCESS_TOKEN  # token for the page you subscribed to
+        fb_access_token=PAGE_ACCESS_TOKEN  # token for the page
+                                           # you subscribed to
     )
 
     agent.handle_channel(HttpInputChannel(5001, "", input_channel))
-
 
 
 if __name__ == '__main__':

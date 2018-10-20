@@ -102,7 +102,7 @@ sudo docker build -t lino .
 
 2. Inicialize o _container_:
 ```
-sudo docker run --rm -it -v $PWD:/2018.2-Lino lino
+sudo docker run --rm -it -p 5002:5002 -v $PWD:/2018.2-Lino lino
 ```
 
 3. Agora basta testar as novas alterações pelo terminal.

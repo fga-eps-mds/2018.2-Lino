@@ -2,10 +2,7 @@
 import requests
 import os
 import time
-import os
 from pymongo import MongoClient
-from pprint import pprint
-from notification_config import db_user, db_password
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
@@ -83,7 +80,8 @@ def notify_daily_meal(messages):
                 .format(telegram_token, chat['sender_id'])).json()
 
             time.sleep(1)
-            a = requests.get(
+
+            requests.get(
                 'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
                 .format(telegram_token, chat['sender_id'], message)).json()
 

@@ -21,7 +21,7 @@
   - utter_greet
 * asks_about_menu
   - utter_menu
-* asks_daily_menu{"period": "hoje", "meal": ""}
+* asks_daily_menu{"period": "hoje"}
   - action_daily_menu
 * goodbye
   - utter_goodbye
