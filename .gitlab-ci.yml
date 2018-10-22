@@ -13,8 +13,6 @@ test_flake8:
   stage: test
   script:
     - flake8
-  only:
-    - /master/
 
 build lino-telegram:
   image: docker:latest
@@ -98,4 +96,3 @@ deploy lino-facebook:
             --rancher-url $RANCHER_URL"
   only:
     - /master/
-  
