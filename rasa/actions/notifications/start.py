@@ -6,8 +6,8 @@ from rasa_core.actions.action import Action
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('TELEGRAM_ACCESS_TOKEN', '445036585:AAFYeGa-B8dfjr4REXyosH2avrBkZxqb5pE')
-PAGE_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', "EAANoEk6bk1MBACfBTZACN42HlDbVZCg5cRqoyZBwfZALh0mZCvd3hXDPuJl1bPijVQPXZBqfUvduVTKh96PFSKpGC2lrHhgb5kZCRMkkZByHtu0RQKUTM6P8OTnZCvGyfzinCsg64rbUoVN4MjaOBEblDzZBuSDyooMj98ZB5tJ3q8EXwZDZD")
+telegram_token = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
+PAGE_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 
 
 class ActionStart(Action):
@@ -22,25 +22,28 @@ class ActionStart(Action):
         tracker = tracker.current_state()
         sender_id = tracker['sender_id']
 
+        print(sender_id)
+
         # Creates an attribute to specify the host messenger
         messenger = "None"
 
         # Message to send to the user
-        text = 'Espera um pouquinho... \
-               Vou ver se você está aqui na minha agenda'
+        text = 'Espera um pouquinho... ' + \
+            'Vou ver se você está aqui na minha agenda'
 
         # Get users data to build a user to the database
         data = requests.get(
-            'https://api.telegram.org/bot{}/sendMessage?\
-            chat_id={}&text={}'
+            'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
             .format(telegram_token, sender_id, text)
         ).json()
 
         # Check if user data was get succefully
         if not data['ok']:
             data = requests.get(
-                "https://graph.facebook.com/{}?fields=first_name,last_name\
-                &access_token={}".format(sender_id, PAGE_ACCESS_TOKEN)
+                "https://graph.facebook.com/{}?fields=first_name,"
+                .format(sender_id) +
+                "last_name&access_token={}"
+                .format(PAGE_ACCESS_TOKEN)
             ).json()
 
             client = MongoClient(
