@@ -55,8 +55,14 @@
 
 ------------
 ## 3. _Burndown Chart_
+
+![captura de tela de 2018-10-23 18-51-34](https://user-images.githubusercontent.com/18364727/47393077-e492f280-d6f4-11e8-9ea3-67391818b258.png)
+
 ------------
 ## 4. Velocity
+
+![captura de tela de 2018-10-23 18-39-29](https://user-images.githubusercontent.com/18364727/47392491-2a4ebb80-d6f3-11e8-98f0-0cf1dc40c9a0.png)
+
 ------------
 
 ## 5. Retrospectiva da _Sprint_

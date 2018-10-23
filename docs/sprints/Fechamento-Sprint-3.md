@@ -65,7 +65,9 @@ Todos esses documentos se tornaram débito técnico, pois ocorreram atrasos devi
 ![](https://i.imgur.com/ZQrxPKW.png)
 ------------
 ## 4. Velocity
-![](https://i.imgur.com/5kQfe4C.png)
+
+![captura de tela de 2018-10-23 18-38-39](https://user-images.githubusercontent.com/18364727/47392488-29b62500-d6f3-11e8-984a-55afb8ec00d6.png)
+
 ------------
 
 ## 5. Retrospectiva da _Sprint_

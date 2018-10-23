@@ -63,8 +63,14 @@ Todos esses documentos se tornaram débito técnico, pois ocorreram atrasos devi
 
 ------------
 ## 3. _Burndown Chart_
+
+![captura de tela de 2018-10-23 18-50-53](https://user-images.githubusercontent.com/18364727/47393074-e3fa5c00-d6f4-11e8-8c3f-16e6f0ec4135.png)
+
 ------------
 ## 4. Velocity
+
+![captura de tela de 2018-10-23 18-38-49](https://user-images.githubusercontent.com/18364727/47392489-2a4ebb80-d6f3-11e8-84ce-ffcfd821ee35.png)
+
 ------------
 
 ## 5. Retrospectiva da _Sprint_

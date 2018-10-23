@@ -73,9 +73,7 @@ Todos esses documentos se tornaram débito técnico, pois ocorreu mudanças não
 
 ## 4. Velocity
 
-Velocity desta equipe: 21 pontos.
-
-![Velocity Sprint 2](https://user-images.githubusercontent.com/18364727/45588479-cebb3200-b8eb-11e8-912b-5a20a94d2f88.png)
+![captura de tela de 2018-10-23 18-38-19](https://user-images.githubusercontent.com/18364727/47392487-29b62500-d6f3-11e8-8444-7a92854cfb43.png)
 
 ------------
 
