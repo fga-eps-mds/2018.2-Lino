@@ -16,8 +16,4 @@ WORKDIR /2018.2-Lino/rasa
 ENV TRAINING_EPOCHS=450 \
     CREDENTIALS="credentials.yml"
 
-<<<<<<< HEAD
-CMD python3 train-telegram.py
-=======
 CMD python train-telegram.py
->>>>>>> 1a23b86c5cf7d3b0bcede4a93bbf950471641bb5
