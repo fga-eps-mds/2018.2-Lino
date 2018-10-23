@@ -69,16 +69,15 @@ Todos esses documentos se tornaram débito técnico, pois ocorreram atrasos devi
 
 ## 5. Retrospectiva da _Sprint_
 
-| Pontos Positivos                           | Pontos Negativos           | Pontos a Melhorar                 |
-|:------------------------------------------:|:--------------------------:|:---------------------------------:|
-| Aprendizado NFR                            | Organização do Tech Lead   | Constância do fechamento de issue |
-| Conhecimento Python, Node, Rasa, API Gmail | Zenhub                     | A melhorar o quadro de negativo   |
-| Organização                                | Falta da dupla             |                                   |
-| Pareamento                                 | Curva de aprendizagem alta |                                   |
-| Pareamento entre as duplas                 | Provas                     |                                   |
-| Feedback Carla                             | Saúde                      |                                   |
-| Empenho da equipe                          | Tristeza depois da prova   |                                   |
-| Conhecimento de EPS ao código              | Testar o banco             |                                   |
+
+|Pontos Positivos|Pontos Negativos|Pontos a Melhorar|
+|:--------------:|:--------------:|:---------------:|
+| Pareamento entre duplas| Organização do Tech Leader | Constância do Fechamento de Issues |
+| Conhecimento de Python, Node, Rasa, API do Gmail e Facebook | Falta da dupla | Diminuir Pontos Negativos |
+| Conhecimento de Docker e Webcrawler | Curva de Aprendizado Alta | |
+| Feedback da Carla | Tristeza Pós Provas | |
+| Empenho da Equipe | Testar o Banco | |
+| Conhecimento de EPS com relação os serviços | | |
 
 
 ------------
