@@ -8,8 +8,7 @@ intents:
   - asks_weekly_menu
 
   - asks_about_notifications
-  - start
-  - notification
+  - action_ask_notification
 
   - asks_about_documents
 

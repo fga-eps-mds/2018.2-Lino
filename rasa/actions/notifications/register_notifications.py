@@ -1,11 +1,6 @@
-import requests
-import time
 import os
-import logging
-from pprint import pprint
 from pymongo import MongoClient
 from rasa_core.actions.action import Action
-from rasa_core.events import UserUtteranceReverted
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
@@ -72,7 +67,6 @@ class ActionRegisterNotification(Action):
 
         return notification_map[word]
 
-
     def update_telegram_user(self, user_telegram, notification):
         URI = 'mongodb://mongo_telegram:27010/lino_telegram'
         database = 'lino_telegram'
@@ -110,7 +104,8 @@ class ActionRegisterNotification(Action):
                 element['value'] = True
                 break
 
-        db.users.update({'sender_id': user['sender_id']},
+        db.users.update(
+            {'sender_id': user['sender_id']},
             {'$set': {'notification': notification_list}}
         )
 
@@ -123,7 +118,7 @@ class ActionRegisterNotification(Action):
         user = {}
         user = db_telegram.users.find_one({'sender_id': sender_id})
 
-        if user == None:
+        if user is None:
             return {}
         else:
             return user
@@ -135,7 +130,7 @@ class ActionRegisterNotification(Action):
         user = {}
         user = db_facebook.users.find_one({'sender_id': sender_id})
 
-        if user == None:
+        if user is None:
             return {}
         else:
             return user
