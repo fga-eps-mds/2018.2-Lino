@@ -4,9 +4,7 @@ services:
     lino:
         # If you want to development and use another image,
         # change the image to the Dockerfile that corresponds to the one you want to use.
-        build:
-            context: .
-            dockerfile: docker/Telegram.Dockerfile
+        image: guila/lino:latest
         ports:
             - 5002:5002
         volumes:
