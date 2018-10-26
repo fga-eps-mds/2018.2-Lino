@@ -8,8 +8,7 @@ intents:
   - asks_weekly_menu
 
   - asks_about_notifications
-  - start
-  - notification
+  - action_ask_notification
 
   - asks_about_documents
 
@@ -22,11 +21,9 @@ entities:
   - meal
   - calendar
 
+
 slots:
   period:
-    type: "text"
-    initial_value: ""
-  meal:
     type: "text"
     initial_value: ""
 
@@ -41,11 +38,10 @@ actions:
   - utter_weekmenu
 
   - utter_notifications
-  - actions.notifications.ActionStart
-  - actions.notifications.ActionAskNotification
+  - actions.notifications.start.ActionStart
+  - actions.notifications.register_notification.ActionRegisterNotification
 
   - utter_documents
-
 
   - utter_gmail
 

@@ -2,12 +2,8 @@
 import requests
 import os
 import time
-import os
 from pymongo import MongoClient
-from pprint import pprint
-from notification_config import db_user, db_password
 
-# If you have your own database, changes to ('database', <PORT>)
 client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
 db = client.lino_ru
 
@@ -24,11 +20,14 @@ def getUsers():
 
     return result['users_list']
 
-def getMenu():
-    day = time.strftime('%A',time.localtime())
 
+def getMenu():
+    day = time.strftime('%A', time.localtime())
     # Change the url if you have your own webcrawler server
-    response = requests.get('http://webcrawler-ru.lappis.rocks/cardapio/{}'.format(day)).json()
+    response = requests.get(
+                    'http://webcrawler-ru.lappis.rocks/cardapio/{}'
+                    .format(day)
+                    ).json()
 
     return response
 
@@ -59,14 +58,17 @@ def notify(messages):
 
     for id in chats:
         for text in messages:
-            a = requests.get(
-                'https://api.telegram.org/bot{}/sendChatAction?chat_id={}&action=typing'
+            requests.get(
+                'https://api.telegram.org/bot{}\
+                /sendChatAction?chat_id={}&action=typing'
                 .format(telegram_token, id)).json()
 
             time.sleep(1)
-            a = requests.get(
+
+            requests.get(
                 'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
                 .format(telegram_token, id, text)).json()
+
 
 res = getMenu()
 res = parseJson(res)
