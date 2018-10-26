@@ -68,17 +68,17 @@
 ## 5. Retrospectiva da _Sprint_
 
 
-|Pontos Positivos|Pontos Negativos|Pontos a Melhorar|
-|:--------------:|:--------------:|:---------------:|
-| Apresentação da Release| Falta de entendimento da Documentação do Rasa  | Divisão das Issues |
-| API do Gmail e Facebook | Falta de Planning poker | Fazer Planning poker |
-| Reunião geral para pareamento | Falta de testes | Integração da Arquitetura |
-| Conhecimento e evolução de microsserviços | Matérias e suas tarefas | Fazer testes |
-| Trabalho e compreensão da equipe | Logs confusos do Cronjob | Organização do Tech Leader |
-| Conhecimento de EPS com relação os serviços | Mudanças que afetaram a EAP     | Comunicação  |
-| Issues fechadas | Falta de README dos serviços | Fazer o README |
-|Conhecimento de Python, Node, Rasa, Cronjob| Desatenção de EPS com relação a documentação | Atualizar documentação |
-|| Falta de Demonstração do Trabalho do Projeto ||
+| Pontos Positivos                             | Pontos Negativos                              | Pontos a Melhorar          |
+| :------------------------------------------: | :-------------------------------------------: | :------------------------: |
+| Apresentação da Release                      | Falta de entendimento da Documentação do Rasa | Divisão das Issues         |
+| API do Gmail e Facebook                      | Falta de Planning poker                       | Fazer Planning poker       |
+| Reunião geral para pareamento                | Falta de testes                               | Integração da Arquitetura  |
+| Conhecimento e evolução de microsserviços    | Matérias e suas tarefas                       | Fazer testes               |
+| Trabalho e compreensão da equipe             | Logs confusos do Cronjob                      | Organização do Tech Leader |
+| Conhecimento de EPS com relação os serviços  | Mudanças que afetaram a EAP                   | Comunicação                |
+| Issues fechadas                              | Falta de README dos serviços                  | Fazer o README             |
+| Conhecimento de Python, Node, Rasa, Cronjob  | Desatenção de EPS com relação a documentação  | Atualizar documentação     |
+| Falta de Demonstração do Trabalho do Projeto |
 
 
 ------------
@@ -88,10 +88,19 @@
 
 ## 7. Quadro de Presença Daily
 
+Não foi registada nenhuma ata nessa sprint.
+
 ------------
 ## 8. Riscos Mapeados
-![](https://i.imgur.com/7weDoOU.png)
-![](https://i.imgur.com/FFtuIVV.png)
+![](https://i.imgur.com/3igSsM7.png)
+![](https://i.imgur.com/7jqsJ8O.png)
+
+Nesse momento, os riscos principais ainda eram os atrasos na entrega, qualidade da interação do bot e integração entre os serviços. Estes riscos possuem uma correlação forte e a mitigação deles é evolutiva. 
+
+Embora tenha ocorrido melhora, a falta de planejamento de EPS, risco empatado com os outros mencionados, foi crucial para os pontos negativos da entrega. 
+
+O ponto positivo fica para a queda do risco de mudança de arquitetura. Nesse momento, foi realizada uma nova checagem e correções importantes no uso da tecnologia e também garantia da escalabilidade do produto.  
+
 ------------
 ## 9. Visão do Tech Lead
 

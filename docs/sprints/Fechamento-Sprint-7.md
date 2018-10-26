@@ -65,15 +65,15 @@
 
 ## 5. Retrospectiva da _Sprint_
 
-|Pontos Positivos|Pontos Negativos|Pontos a Melhorar|
-|:--------------:|:--------------:|:---------------:|
-|Release da API Alertas| Teste feitos de forma tardia | Compromisso da Equipe |
-|Mudança do Escopo|Descompromisso| Gerenciamento da Equipe |
-|Conversas sobre o Papel do P.O| Pareamento | Diminuição do Escopo |
-|Auxilio de EPS| Falta de Meetings | Definir Viabilidade do Messenger |
-|Entendimento de Docker| Comunicação | |
-|Classificação correta de Intents| Conector do Messenger com mal funcionamento ||
-||Problemas com as Custom Actions do Rasa Core||
+| Pontos Positivos                             | Pontos Negativos                            | Pontos a Melhorar                |
+| :------------------------------------------: | :-----------------------------------------: | :------------------------------: |
+| Release da API Alertas                       | Teste feitos de forma tardia                | Compromisso da Equipe            |
+| Mudança do Escopo                            | Descompromisso                              | Gerenciamento da Equipe          |
+| Conversas sobre o Papel do P.O               | Pareamento                                  | Diminuição do Escopo             |
+| Auxilio de EPS                               | Falta de Meetings                           | Definir Viabilidade do Messenger |
+| Entendimento de Docker                       | Comunicação                                 |                                  |
+| Classificação correta de Intents             | Conector do Messenger com mal funcionamento |
+| Problemas com as Custom Actions do Rasa Core |
 
 ------------
 ## 6. Quadro de Conhecimento
@@ -82,10 +82,18 @@
 
 ## 7. Quadro de Presença Daily
 
+Não foram registadas atas nessa sprint.
+
 ------------
 ## 8. Riscos Mapeados
-![](https://i.imgur.com/7weDoOU.png)
-![](https://i.imgur.com/FFtuIVV.png)
+![](https://i.imgur.com/S7z0BKa.png)
+![](https://i.imgur.com/rBcgAim.png)
+
+Nessa sprint, os riscos principais continuaram sendo os atrasos, qualidade do produto e integração entre os serviços. 
+
+Para a mitigação da qualidade de interação do bot, a decisão tomada foi a continuidade nos testes das APIs dos microsserviços, o que acarretou na diminuição do risco de garantia de qualidade e pôde conter o aumento do risco de qualidade e integração entre os serviços.
+
+
 ------------
 ## 9. Visão do Tech Lead
 

@@ -72,34 +72,44 @@
 
 ## 5. Retrospectiva da _Sprint_
 
-| Pontos Positivos                           | Pontos Negativos           | Pontos a Melhorar                 |
-|:------------------------------------------:|:--------------------------:|:---------------------------------:|
-| Conhecimento sobre banco | Indisponibilidade da dupla de pareamento | Testar as funcionalidades da sprint |
-| Conhecimento sobre testes | Batatou no crawler e teve que refatorar nessa sprint | Conhecimento de banco de dados/mongo |
-| Aprimoramento em relação às entidades e slots | Guila otario zoando meu bash | Juntar mais gente no pareamento intensivo |
-| Comida no pareamento intensivo |Assertividade||
-| PAREAMENTO INTENSIVO|Utilização do Zenhub||
-| Entendimento do código geral|Instabilidade dos serviços externos (Dockerhub, gitlabCI)||
-|Conhecimento de Webcrawler|||
-|Conhecimento de Flask|||
-|Docker|||
-|Conhecimento de Rasa|||
-|Rastreamento das issues|||
-|Pontuação coerente|||
-|Equipe produtiva|||
-|Estabilização dos ambientes de produção|||
+| Pontos Positivos                              | Pontos Negativos                                          | Pontos a Melhorar                         |
+| :-------------------------------------------: | :-------------------------------------------------------: | :---------------------------------------: |
+| Conhecimento sobre banco                      | Indisponibilidade da dupla de pareamento                  | Testar as funcionalidades da sprint       |
+| Conhecimento sobre testes                     | Batatou no crawler e teve que refatorar nessa sprint      | Conhecimento de banco de dados/mongo      |
+| Aprimoramento em relação às entidades e slots | Guila otario zoando meu bash                              | Juntar mais gente no pareamento intensivo |
+| Comida no pareamento intensivo                | Assertividade                                             |
+| PAREAMENTO INTENSIVO                          | Utilização do Zenhub                                      |
+| Entendimento do código geral                  | Instabilidade dos serviços externos (Dockerhub, gitlabCI) |
+| Conhecimento de Webcrawler                    |
+| Conhecimento de Flask                         |
+| Docker                                        |
+| Conhecimento de Rasa                          |
+| Rastreamento das issues                       |
+| Pontuação coerente                            |
+| Equipe produtiva                              |
+| Estabilização dos ambientes de produção       |
 
 ------------
 ## 6. Quadro de Conhecimento
-![](https://i.imgur.com/xjFPtQT.png)
+![Imgur](https://i.imgur.com/t5OIcKn.png)
+
 ------------
 
 ## 7. Quadro de Presença Daily
 
+Não foram registradas atas para essa sprint.
+
 ------------
 ## 8. Riscos Mapeados
-![](https://i.imgur.com/7weDoOU.png)
-![](https://i.imgur.com/FFtuIVV.png)
+![Imgur](https://i.imgur.com/3LysybI.png)
+![Imgur](https://i.imgur.com/ezoUUnx.png)
+
+Com a retirada do Elasticsearch e a mudança do escopo para a contribuição do Rasa, não houve impacto no aumento do escopo - uma vez que houve retirada de dificultade tecnica. 
+
+Para a mitigação do impacto na qualidade de interação do bot e falta de testes tradicionais, foram pensadas para as próximas sprints a adoção de testes de usabilidade e, possivelmente, de aceitação.
+
+O foco de mitigação e controle dos riscos que já vinham sendo destacados nas Sprints anteriores. 
+
 ------------
 ## 9. Visão do Tech Lead
 

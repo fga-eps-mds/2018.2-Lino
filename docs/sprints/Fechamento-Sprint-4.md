@@ -76,14 +76,14 @@ Todos esses documentos se tornaram débito técnico, pois ocorreram atrasos devi
 ## 5. Retrospectiva da _Sprint_
 
 
-|Pontos Positivos|Pontos Negativos|Pontos a Melhorar|
-|:--------------:|:--------------:|:---------------:|
-| Pareamento entre duplas| Organização do Tech Leader | Constância do Fechamento de Issues |
-| Conhecimento de Python, Node, Rasa, API do Gmail e Facebook | Falta da dupla | Diminuir Pontos Negativos |
-| Conhecimento de Docker e Webcrawler | Curva de Aprendizado Alta | |
-| Feedback da Carla | Tristeza Pós Provas | |
-| Empenho da Equipe | Testar o Banco | |
-| Conhecimento de EPS com relação os serviços | | |
+| Pontos Positivos                                            | Pontos Negativos           | Pontos a Melhorar                  |
+| :---------------------------------------------------------: | :------------------------: | :--------------------------------: |
+| Pareamento entre duplas                                     | Organização do Tech Leader | Constância do Fechamento de Issues |
+| Conhecimento de Python, Node, Rasa, API do Gmail e Facebook | Falta da dupla             | Diminuir Pontos Negativos          |
+| Conhecimento de Docker e Webcrawler                         | Curva de Aprendizado Alta  |                                    |
+| Feedback da Carla                                           | Tristeza Pós Provas        |                                    |
+| Empenho da Equipe                                           | Testar o Banco             |                                    |
+| Conhecimento de EPS com relação os serviços                 |                            |                                    |
 
 
 ------------
@@ -97,6 +97,11 @@ Todos esses documentos se tornaram débito técnico, pois ocorreram atrasos devi
 ## 8. Riscos Mapeados
 ![](https://i.imgur.com/7weDoOU.png)
 ![](https://i.imgur.com/FFtuIVV.png)
+
+Nessa sprint, os risco principais, ainda se encontravam na dívida técnica e qualidade de interação do bot: devido aos atrasos e entrega inacabada, a qualidade do produto ficou prejudicada e pouco valor acabou sendo entregue. 
+
+O ponto positivo fica para a mitigação do risco de arquitetura, uma vez que esta foi consolidada e o risco acabou caindo em relação às sprints anteriores.
+
 ------------
 ## 9. Visão do Tech Lead
 

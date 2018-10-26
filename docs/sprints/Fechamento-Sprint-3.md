@@ -103,6 +103,11 @@ Todos esses documentos se tornaram débito técnico, pois ocorreram atrasos devi
 
 ![riscos2](https://i.imgur.com/y6xMYDk.png)
 
+
+Nessa sprint, os riscos principais foram a mudança de arquitetura e integração entre os serviços. Um ponto principal também foi a dívida técnica e falta de planejamento por parte de EPS. 
+
+Em relação aos atrasos de entrega, isso em boa parte deu por conta da prática de DevOps ainda estar amadurecendo dentro da equipe; foi um risco planejado mas não mitigado e acabou se concretizando: vários membros do time tiveram problemas com o ambiente e não conseguiram entregar o planejado.
+
 ------------
 ## 9. Visão do Tech Lead
 

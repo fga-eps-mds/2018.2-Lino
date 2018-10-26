@@ -79,16 +79,16 @@ Todos esses documentos se tornaram débito técnico, pois ocorreu mudanças não
 
 ## 5. Retrospectiva da _Sprint_
 
- |Pontos Positivos  |Pontos Negativos  | Pontos a Melhorar
-|:----------------:|:------------------:|:--------------:|
-|Início do desenvolvimento| Configuração de Ambiente/Docker  | Disponibilizar o Docker
-| Desenvolvimento tecnológico de MDS  |  Falta de informação dos Requisitos  |  Reporte de acontecimentos nas issues  |
-| Entendimento as Documentações  |  Mudanças no escopo inicial |  Desorientação da equipe (principalmente EPS)  |
-| Organização das tarefas em forma de issue |  Falta de direcionamento de uma tecnologia específica  |  Dificuldades de MDS na escrita dos documentos  |
-| Estudo da Api do Telegram |Só foi feita uma daily| Dificuldade de Pareamento|
-||Não tivemos reunião no sábado| Curva de Aprendizado |
-||Identidade visual| Fazer mais dailys
-||GitHub Pages||
+ | Pontos Positivos                          | Pontos Negativos                                     | Pontos a Melhorar                             |
+ | :---------------------------------------: | :--------------------------------------------------: | :-------------------------------------------: |
+ | Início do desenvolvimento                 | Configuração de Ambiente/Docker                      | Disponibilizar o Docker                       |
+ | Desenvolvimento tecnológico de MDS        | Falta de informação dos Requisitos                   | Reporte de acontecimentos nas issues          |
+ | Entendimento as Documentações             | Mudanças no escopo inicial                           | Desorientação da equipe (principalmente EPS)  |
+ | Organização das tarefas em forma de issue | Falta de direcionamento de uma tecnologia específica | Dificuldades de MDS na escrita dos documentos |
+ | Estudo da Api do Telegram                 | Só foi feita uma daily                               | Dificuldade de Pareamento                     |
+ | Não tivemos reunião no sábado             | Curva de Aprendizado                                 |
+ | Identidade visual                         | Fazer mais dailys                                    |
+ | GitHub Pages                              |
 
 
 ------------
@@ -111,6 +111,10 @@ Todos esses documentos se tornaram débito técnico, pois ocorreu mudanças não
 ## 8. Riscos Mapeados
 ![](https://i.imgur.com/cQTqKJI.png)
 ![](https://i.imgur.com/gLwC9IY.png)
+
+Para a Sprint, foram identificados sete riscos principais, com 6,7% cada, que indicaram problemas encontrados em toda fase inicial de projeto. São eles: configuração de ambiente, integração entre os serviços propostos, mudança de escopo e arquitetura, além da qualidade da interação do bot e dificuldade técnica.
+
+Esses riscos foram tratados e serão mitigados ao logo do desenrolar do projeto. De qualquer forma, é importante notar que tais problemas devem ser mitigados o mais rápido pois possuem alto impacto na entrega.
 ------------
 ## 9. Visão do Tech Lead
 

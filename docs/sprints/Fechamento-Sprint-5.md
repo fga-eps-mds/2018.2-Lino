@@ -73,16 +73,16 @@
 ## 5. Retrospectiva da _Sprint_
 
 
-|Pontos Positivos|Pontos Negativos|Pontos a Melhorar|
-|:--------------:|:--------------:|:---------------:|
-| Conhecimento de Python, Node, Rasa, Cronjob| Falta de entendimento da Documentação do Rasa  | Divisão das Issues |
-| API do Gmail e Facebook | Falta de Planning poker | Fazer Planning poker |
-| Reunião geral para pareamento | Falta de testes | Integração da Arquitetura |
-| Conhecimento e evolução de microsserviços | Matérias e suas tarefas | Fazer testes |
-| Trabalho e compreensão da equipe | Logs confusos do Cronjob | Organização do Tech Leader |
-| Conhecimento de EPS com relação os serviços | Mudanças que afetaram a EAP     | Comunicação  |
-| Issues fechadas | Falta de README dos serviços | Fazer o README |
-|| Desatenção de EPS com relação a documentação | Atualizar documentação |
+| Pontos Positivos                             | Pontos Negativos                              | Pontos a Melhorar          |
+| :------------------------------------------: | :-------------------------------------------: | :------------------------: |
+| Conhecimento de Python, Node, Rasa, Cronjob  | Falta de entendimento da Documentação do Rasa | Divisão das Issues         |
+| API do Gmail e Facebook                      | Falta de Planning poker                       | Fazer Planning poker       |
+| Reunião geral para pareamento                | Falta de testes                               | Integração da Arquitetura  |
+| Conhecimento e evolução de microsserviços    | Matérias e suas tarefas                       | Fazer testes               |
+| Trabalho e compreensão da equipe             | Logs confusos do Cronjob                      | Organização do Tech Leader |
+| Conhecimento de EPS com relação os serviços  | Mudanças que afetaram a EAP                   | Comunicação                |
+| Issues fechadas                              | Falta de README dos serviços                  | Fazer o README             |
+| Desatenção de EPS com relação a documentação | Atualizar documentação                        |
 
 
 ------------
@@ -94,8 +94,14 @@
 
 ------------
 ## 8. Riscos Mapeados
-![](https://i.imgur.com/7weDoOU.png)
-![](https://i.imgur.com/FFtuIVV.png)
+![](https://i.imgur.com/50qDBo4.png)
+![](https://i.imgur.com/O9kkJGz.png)
+
+Nessa sprint, o risco principal foi o de atraso nas entregas. Embora o risco de CI/CD tenha diminuído, foi priorizada diminuir a pontuação para entregar os débitos técnicos planejados e mitigar o risco principal.
+
+Nesse ponto, a integração entre os serviços foi um risco também devido ao atraso nas entregas.
+
+
 ------------
 ## 9. Visão do Tech Lead
 
