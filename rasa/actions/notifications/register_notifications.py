@@ -43,7 +43,7 @@ class ActionRegisterNotification(Action):
         else:
             self.update_facebook_user(user_facebook, notification)
 
-        messages.append('Agora você pode receber notificações desse tipo...')
+        messages.append('Agora você já pode receber notificações desse tipo!')
 
         for message in messages:
             dispatcher.utter_message(message)

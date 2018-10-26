@@ -6,15 +6,19 @@ services:
         # change the image to the Dockerfile that corresponds to the one you want to use.
         build:
             context: .
-            dockerfile: docker/Messenger.Dockerfile
+            dockerfile: docker/Telegram.Dockerfile
         ports:
-            - 5001:5001
+            - 5002:5002
         volumes:
             - .:/2018.2-Lino
         stdin_open: true
         tty: true
 
         # If you want to development, remove the environment and set your own
+        environment:	
+           - ACCESS_TOKEN: ${ACCESS_TOKEN}	
+           - VERIFY: ${VERIFY}	
+           - WEBHOOK_URL: ${WEBHOOK_URL}
         # bot credentials in train.py or another train file.
         depends_on:
             - cronjob
