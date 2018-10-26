@@ -76,7 +76,7 @@ templates:
 
   utter_notifications:
     - text: |
-        Queres receber notificações sobre o cardápio do dia??
+    Quer se registrar pra receber notificações? Fala aí qual notificação você quer
 
   utter_gmail:
     - text: |

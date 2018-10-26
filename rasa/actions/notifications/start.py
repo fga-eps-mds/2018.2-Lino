@@ -9,8 +9,8 @@ from rasa_core.events import UserUtteranceReverted
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('TELEGRAM_ACCESS_TOKEN', '445036585:AAFYeGa-B8dfjr4REXyosH2avrBkZxqb5pE')
-PAGE_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', "EAANoEk6bk1MBACfBTZACN42HlDbVZCg5cRqoyZBwfZALh0mZCvd3hXDPuJl1bPijVQPXZBqfUvduVTKh96PFSKpGC2lrHhgb5kZCRMkkZByHtu0RQKUTM6P8OTnZCvGyfzinCsg64rbUoVN4MjaOBEblDzZBuSDyooMj98ZB5tJ3q8EXwZDZD")
+telegram_token = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
+PAGE_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 
 class ActionStart(Action):
     def name(self):
@@ -23,12 +23,12 @@ class ActionStart(Action):
         # Tracker that stores the state of dialogue, to gets the users id
         tracker = tracker.current_state()
         sender_id = tracker['sender_id']
-
+        
         # Creates an attribute to specify the host messenger
         messenger = "None"
 
         # Message to send to the user
-        text = "Adoro conhecer pessoas novas! Calma aí rapidinho, vou anotar seu nome na minha agenda..."
+        text = "Pera aí, rapidinho"
 
         # Get users data to build a user to the database
         data = requests.get(
@@ -57,17 +57,12 @@ class ActionStart(Action):
 
         if sender_id in users_id:
             # User found in the database
-            messages.append('Eai! Já tenho você aqui na minha agenda, ' + \
-                            'ajeitei algumas coisas pra você...')
-            messages.append('Agora eu posso te enviar alguns avisos, principalmente ' + \
-                            'se for relacionado ao RU ou avisos da comunidade acadêmica.')
             for message in messages:
                 dispatcher.utter_message(message)
             return []
         else:
             # New user to be registered
             if messenger == "Facebook":
-                messages.append(text)
 
                 for message in messages:
                     dispatcher.utter_message(message)
