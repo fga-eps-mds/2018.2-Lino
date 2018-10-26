@@ -9,27 +9,44 @@ class ActionDailyMenu(Action):
 
     def run(self, dispatcher, tracker, domain):
         messages = []
-        tracker.get_slot('period')
-        tracker.get_slot('meal')
+
         day = time.strftime('%A', time.localtime())
+
         # Change the url if you have your own webcrawler server
         response = requests.get(
-            f'https://webcrawler-ru.lappis.rocks/cardapio/{day}').json()
+            'http://webcrawler-ru.lappis.rocks/cardapio/{}'
+            .format(day)
+        ).json()
 
-        messages.append('Olá! Para o café de hoje nós teremos: ')
+        messages.append('Eai! Então... Pro café da manhã, nós teremos: ')
+
+        breakfast_block = ""
 
         for label in response['DESJEJUM']:
-            messages.append(label + ' ' + response['DESJEJUM'][label])
+            cell = str(label + ': ' + response['DESJEJUM'][label] + '\n')
+            breakfast_block += cell
 
-        messages.append('Para o almoço nós teremos: ')
+        messages.append(breakfast_block)
+
+        messages.append('Já, para o almoço, teremos: ')
+
+        lunch_block = ""
 
         for label in response['ALMOÇO']:
-            messages.append(label + ' ' + response['ALMOÇO'][label])
+            cell = str(label + ' ' + response['ALMOÇO'][label] + '\n')
+            lunch_block += cell
 
-        messages.append('Para o jantar nós teremos: ')
+        messages.append(lunch_block)
+
+        messages.append('E para a janta...')
+
+        dinner_block = ""
 
         for label in response['JANTAR']:
-            messages.append(label + ' ' + response['JANTAR'][label])
+            cell = str(label + ' ' + response['JANTAR'][label] + '\n')
+            dinner_block += cell
+
+        messages.append(dinner_block)
 
         for message in messages:
             dispatcher.utter_message(message)
