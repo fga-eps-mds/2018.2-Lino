@@ -7,11 +7,32 @@ from pymongo import MongoClient
 # If you want to use your own bot to development add the bot token as
 # second parameters
 telegram_token = os.getenv('ACCESS_TOKEN', '')
+PAGE_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 
 
 def get_telegram_users(message):
     client = MongoClient('mongodb://mongo_telegram:27010/lino_telegram')
     db = client['lino_telegram']
+
+    users = db.users.find(
+        {
+            "notification": {
+                "description": message,
+                "value": True
+            }
+        },
+        {
+            '_id': 0,
+            'sender_id': 1
+        }
+    )
+
+    return users
+
+
+def get_facebook_users(message):
+    client = MongoClient('mongodb://mongo_facebook:27011/lino_facebook')
+    db = client['lino_facebook']
 
     users = db.users.find(
         {
@@ -72,7 +93,7 @@ def parse_daily_notification_to_json(menu):
     return messages
 
 
-def notify_daily_meal(messages):
+def notify_daily_meal_to_telegram(messages):
     chats = get_telegram_users('daily meal')
 
     for chat in chats:
@@ -90,8 +111,31 @@ def notify_daily_meal(messages):
                 .format(telegram_token, chat['sender_id'], message)).json()
 
 
+def notify_daily_meal_to_facebook(messages):
+    chats = get_facebook_users('daily meal')
+
+    for chat in chats:
+        for message in messages:
+            build = build_facebook_message(chat['sender_id'], message)
+
+            a = requests.post(
+                'https://graph.facebook.com/v2.11/{}/{}?access_token={}'
+                .format(chat['sender_id'], message, PAGE_ACCESS_TOKEN), data=build)
+
+
+def build_facebook_message(sender_id, message):
+    return {
+        'recipient': {
+            'id': '1891483277604641'
+        },
+        'message': {
+            'text': message
+        }
+    }
+
 menu = get_daily_menu()
 
 if menu:
     messages = parse_daily_notification_to_json(menu)
-    notify_daily_meal(messages)
+    notify_daily_meal_to_telegram(messages)
+    notify_daily_meal_to_facebook(messages)
