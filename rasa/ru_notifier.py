@@ -4,72 +4,94 @@ import os
 import time
 from pymongo import MongoClient
 
-client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
-db = client.lino_ru
-
 # If you want to use your own bot to development add the bot token as
 # second parameters
 telegram_token = os.getenv('ACCESS_TOKEN', '')
 
 
-def getUsers():
-    notifications = db.notifications
-    result = notifications.find_one()
+def get_telegram_users(message):
+    client = MongoClient('mongodb://mongo_telegram:27010/lino_telegram')
+    db = client['lino_telegram']
 
-    print(result)
+    users = db.users.find(
+        {
+            "notification": {
+                "description": message,
+                "value": True
+            }
+        },
+        {
+            '_id': 0,
+            'sender_id': 1
+        }
+    )
 
-    return result['users_list']
+    return users
 
 
-def getMenu():
+def get_daily_menu():
     day = time.strftime('%A', time.localtime())
-    # Change the url if you have your own webcrawler server
-    response = requests.get(
-                    'http://webcrawler-ru.lappis.rocks/cardapio/{}'
-                    .format(day)
-                    ).json()
+
+    if day in build_valid_days():
+        # Change the url if you have your own webcrawler server
+        response = requests.get(
+            'http://webcrawler-ru.lappis.rocks/cardapio/{}'
+            .format(day)
+        ).json()
+    else:
+        response = None
 
     return response
 
 
-def parseJson(res):
-    messages = []
-    messages.append('E hoje no RU nós teremos: ')
+def build_valid_days():
+    return [
+        'Monday',
+        'Tuesday'
+        'Wednesday',
+        'Thursday',
+        'Friday'
+    ]
 
-    for item in res:
+
+def parse_daily_notification_to_json(menu):
+    messages = []
+    messages.append('E no cardápio de hoje, no RU, nós teremos: ')
+
+    for item in menu:
         if item != 'DESJEJUM':
             text = 'Para o ' + item.lower() + ':\n'
         else:
             text = 'Para o ' + 'café da manhã:' + '\n'
 
-        for sub in res[item]:
-            text += sub + ' ' + res[item][sub] + '\n'
+        for sub_item in menu[item]:
+            text += sub_item + ' ' + menu[item][sub_item] + '\n'
 
         messages.append(text)
 
     return messages
 
 
-def notify(messages):
-    chats = getUsers()
+def notify_daily_meal(messages):
+    chats = get_telegram_users('daily meal')
 
-    for item in messages:
-        item = item.replace(' ', '+')
+    for chat in chats:
+        for message in messages:
 
-    for id in chats:
-        for text in messages:
             requests.get(
                 'https://api.telegram.org/bot{}\
                 /sendChatAction?chat_id={}&action=typing'
-                .format(telegram_token, id)).json()
+                .format(telegram_token, chat['sender_id'])).json()
 
             time.sleep(1)
 
             requests.get(
                 'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
-                .format(telegram_token, id, text)).json()
+                .format(telegram_token, chat['sender_id'], message)).json()
 
 
-res = getMenu()
-res = parseJson(res)
-a = notify(res)
+menu = get_daily_menu()
+
+if menu:
+    messages = parse_daily_notification_to_json(menu)
+    notify_daily_meal(messages)

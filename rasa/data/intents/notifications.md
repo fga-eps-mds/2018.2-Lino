@@ -26,12 +26,11 @@
 - notificações jantar
 - jantar
 - jantar pretty please
-- Me cadastra pra receber os alertas da comunidade acadêmica
-- Quero receber sobre os alertas da comunidade acadêmica
-- notificações alertas comunidade acadêmica
-- alertas comunidade
-- alertas comunidade pretty please
-- comunidade acadêmica
+- Me cadastra pra receber alerta da comunidade
+- Quero receber sobre alerta da comunidade
+- notificações alerta da comunidade
+- alerta da comunidade
+- alerta da comunidade pretty please
 - Me cadastra pra receber o cardápio do dia
 - Quero receber sobre o cardápio do dia
 - notificações cardápio do dia

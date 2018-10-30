@@ -16,9 +16,13 @@ intents:
 
 entities:
   - period
+  - notification
 
 slots:
   period:
+    type: "text"
+    initial_value: ""
+  notification:
     type: "text"
     initial_value: ""
 
@@ -34,7 +38,7 @@ actions:
 
   - utter_notifications
   - actions.notifications.start.ActionStart
-  - actions.notifications.register_notification.ActionRegisterNotification
+  - actions.notifications.register_notifications.ActionRegisterNotification
 
   - utter_documents
 
@@ -71,7 +75,7 @@ templates:
 
   utter_notifications:
     - text: |
-        Queres receber notificações sobre o cardápio do dia??
+    Quer se registrar pra receber notificações? Fala aí qual notificação você quer
 
   utter_gmail:
     - text: |

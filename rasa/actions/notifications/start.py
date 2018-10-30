@@ -22,14 +22,11 @@ class ActionStart(Action):
         tracker = tracker.current_state()
         sender_id = tracker['sender_id']
 
-        print(sender_id)
-
         # Creates an attribute to specify the host messenger
         messenger = "None"
 
         # Message to send to the user
-        text = 'Espera um pouquinho... ' + \
-            'Vou ver se você está aqui na minha agenda'
+        text = "Pera aí, rapidinho"
 
         # Get users data to build a user to the database
         data = requests.get(
@@ -71,12 +68,6 @@ class ActionStart(Action):
 
         if sender_id in users_id:
             # User found in the database
-            messages.append('Eai! Já tenho você aqui na minha agenda, ' +
-                            'ajeitei algumas coisas pra você...')
-            messages.append('Agora eu posso te enviar alguns avisos,' +
-                            'principalmente se for relacionado ao RU ou' +
-                            'avisos da comunidade acadêmica.')
-
             for message in messages:
                 dispatcher.utter_message(message)
             return []
@@ -86,7 +77,6 @@ class ActionStart(Action):
 
             # New user to be registered
             if messenger == "Facebook":
-                messages.append(text)
 
                 for message in messages:
                     dispatcher.utter_message(message)
@@ -111,6 +101,7 @@ class ActionStart(Action):
             last_name = data['result']['chat']['last_name']
         except AttributeError as exception:
             print("Telegram user has not a last name!")
+            logging.info(exception)
 
         notification_list = self.build_notification_list()
 
@@ -130,6 +121,7 @@ class ActionStart(Action):
             last_name = data['last_name']
         except AttributeError as exception:
             print("Facebook user has not a last name!")
+            logging.info(exception)
 
         notification_list = self.build_notification_list()
 

@@ -16,6 +16,10 @@ services:
           - VERIFY: ${VERIFY}
           - WEBHOOK_URL: ${WEBHOOK_URL}
         # If you want to development, remove the environment and set your own
+        environment:	
+           - ACCESS_TOKEN: ${ACCESS_TOKEN}	
+           - VERIFY: ${VERIFY}	
+           - WEBHOOK_URL: ${WEBHOOK_URL}
         # bot credentials in train.py or another train file.
         depends_on:
             - cronjob
