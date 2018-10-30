@@ -3,6 +3,7 @@ import requests
 import os
 import time
 import pycurl
+import logging
 from urllib.parse import urlencode
 from pymongo import MongoClient
 
@@ -56,14 +57,16 @@ def get_facebook_users(message):
 def get_daily_menu():
     day = time.strftime('%A', time.localtime())
 
-    day = 'Monday'
-
     if day in build_valid_days():
         # Change the url if you have your own webcrawler server
-        response = requests.get(
-            'http://webcrawler-ru.lappis.rocks/cardapio/{}'
-            .format(day)
-        ).json()
+        try:
+            response = requests.get(
+                'http://webcrawler-ru.lappis.rocks/cardapio/{}'
+                .format(day)
+            ).json()
+        except ValueError:
+            logging.warning('Decoding JSON has failed')
+            response = None
     else:
         response = None
 
@@ -73,7 +76,7 @@ def get_daily_menu():
 def build_valid_days():
     return [
         'Monday',
-        'Tuesday'
+        'Tuesday',
         'Wednesday',
         'Thursday',
         'Friday'
@@ -157,5 +160,11 @@ menu = get_daily_menu()
 
 if menu:
     messages = parse_daily_notification_to_json(menu)
+    notify_daily_meal_to_telegram(messages)
+    notify_daily_meal_to_facebook(messages)
+else:
+    messages = []
+    messages.append('Não consegui pegar o cardápio pra você hoje... :(')
+    messages.append('Parece que teve algum problema com o site do RU')
     notify_daily_meal_to_telegram(messages)
     notify_daily_meal_to_facebook(messages)
