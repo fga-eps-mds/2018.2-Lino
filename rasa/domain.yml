@@ -75,7 +75,7 @@ templates:
 
   utter_notifications:
     - text: |
-    Quer se registrar pra receber notificações? Fala aí qual notificação você quer
+        Quer se registrar pra receber notificações? Fala aí qual notificação você quer
 
   utter_gmail:
     - text: |

@@ -2,11 +2,16 @@
 import requests
 import os
 import time
+import pycurl
+import logging
+from urllib.parse import urlencode
 from pymongo import MongoClient
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
 telegram_token = os.getenv('ACCESS_TOKEN', '')
+PAGE_ACCESS_TOKEN = os.getenv('PAGE_ACCESS_TOKEN', '')
+PSID = os.getenv('PSID', '')
 
 
 def get_telegram_users(message):
@@ -29,15 +34,39 @@ def get_telegram_users(message):
     return users
 
 
+def get_facebook_users(message):
+    client = MongoClient('mongodb://mongo_facebook:27011/lino_facebook')
+    db = client['lino_facebook']
+
+    users = db.users.find(
+        {
+            "notification": {
+                "description": message,
+                "value": True
+            }
+        },
+        {
+            '_id': 0,
+            'sender_id': 1
+        }
+    )
+
+    return users
+
+
 def get_daily_menu():
     day = time.strftime('%A', time.localtime())
 
     if day in build_valid_days():
         # Change the url if you have your own webcrawler server
-        response = requests.get(
-            'http://webcrawler-ru.lappis.rocks/cardapio/{}'
-            .format(day)
-        ).json()
+        try:
+            response = requests.get(
+                'http://webcrawler-ru.lappis.rocks/cardapio/{}'
+                .format(day)
+            ).json()
+        except ValueError:
+            logging.warning('Decoding JSON has failed')
+            response = None
     else:
         response = None
 
@@ -47,7 +76,7 @@ def get_daily_menu():
 def build_valid_days():
     return [
         'Monday',
-        'Tuesday'
+        'Tuesday',
         'Wednesday',
         'Thursday',
         'Friday'
@@ -72,7 +101,7 @@ def parse_daily_notification_to_json(menu):
     return messages
 
 
-def notify_daily_meal(messages):
+def notify_daily_meal_to_telegram(messages):
     chats = get_telegram_users('daily meal')
 
     for chat in chats:
@@ -90,8 +119,52 @@ def notify_daily_meal(messages):
                 .format(telegram_token, chat['sender_id'], message)).json()
 
 
+def notify_daily_meal_to_facebook(messages):
+    chats = get_facebook_users('daily meal')
+
+    for chat in chats:
+        for message in messages:
+            builded_message = build_facebook_message(
+                chat['sender_id'],
+                message + '\n'
+            )
+
+            postfields = urlencode(builded_message)
+
+            url = get_url_facebook_parameter()
+
+            curl = pycurl.Curl()
+            curl.setopt(curl.URL, url)
+            curl.setopt(curl.POSTFIELDS, postfields)
+            curl.perform()
+            curl.close()
+
+
+def build_facebook_message(sender_id, message):
+    return {
+        'recipient': {
+            'id': sender_id
+        },
+        'message': {
+            'text': message
+        }
+    }
+
+
+def get_url_facebook_parameter():
+    return ('https://graph.facebook.com/v2.6/{}/messages?access_token={}'
+            .format(PSID, PAGE_ACCESS_TOKEN))
+
+
 menu = get_daily_menu()
 
 if menu:
     messages = parse_daily_notification_to_json(menu)
-    notify_daily_meal(messages)
+    notify_daily_meal_to_telegram(messages)
+    notify_daily_meal_to_facebook(messages)
+else:
+    messages = []
+    messages.append('Não consegui pegar o cardápio pra você hoje... :(')
+    messages.append('Parece que teve algum problema com o site do RU')
+    notify_daily_meal_to_telegram(messages)
+    notify_daily_meal_to_facebook(messages)

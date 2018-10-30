@@ -7,3 +7,4 @@ requests
 pymongo==3.7.1
 websocket-client==0.52.0
 python-crontab
+pycurl==7.43.0.2
