@@ -12,10 +12,14 @@ services:
         stdin_open: true
         tty: true
         environment:
-          - ACCESS_TOKEN: ${ACCESS_TOKEN}
-          - VERIFY: ${VERIFY}
-          - WEBHOOK_URL: ${WEBHOOK_URL}
-        # If you want to development, remove the environment and set your own
+           - ACCESS_TOKEN: ${ACCESS_TOKEN}
+           - VERIFY: ${VERIFY}
+           - WEBHOOK_URL: ${WEBHOOK_URL}
+           - PSID: ${PSID}
+           - FACEBOOK_ACCESS_TOKEN: ${FACEBOOK_ACCESS_TOKEN}
+           - PAGE_ACCESS_TOKEN: ${PAGE_ACCESS_TOKEN}
+           - SECRET: ${SECRET}
+           - PAGE_ACCESS_TOKEN: ${PAGE_ACCESS_TOKEN}
         # bot credentials in train.py or another train file.
         depends_on:
             - cronjob
