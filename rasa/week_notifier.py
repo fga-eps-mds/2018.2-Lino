@@ -3,7 +3,6 @@ import requests
 import os
 import time
 import pycurl
-import logging
 from urllib.parse import urlencode
 from pymongo import MongoClient
 
