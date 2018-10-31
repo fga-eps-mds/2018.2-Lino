@@ -1,5 +1,5 @@
 ## intent:out_of_scope
-- que
+<!-- - que -->
 - cade o estacionamento
 - to com frio
 - to com calor

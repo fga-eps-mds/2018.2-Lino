@@ -1,8 +1,6 @@
 ## intent:asks_about_menu
 - To com fome, quero saber sobre o menu
 - Queria saber sobre o ru
-- To com fome
-- fome
 - hangri
 - hungry
 - comida
@@ -26,8 +24,6 @@
 - Qual é o cardápio dessa [semana](period)
 - Me passa o cardápio dessa [semana](period)
 - Quero saber a comida dessa [semana](period)
-- RU essa [semana](period)
-- fome [semana](period)
-- fome RU [semana](period)
+- [RU essa semana](period)
 - comida ru [semana](period)
 - rango ru [semana](period)
