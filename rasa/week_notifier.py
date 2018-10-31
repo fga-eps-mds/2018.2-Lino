@@ -14,6 +14,18 @@ PAGE_ACCESS_TOKEN = os.getenv('PAGE_ACCESS_TOKEN', '')
 PSID = os.getenv('PSID', '')
 
 
+def get_telegram_users(message):
+    client = MongoClient('mongodb://mongo_telegram:27010/lino_telegram')
+    db = client['lino_telegram']
+
+    users = db.users.find(
+        build_query(message),
+        build_filters()
+    )
+
+    return users
+
+
 def get_facebook_users(message):
     client = MongoClient('mongodb://mongo_facebook:27011/lino_facebook')
     db = client['lino_facebook']
