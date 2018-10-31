@@ -40,3 +40,16 @@ def build_filters():
         '_id': 0,
         'sender_id': 1
     }
+
+
+def get_weekly_menu():
+
+    try:
+        response = requests.get(
+            'https://webcrawler-ru.lappis.rocks/cardapio/pdf'
+        ).json()
+    except ValueError:
+        logging.warning('Decoding JSON has failed')
+        response = None
+
+    return response
