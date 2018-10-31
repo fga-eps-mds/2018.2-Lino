@@ -76,6 +76,8 @@ def get_weekly_menu():
 def notify_daily_meal_to_telegram(message):
     chats = get_telegram_users('week meal')
 
+    comment_message = "Tá aqui o cardápio da semana"
+
     for chat in chats:
         requests.get(
             'https://api.telegram.org/bot{}\
@@ -85,8 +87,13 @@ def notify_daily_meal_to_telegram(message):
         time.sleep(1)
 
         requests.get(
-            'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
-            .format(telegram_token, chat['sender_id'], message['url'])).json()
+            'https://api.telegram.org/bot{}/sendDocument?'
+            .format(telegram_token) +
+            'chat_id={}&document={}&caption={}'
+            .format(chat['sender_id'],
+                    message['url'],
+                    comment_message)
+            ).json()
 
 
 def notify_daily_meal_to_facebook(message):
