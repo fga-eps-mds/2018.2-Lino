@@ -72,8 +72,10 @@ class ActionStart(Action):
                 dispatcher.utter_message(message)
             return []
         else:
-            text = 'Adoro conhecer pessoas novas! Calma aí rapidinho, \
-                    vou anotar seu nome na minha agenda...'
+            text = """
+                Adoro conhecer pessoas novas! Calma aí rapidinho,
+            vou anotar seu nome na minha agenda...
+            """
 
             # New user to be registered
             if messenger == "Facebook":
@@ -99,7 +101,7 @@ class ActionStart(Action):
 
         try:
             last_name = data['result']['chat']['last_name']
-        except AttributeError as exception:
+        except KeyError as exception:
             print("Telegram user has not a last name!")
             logging.info(exception)
 
@@ -119,7 +121,7 @@ class ActionStart(Action):
 
         try:
             last_name = data['last_name']
-        except AttributeError as exception:
+        except Key  Error as exception:
             print("Facebook user has not a last name!")
             logging.info(exception)
 
