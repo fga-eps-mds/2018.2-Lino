@@ -24,7 +24,7 @@ slots:
   period:
     type: "text"
     initial_value: ""
-  notification:
+  calendar:
     type: "text"
     initial_value: ""
 
@@ -57,11 +57,11 @@ templates:
 
   utter_restart:
     - text: |
-        Reiniciando...
+        Vou reiniciar o flow aqui
 
   utter_menu:
     - text: |
-        Opa, quer saber qual o rango do ru? De hoje ou da semana?
+        Opa, de hoje ou da semana?
 
   utter_weekmenu:
     - text: |
@@ -87,7 +87,7 @@ templates:
     - text: |
         E aê, beleza?! Lino aqui!
 
-        Que que vc tá afim hj? Documentos, notificações ou RU?
+        Que que vc tá afim hj? Documentos, período de matrícula, notificações ou RU?
 
   utter_goodbye:
     - text: |
