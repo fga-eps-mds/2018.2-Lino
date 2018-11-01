@@ -2,7 +2,6 @@
 * greet
   - utter_greet
 
-
 ## path_goodbye
 * goodbye
   - utter_goodbye
@@ -21,14 +20,10 @@
   - utter_gmail
 
 ## path_daily_meal
-* asks_about_menu
-  - utter_menu
 * asks_daily_menu{"period": "hoje"}
   - action_daily_menu
 
 ## path_weekly_meal
-* asks_about_menu
-  - utter_menu
 * asks_weekly_menu{"period": "semana"}
   - utter_weekmenu
 

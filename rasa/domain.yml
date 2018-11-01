@@ -3,7 +3,6 @@ intents:
   - greet
   - goodbye
 
-  - asks_about_menu
   - asks_daily_menu
   - asks_weekly_menu
 
