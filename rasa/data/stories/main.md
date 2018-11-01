@@ -37,4 +37,27 @@
   - utter_notifications
 * register_notification
   - custom_start
+<<<<<<< HEAD
   - action_register_notification
+=======
+  - action_register_notification
+* goodbye
+  - utter_goodbye
+  - utter_restart
+
+## path_calendar
+* greet
+  - utter_greet
+* calendar
+  - action_calendar
+* goodbye
+  - utter_goodbye
+  - utter_restart
+
+## path_fallback
+* out_of_scope
+  - utter_default
+* goodbye
+  - utter_goodbye
+  - utter_restart
+>>>>>>> 5f5726e520c440a0461c2402798fe2a472613625

@@ -42,10 +42,16 @@
 ### 2.3 Pontuação Final
 
 * __Pontuação Total:__ 31 Pontos Planejados
-* __Pontos Concluídos:__ 13 Pontos Concluídos
+* __Débitos Técnicos Adicionados:__ 8 Pontos 
+* __Pontos Concluídos:__ 21 Pontos Concluídos
 * __Pontos Não Agregados:__ 18 Pontos Não Agregados Nessa Sprint
 
-### Débitos Técnicos
+### Débitos Técnicos Sprint Anterior
+
+* Entrevistas abertas com funcionários técnicos: 3 pontos (Fechado)
+* Treinamento de Rasa: 5 pontos (Fechado)
+
+### Débitos Técnicos Gerados
 
 * Criar Documento de Arquitetura
 * Elaborar Plano de Abertura de Projeto (TAP)
@@ -64,9 +70,7 @@ Todos esses documentos se tornaram débito técnico, pois ocorreu mudanças não
 
 ## 4. Velocity
 
-Velocity desta equipe: 21 pontos.
-
-![Velocity Sprint 1](https://user-images.githubusercontent.com/18364727/45058939-93f60600-b070-11e8-9b84-270caa5ce19c.png)
+![captura de tela de 2018-10-23 18-38-09](https://user-images.githubusercontent.com/18364727/47392486-29b62500-d6f3-11e8-8244-45cfe9f7832d.png)
 
 ------------
 

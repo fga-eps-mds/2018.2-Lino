@@ -14,9 +14,11 @@ intents:
 
   - asks_about_gmail
 
+  - calendar
+
 entities:
-  - period
-  - notification
+  - periods
+  - calendar
 
 slots:
   period:
@@ -37,11 +39,13 @@ actions:
 
   - utter_notifications
   - actions.notifications.start.ActionStart
-  - actions.notifications.register_notifications.ActionRegisterNotification
+  - actions.notifications.register_notification.ActionRegisterNotification
 
   - utter_documents
 
   - utter_gmail
+
+  - actions.calendar.ActionCalendar
 
 templates:
   utter_default:
