@@ -32,7 +32,6 @@ actions:
   - utter_greet
   - utter_goodbye
 
-  - utter_menu
   - actions.menu.ActionDailyMenu
   - utter_weekmenu
 
@@ -54,12 +53,6 @@ templates:
   utter_restart:
     - text: |
         Reiniciando :)
-
-  utter_menu:
-    - text: |
-        Ahh, tá na hora de comer né?
-
-        É pra já, você quer saber o rango de hoje ou da semana?
 
   utter_weekmenu:
     - text: |

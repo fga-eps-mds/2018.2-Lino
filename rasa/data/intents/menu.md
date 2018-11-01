@@ -1,10 +1,3 @@
-## intent:asks_about_menu
-- To com fome, quero saber sobre o menu
-- Queria saber sobre o ru
-- hangri
-- hungry
-- comida
-
 ## intent:asks_daily_menu
 - Me fala o cardápio de [hj](period)
 - Me fala o cardápio de [hoje](period)
@@ -17,13 +10,34 @@
 - fome RU [hoje](period)
 - comida ru [hoje](period)
 - rango ru [hoje](period)
+- to com fome, [hoje](period)
+- quero saber qual o cardápio pra [hoje](period)
+- oi lino, me informa sobre o cardápio de [hoje](period)
+- oi lino, menu de [hoje](period)
+- me passa o menu de [hoje](period)
+- me diz o menu de [hoje](period)
+- o que vão servir [hoje](period)
+- o que vai ser servido [hoje](period)?
+- então, o que tem pra comer [hoje](period)?
 
 ## intent: asks_weekly_menu
-- Me fala o cardápio dessa [semana](period)
-- O que tem pra comer essa [semana](period)
-- Qual é o cardápio dessa [semana](period)
-- Me passa o cardápio dessa [semana](period)
-- Quero saber a comida dessa [semana](period)
-- [RU essa semana](period)
+- Me fala o cardápio de [semana](period)
+- Me fala o cardápio de [semana](period)
+- O que tem pra comer [semana](period)
+- Qual é o cardápio de [semana](period)
+- Me passa o cardápio de [semana](period)
+- Quero saber a comida de [semana](period)
+- RU [semana](period)
+- fome [semana](period)
+- fome RU [semana](period)
 - comida ru [semana](period)
 - rango ru [semana](period)
+- to com fome, [semana](period)
+- quero saber qual o cardápio pra [semana](period)
+- oi lino, me informa sobre o cardápio de [semana](period)
+- oi lino, menu de [semana](period)
+- me passa o menu de [semana](period)
+- me diz o menu de [semana](period)
+- o que vão servir [semana](period)
+- o que vai ser servido [semana](period)?
+- então, o que tem pra comer [semana](period)?

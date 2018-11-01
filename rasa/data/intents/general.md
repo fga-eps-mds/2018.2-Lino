@@ -45,7 +45,6 @@
 - Te vejo mais tarde
 - Volto depois
 - Tchau, obrigado
-- vlw flw
 - falous
 - massa, agr tchau
 - brigadão
