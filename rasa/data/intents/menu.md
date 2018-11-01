@@ -1,12 +1,30 @@
+## intent:asks_menu
+- ru
+- me fala do ru
+- quero saber do ru
+- cardápio ru
+- rango ru
+- tenho fome, me fala do ru
+- me informa sobre o ru
+- ru, lindo
+- oi bot, me fala do ru
+- eae, ru
+- comida ru
+
 ## intent:asks_daily_menu
 - Me fala o cardápio de [hj](period)
 - Me fala o cardápio de [hoje](period)
 - O que tem pra comer [hoje](period)
+- Oq tem pra comer [hj](period)
 - Qual é o cardápio de [hoje](period)
+- Qual é o cardápio de [hj](period)
 - Me passa o cardápio de [hoje](period)
+- Passa o cardápio de [hj](period)
 - Quero saber a comida de [hoje](period)
 - RU [hoje](period)
+- ru [hj](period)
 - fome [hoje](period)
+- fome [hj](period)
 - fome RU [hoje](period)
 - comida ru [hoje](period)
 - rango ru [hoje](period)

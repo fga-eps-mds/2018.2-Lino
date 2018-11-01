@@ -20,10 +20,14 @@
   - utter_gmail
 
 ## path_daily_meal
+* asks_menu
+  - utter_menu
 * asks_daily_menu{"period": "hoje"}
   - action_daily_menu
 
 ## path_weekly_meal
+* asks_menu
+  - utter_menu
 * asks_weekly_menu{"period": "semana"}
   - utter_weekmenu
 

@@ -3,6 +3,7 @@ intents:
   - greet
   - goodbye
 
+  - asks_menu
   - asks_daily_menu
   - asks_weekly_menu
 
@@ -33,6 +34,7 @@ actions:
   - utter_greet
   - utter_goodbye
 
+  - utter_menu  
   - actions.menu.ActionDailyMenu
   - utter_weekmenu
 
@@ -56,6 +58,10 @@ templates:
   utter_restart:
     - text: |
         Reiniciando :)
+
+  utter_menu:
+    - text: |
+        Opa, quer saber qual o rango do ru? De hoje ou da semana?
 
   utter_weekmenu:
     - text: |
