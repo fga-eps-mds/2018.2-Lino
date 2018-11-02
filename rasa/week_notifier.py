@@ -2,6 +2,7 @@
 import requests
 import os
 import pycurl
+import time
 from urllib.parse import urlencode
 from pymongo import MongoClient
 
@@ -54,19 +55,7 @@ def build_filters():
 
 def get_weekly_menu():
 
-    response = {
-        'status': 'ok',
-        'url': "https://ru.unb.br/images/Cardapio/outubrorefeitorio2018/" +
-        "FUPFGAFCE29-10-a-04-11.pdf"
-    }
-
-    # try:
-    #     response = requests.get(
-    #         'https://webcrawler-ru.lappis.rocks/cardapio/pdf'
-    #     ).json()
-    # except ValueError:
-    #     logging.warning('Decoding JSON has failed')
-    #     response = None
+    response = 'https://webcrawler.guilhesme.rocks/cardapio/pdf'
 
     return response
 
@@ -85,11 +74,11 @@ def notify_daily_meal_to_telegram(message):
         time.sleep(1)
 
         requests.get(
-            'https://api.telegram.org/bot{}/sendDocument?'
+            'https://api.telegram.org/bot{}/sendPhoto?'
             .format(telegram_token) +
-            'chat_id={}&document={}&caption={}'
+            'chat_id={}&photo={}&caption={}'
             .format(chat['sender_id'],
-                    message['url'],
+                    message,
                     comment_message)
             ).json()
 
@@ -99,7 +88,7 @@ def notify_daily_meal_to_facebook(message):
 
     for chat in chats:
         builded_message = build_facebook_message(
-            chat['sender_id'], message['url']
+            chat['sender_id'], message
         )
 
         postfields = urlencode(builded_message)
@@ -137,4 +126,5 @@ def get_url_facebook_parameter():
 message = get_weekly_menu()
 
 if message:
+    notify_daily_meal_to_telegram(message)
     notify_daily_meal_to_facebook(message)
