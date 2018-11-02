@@ -33,7 +33,7 @@
 * asks_about_menu
   - utter_menu
 * asks_weekly_menu
-  - utter_weekmenu
+  - utter_weekly_menu
 * goodbye
   - utter_goodbye
   - utter_restart

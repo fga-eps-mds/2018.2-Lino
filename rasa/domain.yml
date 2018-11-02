@@ -9,6 +9,7 @@ intents:
 
   - asks_about_notifications
   - action_ask_notification
+  - register_notification
 
   - asks_about_documents
 
@@ -33,13 +34,12 @@ actions:
   - utter_goodbye
 
   - utter_menu
-  - actions.menu.ActionDailyMenu
-  - utter_weekmenu
+  - actions.menu.daily_menu.ActionDailyMenu
+  - utter_weekly_menu
 
   - utter_notifications
   - actions.notifications.start.ActionStart
   - actions.notifications.register_notifications.ActionRegisterNotification
-
   - utter_documents
 
   - utter_gmail
@@ -76,6 +76,10 @@ templates:
   utter_notifications:
     - text: |
         Quer se registrar pra receber notificações? Fala aí qual notificação você quer
+
+  utter_weekly_menu:
+  - text: Tá aqui o cardápio da semana... Bom proveito :)
+    image: "https://webcrawler-ru.lappis.rocks/cardapio/pdf"
 
   utter_gmail:
     - text: |
