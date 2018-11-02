@@ -54,14 +54,6 @@ class ActionDailyMenu(Action):
         return []
 
 
-class ActionWeeklyMenu(Action):
-    def name(self):
-        return "action_weekly_menu"
-
-    def run(self, dispatcher, tracker, domain):
-        pass
-
-
 class ActionNextMeal(Action):
     def name(self):
         return "action_next_meal"
