@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import requests
 import os
-import time
 import pycurl
 from urllib.parse import urlencode
 from pymongo import MongoClient
@@ -121,7 +120,7 @@ def build_facebook_message(sender_id, url):
         },
         "message": {
             "attachment": {
-                "type": "file",
+                "type": "image",
                 "payload": {
                     "url": url
                 }
@@ -138,5 +137,4 @@ def get_url_facebook_parameter():
 message = get_weekly_menu()
 
 if message:
-    notify_daily_meal_to_telegram(message)
     notify_daily_meal_to_facebook(message)
