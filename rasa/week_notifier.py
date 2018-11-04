@@ -2,7 +2,7 @@
 import requests
 import os
 import pycurl
-import logging
+import time
 from urllib.parse import urlencode
 from pymongo import MongoClient
 
@@ -11,6 +11,18 @@ from pymongo import MongoClient
 telegram_token = os.getenv('ACCESS_TOKEN', '')
 PAGE_ACCESS_TOKEN = os.getenv('PAGE_ACCESS_TOKEN', '')
 PSID = os.getenv('PSID', '')
+
+
+def get_telegram_users(message):
+    client = MongoClient('mongodb://mongo_telegram:27010/lino_telegram')
+    db = client['lino_telegram']
+
+    users = db.users.find(
+        build_query(message),
+        build_filters()
+    )
+
+    return users
 
 
 def get_facebook_users(message):
@@ -43,15 +55,32 @@ def build_filters():
 
 def get_weekly_menu():
 
-    try:
-        response = requests.get(
-            'https://webcrawler-ru.lappis.rocks/cardapio/pdf'
-        ).json()
-    except ValueError:
-        logging.warning('Decoding JSON has failed')
-        response = None
+    response = 'https://webcrawler.guilhesme.rocks/cardapio/pdf'
 
     return response
+
+
+def notify_daily_meal_to_telegram(message):
+    chats = get_telegram_users('week meal')
+
+    comment_message = "Tá aqui o cardápio da semana"
+
+    for chat in chats:
+        requests.get(
+            'https://api.telegram.org/bot{}\
+            /sendChatAction?chat_id={}&action=typing'
+            .format(telegram_token, chat['sender_id'])).json()
+
+        time.sleep(1)
+
+        requests.get(
+            'https://api.telegram.org/bot{}/sendPhoto?'
+            .format(telegram_token) +
+            'chat_id={}&photo={}&caption={}'
+            .format(chat['sender_id'],
+                    message,
+                    comment_message)
+            ).json()
 
 
 def notify_daily_meal_to_facebook(message):
@@ -59,7 +88,7 @@ def notify_daily_meal_to_facebook(message):
 
     for chat in chats:
         builded_message = build_facebook_message(
-            chat['sender_id'], message['url']
+            chat['sender_id'], message
         )
 
         postfields = urlencode(builded_message)
@@ -97,4 +126,5 @@ def get_url_facebook_parameter():
 message = get_weekly_menu()
 
 if message:
+    notify_daily_meal_to_telegram(message)
     notify_daily_meal_to_facebook(message)
