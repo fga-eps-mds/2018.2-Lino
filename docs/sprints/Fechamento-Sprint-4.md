@@ -32,25 +32,30 @@
 | ID | História | Status | Pontos |
 |:--:| ------- | :----: | :----: |
 |ISSUE|[US01 - Notificação sobre o cardápio diário do RU](https://github.com/fga-eps-mds/2018.2-Lino/issues/87)|Aberto|5|
-|ISSUE|[US05 - Task 2 - Fazer comunição webcrawler-Lino](https://github.com/fga-eps-mds/2018.2-Lino/issues/79)|Aberto|3|
-|ISSUE|[US12 - Armazenar o conteúdo das conversas em um banco de dados](https://github.com/fga-eps-mds/2018.2-Lino/issues/77)|Fechado|5|
 |ISSUE|[Aplicar Arquitetura do projeto e Aperfeiçoar DevOps para arquitetura](https://github.com/fga-eps-mds/2018.2-Lino/issues/73)|Aberto|5|
-|ISSUE|[US05 - Task 1 - Criar JSONs para retornar o cardápio semanal, e de cada refeição](https://github.com/fga-eps-mds/2018.2-Lino/issues/92)|Fechado|( )|
-|ISSUE|[Modelar o NFR](https://github.com/fga-eps-mds/2018.2-Lino/issues/85)|Fechado|( )|
-|ISSUE|[US07 - Conexao Lino-Messenger](https://github.com/fga-eps-mds/2018.2-Lino/issues/71)|Fechado|3|
 |ISSUE|[US11 - Conexao Lino-Gmail](https://github.com/fga-eps-mds/2018.2-Lino/issues/83)|Aberto|5|
-|ISSUE|[Viabilidade Técnica ELK Stack](https://github.com/fga-eps-mds/2018.2-Lino/issues/75)|Fechado|2|
+|ISSUE|[US12 - Armazenar o conteúdo das conversas em um banco de dados](https://github.com/fga-eps-mds/2018.2-Lino/issues/77)|Fechado|5|
+|ISSUE|[Modelar o NFR](https://github.com/fga-eps-mds/2018.2-Lino/issues/85)|Fechado| - |
 
 ### 2.3 Pontuação Final
 
-* __Pontuação Total:__ 28 Pontos Planejados
-* __Pontos Concluídos:__ 10 Pontos Concluídos
-* __Pontos Não Agregados:__  18 Pontos Não Agregados Nessa Sprint
+* __Pontuação Total:__ 20 Pontos Planejados
+* __Débitos Técnicos Adicionados:__ 21 Pontos 
+* __Pontos Concluídos:__ 26 Pontos Concluídos
+* __Pontos Não Agregados:__  15 Pontos Não Agregados Nessa Sprint
 
-### Débitos Técnicos
+### Débitos Técnicos da Sprint Anterior
+
+* US05 - Task 1 - Criar JSONs para retornar o cardápio semanal, e de cada refeição: Não pontuado (Aberto)
+* US22 - Definição da Identidade visual do Lino: 8 pontos (Fechado)
+* Viabilidade Técnica ELK Stack: 2 pontos (Fechado)
+* Evoluir a Arquitetura do Projeto: 5 pontos (Fechado)
+* US07 - Comunicar o Lino com o mensageiro Messenger: 3 pontos (Fechado)
+* US05 - Task 2 - Buscar informações sobre o Cardápio do RU: 3 pontos (Fechado)
+
+### Débitos Técnicos Gerados
 
 * Aplicar Arquitetura do projeto e Aperfeiçoar DevOps para arquitetura
-* US05 - Task 2 - Fazer comunição webcrawler-Lino
 * US01 - Notificação sobre o cardápio diário do RU
 * US11 - Conexao Lino-Gmail
   
@@ -58,22 +63,27 @@ Todos esses documentos se tornaram débito técnico, pois ocorreram atrasos devi
 
 ------------
 ## 3. _Burndown Chart_
+
+![captura de tela de 2018-10-23 18-50-53](https://user-images.githubusercontent.com/18364727/47393074-e3fa5c00-d6f4-11e8-8c3f-16e6f0ec4135.png)
+
 ------------
 ## 4. Velocity
+
+![captura de tela de 2018-10-23 18-38-49](https://user-images.githubusercontent.com/18364727/47392489-2a4ebb80-d6f3-11e8-84ce-ffcfd821ee35.png)
+
 ------------
 
 ## 5. Retrospectiva da _Sprint_
 
-| Pontos Positivos                           | Pontos Negativos           | Pontos a Melhorar                 |
-|:------------------------------------------:|:--------------------------:|:---------------------------------:|
-| Aprendizado NFR                            | Organização do Tech Lead   | Constância do fechamento de issue |
-| Conhecimento Python, Node, Rasa, API Gmail | Zenhub                     | A melhorar o quadro de negativo   |
-| Organização                                | Falta da dupla             |                                   |
-| Pareamento                                 | Curva de aprendizagem alta |                                   |
-| Pareamento entre as duplas                 | Provas                     |                                   |
-| Feedback Carla                             | Saúde                      |                                   |
-| Empenho da equipe                          | Tristeza depois da prova   |                                   |
-| Conhecimento de EPS ao código              | Testar o banco             |                                   |
+
+| Pontos Positivos                                            | Pontos Negativos           | Pontos a Melhorar                  |
+| :---------------------------------------------------------: | :------------------------: | :--------------------------------: |
+| Pareamento entre duplas                                     | Organização do Tech Leader | Constância do Fechamento de Issues |
+| Conhecimento de Python, Node, Rasa, API do Gmail e Facebook | Falta da dupla             | Diminuir Pontos Negativos          |
+| Conhecimento de Docker e Webcrawler                         | Curva de Aprendizado Alta  |                                    |
+| Feedback da Carla                                           | Tristeza Pós Provas        |                                    |
+| Empenho da Equipe                                           | Testar o Banco             |                                    |
+| Conhecimento de EPS com relação os serviços                 |                            |                                    |
 
 
 ------------
@@ -87,6 +97,11 @@ Todos esses documentos se tornaram débito técnico, pois ocorreram atrasos devi
 ## 8. Riscos Mapeados
 ![](https://i.imgur.com/7weDoOU.png)
 ![](https://i.imgur.com/FFtuIVV.png)
+
+Nessa sprint, os risco principais, ainda se encontravam na dívida técnica e qualidade de interação do bot: devido aos atrasos e entrega inacabada, a qualidade do produto ficou prejudicada e pouco valor acabou sendo entregue. 
+
+O ponto positivo fica para a mitigação do risco de arquitetura, uma vez que esta foi consolidada e o risco acabou caindo em relação às sprints anteriores.
+
 ------------
 ## 9. Visão do Tech Lead
 
