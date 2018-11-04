@@ -43,11 +43,19 @@
 
 ### 2.3 Pontuação Final
 
-* __Pontuação Total:__ 29 Pontos Planejados
-* __Pontos Concluídos:__ 15 Pontos Concluídos
-* __Pontos Não Agregados:__ 14 Pontos Não Agregados Nessa Sprint
+* __Pontuação Total:__ 34 Pontos Planejados
+* __Débitos Técnicos Adicionados:__ 18 Pontos 
+* __Pontos Concluídos:__ 31 Pontos Concluídos
+* __Pontos Não Agregados:__ 21 Pontos Não Agregados Nessa Sprint
 
-### Débitos Técnicos
+### Débitos Técnicos da Sprint Anterior
+
+* Elaborar o Backlog de Produto: 5 pontos (Aberto)
+* Criar Documento de Arquitetura: 5 pontos (Fechado)
+* Elaborar Plano de Abertura de Projeto (TAP): 5 pontos (Fechado)
+* Elaborar a EAP(Estrutura Analítica de Projeto: 3 pontos (Fechado)
+
+### Débitos Técnicos Gerados
 
 * US05 - Buscar informações sobre o Cardápio do RU
 * US22 - Definição da Identidade visual do Lino
@@ -65,24 +73,22 @@ Todos esses documentos se tornaram débito técnico, pois ocorreu mudanças não
 
 ## 4. Velocity
 
-Velocity desta equipe: 21 pontos.
-
-![Velocity Sprint 2](https://user-images.githubusercontent.com/18364727/45588479-cebb3200-b8eb-11e8-912b-5a20a94d2f88.png)
+![captura de tela de 2018-10-23 18-38-19](https://user-images.githubusercontent.com/18364727/47392487-29b62500-d6f3-11e8-8444-7a92854cfb43.png)
 
 ------------
 
 ## 5. Retrospectiva da _Sprint_
 
- |Pontos Positivos  |Pontos Negativos  | Pontos a Melhorar
-|:----------------:|:------------------:|:--------------:|
-|Início do desenvolvimento| Configuração de Ambiente/Docker  | Disponibilizar o Docker
-| Desenvolvimento tecnológico de MDS  |  Falta de informação dos Requisitos  |  Reporte de acontecimentos nas issues  |
-| Entendimento as Documentações  |  Mudanças no escopo inicial |  Desorientação da equipe (principalmente EPS)  |
-| Organização das tarefas em forma de issue |  Falta de direcionamento de uma tecnologia específica  |  Dificuldades de MDS na escrita dos documentos  |
-| Estudo da Api do Telegram |Só foi feita uma daily| Dificuldade de Pareamento|
-||Não tivemos reunião no sábado| Curva de Aprendizado |
-||Identidade visual| Fazer mais dailys
-||GitHub Pages||
+ | Pontos Positivos                          | Pontos Negativos                                     | Pontos a Melhorar                             |
+ | :---------------------------------------: | :--------------------------------------------------: | :-------------------------------------------: |
+ | Início do desenvolvimento                 | Configuração de Ambiente/Docker                      | Disponibilizar o Docker                       |
+ | Desenvolvimento tecnológico de MDS        | Falta de informação dos Requisitos                   | Reporte de acontecimentos nas issues          |
+ | Entendimento as Documentações             | Mudanças no escopo inicial                           | Desorientação da equipe (principalmente EPS)  |
+ | Organização das tarefas em forma de issue | Falta de direcionamento de uma tecnologia específica | Dificuldades de MDS na escrita dos documentos |
+ | Estudo da Api do Telegram                 | Só foi feita uma daily                               | Dificuldade de Pareamento                     |
+ | Não tivemos reunião no sábado             | Curva de Aprendizado                                 |
+ | Identidade visual                         | Fazer mais dailys                                    |
+ | GitHub Pages                              |
 
 
 ------------
@@ -105,6 +111,10 @@ Velocity desta equipe: 21 pontos.
 ## 8. Riscos Mapeados
 ![](https://i.imgur.com/cQTqKJI.png)
 ![](https://i.imgur.com/gLwC9IY.png)
+
+Para a Sprint, foram identificados sete riscos principais, com 6,7% cada, que indicaram problemas encontrados em toda fase inicial de projeto. São eles: configuração de ambiente, integração entre os serviços propostos, mudança de escopo e arquitetura, além da qualidade da interação do bot e dificuldade técnica.
+
+Esses riscos foram tratados e serão mitigados ao logo do desenrolar do projeto. De qualquer forma, é importante notar que tais problemas devem ser mitigados o mais rápido pois possuem alto impacto na entrega.
 ------------
 ## 9. Visão do Tech Lead
 

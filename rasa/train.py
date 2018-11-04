@@ -22,7 +22,7 @@ def train_dialogue(domain_file='domain.yml',
     fallback = FallbackPolicy(
         fallback_action_name="action_default_fallback",
         core_threshold=0.12,
-        nlu_threshold=0.12
+        nlu_threshold=0.7
     )
 
     agent = Agent(

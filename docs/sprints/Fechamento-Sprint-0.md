@@ -69,8 +69,7 @@
 
 ## 4. Velocity
 
-Velocity desta equipe: 24 pontos.
-
+![captura de tela de 2018-10-23 18-37-53](https://user-images.githubusercontent.com/18364727/47392485-291d8e80-d6f3-11e8-9b87-12270115f540.png)
 
 ------------
 
