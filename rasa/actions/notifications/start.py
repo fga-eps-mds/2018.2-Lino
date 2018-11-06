@@ -9,6 +9,9 @@ from rasa_core.actions.action import Action
 TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
 FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 
+TELEGRAM_DB_URI = os.getenv('TELEGRAM_DB_URI', 'localhost')
+FACEBOOK_DB_URI = os.getenv('FACEBOOK_DB_URI', 'localhost')
+
 
 class ActionStart(Action):
     def name(self):
@@ -43,16 +46,12 @@ class ActionStart(Action):
                 .format(FACEBOOK_ACCESS_TOKEN)
             ).json()
 
-            client = MongoClient(
-                'mongodb://mongo_facebook:27011/lino_facebook'
-            )
+            client = MongoClient(FACEBOOK_DB_URI)
             db = client['lino_facebook']
 
             messenger = "Facebook"
         else:
-            client = MongoClient(
-                'mongodb://mongo_telegram:27010/lino_telegram'
-            )
+            client = MongoClient(TELEGRAM_DB_URI)
             db = client['lino_telegram']
 
             messenger = "Telegram"
@@ -72,10 +71,8 @@ class ActionStart(Action):
                 dispatcher.utter_message(message)
             return []
         else:
-            text = """
-                Adoro conhecer pessoas novas! Calma aí rapidinho,
-            vou anotar seu nome na minha agenda...
-            """
+            text = ('Adoro conhecer pessoas novas! Calma aí rapidinho, '
+                    'vou anotar seu nome na minha agenda...')
 
             # New user to be registered
             if messenger == "Facebook":
