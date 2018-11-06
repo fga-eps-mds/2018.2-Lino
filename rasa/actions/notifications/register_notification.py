@@ -4,8 +4,8 @@ from rasa_core.actions.action import Action
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
-PAGE_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
+TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
+FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 
 
 class ActionRegisterNotification(Action):

@@ -22,11 +22,13 @@ ADD cron.requirements.txt .
 
 RUN pip install -r cron.requirements.txt
 
-ADD /rasa/notify.sh .
-RUN chmod +x notify.sh
+# Adiciona todos os scripts
+ADD /rasa/scripts .
 
-ADD /rasa/notifier.py .
-ADD /rasa/notification_config.py .
+# Habilita todos os scripts
+RUN chmod +x notify.sh \
+    notify_gmail.sh \
+    notify_week_meal.sh
 
 ADD /rasa/crontab /etc/cron.d/menu-cron
 

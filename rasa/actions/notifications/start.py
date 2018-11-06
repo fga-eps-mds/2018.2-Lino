@@ -6,8 +6,8 @@ from rasa_core.actions.action import Action
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
-PAGE_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
+TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
+FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 
 
 class ActionStart(Action):
@@ -31,7 +31,7 @@ class ActionStart(Action):
         # Get users data to build a user to the database
         data = requests.get(
             'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
-            .format(telegram_token, sender_id, text)
+            .format(TELEGRAM_ACCESS_TOKEN, sender_id, text)
         ).json()
 
         # Check if user data was get succefully
@@ -40,7 +40,7 @@ class ActionStart(Action):
                 "https://graph.facebook.com/{}?fields=first_name,"
                 .format(sender_id) +
                 "last_name&access_token={}"
-                .format(PAGE_ACCESS_TOKEN)
+                .format(FACEBOOK_ACCESS_TOKEN)
             ).json()
 
             client = MongoClient(
@@ -72,8 +72,10 @@ class ActionStart(Action):
                 dispatcher.utter_message(message)
             return []
         else:
-            text = 'Adoro conhecer pessoas novas! Calma aí rapidinho, \
-                    vou anotar seu nome na minha agenda...'
+            text = """
+                Adoro conhecer pessoas novas! Calma aí rapidinho,
+            vou anotar seu nome na minha agenda...
+            """
 
             # New user to be registered
             if messenger == "Facebook":
@@ -99,7 +101,7 @@ class ActionStart(Action):
 
         try:
             last_name = data['result']['chat']['last_name']
-        except AttributeError as exception:
+        except KeyError as exception:
             print("Telegram user has not a last name!")
             logging.info(exception)
 
@@ -119,7 +121,7 @@ class ActionStart(Action):
 
         try:
             last_name = data['last_name']
-        except AttributeError as exception:
+        except KeyError as exception:
             print("Facebook user has not a last name!")
             logging.info(exception)
 

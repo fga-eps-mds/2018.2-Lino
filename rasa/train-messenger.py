@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 VERIFY = os.getenv('VERIFY', '')
 SECRET = os.getenv('SECRET', '')
-PAGE_ACCESS_TOKEN = os.getenv('PAGE_ACCESS_TOKEN', '')
+FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 
 
 def run():
@@ -27,8 +27,8 @@ def run():
         fb_verify=VERIFY,  # you need tell facebook this token,
                            # to confirm your URL
         fb_secret=SECRET,  # your app secret
-        fb_access_token=PAGE_ACCESS_TOKEN  # token for the page
-                                           # you subscribed to
+        fb_access_token=FACEBOOK_ACCESS_TOKEN  # token for the page
+                                               # you subscribed to
     )
 
     agent.handle_channel(HttpInputChannel(5001, "", input_channel))

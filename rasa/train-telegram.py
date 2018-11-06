@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 # If you want to use your own bot to development add the bot credentials as
 # second parameters
-ACCESS_TOKEN = os.getenv('ACCESS_TOKEN', '')
+TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
 VERIFY = os.getenv('VERIFY', '')
 WEBHOOK_URL = os.getenv('WEBHOOK_URL', '')
 
@@ -24,7 +24,7 @@ def run():
     agent = Agent.load('models/dialogue', interpreter=interpreter)
 
     input_channel = TelegramInput(
-        access_token=ACCESS_TOKEN,
+        access_token=TELEGRAM_ACCESS_TOKEN,
         verify=VERIFY,
         webhook_url=WEBHOOK_URL
     )
