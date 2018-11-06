@@ -36,7 +36,7 @@ def train_dialogue(domain_file='domain.yml',
         training_data,
         epochs=TRAINING_EPOCHS,
         batch_size=100,
-        validation_split=0.2
+        validation_split=0
     )
 
     agent.persist(model_path)
