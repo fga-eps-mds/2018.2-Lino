@@ -118,7 +118,8 @@ def notify_daily_meal_to_telegram(messages, telegram_users):
 
             requests.get(
                 'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
-                .format(TELEGRAM_ACCESS_TOKEN, chat['sender_id'], message)).json()
+                .format(TELEGRAM_ACCESS_TOKEN, chat['sender_id'], message)
+            ).json()
 
 
 def notify_daily_meal_to_facebook(messages, facebook_users):

@@ -28,7 +28,7 @@ def run():
                            # to confirm your URL
         fb_secret=SECRET,  # your app secret
         fb_access_token=FACEBOOK_ACCESS_TOKEN  # token for the page
-                                           # you subscribed to
+                                               # you subscribed to
     )
 
     agent.handle_channel(HttpInputChannel(5001, "", input_channel))
