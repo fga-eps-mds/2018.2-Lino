@@ -47,7 +47,6 @@
 
 ### Documentação
 
-- Criar Folha de Estilo para o projeto
 - Modelar o Banco de Dados
 - Modelar o NFR
 - Fazer Roadmap de papel (EPS)

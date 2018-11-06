@@ -1,57 +1,43 @@
-## path_asks_documents
+## path_greetings
 * greet
   - utter_greet
-* asks_about_documents
-  - utter_documents
+
+## path_goodbye
 * goodbye
   - utter_goodbye
   - utter_restart
 
-## path_asks_gmail
-* greet
-  - utter_greet
-* asks_about_gmail
-  - utter_gmail
-* goodbye
-  - utter_goodbye
-  - utter_restart
-
-## path_daily_meal
-* greet
-  - utter_greet
-* asks_about_menu
-  - utter_menu
-* asks_daily_menu{"period": "hoje"}
-  - action_daily_menu
-* goodbye
-  - utter_goodbye
-  - utter_restart
-
-## path_weekly_meal
-* greet
-  - utter_greet
-* asks_about_menu
-  - utter_menu
-* asks_weekly_menu
-  - utter_weekmenu
-* goodbye
-  - utter_goodbye
-  - utter_restart
-
-## path_asks_notification
-* greet
-  - utter_greet
-* asks_about_notifications
-  - utter_notifications
-* notification
-  - action_ask_notification
-* goodbye
-  - utter_goodbye
-  - utter_restart
- 
 ## path_fallback
 * out_of_scope
   - utter_default
-* goodbye
-  - utter_goodbye
-  - utter_restart
+
+## path_asks_documents
+* asks_about_documents
+  - utter_documents
+
+## path_asks_gmail
+* asks_about_gmail
+  - utter_gmail
+
+## path_daily_meal
+* asks_menu
+  - utter_menu
+* asks_daily_menu{"period": "hoje"}
+  - action_daily_menu
+
+## path_weekly_meal
+* asks_menu
+  - utter_menu
+* asks_weekly_menu{"period": "semana"}
+  - utter_weekly_menu
+
+## path_register_notification
+* asks_about_notifications
+  - utter_notifications
+* register_notification
+  - custom_start
+  - action_register_notification
+
+## path_calendar
+* calendar
+  - action_calendar

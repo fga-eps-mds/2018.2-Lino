@@ -1,5 +1,4 @@
 ## intent:out_of_scope
-- que
 - cade o estacionamento
 - to com frio
 - to com calor
@@ -10,6 +9,9 @@
 - preciso passar na prova
 - ser ou não ser, cadê o bifão
 - última
+- e o estacionamento
+- quando o preço da gasolina vai abaixar?
+- cansei do ru ser 5,20 
 
 ## intent:greet
 - Oi
@@ -25,6 +27,15 @@
 - yo
 - Oi Lino
 - hey
+- Oie
+- Turu bom?
+- Olaaaa
+- Heeeey
+- Hey
+- Hello
+- Alo
+- Oi, tudo bom?
+- Olá Lino
 
 ## intent:goodbye
 - Tchau 
@@ -34,4 +45,7 @@
 - Te vejo mais tarde
 - Volto depois
 - Tchau, obrigado
-- vlw flw
+- falous
+- massa, agr tchau
+- brigadão
+- valeu, agora tchau
