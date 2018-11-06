@@ -12,14 +12,13 @@ services:
         stdin_open: true
         tty: true
         environment:
-           - ACCESS_TOKEN: ${ACCESS_TOKEN}
+           - TRAINING_EPOCHS: ${TRAINING_EPOCHS}
+           - TELEGRAM_ACCESS_TOKEN: ${TELEGRAM_ACCESS_TOKEN}
            - VERIFY: ${VERIFY}
-           - WEBHOOK_URL: ${WEBHOOK_URL}
            - PSID: ${PSID}
            - FACEBOOK_ACCESS_TOKEN: ${FACEBOOK_ACCESS_TOKEN}
-           - PAGE_ACCESS_TOKEN: ${PAGE_ACCESS_TOKEN}
            - SECRET: ${SECRET}
-           - PAGE_ACCESS_TOKEN: ${PAGE_ACCESS_TOKEN}
+           - WEBHOOK_URL: ${WEBHOOK_URL}
         # bot credentials in train.py or another train file.
         depends_on:
             - cronjob
@@ -46,8 +45,18 @@ services:
         image: guila/cronjob:latest
         volumes:
             - ./outputs:/home
+        stdin_open: true
+        tty: true
+        environment:
+            - URI_TELEGRAM: ${URI_TELEGRAM}
+            - URI_FACEBOOK: ${URI_FACEBOOK}
+            - TELEGRAM_ACCESS_TOKEN: ${TELEGRAM_ACCESS_TOKEN}
+            - FACEBOOK_ACCESS_TOKEN: ${FACEBOOK_ACCESS_TOKEN}
+            - PSID: ${PSID}
         depends_on:
             - webcrawler
+            - mongo_telegram
+            - mongo_facebook
 
     webcrawler:
         image: guila/webcrawler:latest
