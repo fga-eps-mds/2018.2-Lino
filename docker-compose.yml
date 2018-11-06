@@ -19,6 +19,8 @@ services:
            - FACEBOOK_ACCESS_TOKEN: ${FACEBOOK_ACCESS_TOKEN}
            - SECRET: ${SECRET}
            - WEBHOOK_URL: ${WEBHOOK_URL}
+           - TELEGRAM_DB_URI: ${TELEGRAM_DB_URI}
+           - FACEBOOK_DB_URI: ${FACEBOOK_DB_URI}
         # bot credentials in train.py or another train file.
         depends_on:
             - cronjob
