@@ -9,8 +9,8 @@ from pymongo import MongoClient
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('ACCESS_TOKEN', '')
-PAGE_ACCESS_TOKEN = os.getenv('PAGE_ACCESS_TOKEN', '')
+TELEGRAM_ACCESS_TOKEN = os.getenv('ACCESS_TOKEN', '')
+FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 PSID = os.getenv('PSID', '')
 URI_TELEGRAM = os.getenv('URI_TELEGRAM', '')
 URI_FACEBOOK = os.getenv('URI_FACEBOOK', '')
@@ -112,13 +112,13 @@ def notify_daily_meal_to_telegram(messages, telegram_users):
             requests.get(
                 'https://api.telegram.org/bot{}\
                 /sendChatAction?chat_id={}&action=typing'
-                .format(telegram_token, chat['sender_id'])).json()
+                .format(TELEGRAM_ACCESS_TOKEN, chat['sender_id'])).json()
 
             time.sleep(1)
 
             requests.get(
                 'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
-                .format(telegram_token, chat['sender_id'], message)).json()
+                .format(TELEGRAM_ACCESS_TOKEN, chat['sender_id'], message)).json()
 
 
 def notify_daily_meal_to_facebook(messages, facebook_users):
@@ -155,7 +155,7 @@ def build_facebook_message(sender_id, message):
 
 def get_url_facebook_parameter():
     return ('https://graph.facebook.com/v2.6/{}/messages?access_token={}'
-            .format(PSID, PAGE_ACCESS_TOKEN))
+            .format(PSID, FACEBOOK_ACCESS_TOKEN))
 
 
 menu = get_daily_menu()

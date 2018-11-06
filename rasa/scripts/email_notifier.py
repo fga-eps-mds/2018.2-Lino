@@ -7,8 +7,8 @@ from pymongo import MongoClient
 from urllib.parse import urlencode
 
 
-telegram_token = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
-PAGE_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
+TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
+FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 PSID = os.getenv('PSID', '')
 URI_TELEGRAM = os.getenv('URI_TELEGRAM', '')
 URI_FACEBOOK = os.getenv('URI_FACEBOOK', '')
@@ -68,7 +68,7 @@ def notify_telegram(message, telegram_users):
     for chat in chats:
         requests.get(
             'https://api.telegram.org/bot{}/sendChatAction?chat_id={}'
-            .format(telegram_token, chat['sender_id']) +
+            .format(TELEGRAM_ACCESS_TOKEN, chat['sender_id']) +
             '&action=typing'
         )
 
@@ -76,7 +76,7 @@ def notify_telegram(message, telegram_users):
 
         requests.get(
             'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
-            .format(telegram_token, chat['sender_id'], message)).json()
+            .format(TELEGRAM_ACCESS_TOKEN, chat['sender_id'], message)).json()
 
 
 def notify_facebook(message, facebook_users):
@@ -114,7 +114,7 @@ def build_facebook_message(sender_id, message):
 
 def get_url_facebook_parameter():
     return ('https://graph.facebook.com/v2.6/{}/messages?access_token={}'
-            .format(PSID, PAGE_ACCESS_TOKEN))
+            .format(PSID, FACEBOOK_ACCESS_TOKEN))
 
 
 result = get_email()

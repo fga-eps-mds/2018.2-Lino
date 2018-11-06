@@ -8,8 +8,8 @@ from pymongo import MongoClient
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('ACCESS_TOKEN', '')
-PAGE_ACCESS_TOKEN = os.getenv('PAGE_ACCESS_TOKEN', '')
+TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
+FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 PSID = os.getenv('PSID', '')
 URI_TELEGRAM = os.getenv('URI_TELEGRAM', '')
 URI_FACEBOOK = os.getenv('URI_FACEBOOK', '')
@@ -71,13 +71,13 @@ def notify_daily_meal_to_telegram(message, telegram_users):
         requests.get(
             'https://api.telegram.org/bot{}\
             /sendChatAction?chat_id={}&action=typing'
-            .format(telegram_token, chat['sender_id'])).json()
+            .format(TELEGRAM_ACCESS_TOKEN, chat['sender_id'])).json()
 
         time.sleep(1)
 
         requests.get(
             'https://api.telegram.org/bot{}/sendPhoto?'
-            .format(telegram_token) +
+            .format(TELEGRAM_ACCESS_TOKEN) +
             'chat_id={}&photo={}&caption={}'
             .format(chat['sender_id'],
                     message,
@@ -122,7 +122,7 @@ def build_facebook_message(sender_id, url):
 
 def get_url_facebook_parameter():
     return ('https://graph.facebook.com/v2.6/{}/messages?access_token={}'
-            .format(PSID, PAGE_ACCESS_TOKEN))
+            .format(PSID, FACEBOOK_ACCESS_TOKEN))
 
 
 message = get_weekly_menu()
