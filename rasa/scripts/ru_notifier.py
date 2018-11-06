@@ -9,13 +9,15 @@ from pymongo import MongoClient
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('ACCESS_TOKEN', '')
-PAGE_ACCESS_TOKEN = os.getenv('PAGE_ACCESS_TOKEN', '')
+TELEGRAM_ACCESS_TOKEN = os.getenv('ACCESS_TOKEN', '')
+FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 PSID = os.getenv('PSID', '')
+URI_TELEGRAM = os.getenv('URI_TELEGRAM', '')
+URI_FACEBOOK = os.getenv('URI_FACEBOOK', '')
 
 
 def get_telegram_users(message):
-    client = MongoClient('mongodb://mongo_telegram:27010/lino_telegram')
+    client = MongoClient(URI_TELEGRAM)
     db = client['lino_telegram']
 
     users = db.users.find(
@@ -35,7 +37,7 @@ def get_telegram_users(message):
 
 
 def get_facebook_users(message):
-    client = MongoClient('mongodb://mongo_facebook:27011/lino_facebook')
+    client = MongoClient(URI_FACEBOOK)
     db = client['lino_facebook']
 
     users = db.users.find(
@@ -101,8 +103,8 @@ def parse_daily_notification_to_json(menu):
     return messages
 
 
-def notify_daily_meal_to_telegram(messages):
-    chats = get_telegram_users('daily meal')
+def notify_daily_meal_to_telegram(messages, telegram_users):
+    chats = telegram_users
 
     for chat in chats:
         for message in messages:
@@ -110,17 +112,18 @@ def notify_daily_meal_to_telegram(messages):
             requests.get(
                 'https://api.telegram.org/bot{}\
                 /sendChatAction?chat_id={}&action=typing'
-                .format(telegram_token, chat['sender_id'])).json()
+                .format(TELEGRAM_ACCESS_TOKEN, chat['sender_id'])).json()
 
             time.sleep(1)
 
             requests.get(
                 'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
-                .format(telegram_token, chat['sender_id'], message)).json()
+                .format(TELEGRAM_ACCESS_TOKEN, chat['sender_id'], message)
+            ).json()
 
 
-def notify_daily_meal_to_facebook(messages):
-    chats = get_facebook_users('daily meal')
+def notify_daily_meal_to_facebook(messages, facebook_users):
+    chats = facebook_users
 
     for chat in chats:
         for message in messages:
@@ -153,18 +156,21 @@ def build_facebook_message(sender_id, message):
 
 def get_url_facebook_parameter():
     return ('https://graph.facebook.com/v2.6/{}/messages?access_token={}'
-            .format(PSID, PAGE_ACCESS_TOKEN))
+            .format(PSID, FACEBOOK_ACCESS_TOKEN))
 
 
 menu = get_daily_menu()
 
+telegram_users = get_telegram_users('daily meal')
+facebook_users = get_facebook_users('daily meal')
+
 if menu:
     messages = parse_daily_notification_to_json(menu)
-    notify_daily_meal_to_telegram(messages)
-    notify_daily_meal_to_facebook(messages)
+    notify_daily_meal_to_telegram(messages, telegram_users)
+    notify_daily_meal_to_facebook(messages, facebook_users)
 else:
     messages = []
     messages.append('Não consegui pegar o cardápio pra você hoje... :(')
     messages.append('Parece que teve algum problema com o site do RU')
-    notify_daily_meal_to_telegram(messages)
-    notify_daily_meal_to_facebook(messages)
+    notify_daily_meal_to_telegram(messages, telegram_users)
+    notify_daily_meal_to_facebook(messages, facebook_users)

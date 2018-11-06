@@ -8,13 +8,15 @@ from pymongo import MongoClient
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('ACCESS_TOKEN', '')
-PAGE_ACCESS_TOKEN = os.getenv('PAGE_ACCESS_TOKEN', '')
+TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
+FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 PSID = os.getenv('PSID', '')
+URI_TELEGRAM = os.getenv('URI_TELEGRAM', '')
+URI_FACEBOOK = os.getenv('URI_FACEBOOK', '')
 
 
 def get_telegram_users(message):
-    client = MongoClient('mongodb://mongo_telegram:27010/lino_telegram')
+    client = MongoClient(URI_TELEGRAM)
     db = client['lino_telegram']
 
     users = db.users.find(
@@ -26,7 +28,7 @@ def get_telegram_users(message):
 
 
 def get_facebook_users(message):
-    client = MongoClient('mongodb://mongo_facebook:27011/lino_facebook')
+    client = MongoClient(URI_FACEBOOK)
     db = client['lino_facebook']
 
     users = db.users.find(
@@ -60,8 +62,8 @@ def get_weekly_menu():
     return response
 
 
-def notify_daily_meal_to_telegram(message):
-    chats = get_telegram_users('week meal')
+def notify_daily_meal_to_telegram(message, telegram_users):
+    chats = telegram_users
 
     comment_message = "Tá aqui o cardápio da semana"
 
@@ -69,13 +71,13 @@ def notify_daily_meal_to_telegram(message):
         requests.get(
             'https://api.telegram.org/bot{}\
             /sendChatAction?chat_id={}&action=typing'
-            .format(telegram_token, chat['sender_id'])).json()
+            .format(TELEGRAM_ACCESS_TOKEN, chat['sender_id'])).json()
 
         time.sleep(1)
 
         requests.get(
             'https://api.telegram.org/bot{}/sendPhoto?'
-            .format(telegram_token) +
+            .format(TELEGRAM_ACCESS_TOKEN) +
             'chat_id={}&photo={}&caption={}'
             .format(chat['sender_id'],
                     message,
@@ -83,8 +85,8 @@ def notify_daily_meal_to_telegram(message):
             ).json()
 
 
-def notify_daily_meal_to_facebook(message):
-    chats = get_facebook_users('week meal')
+def notify_daily_meal_to_facebook(message, facebook_users):
+    chats = facebook_users
 
     for chat in chats:
         builded_message = build_facebook_message(
@@ -120,11 +122,14 @@ def build_facebook_message(sender_id, url):
 
 def get_url_facebook_parameter():
     return ('https://graph.facebook.com/v2.6/{}/messages?access_token={}'
-            .format(PSID, PAGE_ACCESS_TOKEN))
+            .format(PSID, FACEBOOK_ACCESS_TOKEN))
 
 
 message = get_weekly_menu()
 
+telegram_users = get_telegram_users('weekly meal')
+facebook_users = get_facebook_users('weekly meal')
+
 if message:
-    notify_daily_meal_to_telegram(message)
-    notify_daily_meal_to_facebook(message)
+    notify_daily_meal_to_telegram(message, telegram_users)
+    notify_daily_meal_to_facebook(message, facebook_users)
