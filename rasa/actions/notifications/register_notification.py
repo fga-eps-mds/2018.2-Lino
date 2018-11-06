@@ -7,6 +7,9 @@ from rasa_core.actions.action import Action
 TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
 FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 
+TELEGRAM_DB_URI = os.getenv('TELEGRAM_DB_URI', 'localhost')
+FACEBOOK_DB_URI = os.getenv('FACEBOOK_DB_URI', 'localhost')
+
 
 class ActionRegisterNotification(Action):
     def name(self):
@@ -68,7 +71,7 @@ class ActionRegisterNotification(Action):
         return notification_map[word]
 
     def update_telegram_user(self, user_telegram, notification):
-        URI = 'mongodb://mongo_telegram:27010/lino_telegram'
+        URI = TELEGRAM_DB_URI
         database = 'lino_telegram'
 
         self.update_notification(
@@ -81,7 +84,7 @@ class ActionRegisterNotification(Action):
         return []
 
     def update_facebook_user(self, user_facebook, notification):
-        URI = 'mongodb://mongo_facebook:27011/lino_facebook'
+        URI = FACEBOOK_DB_URI
         database = 'lino_facebook'
 
         self.update_notification(
@@ -112,7 +115,7 @@ class ActionRegisterNotification(Action):
         return []
 
     def check_telegram_valid_user(self, sender_id):
-        client = MongoClient('mongodb://mongo_telegram:27010/lino_telegram')
+        client = MongoClient(TELEGRAM_DB_URI)
         db_telegram = client['lino_telegram']
 
         user = {}
@@ -124,7 +127,7 @@ class ActionRegisterNotification(Action):
             return user
 
     def check_facebook_valid_user(self, sender_id):
-        client = MongoClient('mongodb://mongo_facebook:27011/lino_facebook')
+        client = MongoClient(TELEGRAM_DB_URI)
         db_facebook = client['lino_facebook']
 
         user = {}
