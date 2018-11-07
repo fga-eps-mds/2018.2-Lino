@@ -6,7 +6,7 @@ intents:
   - asks_menu
   - asks_daily_menu
   - asks_weekly_menu
-  - asks_breakfast_menu
+  - asks_daily_breakfast
 
   - asks_about_notifications
   - action_ask_notification

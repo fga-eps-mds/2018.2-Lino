@@ -5,7 +5,7 @@ import logging
 
 class ActionDailyBreakfast(Action):
     def name(self):
-        return "action_daily_Breakfast"
+        return "action_daily_breakfast"
 
     def run(self, dispatcher, tracker, domain):
         messages = []
