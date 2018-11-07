@@ -25,6 +25,8 @@ RUN pip install -r cron.requirements.txt
 # Adiciona todos os scripts
 ADD /rasa/scripts .
 
+RUN python env_loader.py
+
 # Habilita todos os scripts
 RUN chmod +x notify.sh \
     notify_gmail.sh \
