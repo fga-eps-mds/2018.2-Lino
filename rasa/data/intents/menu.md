@@ -101,6 +101,46 @@
 - o que vão servir no [café](meal)
 - o que vai ser servido no [café](meal)?
 - então, o que tem pra comer no [café](meal)?
+<!-- cafe da manha -->
+- Me fala o cardápio do [cafe da manha](meal)
+- Me fala o cardápio do [cafe da manha](meal)
+- O que tem pra comer no [cafe da manha](meal)
+- Qual é o cardápio do [cafe da manha](meal)
+- Me passa o cardápio do [cafe da manha](meal)
+- Quero saber a comida do [cafe da manha](meal)
+- fome [cafe da manha](meal)
+- fome RU [cafe da manha](meal)
+- comida do [cafe da manha](meal)
+- rango do [cafe da manha](meal)
+- to com fome, qual o [cafe da manha](meal)
+- quero saber qual o cardápio pro [cafe da manha](meal)
+- oi lino, me informa sobre o cardápio do [cafe da manha](meal)
+- oi lino, menu do [cafe da manha](meal)
+- me passa o menu do [cafe da manha](meal)
+- me diz o menu do [cafe da manha](meal)
+- o que vão servir no [cafe da manha](meal)
+- o que vai ser servido no [cafe da manha](meal)?
+- então, o que tem pra comer no [cafe da manha](meal)?
+<!-- cafe -->
+- Me fala o cardápio do [cafe](meal)
+- Me fala o cardápio do [cafe](meal)
+- O que tem pra comer no [cafe](meal)
+- Qual é o cardápio do [cafe](meal)
+- Me passa o cardápio do [cafe](meal)
+- Quero saber a comida do [cafe](meal)
+- fome [cafe](meal)
+- fome RU [cafe](meal)
+- comida do [cafe](meal)
+- rango do [cafe](meal)
+- to com fome, qual o [cafe](meal)
+- quero saber qual o cardápio pro [cafe](meal)
+- oi lino, me informa sobre o cardápio do [cafe](meal)
+- oi lino, menu do [cafe](meal)
+- me passa o menu do [cafe](meal)
+- me diz o menu do [cafe](meal)
+- o que vão servir no [cafe](meal)
+- o que vai ser servido no [cafe](meal)?
+- então, o que tem pra comer no [cafe](meal)?
 <!-- desjejum -->
 - Me fala o cardápio do [desjejum](meal)
 - Me fala o cardápio do [desjejum](meal)
