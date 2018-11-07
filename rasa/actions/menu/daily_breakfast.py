@@ -21,3 +21,18 @@ class ActionDailyBreakfast(Action):
         except KeyError as keyexception:
             logging.info(keyexception)
             messages.append("É final de semana, amigo... Não tem RU não kkkk")
+
+        messages.append('Eai! Então... Pro café da manhã, nós teremos: ')
+
+        breakfast_menu = ""
+
+        for label in response['DESJEJUM']:
+            dish = str(label + ': ' + response['DESJEJUM'][label] + '\n')
+            breakfast_menu += dish
+        
+        messages.append(breakfast_menu)
+
+        for message in messages:
+            dispatcher.utter_message(message)
+
+        return []
