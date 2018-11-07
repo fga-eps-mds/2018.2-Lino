@@ -31,6 +31,10 @@
 * asks_weekly_menu{"period": "semana"}
   - utter_weekly_menu
 
+## path_breakfast_meal
+* asks_breakfast_menu{"meal": "cafe da manhã"}
+  - action_daily_breakfast
+
 ## path_register_notification
 * asks_about_notifications
   - utter_notifications

@@ -59,3 +59,25 @@
 - o que vão servir [semana](period)
 - o que vai ser servido [semana](period)?
 - então, o que tem pra comer [semana](period)?
+
+## intent: asks_breakfast_menu
+- Me fala o cardápio de [café da manhã](meal)
+- Me fala o cardápio de [café da manhã](meal)
+- O que tem pra comer [café da manhã](meal)
+- Qual é o cardápio de [café da manhã](meal)
+- Me passa o cardápio de [café da manhã](meal)
+- Quero saber a comida de [café da manhã](meal)
+- RU [café da manhã](meal)
+- fome [café da manhã](meal)
+- fome RU [café da manhã](meal)
+- comida ru [café da manhã](meal)
+- rango ru [café da manhã](meal)
+- to com fome, [café da manhã](meal)
+- quero saber qual o cardápio pra [café da manhã](meal)
+- oi lino, me informa sobre o cardápio de [café da manhã](meal)
+- oi lino, menu de [café da manhã](meal)
+- me passa o menu de [café da manhã](meal)
+- me diz o menu de [café da manhã](meal)
+- o que vão servir [café da manhã](meal)
+- o que vai ser servido [café da manhã](meal)?
+- então, o que tem pra comer [café da manhã](meal)?
