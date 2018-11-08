@@ -1,12 +1,13 @@
 import requests
 import os
 import time
+import logging
 import pycurl
 import logging
+from rasa_core.actions.action import Action
 from urllib.parse import urlencode
 
 TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '688895966:AAHF8fFDZxVjtyHjn-PkAlEQ93IhV52MWbg')
-FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN','')
 
 class ActionDailyBreakfast(Action):
     def name(self):
@@ -28,31 +29,36 @@ class ActionDailyBreakfast(Action):
             ).json()
         except KeyError as keyexception:
             logging.info(keyexception)
-            messages.append("É final de semana, amigo... Não tem RU não kkkk")
+            dispatcher.utter_message("É final de semana, amigo... Não tem RU não kkkk")
 
-        breakfast_menu = ""
+        if(day is not 'Saturday' and day is not 'Sunday'):
+            breakfast_menu = ""
+            for label in response['DESJEJUM']:
+                dish = str('*' + label + '*' + ': ' + response['DESJEJUM'][label] + '\n')
+                breakfast_menu += dish
 
-        for label in response['DESJEJUM']:
-            dish = str('*' + label + '*' + ': ' + response['DESJEJUM'][label] + '\n')
-            breakfast_menu += dish
-        
-        messages.append(breakfast_menu)
+            messages.append(breakfast_menu)
 
-        data = requests.get(
-            'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
-            .format(TELEGRAM_ACCESS_TOKEN, sender_id,'Eai! Então... Pro café da manhã, nós teremos: ')
-        ).json()
-        messenger = ""
-        # Check if user data was get succefully
-        if not data['ok']:
-            messenger = "Facebook"
-        else:
-            messenger = "Telegram"
+            welcome_message = 'Eai! Então... Pro café da manhã, nós teremos: '
 
-        for message in messages:
+            data = requests.get(
+                'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
+                .format(TELEGRAM_ACCESS_TOKEN, sender_id,welcome_message)
+            ).json()
+            messenger = ""
+            # Check user is from Telegram or Facebook
+            if not data['ok']:
+                dispatcher.utter_message(welcome_message)
+                messenger = "Facebook"
+            else:
+                messenger = "Telegram"
 
             if(messenger == "Telegram"):
-                requests.get('https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}&parse_mode=Markdown'
-                .format(TELEGRAM_ACCESS_TOKEN,sender_id, message))
-            
+                for message in messages:
+                    requests.get('https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}&parse_mode=Markdown'
+                    .format(TELEGRAM_ACCESS_TOKEN,sender_id, message))
+            elif(messenger == "Facebook"):
+                for message in messages:
+                    dispatcher.utter_message(message)
+
         return []
