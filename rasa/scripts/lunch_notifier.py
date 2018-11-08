@@ -89,11 +89,10 @@ def parse_daily_notification_to_json(menu):
     messages = []
     messages.append('No almoço de hoje nós temos:')
 
-
     text = ''
     for item in menu:
         prev = item
-        item = item.replace(':','')
+        item = item.replace(':', '')
         text += '*{}*'.format(item) + ':' + ' ' + menu[prev] + '\n'
     messages.append(text)
 
@@ -115,8 +114,8 @@ def notify_daily_meal_to_telegram(messages, telegram_users):
 
             requests.get(
                 ('https://api.telegram.org/bot{}/'
-                'sendMessage?chat_id={}&text={}'
-                '&parse_mode=Markdown')
+                 'sendMessage?chat_id={}&text={}'
+                 '&parse_mode=Markdown')
                 .format(TELEGRAM_ACCESS_TOKEN, chat['sender_id'], message)
             ).json()
 
