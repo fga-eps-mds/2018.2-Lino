@@ -4,9 +4,7 @@ services:
     lino:
         # If you want to development and use another image,
         # change the image to the Dockerfile that corresponds to the one you want to use.
-        build:
-            context: .
-            dockerfile: docker/Telegram.Dockerfile
+        image: guila/lino:latest
         ports:
             - 5002:5002
         volumes:
@@ -14,15 +12,15 @@ services:
         stdin_open: true
         tty: true
         environment:
-           - TRAINING_EPOCHS=300
-           - TELEGRAM_ACCESS_TOKEN=677504218:AAHaga656yF0tqY0vfH5NgALds6UFn0VEek
-           - VERIFY=ulib_fga_bot
-           - PSID=303317230254781
-           - FACEBOOK_ACCESS_TOKEN=EAANoEk6bk1MBACfBTZACN42HlDbVZCg5cRqoyZBwfZALh0mZCvd3hXDPuJl1bPijVQPXZBqfUvduVTKh96PFSKpGC2lrHhgb5kZCRMkkZByHtu0RQKUTM6P8OTnZCvGyfzinCsg64rbUoVN4MjaOBEblDzZBuSDyooMj98ZB5tJ3q8EXwZDZD
-           - SECRET=9faf1e57e1d429ac42473796a8eb0849
-           - WEBHOOK_URL=https://96fffef2.ngrok.io/webhook
-           - TELEGRAM_DB_URI=mongodb://mongo_telegram:27010/lino_telegram
-           - FACEBOOK_DB_URI=mongodb://mongo_facebook:27011/lino_facebook
+            - TRAINING_EPOCHS: ${TRAINING_EPOCHS}
+            - TELEGRAM_ACCESS_TOKEN: ${TELEGRAM_ACCESS_TOKEN}
+            - VERIFY: ${VERIFY}
+            - PSID: ${PSID}
+            - FACEBOOK_ACCESS_TOKEN: ${FACEBOOK_ACCESS_TOKEN}
+            - SECRET: ${SECRET}
+            - WEBHOOK_URL: ${WEBHOOK_URL}
+            - TELEGRAM_DB_URI: ${TELEGRAM_DB_URI}
+            - FACEBOOK_DB_URI: ${FACEBOOK_DB_URI}
         # bot credentials in train.py or another train file.
         depends_on:
             - cronjob
@@ -33,7 +31,7 @@ services:
         image: mongo:latest
         command: mongod --port 27010
         volumes:
-            - /tmp:/data/db
+            - /l/mongo_telegram/mongo_telegram_db:/data/db
         ports:
             - 27010:27010
 
@@ -41,7 +39,7 @@ services:
         image: mongo:latest
         command: mongod --port 27011
         volumes:
-            - /tmp:/data/db
+            - /l/mongo_facebook/mongo_facebook_db:/data/db
         ports:
             - 27011:27011
 
@@ -52,11 +50,11 @@ services:
         stdin_open: true
         tty: true
         environment:
-            - URI_TELEGRAM=mongodb://mongo_telegram:27010/lino_telegram
-            - URI_FACEBOOK=AAA
-            - TELEGRAM_ACCESS_TOKEN=677504218:AAHaga656yF0tqY0vfH5NgALds6UFn0VEek
-            - FACEBOOK_ACCESS_TOKEN=AAA
-            - PSID=AAA
+            - URI_TELEGRAM: ${URI_TELEGRAM}
+            - URI_FACEBOOK: ${URI_FACEBOOK}
+            - TELEGRAM_ACCESS_TOKEN: ${TELEGRAM_ACCESS_TOKEN}
+            - FACEBOOK_ACCESS_TOKEN: ${FACEBOOK_ACCESS_TOKEN}
+            - PSID: ${PSID}
         depends_on:
             - webcrawler
             - mongo_telegram
@@ -72,6 +70,6 @@ services:
     mongo_ru:
         image: mongo:latest
         volumes:
-            - /tmp:/data/db
+            - /l/crawler/crawler_db:/data/db
         ports:
             - 27017:27017
