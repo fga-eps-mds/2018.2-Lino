@@ -34,7 +34,7 @@
 ## path_dinner_meal
 * asks_menu
   - utter_menu
-* asks_weekly_menu{"meal": "jantar"}
+* asks_dinner_menu{"meal": "jantar"}
   - action_daily_dinner
 
 ## path_register_notification

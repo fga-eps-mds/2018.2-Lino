@@ -60,7 +60,7 @@
 - o que vai ser servido [semana](period)?
 - então, o que tem pra comer [semana](period)?
 
-## intent: asks_breakfast_menu
+## intent: asks_dinner_menu
 <!-- jantar -->
 - Me fala o cardápio do [jantar](meal)
 - O que tem pra comer no [jantar](meal)
