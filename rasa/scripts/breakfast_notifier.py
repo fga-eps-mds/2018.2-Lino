@@ -15,6 +15,12 @@ PSID = os.getenv('PSID', '')
 URI_TELEGRAM = os.getenv('URI_TELEGRAM', '')
 URI_FACEBOOK = os.getenv('URI_FACEBOOK', '')
 
+print(TELEGRAM_ACCESS_TOKEN)
+print(FACEBOOK_ACCESS_TOKEN)
+print(PSID)
+print(URI_TELEGRAM)
+print(URI_FACEBOOK)
+
 
 def get_telegram_users(message):
     client = MongoClient(URI_TELEGRAM)
@@ -92,7 +98,7 @@ def parse_daily_notification_to_json(menu):
     text = ''
     for item in menu:
         prev = item
-        item = item.replace(':','')
+        item = item.replace(':', '')
         text += '*{}*'.format(item) + ':' + ' ' + menu[prev] + '\n'
 
     messages.append(text)
@@ -164,7 +170,6 @@ facebook_users = get_facebook_users('breakfast meal')
 
 if menu:
     messages = parse_daily_notification_to_json(menu)
-    print(messages)
     notify_daily_meal_to_telegram(messages, telegram_users)
     notify_daily_meal_to_facebook(messages, facebook_users)
 else:
