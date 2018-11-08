@@ -1,4 +1,5 @@
 0 7 * * 1-5 export $(cat /loaded-env.txt | xargs); ./../../notify.sh >> /home/out_cron_daily.log 2>&1
 * * * * * export $(cat /loaded-env.txt | xargs); ./../../notify_gmail.sh >> /home/out_cron.log 2>&1
-30 6 * * 1 export $(cat /loaded-env.txt | xargs); ./../../notify_week_meal.sh >> /home/out_cron_week.log 2>&1
+30 6 * * 1 export $(cat /loaded-env.txt | xargs); ./../../notify_week_meal.sh >> /home/out_cron_week.log 2>&
 30 10 * * 1-5 export $(cat /loaded-env.txt | xargs); ./../../notify_lunch.sh >> /home/out_cron_lunch.log 2>&1
+30 6 * * 1-5 export $(cat /loaded-env.txt | xargs); ./../../notify_breakfast_meal.sh >> /home/out_cron_breakfast.log 2>&1
