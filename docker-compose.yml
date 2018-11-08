@@ -4,7 +4,9 @@ services:
     lino:
         # If you want to development and use another image,
         # change the image to the Dockerfile that corresponds to the one you want to use.
-        image: guila/lino:latest
+        build:
+            context: .
+            dockerfile: docker/Telegram.Dockerfile
         ports:
             - 5002:5002
         volumes:
@@ -43,11 +45,23 @@ services:
             - 27011:27011
 
     cronjob:
-        image: guila/cronjob:latest
+        build:
+            context: .
+            dockerfile: docker/Cronjob.Dockerfile
         volumes:
             - ./outputs:/home
+        stdin_open: true
+        tty: true
+        environment:
+            - URI_TELEGRAM: ${URI_TELEGRAM}
+            - URI_FACEBOOK: ${URI_FACEBOOK}
+            - TELEGRAM_ACCESS_TOKEN: ${TELEGRAM_ACCESS_TOKEN}
+            - FACEBOOK_ACCESS_TOKEN: ${FACEBOOK_ACCESS_TOKEN}
+            - PSID: ${PSID}
         depends_on:
             - webcrawler
+            - mongo_telegram
+            - mongo_facebook
 
     webcrawler:
         image: guila/webcrawler:latest
