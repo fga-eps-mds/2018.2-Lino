@@ -2,12 +2,12 @@ import requests
 import os
 import time
 import logging
-import pycurl
-import logging
 from rasa_core.actions.action import Action
-from urllib.parse import urlencode
 
-TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
+ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
+API_URL = 'https://api.telegram.org'
+PARSE = 'Markdown'
+
 
 class ActionDailyDinner(Action):
     def name(self):
@@ -29,14 +29,18 @@ class ActionDailyDinner(Action):
             ).json()
         except KeyError as keyexception:
             logging.info(keyexception)
-            dispatcher.utter_message("É final de semana, amigo... Não tem RU não kkkk")
+            dispatcher.utter_message(
+                "É final de semana, amigo... Não tem RU não kkkk"
+                )
 
         if(day is not 'Saturday' and day is not 'Sunday'):
-            
+
             lunch_menu = ""
 
             for label in response['JANTAR']:
-                dish = str('*' + label + '*' + ' ' + response['JANTAR'][label] + '\n')
+                dish = str(
+                    '*' + label + '*' + ' ' + response['JANTAR'][label] + '\n'
+                    )
                 lunch_menu += dish
 
             messages.append(lunch_menu)
@@ -45,7 +49,7 @@ class ActionDailyDinner(Action):
 
             data = requests.get(
                 'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
-                .format(TELEGRAM_ACCESS_TOKEN, sender_id,welcome_message)
+                .format(ACCESS_TOKEN, sender_id, welcome_message)
             ).json()
             messenger = ""
             # Check user is from Telegram or Facebook
@@ -57,40 +61,14 @@ class ActionDailyDinner(Action):
 
             if(messenger == "Telegram"):
                 for message in messages:
-                    requests.get('https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}&parse_mode=Markdown'
-                    .format(TELEGRAM_ACCESS_TOKEN,sender_id, message))
+                    requests.get(
+                        '{}/bot{}/sendMessage?chat_id={}&text={}&parse_mode={}'
+                        .format(
+                            API_URL, ACCESS_TOKEN, sender_id, message, PARSE
+                        )
+                    )
             elif(messenger == "Facebook"):
                 for message in messages:
                     dispatcher.utter_message(message)
 
         return []
-
-    # def run(self, dispatcher, tracker, domain):
-    #     messages = []
-
-    #     day = time.strftime('%A', time.localtime())
-
-    #     # Change the url if you have your own webcrawler server
-    #     try:
-    #         response = requests.get(
-    #             'http://webcrawler-ru.lappis.rocks/cardapio/{}'
-    #             .format(day)
-    #         ).json()
-    #     except KeyError as keyexception:
-    #         logging.info(keyexception)
-    #         messages.append("É final de semana, amigo... Não tem RU não kkkk")
-
-    #     messages.append('Eai! Então... Pro jantar, nós teremos: ')
-
-    #     dinner_menu = ""
-
-    #     for label in response['JANTAR']:
-    #         dish = str(label + ': ' + response['JANTAR'][label] + '\n')
-    #         dinner_menu += dish
-
-    #     messages.append(dinner_menu)
-
-    #     for message in messages:
-    #         dispatcher.utter_message(message)
-
-    #     return []
