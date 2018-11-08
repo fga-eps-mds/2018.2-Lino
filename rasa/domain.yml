@@ -6,7 +6,11 @@ intents:
   - asks_menu
   - asks_daily_menu
   - asks_weekly_menu
+<<<<<<< HEAD
+  - asks_lunch_menu
+=======
   - asks_daily_breakfast
+>>>>>>> acc020e956094536766cf1a35bae6b15640ed14d
 
   - asks_about_notifications
   - action_ask_notification
@@ -39,7 +43,11 @@ actions:
 
   - utter_menu
   - actions.menu.daily_menu.ActionDailyMenu
+<<<<<<< HEAD
+  - actions.menu.daily_lunch.ActionDailyLunch
+=======
   - actions.menu.daily_breakfast.ActionDailyBreakfast
+>>>>>>> acc020e956094536766cf1a35bae6b15640ed14d
   - utter_weekly_menu
 
   - utter_notifications
