@@ -31,6 +31,12 @@
 * asks_weekly_menu{"period": "semana"}
   - utter_weekly_menu
 
+## path_lunch_meal
+* asks_menu
+  - utter_menu
+* asks_lunch_menu{"meal": "almoço"}
+  - action_daily_lunch
+
 ## path_register_notification
 * asks_about_notifications
   - utter_notifications
