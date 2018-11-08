@@ -6,7 +6,7 @@
 * goodbye
   - utter_goodbye
   - utter_restart
-    
+
 ## path_fallback
 * out_of_scope
   - utter_default
@@ -29,7 +29,7 @@
 * asks_menu
   - utter_menu
 * asks_weekly_menu{"period": "semana"}
-  - utter_weekmenu
+  - utter_weekly_menu
 
 ## path_register_notification
 * asks_about_notifications

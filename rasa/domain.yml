@@ -9,6 +9,7 @@ intents:
 
   - asks_about_notifications
   - action_ask_notification
+  - register_notification
 
   - asks_about_documents
 
@@ -34,9 +35,9 @@ actions:
   - utter_greet
   - utter_goodbye
 
-  - utter_menu  
-  - actions.menu.ActionDailyMenu
-  - utter_weekmenu
+  - utter_menu
+  - actions.menu.daily_menu.ActionDailyMenu
+  - utter_weekly_menu
 
   - utter_notifications
   - actions.notifications.start.ActionStart
@@ -52,7 +53,7 @@ templates:
   utter_default:
     - text: |
         Eita pessoa, tendi nada
-        
+
         Repete pra mim, dizendo melhor o que vc quer?
 
   utter_restart:
@@ -63,21 +64,19 @@ templates:
     - text: |
         Opa, de hoje ou da semana?
 
-  utter_weekmenu:
-    - text: |
-        Vish pessoa, agora não rola
-        
-        Não me ensinaram ainda, mas logo logo tô manjando!
-
   utter_documents:
     - text: |
         Vish pessoa, agora não rola
-        
+
         Não me ensinaram ainda, mas logo logo tô manjando!
 
   utter_notifications:
     - text: |
         Massa, easy te mandar as notificações. Qual você quer?
+
+  utter_weekly_menu:
+    - text: Tá aqui o cardápio da semana... Bom proveito :)
+      image: "https://webcrawler-ru.lappis.rocks/cardapio/pdf"
 
   utter_gmail:
     - text: |
@@ -93,4 +92,4 @@ templates:
     - text: |
         Feshow então!!!
 
-        Precisando, só me gritar aqui 
+        Precisando, só me gritar aqui

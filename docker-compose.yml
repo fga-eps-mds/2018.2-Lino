@@ -14,14 +14,15 @@ services:
         stdin_open: true
         tty: true
         environment:
-           - ACCESS_TOKEN: ${ACCESS_TOKEN}
+           - TRAINING_EPOCHS: ${TRAINING_EPOCHS}
+           - TELEGRAM_ACCESS_TOKEN: ${TELEGRAM_ACCESS_TOKEN}
            - VERIFY: ${VERIFY}
-           - WEBHOOK_URL: ${WEBHOOK_URL}
            - PSID: ${PSID}
            - FACEBOOK_ACCESS_TOKEN: ${FACEBOOK_ACCESS_TOKEN}
-           - PAGE_ACCESS_TOKEN: ${PAGE_ACCESS_TOKEN}
            - SECRET: ${SECRET}
-           - PAGE_ACCESS_TOKEN: ${PAGE_ACCESS_TOKEN}
+           - WEBHOOK_URL: ${WEBHOOK_URL}
+           - TELEGRAM_DB_URI: ${TELEGRAM_DB_URI}
+           - FACEBOOK_DB_URI: ${FACEBOOK_DB_URI}
         # bot credentials in train.py or another train file.
         depends_on:
             - cronjob

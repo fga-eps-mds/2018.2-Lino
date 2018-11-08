@@ -64,7 +64,7 @@ client = MongoClient('mongodb://mongo-ru:27017/lino_ru')
 ```
 # If you want to use your own bot to development add the bot token as
 # second parameters
-telegram_token = os.getenv('ACCESS_TOKEN', '')
+TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
 ```
 
 3. Caso esteja rodando o webcrawler local, altere a URL no arquivo notifier e no menu.py
@@ -82,7 +82,7 @@ response = requests.get('http://<imagem_crawler>:<porta_crawler>/cardapio/{}'.fo
 ```
 # If you want to use your own bot to development
 # add the bot credentials as second parameters
-ACCESS_TOKEN = os.getenv('ACCESS_TOKEN', '')
+TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
 VERIFY = os.getenv('VERIFY', '')
 # the webhook URL is one that ngrok generates (https)
 WEBHOOK_URL = os.getenv('WEBHOOK_URL', '')
