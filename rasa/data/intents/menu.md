@@ -60,7 +60,27 @@
 - o que vai ser servido [semana](period)?
 - então, o que tem pra comer [semana](period)?
 
-<<<<<<< HEAD
+## intent: asks_dinner_menu
+<!-- jantar -->
+- Me fala o cardápio do [jantar](meal)
+- O que tem pra comer no [jantar](meal)
+- Qual é o cardápio do [jantar](meal)
+- Me passa o cardápio do [jantar](meal)
+- Quero saber a comida do [jantar](meal)
+- fome [jantar](meal)
+- fome RU [jantar](meal)
+- comida do [jantar](meal)
+- rango do [jantar](meal)
+- to com fome, qual o [jantar](meal)
+- quero saber qual o cardápio pro [jantar](meal)
+- oi lino, me informa sobre o cardápio do [jantar](meal)
+- oi lino, menu do [jantar](meal)
+- me passa o menu do [jantar](meal)
+- me diz o menu do [jantar](meal)
+- o que vão servir no [jantar](meal)
+- o que vai ser servido no [jantar](meal)?
+- então, o que tem pra comer no [jantar](meal)?
+
 ## intent: asks_lunch_menu
 <!-- almoço -->
 - Me fala o cardápio do [almoço](meal)
@@ -82,7 +102,7 @@
 - o que vão servir no [almoço](meal)
 - o que vai ser servido no [almoço](meal)?
 - então, o que tem pra comer no [almoço](meal)?
-=======
+
 ## intent: asks_breakfast_menu
 <!-- café da manhã -->
 - Me fala o cardápio do [café da manhã](meal)
@@ -184,4 +204,3 @@
 - o que vão servir no [desjejum](meal)
 - o que vai ser servido no [desjejum](meal)?
 - então, o que tem pra comer no [desjejum](meal)?
->>>>>>> acc020e956094536766cf1a35bae6b15640ed14d
