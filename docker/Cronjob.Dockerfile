@@ -31,7 +31,8 @@ RUN chmod +x notify.sh \
     notify_week_meal.sh \
     entrypoint_cron.sh \
     notify_breakfast_meal.sh \
-    notify_lunch.sh
+    notify_lunch.sh \
+    notify_dinner_meal.sh
 
 RUN python env_loader.py
 
