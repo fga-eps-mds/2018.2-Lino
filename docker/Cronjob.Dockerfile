@@ -29,7 +29,8 @@ ADD /rasa/scripts .
 RUN chmod +x notify.sh \
     notify_gmail.sh \
     notify_week_meal.sh \
-    entrypoint_cron.sh
+    entrypoint_cron.sh \
+    notify_lunch.sh
 
 RUN python env_loader.py
 
