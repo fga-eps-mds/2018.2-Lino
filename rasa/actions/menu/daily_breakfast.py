@@ -2,12 +2,12 @@ import requests
 import os
 import time
 import logging
-import pycurl
-import logging
 from rasa_core.actions.action import Action
-from urllib.parse import urlencode
 
-TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '688895966:AAHF8fFDZxVjtyHjn-PkAlEQ93IhV52MWbg')
+ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
+API_URL = 'https://api.telegram.org'
+PARSE = 'Markdown'
+
 
 class ActionDailyBreakfast(Action):
     def name(self):
@@ -29,21 +29,27 @@ class ActionDailyBreakfast(Action):
             ).json()
         except KeyError as keyexception:
             logging.info(keyexception)
-            dispatcher.utter_message("É final de semana, amigo... Não tem RU não kkkk")
+            dispatcher.utter_message(
+                "É final de semana, amigo... Não tem RU não kkkk"
+                )
 
         if(day is not 'Saturday' and day is not 'Sunday'):
-            breakfast_menu = ""
+
+            lunch_menu = ""
+
             for label in response['DESJEJUM']:
-                dish = str('*' + label + '*' + ': ' + response['DESJEJUM'][label] + '\n')
-                breakfast_menu += dish
+                dish = str(
+                    '*' + label + '*' + ' ' + response['DESJEJUM'][label]
+                    + '\n')
+                lunch_menu += dish
 
-            messages.append(breakfast_menu)
+            messages.append(lunch_menu)
 
-            welcome_message = 'Eai! Então... Pro café da manhã, nós teremos: '
+            welcome_message = 'Eai! Então... Pro café, nós teremos: '
 
             data = requests.get(
                 'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}'
-                .format(TELEGRAM_ACCESS_TOKEN, sender_id,welcome_message)
+                .format(ACCESS_TOKEN, sender_id, welcome_message)
             ).json()
             messenger = ""
             # Check user is from Telegram or Facebook
@@ -55,8 +61,12 @@ class ActionDailyBreakfast(Action):
 
             if(messenger == "Telegram"):
                 for message in messages:
-                    requests.get('https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}&parse_mode=Markdown'
-                    .format(TELEGRAM_ACCESS_TOKEN,sender_id, message))
+                    requests.get(
+                        '{}/bot{}/sendMessage?chat_id={}&text={}&parse_mode={}'
+                        .format(
+                            API_URL, ACCESS_TOKEN, sender_id, message, PARSE
+                        )
+                    )
             elif(messenger == "Facebook"):
                 for message in messages:
                     dispatcher.utter_message(message)
