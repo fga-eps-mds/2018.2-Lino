@@ -59,3 +59,24 @@
 - o que vão servir [semana](period)
 - o que vai ser servido [semana](period)?
 - então, o que tem pra comer [semana](period)?
+
+## intent: asks_breakfast_menu
+<!-- jantar -->
+- Me fala o cardápio do [jantar](meal)
+- O que tem pra comer no [jantar](meal)
+- Qual é o cardápio do [jantar](meal)
+- Me passa o cardápio do [jantar](meal)
+- Quero saber a comida do [jantar](meal)
+- fome [jantar](meal)
+- fome RU [jantar](meal)
+- comida do [jantar](meal)
+- rango do [jantar](meal)
+- to com fome, qual o [jantar](meal)
+- quero saber qual o cardápio pro [jantar](meal)
+- oi lino, me informa sobre o cardápio do [jantar](meal)
+- oi lino, menu do [jantar](meal)
+- me passa o menu do [jantar](meal)
+- me diz o menu do [jantar](meal)
+- o que vão servir no [jantar](meal)
+- o que vai ser servido no [jantar](meal)?
+- então, o que tem pra comer no [jantar](meal)?

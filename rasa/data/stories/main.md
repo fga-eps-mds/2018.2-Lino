@@ -31,6 +31,12 @@
 * asks_weekly_menu{"period": "semana"}
   - utter_weekly_menu
 
+## path_dinner_meal
+* asks_menu
+  - utter_menu
+* asks_weekly_menu{"meal": "jantar"}
+  - action_daily_dinner
+
 ## path_register_notification
 * asks_about_notifications
   - utter_notifications
