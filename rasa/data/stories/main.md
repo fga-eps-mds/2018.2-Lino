@@ -31,17 +31,21 @@
 * asks_weekly_menu{"period": "semana"}
   - utter_weekly_menu
 
-<<<<<<< HEAD
 ## path_dinner_meal
 * asks_menu
   - utter_menu
 * asks_dinner_menu{"meal": "jantar"}
   - action_daily_dinner
-=======
+
+## path_lunch_meal
+* asks_menu
+  - utter_menu
+* asks_lunch_menu{"meal": "almoço"}
+  - action_daily_lunch
+
 ## path_breakfast_meal
 * asks_breakfast_menu{"meal": "cafe da manhã"}
   - action_daily_breakfast
->>>>>>> acc020e956094536766cf1a35bae6b15640ed14d
 
 ## path_register_notification
 * asks_about_notifications
