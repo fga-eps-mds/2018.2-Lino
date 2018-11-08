@@ -60,6 +60,7 @@
 - o que vai ser servido [semana](period)?
 - então, o que tem pra comer [semana](period)?
 
+<<<<<<< HEAD
 ## intent: asks_lunch_menu
 <!-- almoço -->
 - Me fala o cardápio do [almoço](meal)
@@ -81,3 +82,106 @@
 - o que vão servir no [almoço](meal)
 - o que vai ser servido no [almoço](meal)?
 - então, o que tem pra comer no [almoço](meal)?
+=======
+## intent: asks_breakfast_menu
+<!-- café da manhã -->
+- Me fala o cardápio do [café da manhã](meal)
+- Me fala o cardápio do [café da manhã](meal)
+- O que tem pra comer no [café da manhã](meal)
+- Qual é o cardápio do [café da manhã](meal)
+- Me passa o cardápio do [café da manhã](meal)
+- Quero saber a comida do [café da manhã](meal)
+- fome [café da manhã](meal)
+- fome RU [café da manhã](meal)
+- comida do [café da manhã](meal)
+- rango do [café da manhã](meal)
+- to com fome, qual o [café da manhã](meal)
+- quero saber qual o cardápio pro [café da manhã](meal)
+- oi lino, me informa sobre o cardápio do [café da manhã](meal)
+- oi lino, menu do [café da manhã](meal)
+- me passa o menu do [café da manhã](meal)
+- me diz o menu do [café da manhã](meal)
+- o que vão servir no [café da manhã](meal)
+- o que vai ser servido no [café da manhã](meal)?
+- então, o que tem pra comer no [café da manhã](meal)?
+<!-- café -->
+- Me fala o cardápio do [café](meal)
+- Me fala o cardápio do [café](meal)
+- O que tem pra comer no [café](meal)
+- Qual é o cardápio do [café](meal)
+- Me passa o cardápio do [café](meal)
+- Quero saber a comida do [café](meal)
+- fome [café](meal)
+- fome RU [café](meal)
+- comida do [café](meal)
+- rango do [café](meal)
+- to com fome, qual o [café](meal)
+- quero saber qual o cardápio pro [café](meal)
+- oi lino, me informa sobre o cardápio do [café](meal)
+- oi lino, menu do [café](meal)
+- me passa o menu do [café](meal)
+- me diz o menu do [café](meal)
+- o que vão servir no [café](meal)
+- o que vai ser servido no [café](meal)?
+- então, o que tem pra comer no [café](meal)?
+<!-- cafe da manha -->
+- Me fala o cardápio do [cafe da manha](meal)
+- Me fala o cardápio do [cafe da manha](meal)
+- O que tem pra comer no [cafe da manha](meal)
+- Qual é o cardápio do [cafe da manha](meal)
+- Me passa o cardápio do [cafe da manha](meal)
+- Quero saber a comida do [cafe da manha](meal)
+- fome [cafe da manha](meal)
+- fome RU [cafe da manha](meal)
+- comida do [cafe da manha](meal)
+- rango do [cafe da manha](meal)
+- to com fome, qual o [cafe da manha](meal)
+- quero saber qual o cardápio pro [cafe da manha](meal)
+- oi lino, me informa sobre o cardápio do [cafe da manha](meal)
+- oi lino, menu do [cafe da manha](meal)
+- me passa o menu do [cafe da manha](meal)
+- me diz o menu do [cafe da manha](meal)
+- o que vão servir no [cafe da manha](meal)
+- o que vai ser servido no [cafe da manha](meal)?
+- então, o que tem pra comer no [cafe da manha](meal)?
+<!-- cafe -->
+- Me fala o cardápio do [cafe](meal)
+- Me fala o cardápio do [cafe](meal)
+- O que tem pra comer no [cafe](meal)
+- Qual é o cardápio do [cafe](meal)
+- Me passa o cardápio do [cafe](meal)
+- Quero saber a comida do [cafe](meal)
+- fome [cafe](meal)
+- fome RU [cafe](meal)
+- comida do [cafe](meal)
+- rango do [cafe](meal)
+- to com fome, qual o [cafe](meal)
+- quero saber qual o cardápio pro [cafe](meal)
+- oi lino, me informa sobre o cardápio do [cafe](meal)
+- oi lino, menu do [cafe](meal)
+- me passa o menu do [cafe](meal)
+- me diz o menu do [cafe](meal)
+- o que vão servir no [cafe](meal)
+- o que vai ser servido no [cafe](meal)?
+- então, o que tem pra comer no [cafe](meal)?
+<!-- desjejum -->
+- Me fala o cardápio do [desjejum](meal)
+- Me fala o cardápio do [desjejum](meal)
+- O que tem pra comer no [desjejum](meal)
+- Qual é o cardápio do [desjejum](meal)
+- Me passa o cardápio do [desjejum](meal)
+- Quero saber a comida do [desjejum](meal)
+- fome [desjejum](meal)
+- fome RU [desjejum](meal)
+- comida do [desjejum](meal)
+- rango do [desjejum](meal)
+- to com fome, qual o [desjejum](meal)
+- quero saber qual o cardápio pro [desjejum](meal)
+- oi lino, me informa sobre o cardápio do [desjejum](meal)
+- oi lino, menu do [desjejum](meal)
+- me passa o menu do [desjejum](meal)
+- me diz o menu do [desjejum](meal)
+- o que vão servir no [desjejum](meal)
+- o que vai ser servido no [desjejum](meal)?
+- então, o que tem pra comer no [desjejum](meal)?
+>>>>>>> acc020e956094536766cf1a35bae6b15640ed14d
