@@ -6,6 +6,7 @@ intents:
   - asks_menu
   - asks_daily_menu
   - asks_weekly_menu
+  - asks_daily_breakfast
 
   - asks_about_notifications
   - action_ask_notification
@@ -20,6 +21,7 @@ intents:
 entities:
   - periods
   - calendar
+  - meal
 
 slots:
   period:
@@ -37,6 +39,7 @@ actions:
 
   - utter_menu
   - actions.menu.daily_menu.ActionDailyMenu
+  - actions.menu.daily_breakfast.ActionDailyBreakfast
   - utter_weekly_menu
 
   - utter_notifications
