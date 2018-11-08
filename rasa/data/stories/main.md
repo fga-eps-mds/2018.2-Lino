@@ -34,6 +34,7 @@
 ## path_register_notification
 * asks_about_notifications
   - utter_notifications
+  - action_buttons_notification
 * register_notification
   - custom_start
   - action_register_notification
