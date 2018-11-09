@@ -7,8 +7,8 @@ from rasa_core.actions.action import Action
 TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
 FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 
-TELEGRAM_DB_URI = os.getenv('TELEGRAM_DB_URI', 'localhost')
-FACEBOOK_DB_URI = os.getenv('FACEBOOK_DB_URI', 'localhost')
+TELEGRAM_DB_URI = os.getenv('TELEGRAM_DB_URI', '')
+FACEBOOK_DB_URI = os.getenv('FACEBOOK_DB_URI', '')
 
 
 class ActionRegisterNotification(Action):
@@ -38,10 +38,14 @@ class ActionRegisterNotification(Action):
 
         if user_telegram != {}:
             self.update_telegram_user(user_telegram, notification)
-        else:
+            messages.append('Agora você já pode receber notificações desse tipo!')
+        elif user_facebook != {}:
             self.update_facebook_user(user_facebook, notification)
-
-        messages.append('Agora você já pode receber notificações desse tipo!')
+            messages.append('Agora você já pode receber notificações desse tipo!')
+        else:
+            messages.append(('Não consegui te encontrar aqui!'
+                            'Tô com alguns problemas e não'
+                            'consegui te cadastrar!'))
 
         for message in messages:
             dispatcher.utter_message(message)
@@ -127,7 +131,7 @@ class ActionRegisterNotification(Action):
             return user
 
     def check_facebook_valid_user(self, sender_id):
-        client = MongoClient(TELEGRAM_DB_URI)
+        client = MongoClient(FACEBOOK_DB_URI)
         db_facebook = client['lino_facebook']
 
         user = {}
