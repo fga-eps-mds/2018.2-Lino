@@ -34,6 +34,8 @@
 * EPS - Engenharia de Produto de <i>Software</i>
 * Lino - O nome do ChatBot
 * ChatBot - Programa de computador capaz de conduzir uma conversação através de via auditiva ou texto
+* FGA - Faculdade do Gama
+* RU - Restaurante Universitário
 
 ## 1.4 Referências
 
@@ -46,17 +48,17 @@
 # 2. Posicionamento
 ## 2.1 Oportunidade de Negócio
 
-<p align="justify"> &emsp;&emsp;Atualmente, as informações são repassadas para os estudantes através dos murais e redes sociais da Universidade. Para obter tais informações, deve-se acessar o portal Matrícula Web e em alguns casos comparecer na secretaria para retirada.</p>
+<p align="justify"> &emsp;&emsp;Atualmente, as informações são repassadas para os universitários através dos murais, sites e redes sociais da Universidade de Brasília. As vezes, para obter-se tais informações necessita-se acessar o portal Matrícula Web e, em alguns casos, até comparecer na secretaria para obtenção de informações de informações desejadas.</p>
 
-<p align="justify"> &emsp;&emsp;Isso configura uma situação de dificuldade na obtenção das determinadas informações. Muitas vezes o aluno não tem a disponibilidade de comparecer ao local onde se encontram as informações, perdendo-as desta maneira. A forma do aluno se comunicar com a faculdade e os professores ainda não é realizada de maneira fácil e dinâmica. Dessa forma, o ChatBot se propôe a solucionar tais desafios.</p>
+<p align="justify"> &emsp;&emsp;Isso configura um cenário complicado e nada acessível para obtenção das determinadas informações. Muitas vezes os alunos não possuem a disponibilidade necessária de comparecer ao local onde se encontram as informações, perdendo-as desta maneira. A forma do aluno se comunicar com a faculdade e os professores ainda não é realizada de maneira acessível e dinâmica. Dessa forma, o ChatBot se propôe a solucionar tais desafios.</p>
 
-<p align="justify"> &emsp;&emsp;O ChatBot oferecerá o serviço automatizado de alertar os alunos a cerca de informações importantes sobre a universidade, além de fornecer instruções necessárias para a visualização e retirada de documentos. Dessa forma, aumenta-se a velocidade e a facilidade de acesso à documentação e informação, atualmente fornecida pela secretaria.</p>
+<p align="justify"> &emsp;&emsp;O ChatBot oferecerá o serviço automatizado de alertar aos alunos a cerca de informações importantes sobre a universidade e o ambiente acadêmico, além de fornecer instruções necessárias para a visualização e retirada de documentos. Dessa forma, aumenta-se a velocidade e a facilidade de acesso à documentação e informação, atualmente fornecida pela secretaria.</p>
 
 ## 2.2 Descrição do Problema
 <table class="tg">
   <tr>
     <td class="tg-s6z2">O problema de</td>
-    <td class="tg-031e">Desatualização dos estudantes e demora para retirada de documentos</td>
+    <td class="tg-031e">Inacessibilidade de informações aos universitários e demora para retirada de documentos</td>
   </tr>
   <tr>
     <td class="tg-s6z2">Afeta</td>
@@ -82,7 +84,7 @@
   </tr>
   <tr>
     <td class="tg-s6z2">Que</td>
-    <td class="tg-031e">Desejam acelerar o fornecimento de documentos e informação aos estudantes</td>
+    <td class="tg-031e">Desejam acelerar o processo de fornecimento de documentos e informação aos universitários</td>
   </tr>
   <tr>
     <td class="tg-s6z2">O Lino</td>
@@ -90,7 +92,7 @@
   </tr>
   <tr>
     <td class="tg-s6z2">Que</td>
-    <td class="tg-031e">Visa facilitar a interação entre Universidade e Aluno                                                                                 </td>
+    <td class="tg-031e">Visa facilitar a interação entre Universidade de Brasília e universitários                                                                                 </td>
   </tr>
   <tr>
     <td class="tg-s6z2">Diferente de</td>
@@ -105,29 +107,29 @@
 
 # 3. Descrições dos Envolvidos e dos Usuários
 
-Os principais Envolvidos neste projeto serão por parte da equipe de desenvolvimento, gestores e monitores, sendo que esses não necessariamente irão ser usuários do aplicativo.
+Os principais envolvidos neste projeto serão as equipes de desenvolvimento (MDS), gestores (EPS) e monitores, sendo que esses não necessariamente irão ser usuários do aplicativo.
 
-Já os usuários que irão interagir são alunos da Fga, sejam eles de graduação ou pós-graduação.
+O público-alvo do projeto, que irá interagir com o Lino, são alunos da FGA, sejam eles de graduação ou pós-graduação.
 
-Os principais artefatos que o Bot Lino propõe é a maior agilidade e facilidade na transmissão de informação de assuntos e perguntas frequentes em relação a faculdade.
+Os principais artefatos que o Lino propõe é a maior agilidade, acessibilidade e facilidade na entrega de informação de assuntos e perguntas frequentes em relação a Universidade de Brasília.
 
 ## 3.2 Resumo dos Envolvidos
 
 |Nome|Descrição|Responsabilidades|
 |:----:|:----:|:----:|
-|Equipe de desenvolvimento de *Software*|Estudantes da Disciplina Métodos de Desenvolvimento de *Software*|Desenvolvimento e Testes do *Software* descrito no documento|
-|Equipe de Engenharia de Produto de *Software*|Estudantes da Disciplina Engenharia de Produto de *Software*|Gestão da Equipe de Desenvolvimento, bem como manutenção de ambientes e entrega contínua|
+|Equipe de desenvolvimento de *Software*|Estudantes da Disciplina Métodos de Desenvolvimento de *Software*.|Desenvolvimento e Testes do *Software* descrito no documento.|
+|Equipe de Engenharia de Produto de *Software*|Estudantes da Disciplina Engenharia de Produto de *Software*.|Gestão da Equipe de Desenvolvimento, bem como manutenção de ambientes e entrega contínua.|
 |Orientador|Professora na Universidade de Brasília, no campus Faculdade Gama (FGA - UnB), atual professora das disciplinas Métodos de Desenvolvimento de *Software* e Engenharia de Produto de *Software*.|Orientar as equipe de desenvolvimento e gestão em eventuais dúvidas.|
 
 ## 3.3 Resumo dos Usuários
 
 |Nome|Descrição|Responsabilidades|
 |:---:|:---:|:---:|
-|Alunos|Aqueles que frequentam a Fga e porventura tenham dúvidas acerca de assuntos da Universidade|Interagir com o Bot por meio do Telegram, retirar dúvidas e receber notificações|
+|Alunos|Aqueles que frequentam a FGA e porventura tenham dúvidas acerca de assuntos da universidade|Interagir com o Lino por meio das plataformas <i>Telegram</i> e <i>Facebook Messenger</i>, retirar dúvidas e receber notificações e alertas da comunidade acadêmica.|
 
 ## 3.4 Principais Necessidades dos Usuários e dos Envolvidos
 
-Os usuários realizarão a interação com o Bot por meio do Telegram e Messenger do Facebook, serviços de mensagens instantâneas, a qualquer momento que tenham questões sobre procedimentos da Faculdade, e receberão notificações sobre o calendário do semestre.
+Os usuários realizarão a interação com o Lino por meio do <i>Telegram</i> e do <i>Facebook Messenger</i>, serviços de mensagens instantâneas, sempre que tiverem dúvidas ou desejarem maiores esclarecimentos a respeito dos procedimentos da universidade. Também, poderão receber notificações sobre o calendário do semestre e alertas da comunidade acadêmica.
 
 ## 3.5 Perfis dos Envolvidos
 
@@ -160,7 +162,7 @@ Os usuários realizarão a interação com o Bot por meio do Telegram e Messenge
 |:-:|:-|
 |Representantes|Professora Carla Silva Rocha Aguiar|
 |Descrição|Professora na Universidade de Brasília, no campus Faculdade Gama (FGA - UnB), atual professora das disciplinas Métodos de Desenvolvimento de *Software* e Engenharia de Produto de *Software*.|
-|Tipo|Orientadora e avaliadora que dará suporte a respeito do desenvolvimento do Bot.|
+|Tipo|Orientadora e avaliadora que dará suporte a respeito do desenvolvimento do Chatbot Lino.|
 |Responsabilidades|Avaliar a equipe de desenvolvimento e gestão e orientá-los em eventuais dúvidas.|
 |Critérios de Sucesso|Observar o sucesso da equipe de desenvolvimento.|
 |Envolvimento|Médio.|
@@ -173,62 +175,67 @@ Os usuários realizarão a interação com o Bot por meio do Telegram e Messenge
 |Perfil|--|
 |:-:|:-|
 |Representantes|Alunos da Universidade de Brasilia, no campus Faculdade do Gama (FGA - UnB).|
-|Descrição|Alunos que tenham dúvidas acerca da Faculdade.|
-|Tipo|Estudantes da Universidade que tenham dúvidas e necessitem de notificações sobre o calendário do semestre.|
-|Responsabilidades|Interagir com o Bot por meio do Telegram ou Messenger, retirar dúvidas e receber notificações.|
-|Critérios de Sucesso|Realizar interações flúidas com o Bot.|
+|Descrição|Alunos que tenham dúvidas acerca da faculdade.|
+|Tipo|Estudantes da FGA que tenham dúvidas e necessitem de notificações sobre o calendário do semestre.|
+|Responsabilidades|Interagir com o Lino por meio do <i>Telegram</i> ou <i>Facebook Messenger</i>, retirar dúvidas, receber notificações e alertas da comunidade acadêmica.|
+|Critérios de Sucesso|Realizar interações flúidas com o Lino.|
 |Envolvimento|Alto.|
-|Problemas/Comentários|Não possuir cadastro no Telegram.|
+|Problemas/Comentários|Não possuir cadastro no <i>Telegram</i>.|
 
 ## 3.7 Principais Necessidades dos Usuários ou dos Envolvidos
 
 |Necessidade|Prioridade|Preocupação|Solução Proposta|Solução Atual|
 |:---|:---|:---|:---|:---|
-|Retirar dúvidas frequentes de alunos da Universidade.|Alta.|Falta de interação com o Bot.|Um ChatBot de Telegram e Messenger que responda as dúvidas trazidas por alunos.|Perguntar diretamente na Secretaria da Faculdade.|
-|Receber notificações sobre o calendário de atividades da Faculdade.|Alta.|Notificações ignoradas.|Mensagens enviadas pelo ChatBot, avisando de eventos e datas importantes durante o semestre.|Pesquisas e avisos em grupos de Facebook.|
+|Retirar dúvidas frequentes de alunos da FGA - UnB.|Alta.|Falta de interação com o Lino.|Um ChatBot de <i>Telegram</i> e <i>Facebook Messenger</i> que consiga auxiliar os universitários respondendo suas dúvidas e necessidades.|Perguntar diretamente na secretaria da faculdade.|
+|Receber notificações sobre o calendário de atividades da Faculdade.|Alta.|Notificações ignoradas.|Mensagens enviadas pelo Lino, avisando de eventos e datas importantes durante o semestre.|Pesquisas e avisos em grupos de Facebook e sites da comunidade.|
 
 # 4.Descrição da Solução
 
 ## 4.1 Perpectiva do Produto
 
-<p align="justify"> &emsp;&emsp;O ChatBot Lino tem como objetivo automatizar operações de secretariado, permitindo a redistribuição de informações universitárias como datas e prazos de incrição. Ainda é capaz de ensinar o usuário um caminho pra facilitar uma emissão de um documento Universitário e avisar periodicamente eventos de forma prévia.</p>
+<p align="justify"> &emsp;&emsp;O ChatBot Lino tem como objetivo automatizar operações de secretariado, permitindo a redistribuição de informações universitárias como datas e prazos de incrição. Ainda disso, é capaz de ensinar o usuário um caminho pra facilitar uma emissão de documentos universitários, avisar periodicamente eventos, alertas da comunidade acadêmica e informar o cardápio de refeições do RU.</p>
 
 ## 4.2 Resumo dos recursos
 
 | Benefício para o Cliente | Recursos de suporte |
 |:---:|:---:|
-|Fornece avisos sobre datas de eventos e prazos de inscrição|O ChatBot Lino utiliza informações públicas da universidade para gerar os avisos para o usuário, ainda estes combinando de acordo com o assunto que o usuário deseja receber|
-|Capacidade de interação entre usuário e o Lino|A partir de um fluxo de diálogo, Lino é capaz de sguir uma conversa não linear e interagir de forma descontraída e informativa|
-|Facilidade em emissão de documentos universitários|Lino quando questionado sobre documentos prontamente demonstra de forma prática como emitir e obter os documentos a partir das plataformas online da universidade|
+|Fornece avisos sobre datas de eventos e prazos de inscrição|O ChatBot Lino utiliza informações públicas da universidade para gerar os avisos para o usuário, ainda estes combinando de acordo com o assunto que o usuário deseja receber.|
+|Capacidade de interação entre usuário e o Lino|A partir de um fluxo de diálogo, Lino é capaz de sguir uma conversa não linear e interagir de forma descontraída e informativa.|
+|Facilidade em emissão de documentos universitários|O Lino, quando questionado sobre documentos, prontamente demonstra de forma prática como emitir e obter os documentos a partir das plataformas online da universidade.|
+|Facilidade em adquirir o cardápio do RU|O Lino torna mais acessível aos universitários dados relacionados às refeições do Restaurante Universitário.|
 
 # 5. Recursos do Produto
 
-O ChatBot Lino é capaz de realizar:
+O ChatBot Lino é capaz de:
 
-* Avisos prévios de eventos;
-* Avisos prévios de prazos de inscrição;
-* Resposta a dúvidas comuns entre os alunos;
-* Fluxo de conversa com o usuário;
-* Tutoriais para emissão de documentos universitários;
+* Realizar avisos prévios de eventos;
+* Realizar avisos prévios de prazos de inscrição;
+* Realizar avisos de alertar da comunidade acadêmica;
+* Realizar um fluxo de conversa com o usuário;
+* Realizar tutoriais para emissão de documentos universitários;
+* Disponibilizar dados das refeições do RU;
+* Resposder dúvidas comuns entre os universitários;
 
 # 6. Requisitos Funcionais
 
 # 7. Restrições
 
-*	Uso da Internet.
-* Projeto deve ser finalizado até 29/11/2018.
-* Conhecimento básico da Português.
-* Conhecimento básico de Inglês.
+*	Uso da Internet;
+* Uso do <i>Telegram</i>;
+* Uso do <i>Facebook Messenger</i>;
+* Projeto deve ser finalizado até 29/11/2018;
+* Conhecimento básico da Português;
+* Conhecimento básico de Inglês;
 
 # 8. Intervalos de qualidade
 
 ## 8.1 Requisitos de Implementação
 
-Para maior eficiência, o ChatBot será desenvolvido para ser utilizado em conjunto das plataformas <i>Messenger</i> e <i>Telegram</i>, dois programas largamente utilizados pela comunidade para a comunicação, onde a implementação de funcionalidades se mostra viável.
+<p align="justify"> &emsp;&emsp;Para maior eficiência, o Lino será desenvolvido para ser utilizado em conjunto das plataformas <i>Facebook Messenger</i> e <i>Telegram</i>, dois programas largamente utilizados pela comunidade para a comunicação, onde a implementação de funcionalidades se mostra viável.</p>
 
 ## 8.2 Requisitos de Sistema
 
-<p align="justify"> &emsp;&emsp;Esta aplicação deverá ser acessada através de dispositivos que possuem as aplicações <i>Messenger</i> e <i>Telegram</i> em que o sistema operacional é variável de acordo com o dispositivo de utilização, podendo ser: <i>Android</i>, <i>iOS</i>, <i>Windows</i>, <i>Linux</i>, <i>ChromeOS</i>...</p>
+<p align="justify"> &emsp;&emsp;Esta aplicação deverá ser acessada através de dispositivos que possuem as aplicações <i>Facebook Messenger</i> ou <i>Telegram</i> em que o sistema operacional é variável de acordo com o dispositivo de utilização, podendo ser: <i>Android</i>, <i>iOS</i>, <i>Windows</i>, <i>Linux</i>, <i>ChromeOS</i>...</p>
 
 ## 8.3 Requisitos de Design
 
