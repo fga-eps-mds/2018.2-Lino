@@ -15,26 +15,68 @@ class ActionButtonsNotification(Action):
         return "action_buttons_notification"
 
     def run(self, dispatcher, tracker, domain):
-        buttons = self.build_button_telegram()
-        mensagem = 'VAI TOMAR NO CU'
-        dispatcher.utter_button_message(mensagem, buttons, button_type="custom")
+        buttons = self.build_buttons_telegram()
+        mensagem = 'SHABLAW'
+        buttons = self.build_buttons_facebook()
+        elements = self.build_facebook_elements(buttons)
+        dispatcher.utter_custom_message(*elements)
         return []
 
     def build_button_dict(self):
         return [
-            ('cardápio diario','dia'),
-            ('cardápio semanal', 'semana'),
-            ('alerta da comunidade', 'comunidade'),
-            ('café da manhã', 'café'),
-            ('jantar', 'jantar'),
-            ('almoço', 'almoço')
-        ]
-        
+            ('Alerta da Comunidade', 'alerta da comunidade'),
+            ('Cardápio Diario','dia'),
+            ('Cardápio Semanal', 'semana'),
+            ('Café da Manhã', 'café'),
+            ('Almoço', 'almoço'),
+            ('Jantar', 'jantar')
+        ]  
     
-    def build_button_facebook(self):
-        pass
-    
-    def build_button_telegram(self):
+    def build_facebook_message(self, sender_id, message, buttons):
+        return {
+            'recipient': {
+                'id': sender_id
+            },
+            'message': {
+                'text': message,
+                'attachment': {
+                    'type': 'template',
+                    'payload': {
+                        'template_type': 'generic',
+                        'elements': self.build_facebook_elements(buttons)
+                    }
+                }
+            }
+        }
+
+    def build_facebook_elements(self, buttons):
+        message = 'Qual das opções você deseja?'
+        elements = []
+        for value in buttons:
+            element = self.build_element(value, message)
+            elements.append(element)
+        return elements
+
+    def build_element(self, list_buttons, message):
+        return {
+            'title': message,
+            'buttons': list_buttons
+        }
+
+    def build_buttons_facebook(self):
+        values = self.build_button_dict()
+        lista = [values[x:x+3]for x in range(0, len(values), 3)]
+        print(lista)
+        for value in lista: 
+            for i in range(0, len(value)):
+                value[i] = {
+                    'type': 'postback',
+                    'title': value[i][0],
+                    'payload': value[i][1]
+                }
+        return lista
+
+    def build_buttons_telegram(self):
         values = self.build_button_dict()
         lista = [values[x:x+3]for x in range(0, len(values), 3)]
         for value in lista: 
@@ -44,11 +86,3 @@ class ActionButtonsNotification(Action):
                     'payload': value[i][1]
                 }
         return lista
-
-
-
-
-        
-
-
-    

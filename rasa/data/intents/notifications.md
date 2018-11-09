@@ -94,3 +94,5 @@
 - show, quero receber o cardápio da semana
 - xuxu beleza, quero o cardápio da semana
 - opa, cardápio da semana então
+- comunidade
+- alerta da comunidade
