@@ -219,6 +219,16 @@ O <i>ChatBot</i> Lino é capaz de:
 
 # 6. Requisitos Funcionais
 
+| Funcionalidades | Prioridade |
+|:---:|:---:|
+|Notificar o usuário sobre o cardápio diário do RU|Alta|
+|Informar o usuário sobre o cardápio geral da semana|Alta|
+|Informar o usuário sobre o cardápio de uma refeição específica de um período|Alta|
+|Gerenciar as notificações escolhidas pelo usuário| Alta|
+|Receber mensagens dos servidores via gmail e enviar à comunidade acadêmica| Alta|
+|Enviar o caléndário de matricúlas da Universidade|Alta|
+|Informar os usuários sobre documentos acadêmicos|Alta|
+
 # 7. Restrições
 
 *	Uso da <i>Internet</i>;
