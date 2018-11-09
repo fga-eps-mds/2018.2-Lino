@@ -13,6 +13,7 @@
 | 28/08/2018 |   1.10  | Adição do tópico 2 | Gabriel Braga |
 | 28/08/2018 |   1.11  | Revisão do tópico 2.3 | Gabriel Braga |
 | 06/09/2018 |   2.0  | Revisão do tópico 2.1, 3, 3.4, 8.1, 8.2 | Matheus Blanco |
+| 09/11/2018 |   2.1  | Revisão de todos os tópicos | Gabriel Filipe e Gabriel Braga|
 
 # 1. Introdução
 
@@ -20,20 +21,20 @@
 
 ## 1.1 Finalidade
 
-<p aligng="justify"> &emsp;&emsp;O documento presente tem, por finalidade, apresentar e estabelecer uma visão ampla sobre o ChatBot Lino de modo que deixe claro sua proposta, características, utilidades e funcionalidades.</p>
+<p aligng="justify"> &emsp;&emsp;O documento presente tem, por finalidade, apresentar e estabelecer uma visão ampla sobre o <i>ChatBot</i> Lino de modo que deixe claro sua proposta, características, utilidades e funcionalidades.</p>
 
 ## 1.2 Escopo
 
-<p aligng="justify"> &emsp;&emsp;O ChatBot Lino é um projeto realizado para as disciplinas Métodos de Desenvolvimento de <i>Software</i> (MDS) e Engenharia de Produto de <i>Software</i> (EPS), do curso Engenharia de <i>Software</i> da Faculdade UnB Gama (FGA) da Universidade de Brasília (UnB).</p>
-<p aligng="justify"> &emsp;&emsp;O projeto, a ser realizado pela equipe 4, composta por alunos das duas disciplinas, e com orientação da professora Carla Rocha possui como objetivo a comunicação direta com o aluno matriculado na instituição de ensino superior. A partir da interação com o ChatBot, o usuário poderá requisitar deste serviços, ajudas, notícias e informes relacionados à faculdade e à universidade, como o passo-a-passo necessário para a emissão de determinado documento ou informações sobre a alimentação provida pelo Restaurante Universitário.
+<p aligng="justify"> &emsp;&emsp;O <i>ChatBot</i> Lino é um projeto realizado para as disciplinas Métodos de Desenvolvimento de <i>Software</i> (MDS) e Engenharia de Produto de <i>Software</i> (EPS), do curso Engenharia de <i>Software</i> da Faculdade UnB Gama (FGA) da Universidade de Brasília (UnB).</p>
+<p aligng="justify"> &emsp;&emsp;O projeto, a ser realizado pela equipe 4, composta por alunos das duas disciplinas, e com orientação da professora Carla Rocha possui como objetivo a comunicação direta com o aluno matriculado na instituição de ensino superior. A partir da interação com o <i>ChatBot</i>, o usuário poderá requisitar deste serviços, ajudas, notícias e informes relacionados à faculdade e à universidade, como o passo-a-passo necessário para a emissão de determinado documento ou informações sobre a alimentação provida pelo Restaurante Universitário.
 
 ## 1.3 Definições, Acrônimos e Abreviações
 
 * UnB - Universidade de Brasília
 * MDS - Métodos de Desenvolvimento de <i>Software</i>
 * EPS - Engenharia de Produto de <i>Software</i>
-* Lino - O nome do ChatBot
-* ChatBot - Programa de computador capaz de conduzir uma conversação através de via auditiva ou texto
+* Lino - O nome do <i>ChatBot</i>
+* <i>ChatBot</i> - Programa de computador capaz de conduzir uma conversação através de via auditiva ou texto
 * FGA - Faculdade do Gama
 * RU - Restaurante Universitário
 
@@ -50,9 +51,9 @@
 
 <p align="justify"> &emsp;&emsp;Atualmente, as informações são repassadas para os universitários através dos murais, sites e redes sociais da Universidade de Brasília. As vezes, para obter-se tais informações necessita-se acessar o portal Matrícula Web e, em alguns casos, até comparecer na secretaria para obtenção de informações de informações desejadas.</p>
 
-<p align="justify"> &emsp;&emsp;Isso configura um cenário complicado e nada acessível para obtenção das determinadas informações. Muitas vezes os alunos não possuem a disponibilidade necessária de comparecer ao local onde se encontram as informações, perdendo-as desta maneira. A forma do aluno se comunicar com a faculdade e os professores ainda não é realizada de maneira acessível e dinâmica. Dessa forma, o ChatBot se propôe a solucionar tais desafios.</p>
+<p align="justify"> &emsp;&emsp;Isso configura um cenário complicado e nada acessível para obtenção das determinadas informações. Muitas vezes os alunos não possuem a disponibilidade necessária de comparecer ao local onde se encontram as informações, perdendo-as desta maneira. A forma do aluno se comunicar com a faculdade e os professores ainda não é realizada de maneira acessível e dinâmica. Dessa forma, o <i>ChatBot</i> se propôe a solucionar tais desafios.</p>
 
-<p align="justify"> &emsp;&emsp;O ChatBot oferecerá o serviço automatizado de alertar aos alunos a cerca de informações importantes sobre a universidade e o ambiente acadêmico, além de fornecer instruções necessárias para a visualização e retirada de documentos. Dessa forma, aumenta-se a velocidade e a facilidade de acesso à documentação e informação, atualmente fornecida pela secretaria.</p>
+<p align="justify"> &emsp;&emsp;O <i>ChatBot</i> oferecerá o serviço automatizado de alertar aos alunos a cerca de informações importantes sobre a universidade e o ambiente acadêmico, além de fornecer instruções necessárias para a visualização e retirada de documentos. Dessa forma, aumenta-se a velocidade e a facilidade de acesso à documentação e informação, atualmente fornecida pela secretaria.</p>
 
 ## 2.2 Descrição do Problema
 <table class="tg">
@@ -88,7 +89,7 @@
   </tr>
   <tr>
     <td class="tg-s6z2">O Lino</td>
-    <td class="tg-031e">É um ChatBot</td>
+    <td class="tg-031e">É um <i>ChatBot</i></td>
   </tr>
   <tr>
     <td class="tg-s6z2">Que</td>
@@ -162,7 +163,7 @@ Os usuários realizarão a interação com o Lino por meio do <i>Telegram</i> e 
 |:-:|:-|
 |Representantes|Professora Carla Silva Rocha Aguiar|
 |Descrição|Professora na Universidade de Brasília, no campus Faculdade Gama (FGA - UnB), atual professora das disciplinas Métodos de Desenvolvimento de *Software* e Engenharia de Produto de *Software*.|
-|Tipo|Orientadora e avaliadora que dará suporte a respeito do desenvolvimento do Chatbot Lino.|
+|Tipo|Orientadora e avaliadora que dará suporte a respeito do desenvolvimento do <i>Chatbot</i> Lino.|
 |Responsabilidades|Avaliar a equipe de desenvolvimento e gestão e orientá-los em eventuais dúvidas.|
 |Critérios de Sucesso|Observar o sucesso da equipe de desenvolvimento.|
 |Envolvimento|Médio.|
@@ -186,27 +187,27 @@ Os usuários realizarão a interação com o Lino por meio do <i>Telegram</i> e 
 
 |Necessidade|Prioridade|Preocupação|Solução Proposta|Solução Atual|
 |:---|:---|:---|:---|:---|
-|Retirar dúvidas frequentes de alunos da FGA - UnB.|Alta.|Falta de interação com o Lino.|Um ChatBot de <i>Telegram</i> e <i>Facebook Messenger</i> que consiga auxiliar os universitários respondendo suas dúvidas e necessidades.|Perguntar diretamente na secretaria da faculdade.|
+|Retirar dúvidas frequentes de alunos da FGA - UnB.|Alta.|Falta de interação com o Lino.|Um <i>ChatBot</i> de <i>Telegram</i> e <i>Facebook Messenger</i> que consiga auxiliar os universitários respondendo suas dúvidas e necessidades.|Perguntar diretamente na secretaria da faculdade.|
 |Receber notificações sobre o calendário de atividades da Faculdade.|Alta.|Notificações ignoradas.|Mensagens enviadas pelo Lino, avisando de eventos e datas importantes durante o semestre.|Pesquisas e avisos em grupos de Facebook e sites da comunidade.|
 
 # 4.Descrição da Solução
 
 ## 4.1 Perpectiva do Produto
 
-<p align="justify"> &emsp;&emsp;O ChatBot Lino tem como objetivo automatizar operações de secretariado, permitindo a redistribuição de informações universitárias como datas e prazos de incrição. Ainda disso, é capaz de ensinar o usuário um caminho pra facilitar uma emissão de documentos universitários, avisar periodicamente eventos, alertas da comunidade acadêmica e informar o cardápio de refeições do RU.</p>
+<p align="justify"> &emsp;&emsp;O <i>ChatBot</i> Lino tem como objetivo automatizar operações de secretariado, permitindo a redistribuição de informações universitárias como datas e prazos de incrição. Ainda disso, é capaz de ensinar o usuário um caminho pra facilitar uma emissão de documentos universitários, avisar periodicamente eventos, alertas da comunidade acadêmica e informar o cardápio de refeições do RU.</p>
 
 ## 4.2 Resumo dos recursos
 
 | Benefício para o Cliente | Recursos de suporte |
 |:---:|:---:|
-|Fornece avisos sobre datas de eventos e prazos de inscrição|O ChatBot Lino utiliza informações públicas da universidade para gerar os avisos para o usuário, ainda estes combinando de acordo com o assunto que o usuário deseja receber.|
+|Fornece avisos sobre datas de eventos e prazos de inscrição|O <i>ChatBot</i> Lino utiliza informações públicas da universidade para gerar os avisos para o usuário, ainda estes combinando de acordo com o assunto que o usuário deseja receber.|
 |Capacidade de interação entre usuário e o Lino|A partir de um fluxo de diálogo, Lino é capaz de sguir uma conversa não linear e interagir de forma descontraída e informativa.|
 |Facilidade em emissão de documentos universitários|O Lino, quando questionado sobre documentos, prontamente demonstra de forma prática como emitir e obter os documentos a partir das plataformas online da universidade.|
 |Facilidade em adquirir o cardápio do RU|O Lino torna mais acessível aos universitários dados relacionados às refeições do Restaurante Universitário.|
 
 # 5. Recursos do Produto
 
-O ChatBot Lino é capaz de:
+O <i>ChatBot</i> Lino é capaz de:
 
 * Realizar avisos prévios de eventos;
 * Realizar avisos prévios de prazos de inscrição;
@@ -220,7 +221,7 @@ O ChatBot Lino é capaz de:
 
 # 7. Restrições
 
-*	Uso da Internet;
+*	Uso da <i>Internet</i>;
 * Uso do <i>Telegram</i>;
 * Uso do <i>Facebook Messenger</i>;
 * Projeto deve ser finalizado até 29/11/2018;
