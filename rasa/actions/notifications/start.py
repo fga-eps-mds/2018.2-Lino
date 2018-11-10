@@ -9,8 +9,8 @@ from rasa_core.actions.action import Action
 TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
 FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 
-TELEGRAM_DB_URI = os.getenv('TELEGRAM_DB_URI', 'localhost')
-FACEBOOK_DB_URI = os.getenv('FACEBOOK_DB_URI', 'localhost')
+TELEGRAM_DB_URI = os.getenv('TELEGRAM_DB_URI', '')
+FACEBOOK_DB_URI = os.getenv('FACEBOOK_DB_URI', '')
 
 
 class ActionStart(Action):
