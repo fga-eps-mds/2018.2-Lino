@@ -18,7 +18,7 @@
 
 ## 1. Relato da _Sprint_
 
-<p align="justify">&emsp;&emsp; Nesta <i>Sprint</i>, os objetivos foram levantar e fechar o escopo do projeto, assim como documentar,  a nível de produto, o que o projeto propõem.
+<p align="justify">&emsp;&emsp; Nesta <i>Sprint</i>, os objetivos foram levantar e fechar o escopo do projeto, assim como documentar,  a nível de produto, o que o projeto propõe.
 
 
 ------------
@@ -76,13 +76,13 @@ Todos esses documentos se tornaram débito técnico, pois ocorreu mudanças não
 
 ## 5. Retrospectiva da _Sprint_
 
-| Pontos Positivos | Pontos Negativos | Pontos à Melhorar |
-| :--------------: | :--------------: | :----------------: |
-| Desenvolvimento tecnológico de MDS  |  Falta de informação dos Requisitos  |  Reporte de acontecimentos nas issues  |
-| Entendimento as Documentações  |  Mudanças no escopo inicial |  Desorientação da equipe (principalmente EPS)  |
-| Organização das tarefas em forma de issue |  Falta de direcionamento de uma tecnologia específica  |  Dificuldades de MDS na escrita dos documentos  |
-| Estudo da Api do Telegram || Dificuldade de Pareamento|
-||| Curva de Aprendizado |
+| Pontos Positivos                          | Pontos Negativos                                     | Pontos à Melhorar                             |
+| :---------------------------------------: | :--------------------------------------------------: | :-------------------------------------------: |
+| Desenvolvimento tecnológico de MDS        | Falta de informação dos Requisitos                   | Reporte de acontecimentos nas issues          |
+| Entendimento as Documentações             | Mudanças no escopo inicial                           | Desorientação da equipe (principalmente EPS)  |
+| Organização das tarefas em forma de issue | Falta de direcionamento de uma tecnologia específica | Dificuldades de MDS na escrita dos documentos |
+| Estudo da Api do Telegram                 | Dificuldade de Pareamento                            |
+| Curva de Aprendizado                      |
 
 
 ------------

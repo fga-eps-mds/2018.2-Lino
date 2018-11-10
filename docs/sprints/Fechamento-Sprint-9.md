@@ -20,7 +20,7 @@
 
 ## 1. Relato da _Sprint_
 
-<p align="justify"> Nesta <i>Sprint</i>, os objetivos foram implementar novas features e tratar débitos técnicos.
+<p align="justify"> Nesta <i>Sprint</i>, os objetivos foram refatorar métodos de envio e implementar novas features e iniciar a elaboração de testes de usabilidade.
 
 
 ------------
@@ -31,29 +31,24 @@
 
 | ID | História | Status | Pontos |
 |:--:| ------- | :----: | :----: |
-|ISSUE|[[Task 1] I07 - Tirar dúvida sobre o período de matrícula](https://github.com/fga-eps-mds/2018.2-Lino/issues/126)| Fechado | 5 |
-|ISSUE|[[Task 3] I07 - Tirar dúvida sobre o período de matrícula](https://github.com/BotLino/Lino-WebCrawler/issues/127)| Fechado | 5 |
-|ISSUE|[Refatorar o código para que consiga passar no estágio do teste](https://github.com/fga-eps-mds/2018.2-Lino/issues/125)| Fechado | - |
-|Pull Request|[Melhorar o template de Pull Requests](https://github.com/fga-eps-mds/2018.2-Lino/pull/133)| Fechado | - |
+|ISSUE|[[Task 4] I07 - Tirar dúvida sobre o período de matrícula](https://github.com/fga-eps-mds/2018.2-Lino/issues/135)| Fechado | 3 |
+|ISSUE|[[Task 1] US02 - Criar o agendamento referente ao envio do cardápio semanal](https://github.com/fga-eps-mds/2018.2-Lino/issues/147)| Fechado | 5 | 
+|ISSUE|[[Task 2] I07 - Tirar dúvida sobre o período de matrícula](https://github.com/fga-eps-mds/2018.2-Lino/issues/134)| Fechado | 8 | 
+|ISSUE|Mapear o entendimento do Interpreter e Tracker do Rasa Core| Fechado | 13 |
 
 
 ### 2.3 Pontuação Final
 
-* __Pontuação Total:__ 10 Pontos Planejados
-* __Débitos Técnicos Adicionados:__ 5 Pontos
-* __Pontos Adicionados:__ 5 Pontos
-* __Pontos Concluídos:__ 5 Pontos Concluídos
+* __Pontuação Total:__ 29 Pontos Planejados
+* __Débitos Técnicos Adicionados:__ 0 Pontos
+* __Pontos Adicionados:__ 0 Pontos
+* __Pontos Concluídos:__ 29 Pontos Concluídos
 * __Pontos Não Agregados:__ 0 Pontos Não Agregados Nessa Sprint
 
 ### Débitos Técnicos da Sprint Anterior
 
-* US10 - Receber Email do servidor: 5 pontos (Fechado)
-* [Task 2 e 3] US01 - Registrar usuários dos mensageiros que desejam receber a notificação do cardápio diário: Não Pontuado (Fechado)
-* Testar API RU/Crawler: Não Pontuado (Fechado)
-
-
 ### Débitos Técnicos Gerados
-
+[Task 4] I07 - Tirar dúvida sobre o período de matrícula (3 pontos)
 
 ### Pontos Adicionados
 * [Task 1] US02 - Realizar o agendamento do envio do cardápio semanal aos usuários do Telegram e do Messenger, informando-os, em um horário determinado: 5 pontos (Fechado)

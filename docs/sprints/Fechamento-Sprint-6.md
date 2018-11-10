@@ -20,8 +20,7 @@
 
 ## 1. Relato da _Sprint_
 
-<p align="justify">   Nesta <i>Sprint</i>, os objetivos foram levantar e fechar o escopo do projeto, assim como documentar,  a nível de produto, o que o projeto propõem.
-
+<p align="justify">   Nesta <i>Sprint</i>, o objetivo foi a implementação de testes nas APIs do  RU e Alertas. Fora isso, outro objetivo principal foi eliminar débitos técnicos.
 
 ------------
 

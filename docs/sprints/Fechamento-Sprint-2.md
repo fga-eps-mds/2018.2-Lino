@@ -20,7 +20,7 @@
 
 ## 1. Relato da _Sprint_
 
-<p align="justify">&emsp;&emsp; Nesta <i>Sprint</i>, os objetivos foram levantar e fechar o escopo do projeto, assim como documentar,  a nível de produto, o que o projeto propõem.
+<p align="justify">&emsp;&emsp; Nesta <i>Sprint</i>, refatorar e evoluir a documentação.
 
 
 ------------
