@@ -17,6 +17,8 @@
 - Oi
 - Olá
 - Iae
+- eai
+- eae
 - Fala meu compatriota
 - KKK eae man
 - Olar

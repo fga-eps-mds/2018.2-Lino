@@ -36,6 +36,7 @@
 - Me cadastra pra receber o café da manhã
 - Quero receber sobre o café da manhã
 - notificações café da manhã
+- café
 - café da manhã
 - café pretty please
 - quero me cadastrar pra lista de notificações do café da manhã
@@ -71,6 +72,7 @@
 - Me cadastra pra receber o cardápio do dia
 - Quero receber sobre o cardápio do dia
 - notificações cardápio do dia
+- dia
 - cardápio do dia
 - cardápio do dia pretty please
 - quero me cadastrar pra lista de notificações do cardápio do dia
@@ -83,6 +85,7 @@
 - Me cadastra pra receber o cardápio da semana
 - Quero receber sobre o cardápio da semana
 - notificações cardápio da semana
+- semana
 - cardápio da semana
 - cardápio da semana pretty please
 - quero me cadastrar pra lista de notificações do cardápio da semana
@@ -92,4 +95,5 @@
 - show, quero receber o cardápio da semana
 - xuxu beleza, quero o cardápio da semana
 - opa, cardápio da semana então
+- comunidade
 - alerta da comunidade
