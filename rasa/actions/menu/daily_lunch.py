@@ -32,8 +32,9 @@ class ActionDailyLunch(Action):
             dispatcher.utter_message(
                 "É final de semana, amigo... Não tem RU não kkkk"
                 )
+            return []
 
-        if(day is not 'Saturday' and day is not 'Sunday'):
+        if day is not "Saturday" and day is not "Sunday":
 
             lunch_menu = ""
 
