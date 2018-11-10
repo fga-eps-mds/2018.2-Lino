@@ -12,15 +12,15 @@ services:
         stdin_open: true
         tty: true
         environment:
-           - TRAINING_EPOCHS: ${TRAINING_EPOCHS}
-           - TELEGRAM_ACCESS_TOKEN: ${TELEGRAM_ACCESS_TOKEN}
-           - VERIFY: ${VERIFY}
-           - PSID: ${PSID}
-           - FACEBOOK_ACCESS_TOKEN: ${FACEBOOK_ACCESS_TOKEN}
-           - SECRET: ${SECRET}
-           - WEBHOOK_URL: ${WEBHOOK_URL}
-           - TELEGRAM_DB_URI: ${TELEGRAM_DB_URI}
-           - FACEBOOK_DB_URI: ${FACEBOOK_DB_URI}
+            - TRAINING_EPOCHS: ${TRAINING_EPOCHS}
+            - TELEGRAM_ACCESS_TOKEN: ${TELEGRAM_ACCESS_TOKEN}
+            - VERIFY: ${VERIFY}
+            - PSID: ${PSID}
+            - FACEBOOK_ACCESS_TOKEN: ${FACEBOOK_ACCESS_TOKEN}
+            - SECRET: ${SECRET}
+            - WEBHOOK_URL: ${WEBHOOK_URL}
+            - TELEGRAM_DB_URI: ${TELEGRAM_DB_URI}
+            - FACEBOOK_DB_URI: ${FACEBOOK_DB_URI}
         # bot credentials in train.py or another train file.
         depends_on:
             - cronjob
@@ -56,20 +56,5 @@ services:
             - FACEBOOK_ACCESS_TOKEN: ${FACEBOOK_ACCESS_TOKEN}
             - PSID: ${PSID}
         depends_on:
-            - webcrawler
             - mongo_telegram
             - mongo_facebook
-
-    webcrawler:
-        image: guila/webcrawler:latest
-        ports:
-            - 5000:5000
-        depends_on:
-            - mongo_ru
-
-    mongo_ru:
-        image: mongo:latest
-        volumes:
-            - /l/crawler/crawler_db:/data/db
-        ports:
-            - 27017:27017

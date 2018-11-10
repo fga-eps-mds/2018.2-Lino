@@ -6,6 +6,9 @@ intents:
   - asks_menu
   - asks_daily_menu
   - asks_weekly_menu
+  - asks_dinner_menu
+  - asks_lunch_menu
+  - asks_breakfast_menu
 
   - asks_about_notifications
   - action_ask_notification
@@ -20,6 +23,7 @@ intents:
 entities:
   - periods
   - calendar
+  - meal
 
 slots:
   period:
@@ -37,12 +41,15 @@ actions:
 
   - utter_menu
   - actions.menu.daily_menu.ActionDailyMenu
+  - actions.menu.daily_dinner.ActionDailyDinner
+  - actions.menu.daily_lunch.ActionDailyLunch
+  - actions.menu.daily_breakfast.ActionDailyBreakfast
   - utter_weekly_menu
 
   - utter_notifications
   - actions.notifications.start.ActionStart
   - actions.notifications.register_notification.ActionRegisterNotification
-
+  - actions.notifications.buttons_notification.ActionButtonsNotification
   - utter_documents
 
   - utter_gmail
@@ -87,9 +94,10 @@ templates:
         E aê, beleza?! Lino aqui!
 
         Que que vc tá afim hj? Documentos, período de matrícula, notificações ou RU?
-
+  
   utter_goodbye:
     - text: |
         Feshow então!!!
 
         Precisando, só me gritar aqui
+

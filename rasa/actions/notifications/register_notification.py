@@ -7,8 +7,8 @@ from rasa_core.actions.action import Action
 TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
 FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 
-TELEGRAM_DB_URI = os.getenv('TELEGRAM_DB_URI', 'localhost')
-FACEBOOK_DB_URI = os.getenv('FACEBOOK_DB_URI', 'localhost')
+TELEGRAM_DB_URI = os.getenv('TELEGRAM_DB_URI', '')
+FACEBOOK_DB_URI = os.getenv('FACEBOOK_DB_URI', '')
 
 
 class ActionRegisterNotification(Action):
@@ -23,6 +23,7 @@ class ActionRegisterNotification(Action):
 
         text = tracker_state['latest_message']['text']
 
+        text = text.lower()
         words_list = text.split(' ')
         words_key_list = self.build_key_words()
 
@@ -35,13 +36,17 @@ class ActionRegisterNotification(Action):
 
         user_telegram = self.check_telegram_valid_user(sender_id)
         user_facebook = self.check_facebook_valid_user(sender_id)
-
+        welcome = 'Agora você já pode receber notificações desse tipo!'
         if user_telegram != {}:
             self.update_telegram_user(user_telegram, notification)
-        else:
+            messages.append(welcome)
+        elif user_facebook != {}:
             self.update_facebook_user(user_facebook, notification)
-
-        messages.append('Agora você já pode receber notificações desse tipo!')
+            messages.append(welcome)
+        else:
+            messages.append(('Não consegui te encontrar aqui!'
+                             'Tô com alguns problemas e não'
+                             'consegui te cadastrar!'))
 
         for message in messages:
             dispatcher.utter_message(message)
@@ -99,7 +104,6 @@ class ActionRegisterNotification(Action):
     def update_notification(self, notification, URI, database, user):
         client = MongoClient(URI)
         db = client[database]
-
         notification_list = user['notification']
 
         for element in notification_list:
@@ -127,7 +131,7 @@ class ActionRegisterNotification(Action):
             return user
 
     def check_facebook_valid_user(self, sender_id):
-        client = MongoClient(TELEGRAM_DB_URI)
+        client = MongoClient(FACEBOOK_DB_URI)
         db_facebook = client['lino_facebook']
 
         user = {}
