@@ -27,8 +27,8 @@ class ActionDailyLunch(Action):
                 'http://webcrawler-ru.lappis.rocks/cardapio/{}'
                 .format(day)
             ).json()
-        except KeyError as keyexception:
-            logging.info(keyexception)
+        except Exception as exception:
+            logging.info(exception)
             dispatcher.utter_message(
                 "É final de semana, amigo... Não tem RU não kkkk"
                 )
