@@ -25,7 +25,6 @@
 - Me cadastra pra receber o almoço
 - Quero receber sobre o almoço
 - notificações almoço
-- almoço
 - almoço pretty please
 - quero me cadastrar pra lista de notificações do almoço
 - me inscreve pra receber o almoço por favor
@@ -49,7 +48,6 @@
 - Me cadastra pra receber o jantar
 - Quero receber sobre o jantar
 - notificações jantar
-- jantar
 - jantar pretty please
 - quero me cadastrar pra lista de notificações do jantar
 - me inscreve pra receber o jantar por favor
@@ -94,3 +92,4 @@
 - show, quero receber o cardápio da semana
 - xuxu beleza, quero o cardápio da semana
 - opa, cardápio da semana então
+- alerta da comunidade
