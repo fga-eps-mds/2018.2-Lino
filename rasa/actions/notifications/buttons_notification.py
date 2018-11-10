@@ -1,5 +1,4 @@
 import os
-from pymongo import MongoClient
 from rasa_core.actions.action import Action
 
 # If you want to use your own bot to development add the bot token as
@@ -10,23 +9,40 @@ FACEBOOK_ACCESS_TOKEN = os.getenv('FACEBOOK_ACCESS_TOKEN', '')
 TELEGRAM_DB_URI = os.getenv('TELEGRAM_DB_URI', '')
 FACEBOOK_DB_URI = os.getenv('FACEBOOK_DB_URI', '')
 
+
 class ActionButtonsNotification(Action):
     def name(self):
         return "action_buttons_notification"
 
     def run(self, dispatcher, tracker, domain):
-        buttons = self.build_buttons_telegram()
-        mensagem = 'SHABLAW'
-        buttons = self.build_buttons_facebook()
-        elements = self.build_facebook_elements(buttons)
-        dispatcher.utter_custom_message(*elements)
+        buttons_facebook = None
+        buttons_telegram = None
+
+        try:
+            message = 'Qual das opções você deseja?'
+            buttons_telegram = self.build_buttons_telegram()
+            dispatcher.utter_button_message(message,
+                                            buttons_telegram,
+                                            button_type="custom")
+        except ValueError as valueException:
+            print(valueException + ': on Telegram')
+
+        if not buttons_telegram:
+            try:
+                buttons_facebook = self.build_buttons_facebook()
+                elements = self.build_facebook_elements(buttons_facebook)
+                dispatcher.utter_custom_message(*elements)
+            except ValueError as valueException:
+                print(valueException + ': on Messenger')
+
         return []
 
     def build_button_dict(self):
         return [
-            ('Alerta da Comunidade', 'alerta da comunidade'),
-            ('Cardápio Diario','dia'),
-            ('Cardápio Semanal', 'semana'),
+            ('Alerta da Comunidade',
+             'alerta da comunidade'),
+            ('Cardápio do Dia', 'dia'),
+            ('Cardápio da Semana', 'semana'),
             ('Café da Manhã', 'café'),
             ('Almoço', 'almoço'),
             ('Jantar', 'jantar')
