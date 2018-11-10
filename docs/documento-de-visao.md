@@ -227,7 +227,6 @@ O <i>ChatBot</i> Lino é capaz de:
 |Gerenciar as notificações escolhidas pelo usuário| Alta|
 |Receber mensagens dos servidores via gmail e enviar à comunidade acadêmica| Alta|
 |Enviar o caléndário de matricúlas da Universidade|Alta|
-|Informar os usuários sobre documentos acadêmicos|Alta|
 
 # 7. Restrições
 
