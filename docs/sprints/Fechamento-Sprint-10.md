@@ -31,29 +31,23 @@
 
 | ID | História | Status | Pontos |
 |:--:| ------- | :----: | :----: |
-|ISSUE|[[Task 4] I07 - Tirar dúvida sobre o período de matrícula](https://github.com/fga-eps-mds/2018.2-Lino/issues/135)| Fechado | 3 |
-|ISSUE|[[Task 1] US02 - Criar o agendamento referente ao envio do cardápio semanal](https://github.com/fga-eps-mds/2018.2-Lino/issues/147)| Fechado | 5 | 
-|ISSUE|[[Task 2] I07 - Tirar dúvida sobre o período de matrícula](https://github.com/fga-eps-mds/2018.2-Lino/issues/134)| Fechado | 8 | 
-|ISSUE|Mapear o entendimento do Interpreter e Tracker do Rasa Core| Fechado | 13 |
-
+|ISSUE|[[Task 3] US02 Enviar cardápio semanal aos usuários do Facebook](https://github.com/fga-eps-mds/2018.2-Lino/issues/150)| Fechado | 5 |
+|ISSUE|[[Task 4] US02 Enviar cardápio semanal aos usuários do Telegram](https://github.com/fga-eps-mds/2018.2-Lino/issues/151)| Fechado | 5 | 
+|ISSUE|[[Task 4] I07 - Tirar dúvida sobre o período de matrícula (3 pontos)](https://github.com/fga-eps-mds/2018.2-Lino/issues/135)| Fechado | 3 | 
 
 ### 2.3 Pontuação Final
 
-(pendente)
-
-* __Pontuação Total:__  Pontos Planejados
-* __Débitos Técnicos Adicionados:__  Pontos
-* __Pontos Adicionados:__  Pontos
-* __Pontos Concluídos:__  Pontos Concluídos
-* __Pontos Não Agregados:__  Pontos Não Agregados Nessa Sprint
+* __Pontuação Total:__ 15 Pontos Planejados
+* __Débitos Técnicos Adicionados:__ 5 Pontos
+* __Pontos Adicionados:__ 0 Pontos
+* __Pontos Concluídos:__ 15 Pontos Concluídos
+* __Pontos Não Agregados:__ 0 Pontos Não Agregados Nessa Sprint
 
 ### Débitos Técnicos da Sprint Anterior
-
-### Débitos Técnicos Gerados
 [Task 4] I07 - Tirar dúvida sobre o período de matrícula (3 pontos)
+### Débitos Técnicos Gerados
 
 ### Pontos Adicionados
-* [Task 1] US02 - Realizar o agendamento do envio do cardápio semanal aos usuários do Telegram e do Messenger, informando-os, em um horário determinado: 5 pontos (Fechado)
 
 ------------
 ## 3. _Burndown Chart_

@@ -48,7 +48,7 @@
 ### Débitos Técnicos da Sprint Anterior
 
 * US10 - Receber Email do servidor: 5 pontos (Fechado)
-* [Task 2 e 3] US01 - Registrar usuários dos mensageiros que desejam receber a notificação do cardápio diário: Não Pontuado (Fechado)
+* US01 [Task 2 e 3] - Registrar usuários dos mensageiros que desejam receber a notificação do cardápio diário: Não Pontuado (Fechado)
 * Testar API RU/Crawler: Não Pontuado (Fechado)
 
 
