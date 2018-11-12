@@ -24,16 +24,26 @@ class ActionButtonsNotification(Action):
             dispatcher.utter_button_message(message,
                                             buttons_telegram,
                                             button_type="custom")
-        except ValueError as valueException:
-            print(valueException + ': on Telegram')
+        except Exception as exception:
+            print(exception)
+            buttons_telegram = None
 
         if not buttons_telegram:
             try:
                 buttons_facebook = self.build_buttons_facebook()
                 elements = self.build_facebook_elements(buttons_facebook)
                 dispatcher.utter_custom_message(*elements)
-            except ValueError as valueException:
-                print(valueException + ': on Messenger')
+            except Exception as exception:
+                print(exception)
+                buttons_facebook = None
+
+        if not buttons_telegram and not buttons_facebook:
+            dispatcher.utter_message(('Tive alguns problemas aqui em encontrar'
+                                     ' os tipos de notificações :(...'))
+            dispatcher.utter_message(('Vou tentar arrumar o mais rápido '
+                                     'possível pra te mandar algumas, pode ser?'))
+            dispatcher.utter_message(('Você precisa de mais alguma outra coisa'
+                                     ' além disso? Só pedir :)'))
 
         return []
 
@@ -48,27 +58,12 @@ class ActionButtonsNotification(Action):
             ('Jantar', 'jantar')
         ]
 
-    def build_facebook_message(self, sender_id, message, buttons):
-        return {
-            'recipient': {
-                'id': sender_id
-            },
-            'message': {
-                'text': message,
-                'attachment': {
-                    'type': 'template',
-                    'payload': {
-                        'template_type': 'generic',
-                        'elements': self.build_facebook_elements(buttons)
-                    }
-                }
-            }
-        }
-
     def build_facebook_elements(self, buttons):
         message = 'Qual das opções você deseja?'
         elements = []
         for value in buttons:
+            print('A'*100)
+            print(value)
             element = self.build_element(value, message)
             elements.append(element)
         return elements
