@@ -29,7 +29,7 @@
 * asks_menu
   - utter_menu
 * asks_weekly_menu{"period": "semana"}
-  - utter_weekly_menu
+  - action_send_week_menu
 
 ## path_dinner_meal
 * asks_menu
