@@ -40,8 +40,8 @@ class ActionDailyBreakfast(Action):
 
             for label in response['DESJEJUM']:
                 dish = str(
-                    '*' + label + '*' + ' ' + response['DESJEJUM'][label]
-                    + '\n')
+                    '*' + label + '*' + ' ' +
+                    response['DESJEJUM'][label] + '\n')
                 lunch_menu += dish
 
             messages.append(lunch_menu)

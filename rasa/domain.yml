@@ -44,6 +44,7 @@ actions:
   - actions.menu.daily_dinner.ActionDailyDinner
   - actions.menu.daily_lunch.ActionDailyLunch
   - actions.menu.daily_breakfast.ActionDailyBreakfast
+  - actions.menu.week_menu.ActionSendWeekMenu
   - utter_weekly_menu
 
   - utter_notifications
