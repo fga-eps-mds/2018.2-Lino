@@ -16,3 +16,9 @@
 - eae bot, como que arranjo aqueles documentos?
 - me informa sobre os documentos
 - cara, to perdidaço. Me fala dos documentos
+
+## intent:ask_register_proof
+- Como pegar o comprovante de matrícula?
+- como pegar o comprovante de matrícula?
+- Comprovante de matrícula
+- comprovante de matrícula
