@@ -14,7 +14,7 @@ class ActionRegularProof(Action):
         messages = []
 
         messages.append('Só um segundo, to buscando aqui...')
-        messages.append('Para conseguir um comprovante de matrícula: ')
+        messages.append('Para conseguir um comprovante de aluno regular ')
         messages.append('você deve acessar este link')
         messages.append(UNB_URL)
 
