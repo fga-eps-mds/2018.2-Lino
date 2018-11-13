@@ -9,7 +9,7 @@
 
 ## path_compliments
 * compliments
-  - utter_thanks_user
+  - utter_compliments_reply
 
 ## path_fallback
 * out_of_scope

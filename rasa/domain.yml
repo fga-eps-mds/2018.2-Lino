@@ -39,7 +39,7 @@ actions:
   - utter_restart
   - utter_greet
   - utter_goodbye
-  - utter_thanks_user
+  - utter_compliments_reply
 
   - utter_menu
   - actions.menu.daily_menu.ActionDailyMenu
@@ -104,9 +104,13 @@ templates:
 
         Precisando, só me gritar aqui
 
-  utter_thanks_user:
+  utter_compliments_reply:
     - text: |
         Valeeeeeu
 
-        Fico mó feliz que você tá gostando do serviço. Se quiser dar mais feedback positivo, já sabe ;)
+        Fico mó feliz que você tá gostando do serviço. Se quiser dar mais feedback positivo, aceito ;)
 
+    - text: |
+        Awnt, brigadão
+
+        Muito melhor que um site, né?

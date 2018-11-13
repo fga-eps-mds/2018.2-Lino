@@ -1,4 +1,4 @@
-##intent: compliments
+## intent:compliments
 - adorei!
 - amei
 - tu é foda
@@ -20,3 +20,13 @@
 - você é muito legal
 - nós te amamos, Lino
 - você é muito útil
+- sensasional
+- muito bom
+- adorável
+- totoso
+- melhor que site
+- voce é um pitelzinho
+- seu chuchu
+- seu tchutchuco
+- bot muito legal
+- gosto mt de voce, linos
