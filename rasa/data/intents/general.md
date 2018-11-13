@@ -51,3 +51,57 @@
 - massa, agr tchau
 - brigadão
 - valeu, agora tchau
+
+## intent:affirm
+- Sim
+- Yes
+- Isso
+- Com certeza
+- Com ctz
+- Pode pa
+- Sim Sim
+- Afirmativo
+- Ok
+- Okay
+- oquei
+- okei
+- de boa
+- de boas
+- blz
+- beleza
+- tranquilo
+- top
+- Topper
+- topzera
+- toperson
+- topperson
+- Sim, com certeza meu amigo
+- Claro
+- quero
+- quero sim
+- positivo
+
+## intent:deny
+- Nope
+- não
+- not
+- não mesmo
+- nem fodendo
+- claro que não po
+- sai daqui
+- não quero
+- quero não
+- jamais
+- nunca
+- never
+- nunquinha
+- nem a pau
+- nem a pau juvenal
+- não desejo
+- indesejável
+- negativo
+- nem
+- impossível
+- impossivel
+- nao
+- nao quero

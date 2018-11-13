@@ -20,6 +20,9 @@ intents:
 
   - calendar
 
+  - affirm
+  - deny
+
 entities:
   - periods
   - calendar
@@ -52,6 +55,7 @@ actions:
   - actions.notifications.register_notification.ActionRegisterNotification
   - actions.notifications.buttons_notification.ActionButtonsNotification
   - utter_documents
+  - utter_finish_notification
 
   - utter_gmail
 
@@ -81,6 +85,16 @@ templates:
   utter_notifications:
     - text: |
         Massa, easy te mandar as notificações. Qual você quer?
+  
+  utter_finish_notification:
+    - text: |
+        Show! Valeu por se cadastrar bb
+    
+    - text: |
+        Tudo certo! Valeu por se cadastrar aqui manooooow!
+    
+    - text: |
+        TOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOP
 
   utter_weekly_menu:
     - text: Tá aqui o cardápio da semana... Bom proveito :)

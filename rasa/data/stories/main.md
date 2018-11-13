@@ -54,6 +54,8 @@
 * register_notification
   - custom_start
   - action_register_notification
+* deny
+  - utter_finish_notification
 
 ## path_calendar
 * calendar
