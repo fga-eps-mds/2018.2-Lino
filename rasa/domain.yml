@@ -2,6 +2,7 @@ intents:
   - out_of_scope
   - greet
   - goodbye
+  - compliments
 
   - asks_menu
   - asks_daily_menu
@@ -38,6 +39,7 @@ actions:
   - utter_restart
   - utter_greet
   - utter_goodbye
+  - utter_thanks_user
 
   - utter_menu
   - actions.menu.daily_menu.ActionDailyMenu
@@ -95,10 +97,16 @@ templates:
         E aê, beleza?! Lino aqui!
 
         Que que vc tá afim hj? Documentos, período de matrícula, notificações ou RU?
-  
+
   utter_goodbye:
     - text: |
         Feshow então!!!
 
         Precisando, só me gritar aqui
+
+  utter_thanks_user:
+    - text: |
+        Valeeeeeu
+
+        Fico mó feliz que você tá gostando do serviço. Se quiser dar mais feedback positivo, já sabe ;)
 

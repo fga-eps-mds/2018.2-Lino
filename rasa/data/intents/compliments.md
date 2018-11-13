@@ -1,0 +1,22 @@
+##intent: compliments
+- adorei!
+- amei
+- tu é foda
+- tu é foda pra caralho
+- mano, te amo
+- seu lindo, te amo
+- amo-te
+- caralho, voce é muito foda
+- lino, adorei seu trabalho, você é muito bom
+- continue assim
+- amei seus serviços, muito melhor que um site
+- muita facilidade na obtenção de informação, adorei
+- bot, sua criação foi a melhor coisa que já vi, parabens pra vc e seus criadores
+- velho, como que sobrevivi esse tempo todo sem você???
+- vc é mt bonito
+- vc e mt legal
+- seu lindo
+- gostoso
+- você é muito legal
+- nós te amamos, Lino
+- você é muito útil
