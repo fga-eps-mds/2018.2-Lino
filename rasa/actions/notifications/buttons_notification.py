@@ -40,8 +40,8 @@ class ActionButtonsNotification(Action):
         if not buttons_telegram and not buttons_facebook:
             dispatcher.utter_message(('Tive alguns problemas aqui em encontrar'
                                      ' os tipos de notificações :(...'))
-            dispatcher.utter_message(('Vou tentar arrumar o mais rápido '
-                                     'possível pra te mandar algumas, pode ser?'))
+            dispatcher.utter_message(('Vou tentar arrumar rapidão aqui pra te '
+                                     'mandar as que eu tinha antes, beleza?'))
             dispatcher.utter_message(('Você precisa de mais alguma outra coisa'
                                      ' além disso? Só pedir :)'))
 
