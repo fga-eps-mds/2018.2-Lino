@@ -16,3 +16,6 @@
 - eae bot, como que arranjo aqueles documentos?
 - me informa sobre os documentos
 - cara, to perdidaço. Me fala dos documentos
+
+## intent:asks_regular_proof
+- comprovante de aluno regular

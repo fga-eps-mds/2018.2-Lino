@@ -15,6 +15,10 @@
 * asks_about_documents
   - utter_documents
 
+## path_asks_regular_proof
+* asks_regular_proof
+  - action_regular_proof
+
 ## path_asks_gmail
 * asks_about_gmail
   - utter_gmail
