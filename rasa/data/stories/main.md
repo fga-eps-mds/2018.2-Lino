@@ -5,7 +5,6 @@
 ## path_goodbye
 * goodbye
   - utter_goodbye
-  - utter_restart
 
 ## path_fallback
 * out_of_scope
