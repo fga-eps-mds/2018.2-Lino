@@ -17,7 +17,7 @@ intents:
   - asks_about_documents
 
   - asks_about_gmail
-
+  - offenses
   - calendar
 
 entities:
@@ -54,7 +54,7 @@ actions:
   - utter_documents
 
   - utter_gmail
-
+  - utter_offenses
   - actions.calendar.ActionCalendar
 
 templates:
@@ -101,4 +101,20 @@ templates:
         Feshow então!!!
 
         Precisando, só me gritar aqui
+
+  utter_offenses:
+    - text: |
+        Olouco, pessoa...Pra que isso??
+
+        To so querendo te ajudar aqui, foi mal se te ofendi
+
+        Não me xinga não, me diz o que posso fazer pra ajudar ;)
+    
+    - text: |
+        Vamos com calma...Está muito exaltado!!
+
+        To so querendo te ajudar aqui, foi mal se te ofendi
+
+        Deixa de ser bruto, me diz o que posso fazer pra ajudar ;)
+
 
