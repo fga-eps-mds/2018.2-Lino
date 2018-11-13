@@ -1,4 +1,6 @@
 import os
+import requests
+import json
 from pymongo import MongoClient
 from rasa_core.actions.action import Action
 
@@ -29,6 +31,16 @@ class ActionRegisterNotification(Action):
 
         notification = ""
 
+        reply_markup = {
+            "remove_keyboard": True
+        }
+
+        remove_keyboard_payload = {
+            "chat_id": sender_id,
+            "text": "just a text",
+            "reply_markup": json.dumps(reply_markup)
+        }
+
         for word in words_list:
             if word in words_key_list:
                 notification = self.get_element_in_notification_map(word)
@@ -49,7 +61,15 @@ class ActionRegisterNotification(Action):
                              'consegui te cadastrar!'))
 
         for message in messages:
-            dispatcher.utter_message(message)
+            remove_keyboard_payload['text'] = message
+            data = requests.post(
+                ('https://api.telegram.org/bot{}'
+                 '/sendMessage')
+                .format(TELEGRAM_ACCESS_TOKEN),
+                data=remove_keyboard_payload
+            ).json()
+            if not data['ok']:
+                dispatcher.utter_message(message)
 
         return []
 
