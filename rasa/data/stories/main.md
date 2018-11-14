@@ -15,6 +15,10 @@
 * asks_about_documents
   - utter_documents
 
+## path_asks_register_proof
+* ask_register_proof
+  - action_register_proof
+
 ## path_asks_gmail
 * asks_about_gmail
   - utter_gmail

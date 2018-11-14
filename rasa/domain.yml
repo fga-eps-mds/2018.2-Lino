@@ -55,6 +55,8 @@ actions:
   - actions.notifications.buttons_notification.ActionButtonsNotification
   - utter_documents
   - actions.documents.schedule.ActionSchedule
+  - actions.documents.register_proof.ActionRegisterProof
+
   - utter_gmail
 
   - actions.calendar.ActionCalendar
