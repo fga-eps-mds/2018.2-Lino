@@ -19,6 +19,10 @@
 * asks_about_gmail
   - utter_gmail
 
+## path_asks_schedule
+* asks_about_schedule
+  - action_schedule
+
 ## path_daily_meal
 * asks_menu
   - utter_menu
