@@ -24,6 +24,7 @@ entities:
   - periods
   - calendar
   - meal
+  - documents
 
 slots:
   period:
@@ -52,6 +53,7 @@ actions:
   - actions.notifications.register_notification.ActionRegisterNotification
   - actions.notifications.buttons_notification.ActionButtonsNotification
   - utter_documents
+  - actions.documents.register_proof.ActionRegisterProof
 
   - utter_gmail
 
