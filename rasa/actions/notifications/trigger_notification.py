@@ -7,10 +7,10 @@ class ActionTriggerNotification(Action):
         return "action_another_notification"
 
     def run(self, dispatcher, tracker, domain):
-        return [
-            UserUttered("E as notificações",
+        dispatcher.utter_message('TA BOM MANO')
+        tracker.update(
+            UserUttered('Me manda notificações',
                         intent={
                             'name': 'asks_about_notifications',
-                            'confidence': 1.0
-                        })
-        ]
+                            'confidence': 1.0}))
+        return []
