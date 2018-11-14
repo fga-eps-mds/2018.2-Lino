@@ -6,6 +6,7 @@ UNB_URL = f'https://servicos.unb.br/dados/{DOC_1}{DOC_2}'
 GIT_URL = 'https://raw.githubusercontent.com/fga-eps-mds/2018.2-Lino/'
 IMGS_PATH = 'Issue_202-RegularStudentStatementFlow/rasa/images/RegularProof/'
 
+
 class ActionRegularProof(Action):
     def name(self):
         return "action_regular_proof"
@@ -23,38 +24,31 @@ class ActionRegularProof(Action):
 
         steps = []
 
+        # Step 1
+        step_1_1 = 'Faça login no site'
+        step_1_2 = 'selecione Declaração de aluno regular'
         step_1 = {
-            'text': 'Passo 1: Faça login no site.',
-            'image': f'{GIT_URL}{IMGS_PATH}step1.png'
+            'text': f'Passo 1: {step_1_1} e {step_1_2}',
+            'image': f'{GIT_URL}{IMGS_PATH}step2.png'
             }
         steps.append(step_1)
 
+        # Step 2
+        step_2_1 = 'Prove que você está ciente do que está fazendo'
+        step_2_2 = 'clique em emitir'
         step_2 = {
-            'text': 'Passo 2: Selecione Declaração de aluno regular',
-            'image': f'{GIT_URL}{IMGS_PATH}step2.png'
+            'text': f'Passo 2: {step_2_1} e {step_2_2}',
+            'image': f'{GIT_URL}{IMGS_PATH}step4.png'
         }
         steps.append(step_2)
 
+        # Step 3
         step_3 = {
-            'text': 'Passo 3: Prove que você está ciente do que está fazendo',
-            'image': f'{GIT_URL}{IMGS_PATH}step3.png'
+            'text': 'Passo 3: Agora é so baixar'
         }
         steps.append(step_3)
-
-        step_4 = {
-            'text': 'Passo 4: Clique em emitir',
-            'image': f'{GIT_URL}{IMGS_PATH}step4.png'
-        }
-        steps.append(step_4)
-
-        step_5 = {
-            'text': 'Passo 5: Agora é so baixar',
-            'image': f'{GIT_URL}{IMGS_PATH}step5.png'
-        }
-        steps.append(step_5)
 
         for step in steps:
             dispatcher.utter_response(step)
 
-        
         return []
