@@ -15,10 +15,11 @@ class ActionRegisterProof(Action):
 
     def run(self, dispatcher, tracker, domain):
         messages = []
+        welcome_1 = 'Para conseguir um comprovante de matrícula '
+        welcome_2 = 'você deve acessar este link:'
 
         messages.append('Só um segundo, to buscando aqui...')
-        messages.append('Para conseguir um comprovante de matrícula: ')
-        messages.append('você deve acessar este link')
+        messages.append(f'{welcome_1}{welcome_2}')
         messages.append(UNB_URL)
 
         for message in messages:

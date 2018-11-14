@@ -16,9 +16,11 @@ class ActionSchedule(Action):
     def run(self, dispatcher, tracker, domain):
         messages = []
 
+        welcome_1 = 'Para pegar sua grade horária '
+        welcome_2 = 'você deve acessar este link:'
+
         messages.append('Só um segundo, to buscando aqui...')
-        messages.append('Pra pegar sua grade horária: ')
-        messages.append('você deve acessar este link')
+        messages.append(f'{welcome_1}{welcome_2}')
         messages.append(UNB_URL)
 
         for message in messages:
