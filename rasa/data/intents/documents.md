@@ -9,7 +9,7 @@
 - preciso de documentos
 - oi lino, me fala dos documentos da fga
 - eae, como retiro os documentos
-- quero ajuda sobre os documentos 
+- quero ajuda sobre os documentos
 - me da um help sobre documentos
 - e aqueles documentos e declarações?
 - fala jovem, onde tiro os documentos?
@@ -17,8 +17,23 @@
 - me informa sobre os documentos
 - cara, to perdidaço. Me fala dos documentos
 
-## intent:ask_register_proof
-- Como pegar o comprovante de matrícula?
-- como pegar o comprovante de matrícula?
-- Comprovante de matrícula
-- comprovante de matrícula
+## intent:asks_register_proof
+- Como pegar o [comprovante de matrícula](documents)?
+- como pegar o [comprovante de matrícula](documents)?
+- [Comprovante de matrícula](documents)
+- [comprovante de matrícula](documents)
+- [Comprovante de matricula](documents)
+- [comprovante de matricula](documents)
+- [Comprovante de Matrícula](documents)
+- [comprovante de Matrícula](documents)
+- [Comprovante de Matricula](documents)
+- [comprovante de Matricula](documents)
+- Eae, como pego que pego o [comprovante de matrícula](documents)?
+- oi Lino, como que faço pra retirar o [comprovante de matricula](documents)?
+- fala bixo, me manda ae como arranja o [comprovante de matricula](documents)
+- opa mano, me diz sobre o [comprov de matricual](documents)
+- eaeee, [comprovante de matrícula](documents)
+- [comprov de matr](documents)
+- [comprovante de matricual](documents), cara
+- [comprovante de matricula](documents), cara
+- bot, [comprovante de matricula](documents)
