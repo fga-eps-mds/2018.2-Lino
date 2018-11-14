@@ -2,7 +2,7 @@ intents:
   - out_of_scope
   - greet
   - goodbye
-  - start_flow
+  - start
 
   - asks_menu
   - asks_daily_menu
@@ -25,6 +25,7 @@ entities:
   - periods
   - calendar
   - meal
+  - command
 
 slots:
   period:
@@ -39,7 +40,7 @@ actions:
   - utter_restart
   - utter_greet
   - utter_goodbye
-  - utter_start_flow
+  - utter_start
 
   - utter_menu
   - actions.menu.daily_menu.ActionDailyMenu
@@ -66,7 +67,7 @@ templates:
 
         Repete pra mim, dizendo melhor o que vc quer?
 
-  utter_start_flow:
+  utter_start:
     - text: |
         EAE!
 

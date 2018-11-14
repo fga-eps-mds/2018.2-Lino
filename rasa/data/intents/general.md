@@ -13,6 +13,9 @@
 - quando o preço da gasolina vai abaixar?
 - cansei do ru ser 5,20 
 
+## intent:start
+- [start](command)
+
 ## intent:greet
 - Oi
 - Olá

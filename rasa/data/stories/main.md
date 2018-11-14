@@ -1,6 +1,6 @@
-## path_start_flow
-* start_flow
-  - utter_start_flow
+## path_start
+* start{"command": "start"}
+  - utter_start
 
 ## path_greetings
 * greet
