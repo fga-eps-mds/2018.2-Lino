@@ -23,7 +23,7 @@ class ActionSchedule(Action):
             dispatcher.utter_message(message)
 
         steps = []
-        
+
         step_1 = {
             'text': 'Passo 1: Faça login no site.',
             'image': f'{GIT_URL}{IMGS_PATH}step1.png'

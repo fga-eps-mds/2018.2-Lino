@@ -15,6 +15,7 @@ intents:
   - register_notification
 
   - asks_about_documents
+  - asks_about_schedule
 
   - asks_about_gmail
 
@@ -24,6 +25,7 @@ entities:
   - periods
   - calendar
   - meal
+  - documents
 
 slots:
   period:

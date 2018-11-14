@@ -20,7 +20,7 @@
   - utter_gmail
 
 ## path_asks_schedule
-* asks_about_schedule
+* asks_about_schedule{"documents": "grade horaria", "documents": "grade horária"}
   - action_schedule
 
 ## path_daily_meal
