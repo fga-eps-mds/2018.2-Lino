@@ -19,9 +19,23 @@
 * asks_regular_proof
   - action_regular_proof
 
+## path_asks_register_proof
+* ask_register_proof{"documents": "Comprovante de matrícula", 
+    "documents": "comprovante de matrícula",
+    "documents": "Comprovante de matricula",
+    "documents": "Comprovante de Matrícula", 
+    "documents": "comprovante de Matrícula", 
+    "documents": "Comprovante de Matricula",
+    "documents": "comprovante de Matricula"}
+  - action_register_proof
+
 ## path_asks_gmail
 * asks_about_gmail
   - utter_gmail
+
+## path_asks_schedule
+* asks_about_schedule{"documents": "grade horaria", "documents": "grade horária"}
+  - action_schedule
 
 ## path_daily_meal
 * asks_menu

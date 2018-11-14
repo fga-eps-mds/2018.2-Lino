@@ -9,7 +9,7 @@
 - preciso de documentos
 - oi lino, me fala dos documentos da fga
 - eae, como retiro os documentos
-- quero ajuda sobre os documentos 
+- quero ajuda sobre os documentos
 - me da um help sobre documentos
 - e aqueles documentos e declarações?
 - fala jovem, onde tiro os documentos?
@@ -38,3 +38,53 @@
 - como pagar meia no cinema
 - quero sair com a morena e pagar meia
 - meia entrada
+## intent:asks_about_schedule
+- [grade horaria](command)
+- me diz como arranjo minha grade horária
+- eae bot, grade horária
+- me manda ai como pegar meus horários
+- [grade horaria](documents)
+- [grade horária](documents)
+- [Grade horaria](documents)
+- [Grade horária](documents)
+- me diz ai, como faço pra pegar a [grade horaria](documents)
+- eae bot, [grade horaria](documents)
+- [grade horaria](documents), pfvr
+- por favor, gostaria de saber como emitir minha [grade horaria](documents)
+- não quero ir na secretaria, como tiro a [grade horaria](documents) no matricula web?
+- preciso da [grade horaria](documents)
+- preciso da [grade horaria](documents), como faz
+- preciso da [grade horaria](documents), como arranjo?
+- meu plano de saúde tá acabando e preciso da [grade horária](documents) desse semestre. como procedo?
+- [grade horária](documents)??
+- me diz ai, como faço pra pegar a [grade horária](documents)
+- eae bot, [grade horária](documents)
+- [grade horária](documents), pfvr
+- por favor, gostaria de saber como emitir minha [grade horária](documents)
+- não quero ir na secretaria, como tiro a [grade horária](documents) no matricula web?
+- preciso da [grade horária](documents)
+- preciso da [grade horária](documents), como faz
+- preciso da [grade horária](documents), como arranjo?
+- meu plano de saúde tá acabando e preciso da [grade horária](documents) desse semestre. como procedo?
+- [grade horária](documents)??
+
+## intent:ask_register_proof
+- Como pegar o [comprovante de matrícula](documents)?
+- como pegar o [comprovante de matrícula](documents)?
+- [Comprovante de matrícula](documents)
+- [comprovante de matrícula](documents)
+- [Comprovante de matricula](documents)
+- [comprovante de matricula](documents)
+- [Comprovante de Matrícula](documents)
+- [comprovante de Matrícula](documents)
+- [Comprovante de Matricula](documents)
+- [comprovante de Matricula](documents)
+- Eae, como pego que pego o [comprovante de matrícula](documents)?
+- oi Lino, como que faço pra retirar o [comprovante de matricula](documents)?
+- fala bixo, me manda ae como arranja o [comprovante de matricula](documents)
+- opa mano, me diz sobre o [comprov de matricual](documents)
+- eaeee, [comprovante de matrícula](documents)
+- [comprov de matr](documents)
+- [comprovante de matricual](documents), cara
+- [comprovante de matricula](documents), cara
+- bot, [comprovante de matricula](documents)
