@@ -41,6 +41,13 @@
 - Alo
 - Oi, tudo bom?
 - Olá Lino
+- Fala tu
+- e ae
+- e ai
+- fala consagrado
+- fala boy
+- diz ae
+- yo
 
 ## intent:goodbye
 - Tchau
@@ -54,3 +61,12 @@
 - massa, agr tchau
 - brigadão
 - valeu, agora tchau
+- vlw flw
+- flw
+- ok bjs
+- ok beijos
+- inté
+- inte
+- até logo
+- é nois
+- bjs luz

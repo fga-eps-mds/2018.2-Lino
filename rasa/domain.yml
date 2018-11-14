@@ -73,9 +73,9 @@ templates:
 
         Eu sou o Lino! Tô aqui pra te ajudar nos corres da faculdade
 
-        Então pode me pedir ajuda sem dó, tô por aqui 24/7
+        Pode me pedir ajuda sem dó, tô por aqui 24/7
 
-        Caso queira saber mais sobre minhas habilities, dá um /help ae
+        Caso queira saber mais sobre minhas habilidades, dá um /help ae
 
   utter_restart:
     - text: |
