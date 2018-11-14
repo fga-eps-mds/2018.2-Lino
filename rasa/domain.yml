@@ -2,7 +2,7 @@ intents:
   - out_of_scope
   - greet
   - goodbye
-  - compliments
+  - .
 
   - asks_menu
   - asks_daily_menu
@@ -62,7 +62,7 @@ actions:
 templates:
   utter_default:
     - text: |
-        Eita pessoa, tendi nada
+        Não entendi mt bem
 
         Repete pra mim, dizendo melhor o que vc quer?
 
@@ -82,35 +82,40 @@ templates:
 
   utter_notifications:
     - text: |
-        Massa, easy te mandar as notificações. Qual você quer?
+        Quais notificações você quer?
 
   utter_weekly_menu:
-    - text: Tá aqui o cardápio da semana... Bom proveito :)
+    - text: Tá aqui o cardápio da semana, bom rango!
       image: "https://webcrawler-ru.lappis.rocks/cardapio/pdf"
 
   utter_gmail:
     - text: |
-        Para eu te mandar os e-mails precisarei te colocar no meu banco de dados de notificações, blz?
+        Pra te mandar os e-mails vou precisar te colocar no meu banco de dados de notificações, blz?
 
   utter_greet:
     - text: |
-        E aê, beleza?! Lino aqui!
+        E aê, beleza?! Aqui é o Lino
 
-        Que que vc tá afim hj? Documentos, período de matrícula, notificações ou RU?
+        É informação que você quer, @? Então escolhe: Documentos, período de matrícula, notificações ou RU?
 
   utter_goodbye:
     - text: |
-        Feshow então!!!
+        Até a próxima!
 
-        Precisando, só me gritar aqui
+        Não esqueça que eu tô aqui pra ajudar!
 
   utter_compliments_reply:
     - text: |
-        Valeeeeeu
+        Muito obrigado, cara!
 
-        Fico mó feliz que você tá gostando do serviço. Se quiser dar mais feedback positivo, aceito ;)
+        Sem a comunidade acadêmica eu não seria nada.
 
     - text: |
         Awnt, brigadão
 
-        Muito melhor que um site, né?
+        Muito melhor que um site, né?!
+
+    - text: |
+        Valeu demais, mano!
+
+        Tô aqui pra ajudar!
