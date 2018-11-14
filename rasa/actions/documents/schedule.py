@@ -1,4 +1,5 @@
 from rasa_core.actions.action import Action
+import time
 
 DOC_1 = 'login/index.html?response_type=code&'
 DOC_2 = 'client_id=102&redirect_uri=/documentodigital/index.html'
@@ -22,6 +23,7 @@ class ActionSchedule(Action):
         for message in messages:
             dispatcher.utter_message(message)
 
+        time.sleep(0.5)
         steps = []
 
         # Step 1
@@ -48,5 +50,7 @@ class ActionSchedule(Action):
 
         for step in steps:
             dispatcher.utter_response(step)
+
+        dispatcher.utter_message(';)')
 
         return []
