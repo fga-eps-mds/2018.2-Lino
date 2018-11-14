@@ -51,3 +51,6 @@
 - massa, agr tchau
 - brigadão
 - valeu, agora tchau
+
+## intent:help
+- [help](command)

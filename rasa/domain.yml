@@ -2,7 +2,7 @@ intents:
   - out_of_scope
   - greet
   - goodbye
-
+  - help
   - asks_menu
   - asks_daily_menu
   - asks_weekly_menu
@@ -24,6 +24,7 @@ entities:
   - periods
   - calendar
   - meal
+  - command
 
 slots:
   period:
@@ -38,6 +39,8 @@ actions:
   - utter_restart
   - utter_greet
   - utter_goodbye
+
+  - utter_help
 
   - utter_menu
   - actions.menu.daily_menu.ActionDailyMenu
@@ -101,4 +104,8 @@ templates:
         Feshow então!!!
 
         Precisando, só me gritar aqui
+
+  utter_help:
+    - text: |
+        HELP AQUI!
 

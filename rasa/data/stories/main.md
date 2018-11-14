@@ -2,6 +2,10 @@
 * greet
   - utter_greet
 
+## path_help
+* help{"comand": "help"}
+  - utter_help
+
 ## path_goodbye
 * goodbye
   - utter_goodbye
