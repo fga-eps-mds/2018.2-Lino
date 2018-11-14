@@ -1,3 +1,7 @@
+## path_start_flow
+* start_flow
+  - utter_start_flow
+
 ## path_greetings
 * greet
   - utter_greet

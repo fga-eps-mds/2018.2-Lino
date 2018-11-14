@@ -2,6 +2,7 @@ intents:
   - out_of_scope
   - greet
   - goodbye
+  - start_flow
 
   - asks_menu
   - asks_daily_menu
@@ -38,6 +39,7 @@ actions:
   - utter_restart
   - utter_greet
   - utter_goodbye
+  - utter_start_flow
 
   - utter_menu
   - actions.menu.daily_menu.ActionDailyMenu
@@ -63,6 +65,16 @@ templates:
         Eita pessoa, tendi nada
 
         Repete pra mim, dizendo melhor o que vc quer?
+
+  utter_start_flow:
+    - text: |
+        EAE!
+
+        Eu sou o Lino! Tô aqui pra te ajudar nos corres da faculdade
+
+        Então pode me pedir ajuda sem dó, tô por aqui 24/7
+
+        Caso queira saber mais sobre minhas habilities, dá um /help ae
 
   utter_restart:
     - text: |
@@ -94,8 +106,8 @@ templates:
     - text: |
         E aê, beleza?! Lino aqui!
 
-        Que que vc tá afim hj? Documentos, período de matrícula, notificações ou RU?
-  
+        Que que vc tá afim hj? Documentos, período de matrícula, notificações, RU... ?
+
   utter_goodbye:
     - text: |
         Feshow então!!!

@@ -40,7 +40,7 @@
 - Olá Lino
 
 ## intent:goodbye
-- Tchau 
+- Tchau
 - Até mais
 - Tchau migx
 - Smell ya later
