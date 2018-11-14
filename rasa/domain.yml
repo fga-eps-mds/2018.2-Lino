@@ -54,6 +54,7 @@ actions:
   - actions.notifications.start.ActionStart
   - actions.notifications.register_notification.ActionRegisterNotification
   - actions.notifications.buttons_notification.ActionButtonsNotification
+  - actions.notifications.trigger_notification.ActionTriggerNotification
   - utter_documents
   - utter_finish_notification
 

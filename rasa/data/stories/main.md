@@ -54,6 +54,16 @@
 * register_notification
   - custom_start
   - action_register_notification
+* affirm
+  - action_another_notification
+
+## path_register_notification
+* asks_about_notifications
+  - utter_notifications
+  - action_buttons_notification
+* register_notification
+  - custom_start
+  - action_register_notification
 * deny
   - utter_finish_notification
 
