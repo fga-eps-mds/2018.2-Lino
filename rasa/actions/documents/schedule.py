@@ -1,5 +1,6 @@
 from rasa_core.actions.action import Action
 import time
+import datetime
 
 DOC_1 = 'login/index.html?response_type=code&'
 DOC_2 = 'client_id=102&redirect_uri=/documentodigital/index.html'
@@ -23,13 +24,19 @@ class ActionSchedule(Action):
         for message in messages:
             dispatcher.utter_message(message)
 
+        # Free cache images
+        timestamp = datetime.datetime.now().strftime("%d-%m-%Y")
+        free_cache_url = f'?time={timestamp}'
+
+        # typing
         time.sleep(0.5)
+
         steps = []
 
         # Step 1
         step_1 = {
             'text': 'Passo 1: Faça login no site e selecione grade horária',
-            'image': f'{GIT_URL}{IMGS_PATH}step2.png'
+            'image': f'{GIT_URL}{IMGS_PATH}step2.png{free_cache_url}'
             }
         steps.append(step_1)
 
@@ -38,7 +45,7 @@ class ActionSchedule(Action):
         step_2_2 = 'clique em emitir'
         step_2 = {
             'text': f'Passo 2: {step_2_1} e {step_2_2}',
-            'image': f'{GIT_URL}{IMGS_PATH}step4.png'
+            'image': f'{GIT_URL}{IMGS_PATH}step4.png{free_cache_url}'
         }
         steps.append(step_2)
 
