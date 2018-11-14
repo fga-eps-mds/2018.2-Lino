@@ -18,6 +18,8 @@ intents:
 
   - asks_about_gmail
 
+  - thanks
+
   - calendar
 
 entities:
@@ -54,6 +56,8 @@ actions:
   - utter_documents
 
   - utter_gmail
+
+  - utter_thanks
 
   - actions.calendar.ActionCalendar
 
@@ -102,3 +106,8 @@ templates:
 
         Precisando, só me gritar aqui
 
+  utter_thanks:
+    - text: |
+        Que isso, você é uma pessoa maravilhosaa! Precisando eu sempre estarei aqui :D
+
+        

@@ -2,6 +2,10 @@
 * greet
   - utter_greet
 
+## path_thanks
+* thanks
+  - utter_thanks
+
 ## path_goodbye
 * goodbye
   - utter_goodbye

@@ -51,3 +51,12 @@
 - massa, agr tchau
 - brigadão
 - valeu, agora tchau
+
+## intent:thanks
+- Muito obrigado
+- Obrigado
+- Muito obrigada
+- Obrigada
+- Valeu
+- Tamo junto
+- Agradecido
