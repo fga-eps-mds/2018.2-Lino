@@ -66,7 +66,7 @@ templates:
 
   utter_restart:
     - text: |
-        Vou reiniciar o flow aqui
+
 
   utter_menu:
     - text: |
