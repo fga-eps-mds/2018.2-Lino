@@ -2,7 +2,7 @@ intents:
   - out_of_scope
   - greet
   - goodbye
-  - .
+  - compliments
 
   - asks_menu
   - asks_daily_menu
@@ -119,3 +119,6 @@ templates:
         Valeu demais, mano!
 
         Tô aqui pra ajudar!
+
+    - text: |
+        Ah, para com isso! *-*

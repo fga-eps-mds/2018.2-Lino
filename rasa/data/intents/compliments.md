@@ -30,3 +30,11 @@
 - seu tchutchuco
 - bot muito legal
 - gosto mt de voce, linos
+- lindo
+- lindao
+- maravilhoso
+- top
+- gato
+- gado
+- topzera
+- top
