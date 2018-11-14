@@ -1,5 +1,6 @@
 from rasa_core.actions.action import Action
-import logging
+import time
+import datetime
 
 DOC_1 = 'login/index.html?response_type=code&'
 DOC_2 = 'client_id=102&redirect_uri=/documentodigital/index.html'
@@ -23,6 +24,13 @@ class ActionRegisterProof(Action):
         for message in messages:
             dispatcher.utter_message(message)
 
+        # Free cache images
+        timestamp = datetime.datetime.now().strftime("%d-%m-%Y")
+        free_cache_url = f'?time={timestamp}'
+
+        # typing
+        time.sleep(0.5)
+
         steps = []
 
         # Step 1
@@ -30,7 +38,7 @@ class ActionRegisterProof(Action):
         step_1_2 = 'selecione comprovante de matrícula'
         step_1 = {
             'text': f'Passo 1: {step_1_1} e {step_1_2}',
-            'image': f'{GIT_URL}{IMGS_PATH}step2.png'
+            'image': f'{GIT_URL}{IMGS_PATH}step2.png{free_cache_url}'
             }
         steps.append(step_1)
 
@@ -39,7 +47,7 @@ class ActionRegisterProof(Action):
         step_2_2 = 'Clique em emitir'
         step_2 = {
             'text': f'Passo 2: {step_2_1} e {step_2_2}',
-            'image': f'{GIT_URL}{IMGS_PATH}step3.png'
+            'image': f'{GIT_URL}{IMGS_PATH}step4.png{free_cache_url}'
         }
         steps.append(step_2)
 
@@ -50,7 +58,8 @@ class ActionRegisterProof(Action):
         steps.append(step_3)
 
         for step in steps:
-            logging.warning(step)
             dispatcher.utter_response(step)
+
+        dispatcher.utter_message(';)')
 
         return []
