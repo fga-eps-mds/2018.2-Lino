@@ -90,7 +90,15 @@
 
 ## path_handle_visualize_notification
 * notification_types{"notification_types": "Visualizar"}
-  - action_daily_breakfast
+  - action_list_notifications
+* affirm{"notification_types": "Visualizar"}
+  - action_show_notifications_types
+
+## path_handle_visualize_notification
+* notification_types{"notification_types": "Visualizar"}
+  - action_list_notifications
+* deny{"notification_types": "Visualizar"}
+  - utter_finish_notification
 
 ## path_calendar
 * calendar

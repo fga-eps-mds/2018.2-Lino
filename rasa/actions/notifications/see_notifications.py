@@ -1,4 +1,6 @@
 import os
+import requests
+import json
 from pymongo import MongoClient
 from rasa_core.actions.action import Action
 
@@ -39,8 +41,12 @@ class ActionListNotifications(Action):
             types += '* ' + name + '\n'
         messages.append(types)
 
+        messages.append('Quer realizar alguma outra operação?')
+
         for message in messages:
-            dispatcher.utter_message(message)
+            data = self.remove_markup_telegram(message, sender_id)
+            if not data['ok']:
+                dispatcher.utter_message(message)
 
         return []
 
@@ -71,9 +77,33 @@ class ActionListNotifications(Action):
             'gmail alert': 'Alertas da Comunidade'
         }
 
-        try
+        try:
             result = notification_map[word]
             return result
         except KeyError as err:
             print(err)
             return None
+
+    def remove_markup_telegram(self, message, sender_id):
+        """
+        Sends a message using Telegram API and removes any KeyboardMarkup.
+        Returns a dict with the API response.
+        """
+        reply_markup = {
+            "remove_keyboard": True
+        }
+
+        remove_keyboard_payload = {
+            "chat_id": sender_id,
+            "text": "just a text",
+            "reply_markup": json.dumps(reply_markup)
+        }
+
+        remove_keyboard_payload['text'] = message
+        data = requests.post(
+            ('https://api.telegram.org/bot{}'
+             '/sendMessage')
+            .format(TELEGRAM_ACCESS_TOKEN),
+            data=remove_keyboard_payload
+        ).json()
+        return data

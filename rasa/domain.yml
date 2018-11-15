@@ -80,6 +80,7 @@ actions:
   - utter_unregister_notifications
   - actions.notifications.start.ActionStart
   - actions.notifications.register_notification.ActionRegisterNotification
+  - actions.notifications.see_notifications.ActionListNotifications
   - actions.notifications.unregister_notification.ActionUnregisterNotification
   - actions.notifications.buttons_notification.ActionButtonsNotification
   - actions.notifications.buttons_notification.ActionButtonsNotificationTypes
