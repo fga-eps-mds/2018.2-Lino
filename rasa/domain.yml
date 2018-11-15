@@ -140,7 +140,10 @@ templates:
     - text: |
         Agora sim! Desculpe se te incomodei com isso...
 
-        Se quiser reativar, é só chamar aqui!
+        Se quiser reativar, é só pedir aqui!
+
+    - text: |
+        Beleza, se quiser tirar mais alguma, só pedir de novo!
 
   utter_gmail:
     - text: |

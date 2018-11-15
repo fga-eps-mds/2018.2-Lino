@@ -37,7 +37,7 @@ class ActionUnregisterNotification(Action):
                 break
 
         if notification is "":
-            dispatcher.utter_message(('Não consegui encontrar essa opção!'
+            dispatcher.utter_message(('Não consegui encontrar essa opção... '
                                       'Dá uma olhada melhor nas opções, '
                                       'só temos elas, ainda!'))
             return []
@@ -46,7 +46,8 @@ class ActionUnregisterNotification(Action):
 
         user_telegram = self.check_telegram_valid_user(sender_id)
         user_facebook = self.check_facebook_valid_user(sender_id)
-        welcome = 'LALALA'
+        welcome = ('Agora você já não recebe mais esse tipo de notificação... '
+                   'Quer receber ou retirar outra?')
         if user_telegram != {}:
             user_checked = self.check_user_not_receive_notification(
                 sender_id, TELEGRAM_DB_URI, 'lino_telegram', notification)
@@ -69,8 +70,8 @@ class ActionUnregisterNotification(Action):
                 if not data['ok']:
                     dispatcher.utter_message(message)
         else:
-            message = ('Você não recebe mais esse tipo de '
-                       'notificação... Você quer desativar alguma outra?')
+            message = ('Essa notificação já está desativada! Você quer '
+                       'escolher outra opção?')
             data = self.remove_markup_telegram(message, sender_id)
             if not data['ok']:
                 dispatcher.utter_message(message)
@@ -93,7 +94,7 @@ class ActionUnregisterNotification(Action):
         notification_stats = False
 
         for element in notifications:
-            if element['description'] is notification and element['value']:
+            if element['description'] in notification and element['value']:
                 notification_stats = True
                 break
 
