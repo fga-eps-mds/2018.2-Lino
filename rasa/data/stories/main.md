@@ -48,24 +48,110 @@
   - action_daily_breakfast
 
 ## path_register_notification
-* asks_about_notifications
-  - utter_notifications
+* asks_about_register_notifications
+  - utter_register_notifications
   - action_buttons_notification
-* register_notification
+* register_notification{
+    "registered_option": "Alerta da Comunidade",
+    "registered_option": "Cardápio do Dia",
+    "registered_option": "Cardápio da Semana",
+    "registered_option": "Café da Manhã",
+    "registered_option": "Almoço",
+    "registered_option": "Jantar"
+}
   - custom_start
   - action_register_notification
 * affirm
   - action_another_notification
 
 ## path_register_notification
-* asks_about_notifications
-  - utter_notifications
+* asks_about_register_notifications
+  - utter_register_notifications
   - action_buttons_notification
-* register_notification
+* register_notification{
+    "registered_option": "Alerta da Comunidade",
+    "registered_option": "Cardápio do Dia",
+    "registered_option": "Cardápio da Semana",
+    "registered_option": "Café da Manhã",
+    "registered_option": "Almoço",
+    "registered_option": "Jantar"
+}
   - custom_start
   - action_register_notification
 * deny
   - utter_finish_notification
+
+## path_unregister_notification
+* asks_about_unregister_notifications{
+    {"option": "não", "notification": "notificação"},
+    {"option": "nao", "notification": "notificaçao"},
+    {"option": "não", "notification": "notificações"},
+    {"option": "nao", "notification": "notificaçoes"},
+    {"option": "sem", "notification": "notificação"},
+    {"option": "sem", "notification": "notificaçao"},
+    {"option": "sem", "notification": "notificações"},
+    {"option": "sem", "notification": "notificaçoes"},
+    {"option": "quero tirar", "notification": "notificação"},
+    {"option": "quero tirar", "notification": "notificaçao"},
+    {"option": "quero tirar", "notification": "notificações"},
+    {"option": "quero tirar", "notification": "notificaçoes"},
+    {"option": "tira", "notification": "notificação"},
+    {"option": "tira", "notification": "notificaçao"},
+    {"option": "para", "notification": "coisa"},
+    {"option": "para", "notification": "notificações"},
+    {"option": "para", "notification": "cardápio"},
+    {"option": "para", "notification": "mandar"}
+}
+  - utter_unregister_notifications
+  - action_buttons_notification
+* unregister_notification{
+    "unregistered_option": "Alerta da Comunidade",
+    "unregistered_option": "Cardápio do Dia",
+    "unregistered_option": "Cardápio da Semana",
+    "unregistered_option": "Café da Manhã",
+    "unregistered_option": "Almoço",
+    "unregistered_option": "Jantar"
+}
+  - custom_start
+  - action_unregister_notification
+* affirm
+  - action_trigger_unregister_notification
+
+## path_unregister_notification
+* asks_about_unregister_notifications{
+    {"option": "não", "notification": "notificação"},
+    {"option": "nao", "notification": "notificaçao"},
+    {"option": "não", "notification": "notificações"},
+    {"option": "nao", "notification": "notificaçoes"},
+    {"option": "sem", "notification": "notificação"},
+    {"option": "sem", "notification": "notificaçao"},
+    {"option": "sem", "notification": "notificações"},
+    {"option": "sem", "notification": "notificaçoes"},
+    {"option": "quero tirar", "notification": "notificação"},
+    {"option": "quero tirar", "notification": "notificaçao"},
+    {"option": "quero tirar", "notification": "notificações"},
+    {"option": "quero tirar", "notification": "notificaçoes"},
+    {"option": "tira", "notification": "notificação"},
+    {"option": "tira", "notification": "notificaçao"},
+    {"option": "para", "notification": "coisa"},
+    {"option": "para", "notification": "notificações"},
+    {"option": "para", "notification": "cardápio"},
+    {"option": "para", "notification": "mandar"}
+}
+  - utter_unregister_notifications
+  - action_buttons_notification
+* unregister_notification{
+    "unregistered_option": "Alerta da Comunidade",
+    "unregistered_option": "Cardápio do Dia",
+    "unregistered_option": "Cardápio da Semana",
+    "unregistered_option": "Café da Manhã",
+    "unregistered_option": "Almoço",
+    "unregistered_option": "Jantar"
+}
+  - custom_start
+  - action_unregister_notification
+* deny
+  - utter_finish_unregister_notification
 
 ## path_calendar
 * calendar

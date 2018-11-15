@@ -15,6 +15,7 @@ class ActionTriggerNotification(Action):
                             'confidence': 1.0}))
         return []
 
+
 class ActionTriggerUnregisterNotification(Action):
     def name(self):
         return "action_trigger_unregister_notification"

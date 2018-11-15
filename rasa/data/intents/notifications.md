@@ -1,9 +1,14 @@
-## intent:asks_about_notifications
+## intent:asks_about_register_notifications
 - sobre notificações
 - e as notificações?
+- e as notificaçoes?
 - quero saber sobre notificações
+- quero saber sobre as notificações
+- quero saber sobre as notificaçoes
 - me fala sobre as notificações
+- me fala sobre as notificaçoes
 - notificações pfvr
+- notificaçoes pfvr
 - quero me informar sobre as notificações
 - oi, como faço pra receber as notificações?
 - me diz sobre o funcionamento das notificações
@@ -17,6 +22,8 @@
 - fala ai pra mim das notificações
 - oi colega, gostaria de saber mais sobre o serviço de notificações que você oferece
 - notificaçõooooes
+- notificações
+- notificaçoes
 - me diz aí, oq faço pra receber notificações?
 - cansei de ver site, quero receber notificações aqui
 - me fala como receber notificações da faculdade fácil
@@ -97,3 +104,73 @@
 - opa, cardápio da semana então
 - comunidade
 - alerta da comunidade
+- [alerta da comunidade](register_notification)
+- [Alerta da Comunidade](register_notification)
+- [almoço](register_notification)
+- [Almoço](register_notification)
+- [jantar](register_notification)
+- [Jantar](register_notification)
+- [cardápio do dia](register_notification)
+- [Cardápio do Dia](register_notification)
+- [cardápio da semana](register_notification)
+- [Cardápio da Semana](register_notification)
+- [café da manhã](register_notification)
+- [Café da Manhã](register_notification)
+
+## intent:asks_about_unregister_notification
+- [não](option) quero receber mais [notificação](notification)
+- [nao](option) quero receber mais [notificaçao](notification)
+- [não](option) quero receber mais [notificações](notification)
+- [não](option) quero receber mais [notificações](notification)
+- [não](option) quero [notificação](notification)
+- [não](option) quero [notificações](notification)
+- [sem](option) [notificação](notification)
+- [sem](option) [notificaçao](notification)
+- [sem](option) [notificações](notification)
+- [sem](option) [notificações](notification)
+- [quero tirar](option) as [notificações](notification)
+- [quero tirar](option) as [notificaçoes](notification)
+- [quero tirar](option) a [notificação](notification)
+- [quero tirar](option) a [notificaçao](notification)
+- [quero tirar](option) [notificação](notification)
+- [quero tirar](option) [notificaçao](notification)
+- [sem](option) [notificação]notification(), plis
+- [tira](option) essa [notificação](notification) pelo amor de deus
+- [tira](option) essa [notificaçao](notification) pelo amor de deus
+- por favor, [tira](option) essa [notificação](notification)
+- por favor, [tira](option) essa [notificaçao](notification)
+- [sem](option) [notificação](notification), por favor
+- [sem](option) [notificaçao](notification), por favor
+- [não](option) quero [alerta](notification) mais
+- [sem](option) [alertas](notification)
+- [tira](option) os [alertas](notification) pra mim
+- [tira](option) os [alertas](notification) pra mim, por favor
+- [para](option) de mandar [coisa](notification) pra mim toda hora
+- [para](option) de mandar [notificações](notification) pra mim toda hora
+- [para](option) de floddar o [cardápio](notification)
+- [não](option) quero receber o [cardápio do dia](notification)
+- [não](option) quero receber o [cardápio da semana](notification)
+- [não](option) quero receber o [cardápio do café](notification)
+- [não](option) quero receber o [café](notification)
+- [não](option) quero receber o [cardápio do café da manhã](notification)
+- [não](option) quero receber o [café da manhã](notification)
+- [não](option) quero receber o [cardápio do almoço](notification)
+- [não](option) quero receber o [cardápio do jantar](notification)
+- [não](option) quero receber o [cardápio da janta](notification)
+- [não](option) quero receber os [alertas da comunidade](notification)
+- [para](option) de me [mandar](notification) mensagem
+- [para](option) de me [mandar](notification) msg
+
+## intent:unregister_notification
+- [alerta da comunidade](unregister_notification)
+- [Alerta da Comunidade](unregister_notification)
+- [almoço](unregister_notification)
+- [Almoço](unregister_notification)
+- [jantar](unregister_notification)
+- [Jantar](unregister_notification)
+- [cardápio do dia](unregister_notification)
+- [Cardápio do Dia](unregister_notification)
+- [cardápio da semana](unregister_notification)
+- [Cardápio da Semana](unregister_notification)
+- [café da manhã](unregister_notification)
+- [Café da Manhã](unregister_notification)
