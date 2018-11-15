@@ -15,8 +15,18 @@
 * asks_about_documents
   - utter_documents
 
+## path_asks_regular_proof
+* asks_regular_proof
+  - action_regular_proof
+
 ## path_asks_register_proof
-* ask_register_proof
+* ask_register_proof{"documents": "Comprovante de matrícula", 
+    "documents": "comprovante de matrícula",
+    "documents": "Comprovante de matricula",
+    "documents": "Comprovante de Matrícula", 
+    "documents": "comprovante de Matrícula", 
+    "documents": "Comprovante de Matricula",
+    "documents": "comprovante de Matricula"}
   - action_register_proof
 
 ## path_asks_gmail

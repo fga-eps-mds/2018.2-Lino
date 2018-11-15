@@ -17,6 +17,27 @@
 - me informa sobre os documentos
 - cara, to perdidaço. Me fala dos documentos
 
+## intent:asks_regular_proof
+- comprovante de aluno regular
+- quero meu comprovante de aluno regular
+- manda o meu comprovante de aluno regular
+- comprovante aluno
+- quero meu comprovante de aluno
+- manda meu comprovante de aluno
+- aluno comprovante
+- student statement
+- regular student statement
+- passa o comprovante de aluno
+- documento de aluno regular
+- como comprovo que sou aluno regular
+- comprovar que sou aluno
+- comprovar que sou universitario
+- como provar que sou aluno regular
+- como provar que sou universitario regular
+- quero pagar meia
+- como pagar meia no cinema
+- quero sair com a morena e pagar meia
+- meia entrada
 ## intent:asks_about_schedule
 - [grade horaria](command)
 - me diz como arranjo minha grade horária
