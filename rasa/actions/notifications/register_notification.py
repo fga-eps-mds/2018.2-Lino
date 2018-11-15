@@ -70,7 +70,7 @@ class ActionRegisterNotification(Action):
                     dispatcher.utter_message(message)
         else:
             message = ('Você já recebe esse tipo de '
-                       'notificação...')
+                       'notificação... Você quer receber outra?')
             data = self.remove_markup_telegram(message, sender_id)
             if not data['ok']:
                 dispatcher.utter_message(message)
