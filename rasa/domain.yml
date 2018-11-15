@@ -15,6 +15,7 @@ intents:
   - register_notification
 
   - asks_about_documents
+  - asks_about_schedule
 
   - asks_about_gmail
 
@@ -25,6 +26,7 @@ entities:
   - calendar
   - meal
   - command
+  - documents
 
 slots:
   period:
@@ -55,6 +57,8 @@ actions:
   - actions.notifications.register_notification.ActionRegisterNotification
   - actions.notifications.buttons_notification.ActionButtonsNotification
   - utter_documents
+  - actions.documents.schedule.ActionSchedule
+  - actions.documents.register_proof.ActionRegisterProof
 
   - utter_gmail
 

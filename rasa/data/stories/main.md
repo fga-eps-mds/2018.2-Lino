@@ -19,9 +19,17 @@
 * asks_about_documents
   - utter_documents
 
+## path_asks_register_proof
+* ask_register_proof
+  - action_register_proof
+
 ## path_asks_gmail
 * asks_about_gmail
   - utter_gmail
+
+## path_asks_schedule
+* asks_about_schedule{"documents": "grade horaria", "documents": "grade horária"}
+  - action_schedule
 
 ## path_daily_meal
 * asks_menu
