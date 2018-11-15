@@ -15,6 +15,7 @@ intents:
   - action_ask_notification
   - register_notification
   - unregister_notification
+  - notification_types
 
   - asks_about_documents
 
@@ -33,6 +34,7 @@ entities:
   - notification
   - register_notification
   - unregister_notification
+  - notification_types
 
 slots:
   period:
@@ -53,6 +55,12 @@ slots:
   unregister_notification:
     type: "text"
     initial_value: ""
+  notification_types:
+    type: "categorical"
+    values:
+    - Cadastrar
+    - Remover
+    - Visualizar
 
 actions:
   - utter_default
@@ -67,12 +75,14 @@ actions:
   - actions.menu.daily_breakfast.ActionDailyBreakfast
   - actions.menu.week_menu.ActionSendWeekMenu
 
+  - utter_operation_type
   - utter_register_notifications
   - utter_unregister_notifications
   - actions.notifications.start.ActionStart
   - actions.notifications.register_notification.ActionRegisterNotification
   - actions.notifications.unregister_notification.ActionUnregisterNotification
   - actions.notifications.buttons_notification.ActionButtonsNotification
+  - actions.notifications.buttons_notification.ActionButtonsNotificationTypes
   - actions.notifications.trigger_notification.ActionTriggerNotification
   - actions.notifications.trigger_notification.ActionTriggerUnregisterNotification
   - utter_documents
@@ -103,6 +113,10 @@ templates:
         Vish pessoa, agora não rola
 
         Não me ensinaram ainda, mas logo logo tô manjando!
+
+  utter_operation_type:
+    - text: |
+        Top man, vamos mexer nessas notificações aqui!
 
   utter_register_notifications:
     - text: |

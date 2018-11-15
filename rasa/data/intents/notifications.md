@@ -27,6 +27,7 @@
 - me diz aí, oq faço pra receber notificações?
 - cansei de ver site, quero receber notificações aqui
 - me fala como receber notificações da faculdade fácil
+- me manda umas notícia ai
 
 ## intent:register_notification
 - Me cadastra pra receber o almoço
@@ -174,3 +175,8 @@
 - [Cardápio da Semana](unregister_notification)
 - [café da manhã](unregister_notification)
 - [Café da Manhã](unregister_notification)
+
+## intent:notification_types
+- [Cadastrar](notification_types)
+- [Remover](notification_types)
+- [Visualizar](notification_types)
