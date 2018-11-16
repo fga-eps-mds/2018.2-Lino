@@ -29,7 +29,7 @@ class ActionListNotifications(Action):
         telegram, facebook = self.db_connect()
 
         user = telegram.find_one({'sender_id': sender_id})
-        
+
         if not user:
             user = facebook.find_one({'sender_id': sender_id})
 
@@ -106,4 +106,5 @@ class ActionListNotifications(Action):
             .format(TELEGRAM_ACCESS_TOKEN),
             data=remove_keyboard_payload
         ).json()
+
         return data
