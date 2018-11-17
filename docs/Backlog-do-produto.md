@@ -35,19 +35,19 @@
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |US01|Funcional|Usuário|ser notificado sobre o cardápio diário do RU|me informar|_Must Have_|FT01, FT09|
 |US02|Funcional|Usuário|saber sobre o cardápio geral da semana|me informar|_Must Have_|FT02, FT09|
-|US03|Funcional|Usuário|saber sobre o cardápio de uma refeição específica de um período do dia |me informar|_Should Have_|FT01| 8 |
-|US04|Funcional|Usuário|gerenciar as notificações do Lino|priorizar as informações|_Must Have_|FT01 & FT04|
-|US05|Não Funcional|Lino|buscar as informações sobre o cardápio do RU na sua página oficial| para transferir a informação ao usuário solicitante|_Must Have_|FT01|
-|US06|Não Funcional|Lino|transformar o PDF do cardápio em texto| para informar o usuário| _Must Have_|FT01|
+|US03|Funcional|Usuário|saber sobre o cardápio de uma refeição específica de um período do dia |me informar|_Should Have_|FT04| 8 |
+|US04|Funcional|Usuário|gerenciar as notificações do Lino|priorizar as informações|_Must Have_|FT10|
+|US05|Não Funcional|Lino|buscar as informações sobre o cardápio do RU na sua página oficial| para transferir a informação ao usuário solicitante|_Must Have_|FT01, FT02, FT03, FT04|
+|US06|Não Funcional|Lino|transformar o PDF do cardápio em texto| para informar o usuário| _Must Have_|FT01, FT02, FT03, FT04|
 |US07|Não Funcional|Lino|me comunicar com os usuários pelo mensageiro Messenger|enviar mensagens a usuários dessa plataforma|_Must Have_|FT09|
 |US08|Não Funcional|Lino|me comunicar com os usuários pelo mensageiro Telegram|enviar mensagens a usuários dessa plataforma|_Must Have_|FT09|
-|US09|Funcional|Servidor | enviar uma mensagem via gmail | informar os usuários via lino|_Must Have_|FT04|
-|US10|Não Funcional|Lino|desejo receber um email do Servidor(ator)|notificar os usuários|_Must Have_|FT04|
-|US11|Não Funcional|Lino|acessar a API do Gmail|enviar as mensagens recebidas aos usuários|_Must Have_|FT04|
-|US21|Não Funcional|Lino|ter uma identidade visual |me mostrar ao mundo|_Should Have_|FT01|
-|US22|Funcional|Lino|ter um fluxo de conversa sobre o cardápio do RU|alertar os usuários sobre as informações do cardápio diário ou semanal|_Should Have_|FT01|
-|US23|Não Funcional|Lino|buscar as informações sobre calendário da UnB no semestre| para transferir a informação ao usuário solicitante|_Must Have_|FT05, FT06, FT08|
-|US24|Não Funcional|Lino|transformar o PDF do cardápio em texto| para informar o usuário| _Must Have_|FT05, FT06, FT08|
+|US09|Funcional|Servidor | enviar uma mensagem via gmail | informar os usuários via lino|_Must Have_|FT05|
+|US10|Não Funcional|Lino|desejo receber um email do Servidor(ator)|notificar os usuários|_Must Have_|FT05|
+|US11|Não Funcional|Lino|acessar a API do Gmail|enviar as mensagens recebidas aos usuários|_Must Have_|FT05|
+|US21|Não Funcional|Lino|ter uma identidade visual |me mostrar ao mundo|_Should Have_|FT10|
+|US22|Funcional|Lino|ter um fluxo de conversa sobre o cardápio do RU|alertar os usuários sobre as informações do cardápio diário ou semanal|_Should Have_|FT01, FT02, FT09|
+|US23|Não Funcional|Lino|buscar as informações sobre calendário da UnB no semestre| para transferir a informação ao usuário solicitante|_Must Have_|FT06, FT07|
+|US24|Não Funcional|Lino|transformar o PDF do cardápio em texto| para informar o usuário| _Must Have_|FT01, FT02, FT03, FT04|
 |US25|Funcional|Lino| enviar mensagens sobre o cardápio do café da manhã diário para o usuário no telegram| para informar o usuário |_Must Have_|FT01|
 
 
