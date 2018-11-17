@@ -2,7 +2,8 @@ intents:
   - out_of_scope
   - greet
   - goodbye
-
+  - compliments
+  - start
   - asks_menu
   - asks_daily_menu
   - asks_weekly_menu
@@ -15,15 +16,20 @@ intents:
   - register_notification
 
   - asks_about_documents
+  - asks_about_schedule
+  - asks_register_proof
+  - asks_regular_proof
 
   - asks_about_gmail
-
+  - offenses
   - calendar
 
 entities:
   - periods
   - calendar
   - meal
+  - command
+  - documents
 
 slots:
   period:
@@ -38,7 +44,8 @@ actions:
   - utter_restart
   - utter_greet
   - utter_goodbye
-
+  - utter_compliments_reply
+  - utter_start
   - utter_menu
   - actions.menu.daily_menu.ActionDailyMenu
   - actions.menu.daily_dinner.ActionDailyDinner
@@ -52,17 +59,30 @@ actions:
   - actions.notifications.register_notification.ActionRegisterNotification
   - actions.notifications.buttons_notification.ActionButtonsNotification
   - utter_documents
+  - actions.documents.regular_proof.ActionRegularProof
+  - actions.documents.schedule.ActionSchedule
+  - actions.documents.register_proof.ActionRegisterProof
 
   - utter_gmail
-
+  - utter_offenses
   - actions.calendar.ActionCalendar
 
 templates:
   utter_default:
     - text: |
-        Eita pessoa, tendi nada
+        Não entendi mt bem
 
         Repete pra mim, dizendo melhor o que vc quer?
+
+  utter_start:
+    - text: |
+        EAE!
+
+        Eu sou o Lino! Tô aqui pra te ajudar nos corres da faculdade
+
+        Pode me pedir ajuda sem dó, tô por aqui 24/7
+
+        Caso queira saber mais sobre minhas habilidades, dá um /help ae
 
   utter_restart:
     - text: |
@@ -80,27 +100,27 @@ templates:
 
   utter_notifications:
     - text: |
-        Massa, easy te mandar as notificações. Qual você quer?
+        Quais notificações você quer?
 
   utter_weekly_menu:
-    - text: Tá aqui o cardápio da semana... Bom proveito :)
+    - text: Tá aqui o cardápio da semana, bom rango!
       image: "https://webcrawler-ru.lappis.rocks/cardapio/pdf"
 
   utter_gmail:
     - text: |
-        Para eu te mandar os e-mails precisarei te colocar no meu banco de dados de notificações, blz?
+        Pra te mandar os e-mails vou precisar te colocar no meu banco de dados de notificações, blz?
 
   utter_greet:
     - text: |
-        E aê, beleza?! Lino aqui!
+        E aê, beleza?! Aqui é o Lino
 
-        Que que vc tá afim hj? Documentos, período de matrícula, notificações ou RU?
-  
+        Que que vc tá afim hj? Documentos, período de matrícula, notificações, RU... ?
+
   utter_goodbye:
     - text: |
-        Feshow então!!!
+        Até a próxima!
 
-        Precisando, só me gritar aqui
+        Não esqueça que eu tô aqui pra ajudar!
 
     - text: |
         Tchau, tchau
@@ -113,3 +133,44 @@ templates:
         Espero te ver novamente em breve
 
         Até logo!!!
+
+  utter_compliments_reply:
+    - text: |
+        Muito obrigado, cara!
+
+        Sem a comunidade acadêmica eu não seria nada.
+
+    - text: |
+        Awnt, brigadão
+
+        Muito melhor que um site, né?!
+
+    - text: |
+        Valeu demais, mano!
+
+        Tô aqui pra ajudar!
+
+    - text: |
+        Ah, para com isso! *-*
+
+  utter_offenses:
+    - text: |
+        Olouco, pessoa...Pra que isso??
+
+        To so querendo te ajudar aqui, foi mal se te ofendi
+
+        Não me xinga não, me diz o que posso fazer pra ajudar ;)
+
+    - text: |
+        Vamos com calma...Está muito exaltado!!
+
+        To so querendo te ajudar aqui, foi mal se te ofendi
+
+        Deixa de ser bruto, me diz o que posso fazer pra ajudar ;)
+
+    - text: |
+        Fica frio aí!!!
+
+        Eu sou um bot tão legal, pra q essa agressividade!?
+
+        Vamos lá, me diz com um pouco mais de carinho em que posso ajudar... =)
