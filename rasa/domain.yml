@@ -86,7 +86,7 @@ templates:
 
   utter_restart:
     - text: |
-        Vou reiniciar o flow aqui
+
 
   utter_menu:
     - text: |
@@ -122,6 +122,18 @@ templates:
 
         Não esqueça que eu tô aqui pra ajudar!
 
+    - text: |
+        Tchau, tchau
+
+        Estarei aqui quando precisar
+
+    - text: |
+        Flwss!
+
+        Espero te ver novamente em breve
+
+        Até logo!!!
+
   utter_compliments_reply:
     - text: |
         Muito obrigado, cara!
@@ -140,7 +152,7 @@ templates:
 
     - text: |
         Ah, para com isso! *-*
-        
+
   utter_offenses:
     - text: |
         Olouco, pessoa...Pra que isso??
@@ -148,7 +160,7 @@ templates:
         To so querendo te ajudar aqui, foi mal se te ofendi
 
         Não me xinga não, me diz o que posso fazer pra ajudar ;)
-    
+
     - text: |
         Vamos com calma...Está muito exaltado!!
 
@@ -157,8 +169,8 @@ templates:
         Deixa de ser bruto, me diz o que posso fazer pra ajudar ;)
 
     - text: |
-        Fica frio aí!!! 
-        
+        Fica frio aí!!!
+
         Eu sou um bot tão legal, pra q essa agressividade!?
 
         Vamos lá, me diz com um pouco mais de carinho em que posso ajudar... =)
