@@ -124,17 +124,18 @@ class ActionButtonsNotification(Action):
     def build_button_dict(self):
         return [
             ('Alerta da Comunidade',
-             '/notification{"name": "alerta da comunidade"}'),
+             ('/notifications{"register_notification":'
+              '" alerta da comunidade "}')),
             ('Cardápio do Dia',
-             '/notification{"name": "dia"}'),
+             '/notifications{"register_notification": " dia "}'),
             ('Cardápio da Semana',
-             '/notification{"name": "semana"}'),
+             '/notifications{"register_notification": " semana "}'),
             ('Café da Manhã',
-             '/notification{"name": "café"}'),
+             '/notifications{"register_notification": " café "}'),
             ('Almoço',
-             '/notification{"name": "almoço"}'),
+             '/notifications{"register_notification": " almoço "}'),
             ('Jantar',
-             '/notification{"name": "jantar"}')
+             '/notifications{"register_notification": " jantar "}')
         ]
 
     def build_facebook_elements(self, buttons):
