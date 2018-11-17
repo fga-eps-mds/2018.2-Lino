@@ -1,3 +1,7 @@
+## path_start
+* start{"command": "start"}
+  - utter_start
+
 ## path_greetings
 * greet
   - utter_greet
@@ -11,6 +15,10 @@
   - utter_goodbye
   - utter_restart
 
+## path_compliments
+* compliments
+  - utter_compliments_reply
+
 ## path_fallback
 * out_of_scope
   - utter_default
@@ -19,9 +27,21 @@
 * asks_about_documents
   - utter_documents
 
+## path_asks_regular_proof
+* asks_regular_proof
+  - action_regular_proof
+
+## path_asks_register_proof
+* asks_register_proof{"documents": "Comprovante de matrícula", "documents": "comprovante de matrícula", "documents": "Comprovante de matricula", "documents": "Comprovante de Matrícula", "documents": "comprovante de Matrícula", "documents": "Comprovante de Matricula", "documents": "comprovante de Matricula"}
+  - action_register_proof
+
 ## path_asks_gmail
 * asks_about_gmail
   - utter_gmail
+
+## path_asks_schedule
+* asks_about_schedule{"documents": "grade horaria", "documents": "grade horária"}
+  - action_schedule
 
 ## path_daily_meal
 * asks_menu
@@ -62,3 +82,7 @@
 ## path_calendar
 * calendar
   - action_calendar
+
+## path_offenses
+* offenses
+  - utter_offenses

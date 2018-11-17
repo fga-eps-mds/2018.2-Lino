@@ -1,4 +1,6 @@
 import os
+import requests
+import json
 from pymongo import MongoClient
 from rasa_core.actions.action import Action
 
@@ -34,24 +36,68 @@ class ActionRegisterNotification(Action):
                 notification = self.get_element_in_notification_map(word)
                 break
 
+        if notification is "":
+            dispatcher.utter_message(('Não consegui encontrar essa opção!'
+                                      'Dá uma olhada melhor nas opções, '
+                                      'só temos elas, ainda!'))
+            return []
+
+        user_checked = False
+
         user_telegram = self.check_telegram_valid_user(sender_id)
         user_facebook = self.check_facebook_valid_user(sender_id)
         welcome = 'Agora você já pode receber notificações desse tipo!'
         if user_telegram != {}:
-            self.update_telegram_user(user_telegram, notification)
-            messages.append(welcome)
-        elif user_facebook != {}:
-            self.update_facebook_user(user_facebook, notification)
-            messages.append(welcome)
-        else:
-            messages.append(('Não consegui te encontrar aqui!'
-                             'Tô com alguns problemas e não'
-                             'consegui te cadastrar!'))
+            user_checked = self.check_user_receive_notification(
+                sender_id, TELEGRAM_DB_URI, 'lino_telegram', notification)
 
-        for message in messages:
-            dispatcher.utter_message(message)
+            if user_checked:
+                self.update_telegram_user(user_telegram, notification)
+                messages.append(welcome)
+
+        elif user_facebook != {}:
+            user_checked = self.check_user_receive_notification(
+                sender_id, FACEBOOK_DB_URI, 'lino_facebook', notification)
+
+            if user_checked:
+                self.update_facebook_user(user_facebook, notification)
+                messages.append(welcome)
+
+        if user_checked:
+            for message in messages:
+                data = self.remove_markup_telegram(message, sender_id)
+                if not data['ok']:
+                    dispatcher.utter_message(message)
+        else:
+            message = ('Você já recebe esse tipo de '
+                       'notificação...')
+            data = self.remove_markup_telegram(message, sender_id)
+            if not data['ok']:
+                dispatcher.utter_message(message)
 
         return []
+
+    def check_user_receive_notification(
+            self, sender_id, URI, database, notification):
+
+        client = MongoClient(URI)
+        db = client[database]
+
+        user_notifications = db.users.find_one(
+            {'sender_id': sender_id},
+            {'_id': 0, 'notification': 1}
+        )
+
+        notifications = user_notifications['notification']
+
+        notification_stats = False
+
+        for element in notifications:
+            if element['description'] is notification and not element['value']:
+                notification_stats = True
+                break
+
+        return notification_stats
 
     def build_key_words(self):
         return [
@@ -141,3 +187,27 @@ class ActionRegisterNotification(Action):
             return {}
         else:
             return user
+
+    def remove_markup_telegram(self, message, sender_id):
+        """
+        Sends a message using Telegram API and removes any KeyboardMarkup.
+        Returns a dict with the API response.
+        """
+        reply_markup = {
+            "remove_keyboard": True
+        }
+
+        remove_keyboard_payload = {
+            "chat_id": sender_id,
+            "text": "just a text",
+            "reply_markup": json.dumps(reply_markup)
+        }
+
+        remove_keyboard_payload['text'] = message
+        data = requests.post(
+            ('https://api.telegram.org/bot{}'
+             '/sendMessage')
+            .format(TELEGRAM_ACCESS_TOKEN),
+            data=remove_keyboard_payload
+        ).json()
+        return data
