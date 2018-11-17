@@ -20,13 +20,7 @@
   - action_regular_proof
 
 ## path_asks_register_proof
-* ask_register_proof{"documents": "Comprovante de matrícula", 
-    "documents": "comprovante de matrícula",
-    "documents": "Comprovante de matricula",
-    "documents": "Comprovante de Matrícula", 
-    "documents": "comprovante de Matrícula", 
-    "documents": "Comprovante de Matricula",
-    "documents": "comprovante de Matricula"}
+* asks_register_proof{"documents": "Comprovante de matrícula", "documents": "comprovante de matrícula", "documents": "Comprovante de matricula", "documents": "Comprovante de Matrícula", "documents": "comprovante de Matrícula", "documents": "Comprovante de Matricula", "documents": "comprovante de Matricula"}
   - action_register_proof
 
 ## path_asks_gmail

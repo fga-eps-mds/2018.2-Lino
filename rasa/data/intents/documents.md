@@ -38,8 +38,9 @@
 - como pagar meia no cinema
 - quero sair com a morena e pagar meia
 - meia entrada
+
 ## intent:asks_about_schedule
-- [grade horaria](command)
+- [grade horaria](documents)
 - me diz como arranjo minha grade horária
 - eae bot, grade horária
 - me manda ai como pegar meus horários
@@ -68,7 +69,7 @@
 - meu plano de saúde tá acabando e preciso da [grade horária](documents) desse semestre. como procedo?
 - [grade horária](documents)??
 
-## intent:ask_register_proof
+## intent:asks_register_proof
 - Como pegar o [comprovante de matrícula](documents)?
 - como pegar o [comprovante de matrícula](documents)?
 - [Comprovante de matrícula](documents)
