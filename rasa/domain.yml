@@ -16,7 +16,8 @@ intents:
 
   - asks_about_documents
   - asks_about_schedule
-  - ask_register_proof
+  - asks_register_proof
+  - asks_regular_proof
 
   - asks_about_gmail
 
