@@ -16,6 +16,9 @@
 ## intent:start
 - [start](command)
 
+## intent:help
+- [help](command)
+
 ## intent:greet
 - Oi
 - Olá

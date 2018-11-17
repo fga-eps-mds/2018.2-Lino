@@ -2,6 +2,7 @@ intents:
   - out_of_scope
   - greet
   - goodbye
+  - help
   - compliments
   - start
   - asks_menu
@@ -75,6 +76,9 @@ actions:
   - utter_restart
   - utter_greet
   - utter_goodbye
+
+  - utter_help
+
   - utter_compliments_reply
   - utter_start
   - utter_menu
@@ -246,3 +250,17 @@ templates:
         Eu sou um bot tão legal, pra q essa agressividade!?
 
         Vamos lá, me diz com um pouco mais de carinho em que posso ajudar... =)
+
+  utter_help:
+    - text: |
+        Opa, deixa eu te responder aqui então
+
+        Como um bot criado para facilitar seu percurso e formação no curso, minhas principais funções se resumem em sanar as suas necessidades gerais da faculdade
+
+        Dentre minhas capacidades, eu posso procurar e te enviar o cardápio diário e semanal do RU, bem como os cardápios específicos como café da manhã, almoço e jantar. Além disso, posso, se você quiser, posso também te cadastrar em meu banco de dados e te mandar essas informações em um horário determinado
+
+        Outra notificação que posso te mandar sãos os e-mails dos professores e da faculdade em geral. Claro, que apenas se você quiser que eu te mande tais
+
+        Posso te mandar também tutoriais de como emitir os documentos que lhe forem necessários. Vou te ensinar passo-a-passo como buscar no Matrícula Web, em um tutorial com links e fotos demonstrativas. Além disso, também posso te mandar o calendário do semestre, com informações como período de matrícula e trancamento
+
+        E é isso! Qualquer coisa, é só falar comigo!
