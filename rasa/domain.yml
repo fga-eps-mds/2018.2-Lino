@@ -2,8 +2,8 @@ intents:
   - out_of_scope
   - greet
   - goodbye
+  - compliments
   - start
-
   - asks_menu
   - asks_daily_menu
   - asks_weekly_menu
@@ -44,8 +44,8 @@ actions:
   - utter_restart
   - utter_greet
   - utter_goodbye
+  - utter_compliments_reply
   - utter_start
-
   - utter_menu
   - actions.menu.daily_menu.ActionDailyMenu
   - actions.menu.daily_dinner.ActionDailyDinner
@@ -70,7 +70,7 @@ actions:
 templates:
   utter_default:
     - text: |
-        Eita pessoa, tendi nada
+        Não entendi mt bem
 
         Repete pra mim, dizendo melhor o que vc quer?
 
@@ -100,28 +100,47 @@ templates:
 
   utter_notifications:
     - text: |
-        Massa, easy te mandar as notificações. Qual você quer?
+        Quais notificações você quer?
 
   utter_weekly_menu:
-    - text: Tá aqui o cardápio da semana... Bom proveito :)
+    - text: Tá aqui o cardápio da semana, bom rango!
       image: "https://webcrawler-ru.lappis.rocks/cardapio/pdf"
 
   utter_gmail:
     - text: |
-        Para eu te mandar os e-mails precisarei te colocar no meu banco de dados de notificações, blz?
+        Pra te mandar os e-mails vou precisar te colocar no meu banco de dados de notificações, blz?
 
   utter_greet:
     - text: |
-        E aê, beleza?! Lino aqui!
+        E aê, beleza?! Aqui é o Lino
 
         Que que vc tá afim hj? Documentos, período de matrícula, notificações, RU... ?
 
   utter_goodbye:
     - text: |
-        Feshow então!!!
+        Até a próxima!
 
-        Precisando, só me gritar aqui
+        Não esqueça que eu tô aqui pra ajudar!
 
+  utter_compliments_reply:
+    - text: |
+        Muito obrigado, cara!
+
+        Sem a comunidade acadêmica eu não seria nada.
+
+    - text: |
+        Awnt, brigadão
+
+        Muito melhor que um site, né?!
+
+    - text: |
+        Valeu demais, mano!
+
+        Tô aqui pra ajudar!
+
+    - text: |
+        Ah, para com isso! *-*
+        
   utter_offenses:
     - text: |
         Olouco, pessoa...Pra que isso??
@@ -143,5 +162,3 @@ templates:
         Eu sou um bot tão legal, pra q essa agressividade!?
 
         Vamos lá, me diz com um pouco mais de carinho em que posso ajudar... =)
-
-

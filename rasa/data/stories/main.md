@@ -11,6 +11,10 @@
   - utter_goodbye
   - utter_restart
 
+## path_compliments
+* compliments
+  - utter_compliments_reply
+
 ## path_fallback
 * out_of_scope
   - utter_default
