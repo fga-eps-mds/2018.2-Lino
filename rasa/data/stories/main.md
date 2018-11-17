@@ -1,15 +1,27 @@
-## path_greetings
-* greet
-  - utter_greet
+## path_start
+* start{"command": "start"}
+  - utter_start
 
 ## path_help
 * help{"command": "help"}
   - utter_help
 
+## path_greetings
+* greet
+  - utter_greet
+
+## path_thanks
+* thanks
+  - utter_thanks
+
 ## path_goodbye
 * goodbye
   - utter_goodbye
   - utter_restart
+
+## path_compliments
+* compliments
+  - utter_compliments_reply
 
 ## path_fallback
 * out_of_scope
@@ -24,13 +36,7 @@
   - action_regular_proof
 
 ## path_asks_register_proof
-* ask_register_proof{"documents": "Comprovante de matrícula", 
-    "documents": "comprovante de matrícula",
-    "documents": "Comprovante de matricula",
-    "documents": "Comprovante de Matrícula", 
-    "documents": "comprovante de Matrícula", 
-    "documents": "Comprovante de Matricula",
-    "documents": "comprovante de Matricula"}
+* asks_register_proof{"documents": "Comprovante de matrícula", "documents": "comprovante de matrícula", "documents": "Comprovante de matricula", "documents": "Comprovante de Matrícula", "documents": "comprovante de Matrícula", "documents": "Comprovante de Matricula", "documents": "comprovante de Matricula"}
   - action_register_proof
 
 ## path_asks_gmail
@@ -80,3 +86,7 @@
 ## path_calendar
 * calendar
   - action_calendar
+
+## path_offenses
+* offenses
+  - utter_offenses

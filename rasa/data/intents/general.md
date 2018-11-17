@@ -11,7 +11,13 @@
 - última
 - e o estacionamento
 - quando o preço da gasolina vai abaixar?
-- cansei do ru ser 5,20 
+- cansei do ru ser 5,20
+
+## intent:start
+- [start](command)
+
+## intent:help
+- [help](command)
 
 ## intent:greet
 - Oi
@@ -38,9 +44,16 @@
 - Alo
 - Oi, tudo bom?
 - Olá Lino
+- Fala tu
+- e ae
+- e ai
+- fala consagrado
+- fala boy
+- diz ae
+- yo
 
 ## intent:goodbye
-- Tchau 
+- Tchau
 - Até mais
 - Tchau migx
 - Smell ya later
@@ -48,9 +61,17 @@
 - Volto depois
 - Tchau, obrigado
 - falous
+- vlw flw
+- flw vlw
 - massa, agr tchau
 - brigadão
 - valeu, agora tchau
 
-## intent:help
-- [help](command)
+## intent:thanks
+- Muito obrigado
+- Obrigado
+- Muito obrigada
+- Obrigada
+- Valeu
+- Tamo junto
+- Agradecido
