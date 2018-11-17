@@ -13,6 +13,9 @@
 - quando o preço da gasolina vai abaixar?
 - cansei do ru ser 5,20 
 
+## intent:start
+- [start](command)
+
 ## intent:greet
 - Oi
 - Olá
@@ -38,9 +41,16 @@
 - Alo
 - Oi, tudo bom?
 - Olá Lino
+- Fala tu
+- e ae
+- e ai
+- fala consagrado
+- fala boy
+- diz ae
+- yo
 
 ## intent:goodbye
-- Tchau 
+- Tchau
 - Até mais
 - Tchau migx
 - Smell ya later
@@ -51,3 +61,12 @@
 - massa, agr tchau
 - brigadão
 - valeu, agora tchau
+- vlw flw
+- flw
+- ok bjs
+- ok beijos
+- inté
+- inte
+- até logo
+- é nois
+- bjs luz

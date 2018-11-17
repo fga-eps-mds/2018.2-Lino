@@ -1,3 +1,7 @@
+## path_start
+* start{"command": "start"}
+  - utter_start
+
 ## path_greetings
 * greet
   - utter_greet
