@@ -29,7 +29,7 @@
 - me fala como receber notificações da faculdade fácil
 - me manda umas notícia ai
 
-## intent:register_notification
+## intent:notifications
 - Me cadastra pra receber o almoço
 - Quero receber sobre o almoço
 - notificações almoço
@@ -161,20 +161,6 @@
 - [não](option) quero receber os [alertas da comunidade](notification)
 - [para](option) de me [mandar](notification) mensagem
 - [para](option) de me [mandar](notification) msg
-
-## intent:unregister_notification
-- [alerta da comunidade](unregister_notification)
-- [Alerta da Comunidade](unregister_notification)
-- [almoço](unregister_notification)
-- [Almoço](unregister_notification)
-- [jantar](unregister_notification)
-- [Jantar](unregister_notification)
-- [cardápio do dia](unregister_notification)
-- [Cardápio do Dia](unregister_notification)
-- [cardápio da semana](unregister_notification)
-- [Cardápio da Semana](unregister_notification)
-- [café da manhã](unregister_notification)
-- [Café da Manhã](unregister_notification)
 
 ## intent:notification_types
 - [Cadastrar](notification_types)

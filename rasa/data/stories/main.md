@@ -56,7 +56,7 @@
 * notification_types{"notification_types": "Cadastrar"}
   - custom_start
   - action_buttons_notification
-* asks_about_register_notifications
+* notifications
   - action_register_notification
 * affirm{"notification_types": "Cadastrar"}
   - action_show_notifications_types
@@ -65,7 +65,7 @@
 * notification_types{"notification_types": "Cadastrar"}
   - custom_start
   - action_buttons_notification
-* asks_about_register_notifications
+* notifications
   - action_register_notification
 * deny{"notification_types": "Cadastrar"}
   - utter_finish_notification
@@ -74,7 +74,7 @@
 * notification_types{"notification_types": "Remover"}
   - custom_start
   - action_buttons_notification
-* asks_about_unregister_notification
+* notifications
   - action_unregister_notification
 * affirm{"notification_types": "Remover"}
   - action_show_notifications_types
@@ -83,7 +83,7 @@
 * notification_types{"notification_types": "Remover"}
   - custom_start
   - action_buttons_notification
-* asks_about_unregister_notification
+* notifications
   - action_unregister_notification
 * deny{"notification_types": "Remover"}
   - utter_finish_unregister_notification

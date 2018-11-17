@@ -10,8 +10,7 @@ intents:
   - asks_lunch_menu
   - asks_breakfast_menu
 
-  - asks_about_register_notifications
-  - asks_about_unregister_notification
+  - notifications
   - action_ask_notification
   - register_notification
   - unregister_notification
