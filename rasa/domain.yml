@@ -12,9 +12,11 @@ intents:
   - asks_lunch_menu
   - asks_breakfast_menu
 
-  - asks_about_notifications
+  - notifications
   - action_ask_notification
   - register_notification
+  - unregister_notification
+  - notification_types
 
   - asks_about_documents
   - asks_about_schedule
@@ -28,10 +30,18 @@ intents:
   - offenses
   - calendar
 
+  - affirm
+  - deny
+
 entities:
   - periods
   - calendar
   - meal
+  - option
+  - notification
+  - register_notification
+  - unregister_notification
+  - notification_types
   - command
   - documents
 
@@ -42,6 +52,24 @@ slots:
   calendar:
     type: "text"
     initial_value: ""
+  option:
+    type: "text"
+    initial_value: ""
+  notification:
+    type: "text"
+    initial_value: ""
+  register_notification:
+    type: "text"
+    initial_value: ""
+  unregister_notification:
+    type: "text"
+    initial_value: ""
+  notification_types:
+    type: "categorical"
+    values:
+    - Cadastrar
+    - Remover
+    - Visualizar
 
 actions:
   - utter_default
@@ -59,17 +87,24 @@ actions:
   - actions.menu.daily_lunch.ActionDailyLunch
   - actions.menu.daily_breakfast.ActionDailyBreakfast
   - actions.menu.week_menu.ActionSendWeekMenu
-  - utter_weekly_menu
 
-  - utter_notifications
+  - utter_operation_type
+  - utter_register_notifications
+  - utter_unregister_notifications
   - actions.notifications.start.ActionStart
   - actions.notifications.register_notification.ActionRegisterNotification
+  - actions.notifications.see_notifications.ActionListNotifications
+  - actions.notifications.unregister_notification.ActionUnregisterNotification
   - actions.notifications.buttons_notification.ActionButtonsNotification
+  - actions.notifications.buttons_notification.ActionButtonsNotificationTypes
+  - actions.notifications.trigger_notification.ActionTriggerNotification
+  - actions.notifications.trigger_notification.ActionTriggerUnregisterNotification
   - utter_documents
   - actions.documents.regular_proof.ActionRegularProof
   - actions.documents.schedule.ActionSchedule
   - actions.documents.register_proof.ActionRegisterProof
-
+  - utter_finish_notification
+  - utter_finish_unregister_notification
   - utter_gmail
 
   - utter_thanks
@@ -108,9 +143,36 @@ templates:
 
         Não me ensinaram ainda, mas logo logo tô manjando!
 
-  utter_notifications:
+  utter_operation_type:
+    - text: |
+        Top man, vamos mexer nessas notificações aqui!
+
+  utter_register_notifications:
     - text: |
         Quais notificações você quer?
+
+  utter_unregister_notifications:
+    - text: |
+        Beleza! Vou pegar minha borracha pra apagar seu nome aqui...
+
+  utter_finish_notification:
+    - text: |
+        Show! Valeu por se cadastrar bb
+
+    - text: |
+        Tudo certo! Valeu por se cadastrar aqui manooooow!
+
+    - text: |
+        TOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOP
+
+  utter_finish_unregister_notification:
+    - text: |
+        Agora sim! Desculpe se te incomodei com isso...
+
+        Se quiser reativar, é só pedir aqui!
+
+    - text: |
+        Beleza, se quiser tirar mais alguma, só pedir de novo!
 
   utter_weekly_menu:
     - text: Tá aqui o cardápio da semana, bom rango!
@@ -124,7 +186,7 @@ templates:
     - text: |
         E aê, beleza?! Aqui é o Lino
 
-        Que que vc tá afim hj? Documentos, período de matrícula, notificações, RU... ?
+        Que que vc tá afim hj? Documentos, período de matrícula, notificações ou RU?
 
   utter_goodbye:
     - text: |

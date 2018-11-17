@@ -10,6 +10,80 @@ TELEGRAM_DB_URI = os.getenv('TELEGRAM_DB_URI', '')
 FACEBOOK_DB_URI = os.getenv('FACEBOOK_DB_URI', '')
 
 
+class ActionButtonsNotificationTypes(Action):
+    """
+    Send to the user the operation types over notifications.
+    'Adicionar' -> The user can register to an type of notification
+    'Retirar' -> The user can remove an type of notification
+    'Visualizar' -> The user can see the notification types registered so far
+    """
+    def name(self):
+        return "action_show_notifications_types"
+
+    def run(self, dispatcher, tracker, domain):
+        options = [
+            ('Cadastrar', 'Cadastrar'),
+            ('Remover', 'Remover'),
+            ('Visualizar', 'Visualizar')
+        ]
+
+        buttons_facebook = None
+        buttons_telegram = None
+
+        try:
+            message = 'Qual das opções você deseja?'
+            buttons_telegram = self.build_buttons(options)
+            dispatcher.utter_button_message(message,
+                                            buttons_telegram,
+                                            button_type="custom")
+        except Exception as exception:
+            print(exception)
+            buttons_telegram = None
+
+        if not buttons_telegram:
+            try:
+                buttons_facebook = self.build_buttons(options, 'facebook')
+                element = {
+                    'title': 'Qual das opções você deseja?',
+                    'buttons': buttons_facebook
+                }
+                dispatcher.utter_custom_message(element)
+            except Exception as exception:
+                print(exception)
+                buttons_facebook = None
+
+        if not buttons_telegram and not buttons_facebook:
+            dispatcher.utter_message(('Tive alguns problemas aqui em encontrar'
+                                      ' os tipos de notificações :(...'))
+            dispatcher.utter_message(('Vou tentar arrumar rapidão aqui pra te '
+                                      'mandar as que eu tinha antes, beleza?'))
+            dispatcher.utter_message(('Você precisa de mais alguma outra coisa'
+                                      ' além disso? Só pedir :)'))
+
+        return []
+
+    def build_buttons(self, button_values, channel='telegram'):
+        button = {}
+        buttons = []
+
+        if channel is 'telegram':
+            for item in button_values:
+                button['title'] = item[0]
+                button['payload'] = item[1]
+                buttons.append(button.copy())
+
+            return buttons
+
+        elif channel is 'facebook':
+            for item in button_values:
+                button['title'] = item[0]
+                button['payload'] = item[1]
+                button['type'] = 'postback'
+                buttons.append(button.copy())
+
+            return buttons
+
+
 class ActionButtonsNotification(Action):
     def name(self):
         return "action_buttons_notification"
@@ -50,12 +124,18 @@ class ActionButtonsNotification(Action):
     def build_button_dict(self):
         return [
             ('Alerta da Comunidade',
-             'alerta da comunidade'),
-            ('Cardápio do Dia', 'dia'),
-            ('Cardápio da Semana', 'semana'),
-            ('Café da Manhã', 'café'),
-            ('Almoço', 'almoço'),
-            ('Jantar', 'jantar')
+             ('/notifications{"register_notification":'
+              '" alerta da comunidade "}')),
+            ('Cardápio do Dia',
+             '/notifications{"register_notification": " dia "}'),
+            ('Cardápio da Semana',
+             '/notifications{"register_notification": " semana "}'),
+            ('Café da Manhã',
+             '/notifications{"register_notification": " café "}'),
+            ('Almoço',
+             '/notifications{"register_notification": " almoço "}'),
+            ('Jantar',
+             '/notifications{"register_notification": " jantar "}')
         ]
 
     def build_facebook_elements(self, buttons):

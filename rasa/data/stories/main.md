@@ -75,13 +75,58 @@
 * asks_breakfast_menu{"meal": "cafe da manhã"}
   - action_daily_breakfast
 
-## path_register_notification
-* asks_about_notifications
-  - utter_notifications
-  - action_buttons_notification
-* register_notification
+## path_handle_notifications
+* asks_about_register_notifications
+  - utter_operation_type
+  - action_show_notifications_types
+
+## path_handle_register_notifications
+* notification_types{"notification_types": "Cadastrar"}
   - custom_start
+  - action_buttons_notification
+* notifications
   - action_register_notification
+* affirm{"notification_types": "Cadastrar"}
+  - action_show_notifications_types
+
+## path_handle_register_notifications
+* notification_types{"notification_types": "Cadastrar"}
+  - custom_start
+  - action_buttons_notification
+* notifications
+  - action_register_notification
+* deny{"notification_types": "Cadastrar"}
+  - utter_finish_notification
+
+## path_handle_unregister_notifications
+* notification_types{"notification_types": "Remover"}
+  - custom_start
+  - action_buttons_notification
+* notifications
+  - action_unregister_notification
+* affirm{"notification_types": "Remover"}
+  - action_show_notifications_types
+
+## path_handle_unregister_notifications
+* notification_types{"notification_types": "Remover"}
+  - custom_start
+  - action_buttons_notification
+* notifications
+  - action_unregister_notification
+* deny{"notification_types": "Remover"}
+  - utter_finish_unregister_notification
+
+## path_handle_visualize_notification
+* notification_types{"notification_types": "Visualizar"}
+  - action_list_notifications
+* affirm{"notification_types": "Visualizar"}
+  - action_show_notifications_types
+
+## path_handle_visualize_notification
+* notification_types{"notification_types": "Visualizar"}
+  - action_list_notifications
+* deny{"notification_types": "Visualizar"}
+  - utter_finish_notification
 
 ## path_calendar
 * calendar
