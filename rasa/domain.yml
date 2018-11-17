@@ -21,6 +21,9 @@ intents:
   - asks_regular_proof
 
   - asks_about_gmail
+
+  - thanks
+
   - offenses
   - calendar
 
@@ -64,6 +67,9 @@ actions:
   - actions.documents.register_proof.ActionRegisterProof
 
   - utter_gmail
+
+  - utter_thanks
+
   - utter_offenses
   - actions.calendar.ActionCalendar
 
@@ -152,6 +158,10 @@ templates:
 
     - text: |
         Ah, para com isso! *-*
+
+  utter_thanks:
+      - text: |
+          Que isso, você é uma pessoa maravilhosaa! Precisando eu sempre estarei aqui :D
 
   utter_offenses:
     - text: |

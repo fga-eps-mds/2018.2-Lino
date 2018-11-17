@@ -63,51 +63,12 @@
 - massa, agr tchau
 - brigadão
 - valeu, agora tchau
-- tchau, lino
-- hasta la vista baby
-- goodbye
-- hasta la vista
-- adeus
-- au revoir
-- sayonara goodbye
-- hasta luego
-- tchau, bebe
-- valeu falou
-- falou valeu
-- see ya
-- chau
-- xau
-- pica a mula
-- tchau bjs
-- bjs lino
-- beijos
-- até logo
-- arrivederci
-- tchauzinho
-- que a porta bata onde o sol não bate
-- inté
-- tchaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaau
-- see ya later, aligator
-- see you
-- bye nii
-- é nois
-- noixx
-- é tois
-- tóis
-- tois
-- bjs bb
-- falou consagrado
-- falou compatriota
-- cabou
-- falou meu informado
-- tchau meu informante
-- cabou o semestre
-- vlw flw
-- flw
-- ok bjs
-- ok beijos
-- inté
-- inte
-- até logo
-- é nois
-- bjs luz
+
+## intent:thanks
+- Muito obrigado
+- Obrigado
+- Muito obrigada
+- Obrigada
+- Valeu
+- Tamo junto
+- Agradecido
