@@ -13,9 +13,9 @@ TELEGRAM_DB_URI = os.getenv('TELEGRAM_DB_URI', '')
 FACEBOOK_DB_URI = os.getenv('FACEBOOK_DB_URI', '')
 
 
-class ActionRegisterNotification(Action):
+class ActionUnregisterNotification(Action):
     def name(self):
-        return "action_register_notification"
+        return "action_unregister_notification"
 
     def run(self, dispatcher, tracker, domain):
         messages = []
@@ -46,10 +46,10 @@ class ActionRegisterNotification(Action):
 
         user_telegram = self.check_telegram_valid_user(sender_id)
         user_facebook = self.check_facebook_valid_user(sender_id)
-        welcome = ('Agora você já pode receber notificações desse tipo! '
-                   'Quer receber ou retirar outra notificação?')
+        welcome = ('Agora você já não recebe mais esse tipo de notificação... '
+                   'Quer receber ou retirar outra?')
         if user_telegram != {}:
-            user_checked = self.check_user_receive_notification(
+            user_checked = self.check_user_not_receive_notification(
                 sender_id, TELEGRAM_DB_URI, 'lino_telegram', notification)
 
             if user_checked:
@@ -57,7 +57,7 @@ class ActionRegisterNotification(Action):
                 messages.append(welcome)
 
         elif user_facebook != {}:
-            user_checked = self.check_user_receive_notification(
+            user_checked = self.check_user_not_receive_notification(
                 sender_id, FACEBOOK_DB_URI, 'lino_facebook', notification)
 
             if user_checked:
@@ -70,15 +70,15 @@ class ActionRegisterNotification(Action):
                 if not data['ok']:
                     dispatcher.utter_message(message)
         else:
-            message = ('Ué, você já ativou essa notificação antes! '
-                       'Quer escolher outra notificação?')
+            message = ('Essa notificação já está desativada! Você quer '
+                       'escolher outra opção?')
             data = self.remove_markup_telegram(message, sender_id)
             if not data['ok']:
                 dispatcher.utter_message(message)
 
         return []
 
-    def check_user_receive_notification(
+    def check_user_not_receive_notification(
             self, sender_id, URI, database, notification):
 
         client = MongoClient(URI)
@@ -94,7 +94,7 @@ class ActionRegisterNotification(Action):
         notification_stats = False
 
         for element in notifications:
-            if element['description'] in notification and not element['value']:
+            if element['description'] in notification and element['value']:
                 notification_stats = True
                 break
 
@@ -155,7 +155,7 @@ class ActionRegisterNotification(Action):
 
         for element in notification_list:
             if element['description'] == notification:
-                element['value'] = True
+                element['value'] = False
                 break
 
         db.users.update(
