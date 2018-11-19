@@ -17,6 +17,7 @@ intents:
   - register_notification
   - unregister_notification
   - notification_types
+  - asks_about_register_notifications
 
   - asks_about_documents
   - asks_about_schedule
@@ -34,7 +35,7 @@ intents:
   - deny
 
 entities:
-  - periods
+  - period
   - calendar
   - meal
   - option

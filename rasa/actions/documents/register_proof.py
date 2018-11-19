@@ -6,7 +6,8 @@ DOC_1 = 'login/index.html?response_type=code&'
 DOC_2 = 'client_id=102&redirect_uri=/documentodigital/index.html'
 UNB_URL = f'https://servicos.unb.br/dados/{DOC_1}{DOC_2}'
 GIT_URL = 'https://raw.githubusercontent.com/fga-eps-mds/2018.2-Lino/'
-IMGS_PATH = 'Issue_203-RegisterProof/rasa/images/RegisterProof/'
+# IMGS_PATH = 'Issue_203-RegisterProof/rasa/images/RegisterProof/'
+IMGS_PATH = 'master/rasa/images/RegisterProof/'
 
 
 class ActionRegisterProof(Action):
