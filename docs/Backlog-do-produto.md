@@ -86,6 +86,9 @@
 ## Tasks Intents
 |US|ID|Descrição|_Feature_| Pontuação |
 |:--:|:--:|:------------:|:-----------:|:--:|
+|I04|T01|Criar fluxo de tutorial para orientar os usuários a obter a declaração de aluno regular|FT07|-|
+|I05|T01|Criar fluxo de tutorial para orientar os usuários a obter o comprovante de matricula|FT07|-|
+|I06|T01|Criar fluxo de tutorial para orientar os usuários a obter a declaração de grade horária|FT07|-|
 |I07|T01|Fazer o webcrawler pegar o PDF certo | FT07|-|
 |I07|T02|Fazer o webcrawler elaborar o parser | FT07|-|
 |I07|T03|Criar fluxo do período de matrícula no Rasa e elaborar modelo de JSON a ser recebido | FT07|-|
