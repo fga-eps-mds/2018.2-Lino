@@ -1,0 +1,40 @@
+## intent:offenses
+- filha da puta
+- fi da puta
+- vai tomar no cu
+- vtnc
+- tnc
+- bosta
+- vai se fuder
+- vsf
+- batata
+- seu merda
+- lixo
+- escroto
+- burro
+- merda
+- jumento
+- pnc
+- pau no cu
+- pau no rego
+- abestado
+- jegão
+- desgraça
+- safado
+- puta
+- corno
+- puto
+- piranha
+- ameba
+- seu bot horrivel
+- vai se lascar
+- arrombado
+- vagabundo
+- chupa minha pica
+- bolsonaro
+- bolsominion
+- boloro
+- eleitor do bolsonaro
+- fdp
+- babaca
+- retardado

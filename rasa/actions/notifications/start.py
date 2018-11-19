@@ -29,7 +29,8 @@ class ActionStart(Action):
         messenger = "None"
 
         # Message to send to the user
-        text = "Pera aí, rapidinho"
+        text = ('Pera aí, rapidinho... '
+                'Vou pegar minha agenda aqui pra te procurar')
 
         # Get users data to build a user to the database
         data = requests.get(
@@ -71,8 +72,8 @@ class ActionStart(Action):
                 dispatcher.utter_message(message)
             return []
         else:
-            text = ('Adoro conhecer pessoas novas! Calma aí rapidinho, '
-                    'vou anotar seu nome na minha agenda...')
+            text = ('Olha! Acho que não tenho você aqui hein! Calma aí '
+                    'rapidinho, vou anotar seu nome na minha agenda...')
 
             # New user to be registered
             if messenger == "Facebook":

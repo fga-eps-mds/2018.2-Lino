@@ -2,7 +2,9 @@ intents:
   - out_of_scope
   - greet
   - goodbye
-
+  - help
+  - compliments
+  - start
   - asks_menu
   - asks_daily_menu
   - asks_weekly_menu
@@ -10,22 +12,37 @@ intents:
   - asks_lunch_menu
   - asks_breakfast_menu
 
-  - asks_about_notifications
+  - notifications
   - action_ask_notification
   - register_notification
+  - unregister_notification
+  - notification_types
 
   - asks_about_documents
   - asks_about_schedule
-  - ask_register_proof
+  - asks_register_proof
+  - asks_regular_proof
 
   - asks_about_gmail
 
+  - thanks
+
+  - offenses
   - calendar
+
+  - affirm
+  - deny
 
 entities:
   - periods
   - calendar
   - meal
+  - option
+  - notification
+  - register_notification
+  - unregister_notification
+  - notification_types
+  - command
   - documents
 
 slots:
@@ -35,6 +52,24 @@ slots:
   calendar:
     type: "text"
     initial_value: ""
+  option:
+    type: "text"
+    initial_value: ""
+  notification:
+    type: "text"
+    initial_value: ""
+  register_notification:
+    type: "text"
+    initial_value: ""
+  unregister_notification:
+    type: "text"
+    initial_value: ""
+  notification_types:
+    type: "categorical"
+    values:
+    - Cadastrar
+    - Remover
+    - Visualizar
 
 actions:
   - utter_default
@@ -42,37 +77,61 @@ actions:
   - utter_greet
   - utter_goodbye
 
+  - utter_help
+
+  - utter_compliments_reply
+  - utter_start
   - utter_menu
   - actions.menu.daily_menu.ActionDailyMenu
   - actions.menu.daily_dinner.ActionDailyDinner
   - actions.menu.daily_lunch.ActionDailyLunch
   - actions.menu.daily_breakfast.ActionDailyBreakfast
   - actions.menu.week_menu.ActionSendWeekMenu
-  - utter_weekly_menu
 
-  - utter_notifications
+  - utter_operation_type
+  - utter_register_notifications
+  - utter_unregister_notifications
   - actions.notifications.start.ActionStart
   - actions.notifications.register_notification.ActionRegisterNotification
+  - actions.notifications.see_notifications.ActionListNotifications
+  - actions.notifications.unregister_notification.ActionUnregisterNotification
   - actions.notifications.buttons_notification.ActionButtonsNotification
+  - actions.notifications.buttons_notification.ActionButtonsNotificationTypes
+  - actions.notifications.trigger_notification.ActionTriggerNotification
+  - actions.notifications.trigger_notification.ActionTriggerUnregisterNotification
   - utter_documents
   - actions.documents.regular_proof.ActionRegularProof
   - actions.documents.schedule.ActionSchedule
   - actions.documents.register_proof.ActionRegisterProof
-
+  - utter_finish_notification
+  - utter_finish_unregister_notification
   - utter_gmail
 
+  - utter_thanks
+
+  - utter_offenses
   - actions.calendar.ActionCalendar
 
 templates:
   utter_default:
     - text: |
-        Eita pessoa, tendi nada
+        Não entendi mt bem
 
         Repete pra mim, dizendo melhor o que vc quer?
 
+  utter_start:
+    - text: |
+        EAE!
+
+        Eu sou o Lino! Tô aqui pra te ajudar nos corres da faculdade
+
+        Pode me pedir ajuda sem dó, tô por aqui 24/7
+
+        Caso queira saber mais sobre minhas habilidades, dá um /help ae
+
   utter_restart:
     - text: |
-        Vou reiniciar o flow aqui
+
 
   utter_menu:
     - text: |
@@ -84,27 +143,124 @@ templates:
 
         Não me ensinaram ainda, mas logo logo tô manjando!
 
-  utter_notifications:
+  utter_operation_type:
     - text: |
-        Massa, easy te mandar as notificações. Qual você quer?
+        Top man, vamos mexer nessas notificações aqui!
+
+  utter_register_notifications:
+    - text: |
+        Quais notificações você quer?
+
+  utter_unregister_notifications:
+    - text: |
+        Beleza! Vou pegar minha borracha pra apagar seu nome aqui...
+
+  utter_finish_notification:
+    - text: |
+        Show! Valeu por se cadastrar bb
+
+    - text: |
+        Tudo certo! Valeu por se cadastrar aqui manooooow!
+
+    - text: |
+        TOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOP
+
+  utter_finish_unregister_notification:
+    - text: |
+        Agora sim! Desculpe se te incomodei com isso...
+
+        Se quiser reativar, é só pedir aqui!
+
+    - text: |
+        Beleza, se quiser tirar mais alguma, só pedir de novo!
 
   utter_weekly_menu:
-    - text: Tá aqui o cardápio da semana... Bom proveito :)
+    - text: Tá aqui o cardápio da semana, bom rango!
       image: "https://webcrawler-ru.lappis.rocks/cardapio/pdf"
 
   utter_gmail:
     - text: |
-        Para eu te mandar os e-mails precisarei te colocar no meu banco de dados de notificações, blz?
+        Pra te mandar os e-mails vou precisar te colocar no meu banco de dados de notificações, blz?
 
   utter_greet:
     - text: |
-        E aê, beleza?! Lino aqui!
+        E aê, beleza?! Aqui é o Lino
 
         Que que vc tá afim hj? Documentos, período de matrícula, notificações ou RU?
-  
+
   utter_goodbye:
     - text: |
-        Feshow então!!!
+        Até a próxima!
 
-        Precisando, só me gritar aqui
+        Não esqueça que eu tô aqui pra ajudar!
 
+    - text: |
+        Tchau, tchau
+
+        Estarei aqui quando precisar
+
+    - text: |
+        Flwss!
+
+        Espero te ver novamente em breve
+
+        Até logo!!!
+
+  utter_compliments_reply:
+    - text: |
+        Muito obrigado, cara!
+
+        Sem a comunidade acadêmica eu não seria nada.
+
+    - text: |
+        Awnt, brigadão
+
+        Muito melhor que um site, né?!
+
+    - text: |
+        Valeu demais, mano!
+
+        Tô aqui pra ajudar!
+
+    - text: |
+        Ah, para com isso! *-*
+
+  utter_thanks:
+      - text: |
+          Que isso, você é uma pessoa maravilhosaa! Precisando eu sempre estarei aqui :D
+
+  utter_offenses:
+    - text: |
+        Olouco, pessoa...Pra que isso??
+
+        To so querendo te ajudar aqui, foi mal se te ofendi
+
+        Não me xinga não, me diz o que posso fazer pra ajudar ;)
+
+    - text: |
+        Vamos com calma...Está muito exaltado!!
+
+        To so querendo te ajudar aqui, foi mal se te ofendi
+
+        Deixa de ser bruto, me diz o que posso fazer pra ajudar ;)
+
+    - text: |
+        Fica frio aí!!!
+
+        Eu sou um bot tão legal, pra q essa agressividade!?
+
+        Vamos lá, me diz com um pouco mais de carinho em que posso ajudar... =)
+
+  utter_help:
+    - text: |
+        Opa, deixa eu te responder aqui então
+
+        Como um bot criado para facilitar seu percurso e formação no curso, minhas principais funções se resumem em sanar as suas necessidades gerais da faculdade
+
+        Dentre minhas capacidades, eu posso procurar e te enviar o cardápio diário e semanal do RU, bem como os cardápios específicos como café da manhã, almoço e jantar. Além disso, posso, se você quiser, posso também te cadastrar em meu banco de dados e te mandar essas informações em um horário determinado
+
+        Outra notificação que posso te mandar sãos os e-mails dos professores e da faculdade em geral. Claro, que apenas se você quiser que eu te mande tais
+
+        Posso te mandar também tutoriais de como emitir os documentos que lhe forem necessários. Vou te ensinar passo-a-passo como buscar no Matrícula Web, em um tutorial com links e fotos demonstrativas. Além disso, também posso te mandar o calendário do semestre, com informações como período de matrícula e trancamento
+
+        E é isso! Qualquer coisa, é só falar comigo!
