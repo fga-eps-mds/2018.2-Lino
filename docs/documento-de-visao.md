@@ -26,7 +26,7 @@
 ## 1.2 Escopo
 
 <p aligng="justify"> &emsp;&emsp;O <i>ChatBot</i> Lino é um projeto realizado para as disciplinas Métodos de Desenvolvimento de <i>Software</i> (MDS) e Engenharia de Produto de <i>Software</i> (EPS), do curso Engenharia de <i>Software</i> da Faculdade UnB Gama (FGA) da Universidade de Brasília (UnB).</p>
-<p aligng="justify"> &emsp;&emsp;O projeto, a ser realizado pela equipe 4, composta por alunos das duas disciplinas, e com orientação da professora Carla Rocha possui como objetivo a comunicação direta com o aluno matriculado na instituição de ensino superior. A partir da interação com o <i>ChatBot</i>, o usuário poderá requisitar deste serviços, ajudas, notícias e informes relacionados à faculdade e à universidade, como o passo-a-passo necessário para a emissão de determinado documento ou informações sobre a alimentação provida pelo Restaurante Universitário.
+<p aligng="justify"> &emsp;&emsp;O projeto, a ser realizado pela equipe 4, composta por alunos das duas disciplinas, e com orientação da professora Carla Rocha possui como objetivo auxiliar os alunos da universidade em quaisquer dúvidas que eles tenham em relação ao meio acadêmico. Isso envolve documentação, cardápio do restaurante universitário, alertas da comunidade acadêmica e de professores. A partir da interação com o <i>ChatBot</i>, o usuário poderá requisitar deste serviços, ajudas, notícias e informes relacionados à faculdade e à universidade, como o passo-a-passo necessário para a emissão de determinado documento ou informações sobre a alimentação provida pelo Restaurante Universitário.
 
 ## 1.3 Definições, Acrônimos e Abreviações
 
