@@ -37,6 +37,10 @@
 - periodo de [pré-matrícula] de matérias(calendar)
 - fala ae sobre o período de [pré-matrícula](calendar)
 - fala ae sobre o período de [pré-matrícula] deste semestre(calendar)
+- data do período de [pré-matrícula](calendar)
+- data da [pré-matrícula](calendar)
+- onde vejo o dia da [pré-matrícula](calendar)
+- dia da [pré-matrícula](calendar)
 <!-- resultado de matrícula -->
 - Quando vai rolar o [resultado de matrícula](calendar)?
 - [resultado de matrícula](calendar)
