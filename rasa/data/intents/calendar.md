@@ -121,4 +121,21 @@
 - Até que data eu posso [retirar matéria](calendar)?
 - Até que dia posso [retirar matéria](calendar)?
 - Lino, [retirar matéria](calendar)
-
+<!-- matrícula orientada -->
+- [matricula orientada](calendar)
+- Quando é a [matricula orientada](calendar)?
+- Quando vai ser a [matricula orientada](calendar)(calendar)?
+- Quero saber quando vai ser a [matricula orientada](calendar)(calendar)
+- [matricula orientada](calendar) viado
+- Me diz quando vai ser a [matricula orientada](calendar)
+- [matricula orientada](calendar) das matérias(calendar)
+- Quero saber da [matricula orientada](calendar)
+- periodo de [matricula orientada](calendar)
+- periodo de [matricula orientada](calendar) de matérias
+- fala ae sobre o período de [matricula orientada](calendar)
+- fala ae sobre o período de [matricula orientada](calendar) deste semestre
+- data do período de [matricula orientada](calendar)
+- data da [matricula orientada](calendar)
+- onde vejo o dia da [matricula orientada](calendar)
+- dia da [matricula orientada](calendar)
+- até quando é a [matricula orientada](calendar)
