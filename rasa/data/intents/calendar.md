@@ -37,3 +37,21 @@
 - periodo de [pré-matrícula] de matérias(calendar)
 - fala ae sobre o período de [pré-matrícula](calendar)
 - fala ae sobre o período de [pré-matrícula] deste semestre(calendar)
+<!-- resultado de matrícula -->
+- Quando vai rolar o [resultado de matrícula](calendar)?
+- [resultado de matrícula](calendar)
+- Quero o [resultado de matrícula](calendar)
+- Quando será o [resultado de matrícula](calendar)
+- Data do [resultado de matrícula](calendar)
+- Onde vejo o [resultado de matrícula](calendar)
+- Quando vai ser o [resultado de matrícula](calendar)
+- onde vejo a data do [resultado de matrícula](calendar)
+- onde vejo o dia do [resultado de matrícula](calendar)
+- dia do [resultado de matrícula](calendar)
+- quando sai o [resultado de matrícula](calendar)
+- quando é o [resultado de matrícula](calendar)
+- [resultado da matrícula](calendar)
+- periodo do [resultado de matrícula](calendar)
+- fala sobre o [resultado de matrícula](calendar)
+- quero saber quando sai o [resultado de matrícula](calendar)
+
