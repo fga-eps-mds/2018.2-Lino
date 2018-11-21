@@ -88,6 +88,28 @@
 - dia da [pré-matrícula](calendar)
 - até quando é a [pré-matrícula](calendar)
 - posso me [pré-matricular] até que dia? (calendar)
+- Lino, [pré-matrícula](calendar)
+<!-- reserva de vaga -->
+- [reserva de vaga](calendar)
+- Quando é a [reserva de vaga](calendar)?
+- Quando vai ser a [reserva de vaga](calendar)?
+- Quero saber quando vai ser a [reserva de vaga](calendar)
+- [reserva de vaga](calendar) viado (calendar)
+- Me diz quando vai ser a [reserva de vaga](calendar)
+- [reserva de vaga](calendar) das matérias
+- e como é a [reserva de vaga](calendar)ar)
+- diga sobre [reserva de vaga](calendar)
+- Quero saber da [reserva de vaga](calendar)
+- periodo de [reserva de vaga](calendar)
+- periodo de [reserva de vaga](calendar) de matérias
+- fala ae sobre o período de [reserva de vaga](calendar)
+- fala ae sobre o período de [reserva de vaga](calendar) deste semestre
+- data do período de [reserva de vaga](calendar)
+- data da [reserva de vaga](calendar)
+- onde vejo o dia da [reserva de vaga](calendar)
+- dia da [reserva de vaga](calendar)
+- até quando é a [reserva de vaga](calendar)
+- posso me [reserva de vaga](calendar) até que dia?
 <!-- resultado de matrícula -->
 - Quando vai rolar o [resultado de matrícula](calendar)?
 - [resultado de matrícula](calendar)
