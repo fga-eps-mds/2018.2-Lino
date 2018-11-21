@@ -41,6 +41,32 @@
 - periodo do [trancamento geral](calendar)
 - quero saber quando sai o [trancamento geral](calendar)
 - Lino, [trancamento geral](calendar)
+<!-- trancamento parcial -->
+- [trancamento parcial](calendar)
+- [trancamento de matéria](calendar)
+- Até quando é o [trancamento parcial de matrícula](calendar)
+- Até quando é o [trancamento parcial](calendar)
+- Até quando é o [trancamento de matéria](calendar)
+- Quando vai rolar o [trancamento parcial](calendar)?
+- Quando vai rolar o [trancamento de matéria](calendar)?
+- Quero o [trancamento de matéria](calendar)
+- Quando será o [trancamento de matéria](calendar)
+- Quando será o [trancamento parcial](calendar)
+- Data do [trancamento de matéria](calendar)
+- Data do [trancamento parcial](calendar)
+- Onde vejo o [trancamento de matéria](calendar)
+- Quando vai ser o [trancamento de matéria](calendar)
+- Quando vai ser o [trancamento](calendar)
+- onde vejo a data do [trancamento de matéria](calendar)
+- onde vejo o dia do [trancamento de matéria](calendar)
+- onde vejo a data do [trancamento parcial](calendar)
+- onde vejo o dia do [trancamento parcial](calendar)
+- dia do [trancamento de matéria](calendar)
+- quando sai o [trancamento de matéria](calendar)
+- quando é o [trancamento de matéria](calendar)
+- periodo do [trancamento de matéria](calendar)
+- quero saber quando sai o [trancamento de matéria](calendar)
+- Lino, [trancamento de matéria](calendar)
 <!-- pré-matrícula -->
 - [pré-matrícula](calendar)
 - Quando é a [pré-matrícula](calendar)?
