@@ -1,4 +1,5 @@
 ## intent: calendar
+<!-- matricula -->
 - [matricula](calendar)
 - [matrícula](calendar)
 - A [matricula](calendar)
@@ -15,13 +16,31 @@
 - Fucking [período de matrícula](calendar)
 - Quando começa as [matrículas](calendar)
 - Quando vai rolar as [matrículas](calendar)
-- Trancamento de [matrícula](calendar)
-- [trancamento](calendar)
+<!--calendario de matricula -->
+- Manda o [calendário] aí(calendar)
 - [calendar](calendar)
 - [calendario](calendar)
-- Manda o [calendário] aí(calendar)
+<!-- trancamento geral -->
+- Trancamento de [matrícula](calendar)
+- [trancamento](calendar)
+- [trancamento geral](calendar)
 - Até quando é o [trancamento de matrícula](calendar)
-- Quando é o [trancamento de matéria](calendar)
+- Até quando é o [trancamento geral](calendar)
+- Quando vai rolar o [trancamento geral](calendar)?
+- Quero o [trancamento geral](calendar)
+- Quando será o [trancamento geral](calendar)
+- Data do [trancamento geral](calendar)
+- Onde vejo o [trancamento geral](calendar)
+- Quando vai ser o [trancamento geral](calendar)
+- onde vejo a data do [trancamento geral](calendar)
+- onde vejo o dia do [trancamento geral](calendar)
+- dia do [trancamento geral](calendar)
+- quando sai o [trancamento geral](calendar)
+- quando é o [trancamento geral](calendar)
+- [trancar geral](calendar)
+- periodo do [trancamento geral](calendar)
+- quero saber quando sai o [trancamento geral](calendar)
+- Lino, [trancamento geral](calendar)
 <!-- pré-matrícula -->
 - [pré-matrícula](calendar)
 - Quando é a [pré-matrícula](calendar)?
