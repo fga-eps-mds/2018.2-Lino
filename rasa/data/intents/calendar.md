@@ -105,5 +105,20 @@
 - Lino, o [ajuste de matéria](calendar)
 - Até quando é o [ajuste de matéria](calendar)
 - Até quando é o [ajuste](calendar)
-
+<!-- retirar matéria -->
+- [retirar matéria](calendar)
+- Quando posso [retirar matéria](calendar)?
+- Até quando posso [retirar matéria](calendar)?
+- Qual o dia para [retirar matéria](calendar)?
+- Dia de [retirar matéria](calendar)
+- Data de [retirar matéria](calendar)
+- Periodo de [retirar matéria](calendar)
+- Onde vejo a data para [retirar matéria](calendar)
+- Onde vejo o dia para [retirar matéria](calendar)
+- Quando é a [retiragem de matéria](calendar)
+- Quero [retirar uma matéria](calendar) até quando posso fazer isso?
+- Periodo para [retirar matéria](calendar)
+- Até que data eu posso [retirar matéria](calendar)?
+- Até que dia posso [retirar matéria](calendar)?
+- Lino, [retirar matéria](calendar)
 
