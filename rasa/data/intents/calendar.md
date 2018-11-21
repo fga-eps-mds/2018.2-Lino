@@ -58,4 +58,20 @@
 - periodo do [resultado de matrícula](calendar)
 - fala sobre o [resultado de matrícula](calendar)
 - quero saber quando sai o [resultado de matrícula](calendar)
+<!-- lista de espera -->
+- Quando vai rolar a [lista de espera](calendar)?
+- [lista de espera](calendar)
+- Quando será a [lista de espera](calendar)
+- Quando terá a [lista de espera](calendar)
+- Data da [lista de espera](calendar)
+- Quando vai ser a [lista de espera](calendar)
+- onde vejo a data da [lista de espera](calendar)
+- onde vejo o dia da [lista de espera](calendar)
+- dia da [lista de espera](calendar)
+- quando sai a [lista de espera](calendar)
+- quando é a [lista de espera](calendar)
+- periodo da [lista de espera](calendar)
+- quero saber quando sai a [lista de espera](calendar)
+- Lino, a [lista de espera](calendar)
+
 
