@@ -11,11 +11,13 @@ class ActionCalendar(Action):
         return "action_calendar"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message('Ja to indo...')
+        dispatcher.utter_message('Calma aí, rapidinho! Vou buscar isso daí para você')
         crawlerRegister = 'https://webcrawler-matricula.lappis.rocks'
         data = {}
         data = {
-            'text': 'Calendário de matrícula',
+            'text': 'Aqui está o calendário de matrícula. '
+                    'Nele você pode adquirir informações de datas sobre: '
+                    'trancamento geral, parcial, período de matrícula, pré-matrícula, ajuste...',
             'image': f'{crawlerRegister}/registration/downloadPdf'
             }
         dispatcher.utter_response(data)

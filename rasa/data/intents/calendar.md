@@ -110,7 +110,7 @@
 - [reserva de vaga](calendar) viado (calendar)
 - Me diz quando vai ser a [reserva de vaga](calendar)
 - [reserva de vaga](calendar) das matérias
-- e como é a [reserva de vaga](calendar)ar)
+- e como é a [reserva de vaga](calendar)
 - diga sobre [reserva de vaga](calendar)
 - Quero saber da [reserva de vaga](calendar)
 - periodo de [reserva de vaga](calendar)
@@ -204,8 +204,8 @@
 <!-- matrícula orientada -->
 - [matricula orientada](calendar)
 - Quando é a [matricula orientada](calendar)?
-- Quando vai ser a [matricula orientada](calendar)(calendar)?
-- Quero saber quando vai ser a [matricula orientada](calendar)(calendar)
+- Quando vai ser a [matricula orientada](calendar)?
+- Quero saber quando vai ser a [matricula orientada](calendar)
 - [matricula orientada](calendar) viado
 - Me diz quando vai ser a [matricula orientada](calendar)
 - [matricula orientada](calendar) das matérias(calendar)
