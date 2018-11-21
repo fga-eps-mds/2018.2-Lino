@@ -17,9 +17,22 @@
 - Quando começa as [matrículas](calendar)
 - Quando vai rolar as [matrículas](calendar)
 <!--calendario de matricula -->
-- Manda o [calendário] aí(calendar)
+- Manda o [calendário](calendar) aí
 - [calendar](calendar)
 - [calendario](calendar)
+- [calendario de matrícula](calendar)
+- Tem como você me mandar o [calendario](calendar)?
+- Tem como você me mandar o [calendario de matrícula](calendar)?
+- Lino, [calendario de matrícula](calendar)
+- Lino, [calendario](calendar)
+- Quero o [calendario de matrícula](calendar)
+- Quero o [calendario](calendar)
+- pode me mandar o [calendario de matrícula](calendar)?
+- onde tá o [calendario de matrícula](calendar)
+- manda o [calendario de matrícula](calendar)
+- cade o [calendario de matrícula](calendar)
+- passa o [calendario de matrícula](calendar)
+- Lino, [calendario de matrícula](calendar)
 <!-- trancamento geral -->
 - Trancamento de [matrícula](calendar)
 - [trancamento](calendar)
