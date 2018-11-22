@@ -39,7 +39,7 @@ class ActionRegisterNotification(Action):
         if notification is "":
             dispatcher.utter_message(('Não consegui encontrar essa opção... '
                                       'Dá uma olhada melhor nas opções, '
-                                      'só temos elas, ainda!'))
+                                      'no /help!'))
             return []
 
         user_checked = False

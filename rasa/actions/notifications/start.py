@@ -3,6 +3,7 @@ import os
 import logging
 from pymongo import MongoClient
 from rasa_core.actions.action import Action
+from time import sleep
 
 # If you want to use your own bot to development add the bot token as
 # second parameters
@@ -29,8 +30,8 @@ class ActionStart(Action):
         messenger = "None"
 
         # Message to send to the user
-        text = ('Pera aí, rapidinho... '
-                'Vou pegar minha agenda aqui pra te procurar')
+        text = ('Espera uns segundinhos aí, rapidinho... ')
+        sleep(2.75)
 
         # Get users data to build a user to the database
         data = requests.get(
@@ -72,8 +73,6 @@ class ActionStart(Action):
                 dispatcher.utter_message(message)
             return []
         else:
-            text = ('Olha! Acho que não tenho você aqui hein! Calma aí '
-                    'rapidinho, vou anotar seu nome na minha agenda...')
 
             # New user to be registered
             if messenger == "Facebook":

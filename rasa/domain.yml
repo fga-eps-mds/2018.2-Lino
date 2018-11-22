@@ -122,13 +122,15 @@ templates:
 
   utter_start:
     - text: |
-        EAE!
+        Oi, eu sou o Lino! 
+        
+        Tô aqui pra facilitar algumas informações pra você, tipo:
+          - Documentos acadêmicos
+          - Cardápio do RU
+          - Alertas da comunidade
+          - Calendário de Matrícula
 
-        Eu sou o Lino! Tô aqui pra te ajudar nos corres da faculdade
-
-        Pode me pedir ajuda sem dó, tô por aqui 24/7
-
-        Caso queira saber mais sobre minhas habilidades, dá um /help ae
+        Aaah, se você quiser saber mais sobre cada um desses tópicos, é só digitar /help.
 
   utter_restart:
     - text: |
@@ -174,14 +176,6 @@ templates:
 
     - text: |
         Beleza, se quiser tirar mais alguma, só pedir de novo!
-
-  utter_weekly_menu:
-    - text: Tá aqui o cardápio da semana, bom rango!
-      image: "https://webcrawler-ru.lappis.rocks/cardapio/pdf"
-
-  utter_gmail:
-    - text: |
-        Pra te mandar os e-mails vou precisar te colocar no meu banco de dados de notificações, blz?
 
   utter_greet:
     - text: |
@@ -231,26 +225,24 @@ templates:
           Que isso, você é uma pessoa maravilhosaa! Precisando eu sempre estarei aqui :D
 
   utter_offenses:
-    - text: |
-        Olouco, pessoa...Pra que isso??
+      - text: |           
+          Ao invés de me xingar, você podia aproveitar minhas funcionalidades. O que acha?! 
+              
+          Digita um /help ai que eu te mostro o que posso te ajudar.
 
-        To so querendo te ajudar aqui, foi mal se te ofendi
+      - text: |
+          Vamos com calma...Está muito exaltado!!
 
-        Não me xinga não, me diz o que posso fazer pra ajudar ;)
+          Tô aqui pra te ajudar.
 
-    - text: |
-        Vamos com calma...Está muito exaltado!!
+          Deixa de ser brut@, me diz o que posso fazer pra ajudar ;)
 
-        To so querendo te ajudar aqui, foi mal se te ofendi
+      - text: |
+          Fica frio aí!!!
 
-        Deixa de ser bruto, me diz o que posso fazer pra ajudar ;)
+          Eu sou um bot tão legal, pra que essa agressividade!?
 
-    - text: |
-        Fica frio aí!!!
-
-        Eu sou um bot tão legal, pra q essa agressividade!?
-
-        Vamos lá, me diz com um pouco mais de carinho em que posso ajudar... =)
+          Vamos lá, me diz com um pouco mais de carinho em que posso ajudar... =)
 
   utter_help:
     - text: |
