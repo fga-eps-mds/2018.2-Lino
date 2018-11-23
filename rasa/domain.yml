@@ -189,9 +189,11 @@ templates:
 
   utter_greet:
     - text: |
-        E aê, beleza?! Aqui é o Lino
-
-        Que que vc tá afim hj? Documentos, período de matrícula, notificações ou RU?
+        E aê, beleza?! Como você já deve saber eu sou o Lino ;)
+              
+        E eu tenho as incríveis habilidades de falar sobre documentos acadêmicos, cardápio do RU, alertas da comunidade e calendário de matrícula
+              
+        Se está procurando por alguma dessas opções é só me falar qual que eu posso te ajudar, bb.
 
   utter_goodbye:
     - text: |
