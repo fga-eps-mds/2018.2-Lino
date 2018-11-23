@@ -170,22 +170,21 @@ templates:
 
   utter_finish_notification:
     - text: |
-        Show! Valeu por se cadastrar bb
+        Show! Valeu por se cadastrar, bb
 
     - text: |
-        Tudo certo! Valeu por se cadastrar aqui manooooow!
-
-    - text: |
-        TOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOP
+        Tudo certo! Valeu por se cadastrar
 
   utter_finish_unregister_notification:
     - text: |
-        Agora sim! Desculpe se te incomodei com isso...
+        Tudo certo, já te tiramos dessa notificação
 
-        Se quiser reativar, é só pedir aqui!
+        Caso queira se cadastrar novamente é só pedir que eu faço na hora.
 
     - text: |
-        Beleza, se quiser tirar mais alguma, só pedir de novo!
+        Beleza, tirei aqui já. Se quiser cancelar mais algum cadastro, é só pedir de novo!
+
+        Caso queira se cadastrar novamente é só pedir que eu faço na hora.
 
   utter_greet:
     - text: |
