@@ -12,7 +12,8 @@ class ActionSendWeekMenu(Action):
         timestamp = datetime.datetime.now().strftime("%d-%m-%Y")
         img_timestamp = f'?time={timestamp}'
         data = {
-            'text': 'Tá aqui o cardápio da semana... Bom proveito :)',
+            'text': 'Tá aqui o cardápio da semana. '
+                    'Aprecie com moderação :)',
             'image': f'{crawler_url}{img_path}{img_timestamp}'
         }
         dispatcher.utter_response(data)
