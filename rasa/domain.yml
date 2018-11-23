@@ -242,16 +242,15 @@ templates:
         HmMmM... bora marcar um churrálcool??
 
   utter_thanks:
-      - text: |
-          Que isso, você é uma pessoa maravilhosa! Precisando eu sempre estarei aqui :D
+    - text: |
+        Que isso, você é uma pessoa maravilhosa! Precisando eu sempre estarei aqui :D
 
-      - text: |
+    - text: |
         Aaah, para com isso. To aqui pra te ajudar mesmo :DD
 
-        Foi bom demais poder te ajudar!!  
+        Foi bom demais poder te ajudar!!
 
   utter_offenses:
-
     - text: |
         Ao invés de me xingar, você podia aproveitar minhas funcionalidades. O que acha?! 
 
