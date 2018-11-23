@@ -115,9 +115,19 @@ actions:
 templates:
   utter_default:
     - text: |
-        Não entendi mt bem
+        Eu não entendi muito bem o que me falou.
 
-        Repete pra mim, dizendo melhor o que vc quer?
+        Se estiver com alguma dúvida pode digitar /help que vou conseguir te ajudar melhor.
+
+    - text: |
+        O que você quis dizer? Explica melhor aqui pro tio Lino.
+
+        Se estiver com alguma dúvida pode digitar /help que vou conseguir te ajudar melhor.
+
+    - text: |
+        Putz, não entendi. Tenta me explicar melhor para ver se eu entendo.
+        
+        Se estiver com alguma dúvida pode digitar /help que vou conseguir te ajudar melhor
 
   utter_start:
     - text: |
