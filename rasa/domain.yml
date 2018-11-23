@@ -213,9 +213,9 @@ templates:
 
   utter_compliments_reply:
     - text: |
-        Muito obrigado, cara!
+        Muito obrigado, migx.
 
-        Sem a comunidade acadêmica eu não seria nada.
+        Sem vocês, e meus programadores, eu não seria nada.
 
     - text: |
         Awnt, brigadão
@@ -229,6 +229,9 @@ templates:
 
     - text: |
         Ah, para com isso! *-*
+
+    - text: |
+        HmMmM... bora marcar um churrálcool??
 
   utter_thanks:
       - text: |
@@ -244,7 +247,7 @@ templates:
     - text: |
         Calma lá!!!
 
-        Deixa de ser brut@, da um / help e me diz em que posso te ajudar ;)
+        Deixa de ser brut@, da um /help e me diz em que posso te ajudar ;)
 
     - text: |
         Fica frio aí!!!
