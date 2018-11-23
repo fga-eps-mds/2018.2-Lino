@@ -126,7 +126,7 @@ templates:
 
     - text: |
         Putz, não entendi. Tenta me explicar melhor para ver se eu entendo.
-        
+
         Se estiver com alguma dúvida pode digitar /help que vou conseguir te ajudar melhor
 
   utter_start:
@@ -235,24 +235,24 @@ templates:
           Que isso, você é uma pessoa maravilhosaa! Precisando eu sempre estarei aqui :D
 
   utter_offenses:
-      - text: |           
-          Ao invés de me xingar, você podia aproveitar minhas funcionalidades. O que acha?! 
-              
-          Digita um /help ai que eu te mostro o que posso te ajudar.
 
-      - text: |
-          Vamos com calma...Está muito exaltado!!
+    - text: |
+        Ao invés de me xingar, você podia aproveitar minhas funcionalidades. O que acha?! 
+        
+        Digita um /help ai que eu te mostro o que posso te ajudar.
 
-          Tô aqui pra te ajudar.
+    - text: |
+        Calma lá!!!
 
-          Deixa de ser brut@, me diz o que posso fazer pra ajudar ;)
+        Deixa de ser brut@, da um / help e me diz em que posso te ajudar ;)
 
-      - text: |
-          Fica frio aí!!!
+    - text: |
+        Fica frio aí!!!
 
-          Eu sou um bot tão legal, pra que essa agressividade!?
+        Eu sou um bot tão legal, pra que essa agressividade!?
 
-          Vamos lá, me diz com um pouco mais de carinho em que posso ajudar... =)
+        Vamos lá, me diz com um pouco mais de carinho em que posso ajudar... =)
+        
 
   utter_help:
     - text: |
