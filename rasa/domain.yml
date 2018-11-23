@@ -148,7 +148,11 @@ templates:
 
   utter_menu:
     - text: |
-        Opa, de hoje ou da semana?
+        Eiiita, tá com fome né??!
+
+        Você quer o cardápio do dia ou da semana?
+
+        Se quiser um específico como café da manhã, almoço ou jantar, eu também consigo te ajudar.
 
   utter_documents:
     - text: |
