@@ -6,7 +6,7 @@ DOC_1 = 'login/index.html?response_type=code&'
 DOC_2 = 'client_id=102&redirect_uri=/documentodigital/index.html'
 UNB_URL = f'https://servicos.unb.br/dados/{DOC_1}{DOC_2}'
 GIT_URL = 'https://raw.githubusercontent.com/fga-eps-mds/2018.2-Lino/'
-IMGS_PATH = 'Issue_204-HourGridStatementFlow/rasa/images/schedule/'
+IMGS_PATH = 'master/rasa/images/schedule/'
 
 
 class ActionSchedule(Action):
