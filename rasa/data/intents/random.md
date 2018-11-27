@@ -64,6 +64,11 @@
 - manda uma [piada](joke) ai
 
 ## intent:name
+- Qual o seu [nome](name)?
+- Como você se [chama](name)?
+- Qual o seu [nome](name) completo?
+- [nome](name)
+
 ## intent:license
 - qual e a sua [licença](license)
 - voce e [licenciado](license)

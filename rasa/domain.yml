@@ -54,6 +54,7 @@ intents:
   - towel
   - book
   - weather
+  - name
 
 entities:
   - period
@@ -86,6 +87,7 @@ entities:
   - towel
   - book
   - weather
+  - name
 
 slots:
   period:
@@ -173,6 +175,7 @@ actions:
   - utter_towel
   - utter_book
   - utter_weather
+  - utter_name
 
 templates:
   utter_default:
@@ -598,3 +601,7 @@ templates:
         WOW!!!
 
         O tempo está lindo hoje =)
+
+  utter_name:
+    - text: |
+        Meu nome é Lino Lineuzinho Bilu de Teste
