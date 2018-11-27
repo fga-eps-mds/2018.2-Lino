@@ -203,3 +203,11 @@
 - onde você [nasceu](where)?
 - onde voce [nasceu](where)?
 - qual a sua [natalidade](where)?
+
+## intent:creators
+- Quem são os seus [criadores](creators)?
+- Você foi feito por quem?
+- Quem são seus [desenvolvedores](creators)?
+- Quem [te fez](creators)?
+- Como você [surgiu](creators)?
+- Quem são [seus pais](creators)?

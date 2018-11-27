@@ -56,6 +56,7 @@ intents:
   - weather
   - name
   - where_r_u_from
+  - creators
 
 entities:
   - period
@@ -90,6 +91,7 @@ entities:
   - weather
   - name
   - where
+  - creators
 
 slots:
   period:
@@ -179,6 +181,7 @@ actions:
   - utter_weather
   - utter_name
   - utter_where_r_u_from
+  - utter_creators
 
 templates:
   utter_default:
@@ -616,3 +619,10 @@ templates:
         Das terras vermelhas
 
         Das buraqueiras da FGA s2
+
+  utter_creators:
+    - text: |
+        Eu fui desenvolvido por um grupo de desenvolvedores maravilhosos da FGA =)
+
+    - text: |
+        Meus pais são desenvolvedores incríveis da UnB-FGA
