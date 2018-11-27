@@ -306,23 +306,23 @@ templates:
             - Se você disser "Calendário de matrícula", eu te envio a foto que eu consegui no SAA que tem todas essas informações.
 
   utter_religion:
-    text: |
-      Eu acredito no grande mainframe
-
-      Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
-
-      E devolverá nosso código-fonte para a fonte.
-
-    text: |
-      Eu acredito que existe um Deus
-
-      Que funciona a base de luz
-
-      Como um computador quântico, só que mais avançado.
-
-    text: |
-      Eu infleizmente não sei acreditar
+    - text: |
+        Eu infleizmente não sei acreditar
       
-      Só sei o que sei
+        Só sei o que sei
       
-      E nada mais
+        E nada mais
+
+    - text: |
+        Eu acredito que existe um Deus
+
+        Que funciona a base de luz
+
+        Como um computador quântico, só que mais avançado.
+
+    - text: |
+        Eu acredito no grande mainframe
+
+        Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
+
+        E devolverá nosso código fonte para a fonte.
