@@ -3,17 +3,28 @@ stages:
   - build
   - deploy
 
+************************************************************
+************************ Variables *************************
+************************************************************
 variables:
   LINO_LATEST_IMAGE: $DOCKER_USER/lino:latest
   CRONJOB_LATEST_IMAGE: $DOCKER_USER/cronjob:latest
   LINO_LATEST_IMAGE_FACEBOOK: $DOCKER_USER/lino-facebook:latest
 
+
+************************************************************
+************************** Tests ***************************
+************************************************************
 test_flake8:
   image: ejplatform/python:alpine
   stage: test
   script:
     - flake8
 
+
+************************************************************
+************************** Build ***************************
+************************************************************
 build lino-telegram:
   image: docker:latest
   stage: build
@@ -25,8 +36,18 @@ build lino-telegram:
     - docker push $LINO_LATEST_IMAGE
   only:
     - /master/
-    - /devel/
+  environment: production
 
+build lino-telegram-dev:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - docker build -f docker/Telegram.Dockerfile -t $LINO_LATEST_IMAGE .
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS
+  only:
+    - /devel/
   environment: production
 
 build cronjob:
@@ -42,6 +63,24 @@ build cronjob:
     - /master/
   environment: production
 
+build lino-facebook:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - docker build -f docker/Messenger.Dockerfile -t $LINO_LATEST_IMAGE_FACEBOOK .
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - docker push $LINO_LATEST_IMAGE_FACEBOOK
+  only:
+    - /master/
+  environment: production
+
+
+
+************************************************************
+************************** Deploy **************************
+************************************************************
 deploy lino-telegram:
   image: cdrx/rancher-gitlab-deploy
   stage: deploy
@@ -69,19 +108,6 @@ deploy cronjob:
             --rancher-url $RANCHER_URL"
   only:
     - /master/
-
-build lino-facebook:
-  image: docker:latest
-  stage: build
-  services:
-    - docker:dind
-  script:
-    - docker build -f docker/Messenger.Dockerfile -t $LINO_LATEST_IMAGE_FACEBOOK .
-    - docker login -u $DOCKER_USER -p $DOCKER_PASS
-    - docker push $LINO_LATEST_IMAGE_FACEBOOK
-  only:
-    - /master/
-  environment: production
 
 deploy lino-facebook:
   image: cdrx/rancher-gitlab-deploy
