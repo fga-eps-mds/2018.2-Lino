@@ -131,3 +131,7 @@
 ## path_offenses
 * offenses
   - utter_offenses
+
+## path_religion
+* religion
+  - utter_religion

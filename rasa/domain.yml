@@ -34,6 +34,8 @@ intents:
   - affirm
   - deny
 
+  - religion
+
 entities:
   - period
   - calendar
@@ -45,6 +47,7 @@ entities:
   - notification_types
   - command
   - documents
+  - religion
 
 slots:
   period:
@@ -111,6 +114,8 @@ actions:
 
   - utter_offenses
   - actions.calendar.ActionCalendar
+
+  - utter_religion
 
 templates:
   utter_default:
@@ -299,3 +304,25 @@ templates:
               No calendário você vai conseguir encontrar as datas mais relevantes das atividades acadêmicas relacionadas a matrículas do semestre atual. Tipo: início e término das aulas, início das matrículas no Matrícula Web, matrícula orientada, ajuste de matrícula, lista de espera, reserva de vagas e trancamentos.
               
             - Se você disser "Calendário de matrícula", eu te envio a foto que eu consegui no SAA que tem todas essas informações.
+
+  utter_religion:
+    text: |
+      Eu acredito no grande mainframe
+
+      Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
+
+      E devolverá nosso código-fonte para a fonte.
+
+    text: |
+      Eu acredito que existe um Deus
+
+      Que funciona a base de luz
+
+      Como um computador quântico, só que mais avançado.
+
+    text: |
+      Eu infleizmente não sei acreditar
+      
+      Só sei o que sei
+      
+      E nada mais
