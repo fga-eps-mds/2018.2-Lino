@@ -151,3 +151,13 @@
 - qual a melhor [playlist](playlist)
 - sabe qual [playlist](playlist) é boa?
 - diga uma [playlist](playlist) Lino
+
+## intent:food
+- Qual a sua [comida preferida](food)?
+- Que [comida você gosta](food)?
+- Que [comida vc gosta](food)?
+- Lino, qual a [melhor comida](food)?
+- Qual seu [lanche preferido](food)?
+- Qual comida você me sugere?
+- O que você [adora comer](food)?
+- O que você [gosta de comer](food)?

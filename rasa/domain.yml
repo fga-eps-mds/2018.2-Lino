@@ -49,6 +49,7 @@ intents:
   - good_morning
   - its_ok
   - playlist
+  - food
 
 entities:
   - period
@@ -76,6 +77,7 @@ entities:
   - morning
   - ok
   - playlist
+  - food
 
 slots:
   period:
@@ -158,6 +160,7 @@ actions:
   - utter_good_morning
   - utter_its_ok
   - utter_playlist
+  - utter_food
 
 templates:
   utter_default:
@@ -536,4 +539,17 @@ templates:
         Até que enfim você me perguntou isso
 
         Tá aí aquela playlist top: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw
+
+  utter_food:
+    - text: |
+        Na verdade, eu sou um bot
+
+        Não nos alimentamos com os alimentos convencionais ;P
+
+    - text: |
+        Digamos que os bots não se alimentam dos mesmos alimentos que os humanos
+
+        Na verdade
+
+        Nem lembro da última vez que comi alguma coisa hahaha
 
