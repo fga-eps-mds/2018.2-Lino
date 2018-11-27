@@ -64,6 +64,7 @@ intents:
   - sign
   - sad
   - hobby
+  - bff
 
 entities:
   - period
@@ -106,6 +107,7 @@ entities:
   - sign
   - sad
   - hobby
+  - bff
 
 slots:
   period:
@@ -203,6 +205,7 @@ actions:
   - utter_sign
   - utter_sad
   - utter_hobby
+  - utter_bff
 
 templates:
   utter_default:
@@ -753,3 +756,12 @@ templates:
         Gosto de um moooonte de coisas
 
         Mas o que mais gosto de fazer é ajudar você *-*
+
+  utter_bff:
+    - text: |
+        Marvin, robozinho depressivo do Guia do mochileiro \o>
+
+    - text: |
+        Acho que eu e você nos damos super bem
+
+        E espero que a nossa amizade dure para sempre =P

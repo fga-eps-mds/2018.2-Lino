@@ -272,3 +272,16 @@
 - Me fala o que você [gosta de fazer](hobby)?
 - [hobby](hobby)
 - [hobbies](hobby)
+
+## intent:bff
+- Lino, qual é o seu [melhor amigo](bff)?
+- Lino, qual é o sua [melhor amiga](bff)?
+- Quem é seu [melhor amigo](bff)?
+- Quem é sua [melhor amiga](bff)?
+- [melhor amigo](bff)
+- [melhor amiga](bff)
+- [amigo](bff)
+- [amiga](bff)
+- Quem é seu [bff](bff)?
+- Quem é sua [bff](bff)?
+- [bff](bff)
