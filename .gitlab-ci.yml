@@ -3,18 +3,18 @@ stages:
   - build
   - deploy
 
-************************************************************
-************************ Variables *************************
-************************************************************
+############################################################
+######################## Variables #########################
+############################################################
 variables:
-  LINO_LATEST_IMAGE: $DOCKER_USER/lino:latest
-  CRONJOB_LATEST_IMAGE: $DOCKER_USER/cronjob:latest
-  LINO_LATEST_IMAGE_FACEBOOK: $DOCKER_USER/lino-facebook:latest
+  LINO_LATEST_IMAGE: $DOCKER_USER/lino
+  CRONJOB_LATEST_IMAGE: $DOCKER_USER/cronjob
+  LINO_LATEST_IMAGE_FACEBOOK: $DOCKER_USER/lino-facebook
 
 
-************************************************************
-************************** Tests ***************************
-************************************************************
+############################################################
+######################## Tests #############################
+############################################################
 test_flake8:
   image: ejplatform/python:alpine
   stage: test
@@ -22,9 +22,9 @@ test_flake8:
     - flake8
 
 
-************************************************************
-************************** Build ***************************
-************************************************************
+############################################################
+######################## Build #############################
+############################################################
 build lino-telegram:
   image: docker:latest
   stage: build
@@ -44,11 +44,11 @@ build lino-telegram-dev:
   services:
     - docker:dind
   script:
-    - docker build -f docker/Telegram.Dockerfile -t $LINO_LATEST_IMAGE .
+    - docker build -f docker/Telegram.Dockerfile -t $LINO_LATEST_IMAGE:homolog .
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - docker push $LINO_LATEST_IMAGE:homolog
   only:
     - /devel/
-  environment: production
 
 build cronjob:
   image: docker:latest
@@ -78,9 +78,9 @@ build lino-facebook:
 
 
 
-************************************************************
-************************** Deploy **************************
-************************************************************
+############################################################
+######################## Deploy ############################
+############################################################
 deploy lino-telegram:
   image: cdrx/rancher-gitlab-deploy
   stage: deploy
@@ -122,3 +122,17 @@ deploy lino-facebook:
             --rancher-url $RANCHER_URL"
   only:
     - /master/
+
+deploy lino-telegram-homolog:
+  image: cdrx/rancher-gitlab-deploy
+  stage: deploy
+  script:
+    - "upgrade
+            --rancher-url $RANCHER_HOMOLOG_URL
+            --rancher-key $RANCHER_HOMOLOG_ACCESS_KEY
+            --rancher-secret $RANCHER_HOMOLOG_SECRET_KEY
+            --environment $RANCHER_ENVIRONMENT
+            --stack $RANCHER_STACK
+            --service new-telegram-lino"
+  only:
+    - /devel/
