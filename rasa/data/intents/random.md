@@ -15,6 +15,16 @@
 - Lino, você acredita em alguma [religião](religion)?
 - [biblia](religion)
 - [religiao](religion)
+
+## intent:sport
+- voce joga [futebol](sport)
+- vamos falar de [futebol](sport)
+- qual o seu [esporte](sport) favorito?
+- voce pratica [esporte](sport)?
+- [esporte](sport)
+- [futebol](sport)
+
+
 ## intent:star_wars
 ## intent:where_r_u
 ## intent:joke

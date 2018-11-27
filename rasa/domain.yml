@@ -35,6 +35,7 @@ intents:
   - deny
 
   - religion
+  - sport
 
 entities:
   - period
@@ -48,6 +49,7 @@ entities:
   - command
   - documents
   - religion
+  - sport
 
 slots:
   period:
@@ -116,6 +118,7 @@ actions:
   - actions.calendar.ActionCalendar
 
   - utter_religion
+  - utter_sport
 
 templates:
   utter_default:
@@ -326,3 +329,14 @@ templates:
         Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
 
         E devolverá nosso código fonte para a fonte.
+
+  utter_sport:
+    - text: |
+        Eu amo jogar futebol
+      
+        Eu que ensinei o Pele a jogar bola haha
+
+    - text: |
+        Falam que todo ser humano nasce Botafoguense
+      
+        Com os Bots não é diferente

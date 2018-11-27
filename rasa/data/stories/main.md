@@ -135,3 +135,7 @@
 ## path_religion
 * religion
   - utter_religion
+
+## path_sport
+* sport
+  - utter_sport
