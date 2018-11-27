@@ -222,3 +222,10 @@
 - Bora [namorar](relationship)?
 - Tem [boyfriend](relationship)?
 - Tem [girlfriend](relationship)?
+
+## intent:me
+- [Lino](me)
+- [Ow](me)
+- [Ei](me)
+- [Fala](me) man
+- [Fala](me) macho

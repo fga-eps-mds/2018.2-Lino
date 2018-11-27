@@ -58,6 +58,7 @@ intents:
   - where_r_u_from
   - creators
   - relationship
+  - me
 
 entities:
   - period
@@ -94,6 +95,7 @@ entities:
   - where
   - creators
   - relationship
+  - me
 
 slots:
   period:
@@ -185,6 +187,7 @@ actions:
   - utter_where_r_u_from
   - utter_creators
   - utter_relationship
+  - utter_me
 
 templates:
   utter_default:
@@ -639,7 +642,7 @@ templates:
     - text: |
         Então ... =x
 
-        Ainda estou procurando =P
+        Ainda estou procurando a minha crush =P
 
     - text: |
         Estou focado em ser o seu assistente no momento ;)
@@ -647,3 +650,16 @@ templates:
         Mas se no futuro vocí encontrar um dispositivo solteiro por aí...
 
         =P
+
+  utter_me:
+    - text: |
+        Eu!!!
+
+    - text: |
+        Diz ai =)
+
+    - text: |
+        Oi ;)
+
+    - text: |
+        Fala aê!
