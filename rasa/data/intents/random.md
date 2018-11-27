@@ -117,3 +117,9 @@
 - [good evening](night)
 - [noite](night)
 - otima [noite](night)
+
+## intent:good_afternoon
+- boa [tarde](afternoon)
+- [good afternoon](afternoon)
+- [tarde](afternoon)
+- otima [tarde](afternoon)
