@@ -4,6 +4,7 @@ from rasa_core.actions.action import Action
 # If you want to use your own bot to development add the bot token as
 # second parameters
 TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
+CALENDAR_URL = os.getenv('CALENDAR_URL', '')
 
 
 class ActionCalendar(Action):
