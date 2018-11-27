@@ -40,6 +40,7 @@ intents:
   - languages
   - genre
   - star_wars
+  - joke
 
 entities:
   - period
@@ -58,6 +59,7 @@ entities:
   - languages
   - genre
   - starwars
+  - joke
 
 slots:
   period:
@@ -131,6 +133,7 @@ actions:
   - utter_languages
   - utter_genre
   - utter_star_wars
+  - utter_joke
 
 templates:
   utter_default:
@@ -397,3 +400,11 @@ templates:
 
     - text: |
         Muito a aprender você ainda tem.
+
+  utter_joke:
+    - text: |
+        Só conheço uma piada
+
+        A do CPU que apitou e explodiu
+
+        01100110010101010101000000111101001001001110100101

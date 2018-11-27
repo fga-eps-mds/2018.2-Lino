@@ -155,3 +155,7 @@
 ## path_star_wars
 * star_wars
   - utter_star_wars
+
+## path_joke
+* joke
+  - utter_joke

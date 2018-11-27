@@ -45,7 +45,16 @@
 - [guerra nas estrelas](starwars)
 
 ## intent:where_r_u
+
 ## intent:joke
+- sabe alguma [piada](joke)
+- voce sabe contar [piadas](joke)
+- conhece alguma [piada](joke)
+- [piada](joke)
+- me conte uma [piada](joke)
+- conte-me uma [piada](joke)
+- manda uma [piada](joke) ai
+
 ## intent:name
 ## intent:license
 ## intent:where_u_liv
