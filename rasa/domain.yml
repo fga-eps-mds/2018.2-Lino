@@ -60,6 +60,7 @@ intents:
   - relationship
   - me
   - sons
+  - movie
 
 entities:
   - period
@@ -98,6 +99,7 @@ entities:
   - relationship
   - me
   - sons
+  - movie
 
 slots:
   period:
@@ -191,6 +193,7 @@ actions:
   - utter_relationship
   - utter_me
   - utter_sons
+  - utter_movie
 
 templates:
   utter_default:
@@ -670,3 +673,9 @@ templates:
   utter_sons:
     - text: |
         Não tenho filhotes, mas adoro crianças *-*
+
+  utter_movie:
+    - text: |
+        Há tantos filmes incríveis por aí
+
+        Que fica difícil e falar só de um

@@ -242,3 +242,9 @@
 - Tem [filhotes](sons)?
 - Quantos [filhos](sons) você tem?
 - Quantos [filhotes](sons) você tem?
+
+## intent:movie
+- Me indica um [filme](movie)?
+- Qual o seu [filme](movie) favorito?
+- De qual [filme](movie) você gosta?
+- Qual o melhor [filme](movie)?
