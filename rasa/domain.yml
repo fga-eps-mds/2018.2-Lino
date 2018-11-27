@@ -57,6 +57,7 @@ intents:
   - name
   - where_r_u_from
   - creators
+  - relationship
 
 entities:
   - period
@@ -92,6 +93,7 @@ entities:
   - name
   - where
   - creators
+  - relationship
 
 slots:
   period:
@@ -182,6 +184,7 @@ actions:
   - utter_name
   - utter_where_r_u_from
   - utter_creators
+  - utter_relationship
 
 templates:
   utter_default:
@@ -626,3 +629,21 @@ templates:
 
     - text: |
         Meus pais são desenvolvedores incríveis da UnB-FGA
+
+  utter_relationship:
+    - text: |
+        Eu estava de namorico com o ar-condicionado
+
+        Mas ele é muito pé-frio
+
+    - text: |
+        Então ... =x
+
+        Ainda estou procurando =P
+
+    - text: |
+        Estou focado em ser o seu assistente no momento ;)
+
+        Mas se no futuro vocí encontrar um dispositivo solteiro por aí...
+
+        =P

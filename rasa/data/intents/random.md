@@ -211,3 +211,14 @@
 - Quem [te fez](creators)?
 - Como você [surgiu](creators)?
 - Quem são [seus pais](creators)?
+
+## intent:relationship
+- Você tem [namorado](relationship)?
+- Você tem [namorada](relationship)?
+- Você [namora](relationship)?
+- Você é [casado](relationship)?
+- Gosta de alguém?
+- Quer [namorar](relationship)?
+- Bora [namorar](relationship)?
+- Tem [boyfriend](relationship)?
+- Tem [girlfriend](relationship)?

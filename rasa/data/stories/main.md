@@ -223,3 +223,7 @@
 ## path_creators
 * creators
   - utter_creators
+
+## path_relationship
+* relationship
+  - utter_relationship
