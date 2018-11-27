@@ -263,3 +263,12 @@
 - Estou [chorando](sad)
 - Estou [desapontado](sad)
 - [depressão](sad)
+
+## intent:hobby
+- O que você [gosta de fazer](hobby)?
+- Quais são seus [hobbies](hobby)?
+- Me fala seu [hobby](hobby)?
+- Qual é o seu [hobby](hobby)?
+- Me fala o que você [gosta de fazer](hobby)?
+- [hobby](hobby)
+- [hobbies](hobby)

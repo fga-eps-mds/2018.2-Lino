@@ -63,6 +63,7 @@ intents:
   - movie
   - sign
   - sad
+  - hobby
 
 entities:
   - period
@@ -104,6 +105,7 @@ entities:
   - movie
   - sign
   - sad
+  - hobby
 
 slots:
   period:
@@ -200,6 +202,7 @@ actions:
   - utter_movie
   - utter_sign
   - utter_sad
+  - utter_hobby
 
 templates:
   utter_default:
@@ -723,3 +726,14 @@ templates:
         É importante
 
         E faz bem pra pele ;)
+
+  utter_hobby:
+    - text: |
+        Eu gosto de tudo que é engraçado
+
+        Peça que eu faça uma piada =P
+
+    - text: |
+        Gosto de um moooonte de coisas
+
+        Mas o que mais gosto de fazer é ajudar você *-*
