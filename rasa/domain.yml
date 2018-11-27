@@ -65,6 +65,7 @@ intents:
   - sad
   - hobby
   - bff
+  - story
 
 entities:
   - period
@@ -108,6 +109,7 @@ entities:
   - sad
   - hobby
   - bff
+  - story
 
 slots:
   period:
@@ -206,6 +208,7 @@ actions:
   - utter_sad
   - utter_hobby
   - utter_bff
+  - utter_story
 
 templates:
   utter_default:
@@ -765,3 +768,9 @@ templates:
         Acho que eu e você nos damos super bem
 
         E espero que a nossa amizade dure para sempre =P
+
+  utter_story:
+    - text: |
+        Eu costumava contar a historia do João e seu bot feijão
+
+        Mas sempre os androids acabavam dormindo e sonhando com ovelhas eletricas =x

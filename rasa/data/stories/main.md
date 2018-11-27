@@ -255,3 +255,7 @@
 ## path_bff
 * bff
   - utter_bff
+
+## path_story
+* story
+  - utter_story

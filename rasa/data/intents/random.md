@@ -285,3 +285,11 @@
 - Quem é seu [bff](bff)?
 - Quem é sua [bff](bff)?
 - [bff](bff)
+
+## intent:story
+- me fala uma [história](story)
+- me conta uma [história](story)
+- [historia](story)
+- [história](story)
+- conta pra mim uma [historinha](story)
+- fala uma [historia](story) ai
