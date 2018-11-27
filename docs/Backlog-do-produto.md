@@ -50,8 +50,8 @@
 |US23|Não Funcional|Lino|buscar as informações sobre calendário da UnB no semestre| para transferir a informação ao usuário solicitante|_Must Have_|FT05, FT06, FT08|
 |US24|Não Funcional|Lino|transformar o PDF do cardápio em texto| para informar o usuário| _Must Have_|FT01, FT02, FT03, FT04, FT05|
 |US25|Funcional|Lino| enviar mensagens sobre o cardápio do café da manhã do dia| para informar o usuário |_Must Have_|FT03|
-|US26|Funcional|Lino| enviar mensagens sobrre o cardápio do almoço do dia| para informar o usuário |_Must Have_|FT04|
-|US27|Funcional|Lino| enviar mensagens sobrre o cardápio do jantar do dia| para informar o usuário |_Must Have_|FT05|
+|US26|Funcional|Lino| enviar mensagens sobre o cardápio do almoço do dia| para informar o usuário |_Must Have_|FT04|
+|US27|Funcional|Lino| enviar mensagens sobre o cardápio do jantar do dia| para informar o usuário |_Must Have_|FT05|
 
 ## Tasks Histórias de Usuário
 |US|ID|Descrição|_Feature_| Pontuação |
@@ -110,3 +110,6 @@ informando-os em um horário determinado|FT05|2|
 |I07|T02|Fazer o webcrawler elaborar o parser | FT07|-|
 |I07|T03|Criar fluxo do período de matrícula no Rasa e elaborar modelo de JSON a ser recebido | FT07|-|
 |I07|T04|Conectar fluxo ao webcrawler| FT07|-|
+|I09|T01|Criar fluxo de conversa para a obtenção do cardápio do café da manhã|FT03|3|
+|I10|T01|Criar fluxo de conversa para a obtenção do cardápio do almoço|FT04|3|
+|I11|T01|Criar fluxo de conversa para a obtenção do cardápio do jantar|FT05|3|
