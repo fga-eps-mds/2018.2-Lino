@@ -229,3 +229,16 @@
 - [Ei](me)
 - [Fala](me) man
 - [Fala](me) macho
+
+## intent:sons
+- Você tem [filhos](sons)?
+- [filhos](sons)?
+- Você tem [filhos](sons)?
+- [filho](sons)
+- [filha](sons)
+- [filhas](sons)?
+- [Filhote](sons)?
+- Tem [filhote](sons)?
+- Tem [filhotes](sons)?
+- Quantos [filhos](sons) você tem?
+- Quantos [filhotes](sons) você tem?

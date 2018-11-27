@@ -59,6 +59,7 @@ intents:
   - creators
   - relationship
   - me
+  - sons
 
 entities:
   - period
@@ -96,6 +97,7 @@ entities:
   - creators
   - relationship
   - me
+  - sons
 
 slots:
   period:
@@ -188,6 +190,7 @@ actions:
   - utter_creators
   - utter_relationship
   - utter_me
+  - utter_sons
 
 templates:
   utter_default:
@@ -663,3 +666,7 @@ templates:
 
     - text: |
         Fala aê!
+
+  utter_sons:
+    - text: |
+        Não tenho filhotes, mas adoro crianças *-*
