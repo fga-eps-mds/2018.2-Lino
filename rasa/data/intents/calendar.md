@@ -1,4 +1,5 @@
 ## intent: calendar
+<!-- matricula -->
 - [matricula](calendar)
 - [matrícula](calendar)
 - A [matricula](calendar)
@@ -15,3 +16,206 @@
 - Fucking [período de matrícula](calendar)
 - Quando começa as [matrículas](calendar)
 - Quando vai rolar as [matrículas](calendar)
+<!--calendario de matricula -->
+- Manda o [calendário](calendar) aí
+- [calendar](calendar)
+- [calendario](calendar)
+- [calendario de matrícula](calendar)
+- Tem como você me mandar o [calendario](calendar)?
+- Tem como você me mandar o [calendario de matrícula](calendar)?
+- Lino, [calendario de matrícula](calendar)
+- Lino, [calendario](calendar)
+- Quero o [calendario de matrícula](calendar)
+- Quero o [calendario](calendar)
+- pode me mandar o [calendario de matrícula](calendar)?
+- onde tá o [calendario de matrícula](calendar)
+- manda o [calendario de matrícula](calendar)
+- cade o [calendario de matrícula](calendar)
+- passa o [calendario de matrícula](calendar)
+- Lino, [calendario de matrícula](calendar)
+<!-- trancamento geral -->
+- Trancamento de [matrícula](calendar)
+- [trancamento](calendar)
+- [trancamento geral](calendar)
+- Até quando é o [trancamento de matrícula](calendar)
+- Até quando é o [trancamento geral](calendar)
+- Quando vai rolar o [trancamento geral](calendar)?
+- Quero o [trancamento geral](calendar)
+- Quando será o [trancamento geral](calendar)
+- Data do [trancamento geral](calendar)
+- Onde vejo o [trancamento geral](calendar)
+- Quando vai ser o [trancamento geral](calendar)
+- onde vejo a data do [trancamento geral](calendar)
+- onde vejo o dia do [trancamento geral](calendar)
+- dia do [trancamento geral](calendar)
+- quando sai o [trancamento geral](calendar)
+- quando é o [trancamento geral](calendar)
+- [trancar geral](calendar)
+- periodo do [trancamento geral](calendar)
+- quero saber quando sai o [trancamento geral](calendar)
+- Lino, [trancamento geral](calendar)
+<!-- trancamento parcial -->
+- [trancamento parcial](calendar)
+- [trancamento de matéria](calendar)
+- Até quando é o [trancamento parcial de matrícula](calendar)
+- Até quando é o [trancamento parcial](calendar)
+- Até quando é o [trancamento de matéria](calendar)
+- Quando vai rolar o [trancamento parcial](calendar)?
+- Quando vai rolar o [trancamento de matéria](calendar)?
+- Quero o [trancamento de matéria](calendar)
+- Quando será o [trancamento de matéria](calendar)
+- Quando será o [trancamento parcial](calendar)
+- Data do [trancamento de matéria](calendar)
+- Data do [trancamento parcial](calendar)
+- Onde vejo o [trancamento de matéria](calendar)
+- Quando vai ser o [trancamento de matéria](calendar)
+- Quando vai ser o [trancamento](calendar)
+- onde vejo a data do [trancamento de matéria](calendar)
+- onde vejo o dia do [trancamento de matéria](calendar)
+- onde vejo a data do [trancamento parcial](calendar)
+- onde vejo o dia do [trancamento parcial](calendar)
+- dia do [trancamento de matéria](calendar)
+- quando sai o [trancamento de matéria](calendar)
+- quando é o [trancamento de matéria](calendar)
+- periodo do [trancamento de matéria](calendar)
+- quero saber quando sai o [trancamento de matéria](calendar)
+- Lino, [trancamento de matéria](calendar)
+<!-- pré-matrícula -->
+- [pré-matrícula](calendar)
+- Quando é a [pré-matrícula](calendar)?
+- Quando vai ser a [pré-matrícula](calendar)?
+- Quero saber quando vai ser a [pré-matrícula](calendar)
+- [pré-matrícula] viado (calendar)
+- Me diz quando vai ser a [pré-matrícula](calendar)
+- [pré-matrícula] das matérias(calendar)
+- e como é a [pré-matrícula](calendar)
+- diga sobre [pré-matrícula](calendar)
+- Quero saber da [pré-matrícula](calendar)
+- periodo de [pré-matrícula](calendar)
+- periodo de [pré-matrícula] de matérias(calendar)
+- fala ae sobre o período de [pré-matrícula](calendar)
+- fala ae sobre o período de [pré-matrícula] deste semestre(calendar)
+- data do período de [pré-matrícula](calendar)
+- data da [pré-matrícula](calendar)
+- onde vejo o dia da [pré-matrícula](calendar)
+- dia da [pré-matrícula](calendar)
+- até quando é a [pré-matrícula](calendar)
+- posso me [pré-matricular] até que dia? (calendar)
+- Lino, [pré-matrícula](calendar)
+<!-- reserva de vaga -->
+- [reserva de vaga](calendar)
+- Quando é a [reserva de vaga](calendar)?
+- Quando vai ser a [reserva de vaga](calendar)?
+- Quero saber quando vai ser a [reserva de vaga](calendar)
+- [reserva de vaga](calendar) viado (calendar)
+- Me diz quando vai ser a [reserva de vaga](calendar)
+- [reserva de vaga](calendar) das matérias
+- e como é a [reserva de vaga](calendar)
+- diga sobre [reserva de vaga](calendar)
+- Quero saber da [reserva de vaga](calendar)
+- periodo de [reserva de vaga](calendar)
+- periodo de [reserva de vaga](calendar) de matérias
+- fala ae sobre o período de [reserva de vaga](calendar)
+- fala ae sobre o período de [reserva de vaga](calendar) deste semestre
+- data do período de [reserva de vaga](calendar)
+- data da [reserva de vaga](calendar)
+- onde vejo o dia da [reserva de vaga](calendar)
+- dia da [reserva de vaga](calendar)
+- até quando é a [reserva de vaga](calendar)
+- posso me [reserva de vaga](calendar) até que dia?
+<!-- resultado de matrícula -->
+- Quando vai rolar o [resultado de matrícula](calendar)?
+- [resultado de matrícula](calendar)
+- Quero o [resultado de matrícula](calendar)
+- Quando será o [resultado de matrícula](calendar)
+- Data do [resultado de matrícula](calendar)
+- Onde vejo o [resultado de matrícula](calendar)
+- Quando vai ser o [resultado de matrícula](calendar)
+- onde vejo a data do [resultado de matrícula](calendar)
+- onde vejo o dia do [resultado de matrícula](calendar)
+- dia do [resultado de matrícula](calendar)
+- quando sai o [resultado de matrícula](calendar)
+- quando é o [resultado de matrícula](calendar)
+- [resultado da matrícula](calendar)
+- periodo do [resultado de matrícula](calendar)
+- fala sobre o [resultado de matrícula](calendar)
+- quero saber quando sai o [resultado de matrícula](calendar)
+<!-- lista de espera -->
+- Quando vai rolar a [lista de espera](calendar)?
+- [lista de espera](calendar)
+- Quando será a [lista de espera](calendar)
+- Quando terá a [lista de espera](calendar)
+- Data da [lista de espera](calendar)
+- Quando vai ser a [lista de espera](calendar)
+- onde vejo a data da [lista de espera](calendar)
+- onde vejo o dia da [lista de espera](calendar)
+- dia da [lista de espera](calendar)
+- quando sai a [lista de espera](calendar)
+- quando é a [lista de espera](calendar)
+- periodo da [lista de espera](calendar)
+- quero saber quando sai a [lista de espera](calendar)
+- Lino, a [lista de espera](calendar)
+- Até quando é a [lista de espera](calendar)
+- Confirmação da [lista de espera](calendar)
+- Quando é a confirmação da [lista de espera](calendar)
+<!-- ajuste -->
+- Quando vai rolar o [ajuste](calendar)?
+- Quando vai rolar o [ajuste de matéria](calendar)
+- [ajuste](calendar)
+- [ajuste de matéria](calendar)
+- [ajuste de disciplina](calendar)
+- Quando será o [ajuste de matéria](calendar)
+- Quando terá o [ajuste de matéria](calendar)
+- Quando terá o [ajuste](calendar)
+- Data do [ajuste](calendar)
+- Data do [ajuste de matéria](calendar)
+- Quando vai ser o [ajuste de matéria](calendar)
+- onde vejo a data do [ajuste de matéria](calendar)
+- onde vejo o dia do [ajuste de matéria](calendar)
+- onde vejo o dia do [ajuste](calendar)
+- dia do [ajuste de matéria](calendar)
+- dia do [ajuste](calendar)
+- quando sai o [ajuste de matéria](calendar)
+- quando é o [ajuste de matéria](calendar)
+- quando é o [ajuste](calendar)
+- periodo de [ajuste de matéria](calendar)
+- periodo do [ajuste de matéria](calendar)
+- periodo de [ajuste](calendar)
+- quero saber quando sai o [ajuste de matéria](calendar)
+- Lino, o [ajuste de matéria](calendar)
+- Até quando é o [ajuste de matéria](calendar)
+- Até quando é o [ajuste](calendar)
+<!-- retirar matéria -->
+- [retirar matéria](calendar)
+- Quando posso [retirar matéria](calendar)?
+- Até quando posso [retirar matéria](calendar)?
+- Qual o dia para [retirar matéria](calendar)?
+- Dia de [retirar matéria](calendar)
+- Data de [retirar matéria](calendar)
+- Periodo de [retirar matéria](calendar)
+- Onde vejo a data para [retirar matéria](calendar)
+- Onde vejo o dia para [retirar matéria](calendar)
+- Quando é a [retiragem de matéria](calendar)
+- Quero [retirar uma matéria](calendar) até quando posso fazer isso?
+- Periodo para [retirar matéria](calendar)
+- Até que data eu posso [retirar matéria](calendar)?
+- Até que dia posso [retirar matéria](calendar)?
+- Lino, [retirar matéria](calendar)
+<!-- matrícula orientada -->
+- [matricula orientada](calendar)
+- Quando é a [matricula orientada](calendar)?
+- Quando vai ser a [matricula orientada](calendar)?
+- Quero saber quando vai ser a [matricula orientada](calendar)
+- [matricula orientada](calendar) viado
+- Me diz quando vai ser a [matricula orientada](calendar)
+- [matricula orientada](calendar) das matérias(calendar)
+- Quero saber da [matricula orientada](calendar)
+- periodo de [matricula orientada](calendar)
+- periodo de [matricula orientada](calendar) de matérias
+- fala ae sobre o período de [matricula orientada](calendar)
+- fala ae sobre o período de [matricula orientada](calendar) deste semestre
+- data do período de [matricula orientada](calendar)
+- data da [matricula orientada](calendar)
+- onde vejo o dia da [matricula orientada](calendar)
+- dia da [matricula orientada](calendar)
+- até quando é a [matricula orientada](calendar)
