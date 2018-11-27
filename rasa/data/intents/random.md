@@ -131,7 +131,7 @@
 - [ótimo dia](morning)
 
 ## intent:its_ok
-- Tudo[bem](ok)?
+- Tudo [bem](ok)?
 - Tudo [ótimo](ok)?
 - Tudo [otimo](ok)?
 - [Como você está](ok)?
@@ -182,3 +182,13 @@
 - Qual [livro](book) você gosta?
 - Me indica um [livro](book)
 - Qual [livro](book) é bom?
+
+## intent:weather
+- Lino, fale sobre o [clima](weather) de hoje?
+- Como está o [clima](weather) hoje?
+- Como está o [tempo](weather) hoje?
+- [clima](weather) hoje
+- [tempo](weather) hoje
+- Fale sobre o [clima](weather) de hoje 
+- [metereologia](weather)
+- condições [metereologicas](weather)

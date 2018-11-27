@@ -53,6 +53,7 @@ intents:
   - color
   - towel
   - book
+  - weather
 
 entities:
   - period
@@ -84,6 +85,7 @@ entities:
   - color
   - towel
   - book
+  - weather
 
 slots:
   period:
@@ -170,6 +172,7 @@ actions:
   - utter_color
   - utter_towel
   - utter_book
+  - utter_weather
 
 templates:
   utter_default:
@@ -586,3 +589,12 @@ templates:
 
     - text: |
         Neuromancer
+
+  utter_weather:
+    - text: |
+        O clima hoje tá bom pra guaxinim!!!
+
+    - text: |
+        WOW!!!
+
+        O tempo está lindo hoje =)
