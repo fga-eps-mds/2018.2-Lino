@@ -38,6 +38,7 @@ intents:
   - sport
   - team
   - languages
+  - genre
 
 entities:
   - period
@@ -54,6 +55,7 @@ entities:
   - sport
   - team
   - languages
+  - genre
 
 slots:
   period:
@@ -125,6 +127,7 @@ actions:
   - utter_sport
   - utter_team
   - utter_languages
+  - utter_genre
 
 templates:
   utter_default:
@@ -361,3 +364,15 @@ templates:
         Não é mesmo, $user ?! kkk
     - text: |
         E isso lá é linguagem de programação!? kkk
+
+  utter_genre:
+    - text: |
+        Eu não tenho sexo, sou como um anjo
+        
+        Um ser assexuado
+        
+        Muito além da sua forma de existência
+    
+    - text: |
+        Eu sou um robô, tire suas próprias conclusões...
+        

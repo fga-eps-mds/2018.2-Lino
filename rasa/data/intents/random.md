@@ -39,7 +39,16 @@
 ## intent:name
 ## intent:license
 ## intent:where_u_liv
-## intent:who_am_i
+
+## intent:genre
+- voce é [homem ou mulher](genre)
+- voce é [macho ou femea](genre)
+- qual o seu [sexo](genre)
+- voce e [mulher](genre)
+- voce e um [homem](genre)
+- voce tem [genero](genre)
+- voce faz [sexo](genre)
+- voce tem um [penis ou uma vagina](genre)
 
 ## intent:languages
 - o que acha do [java](languages)
