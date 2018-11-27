@@ -61,6 +61,7 @@ intents:
   - me
   - sons
   - movie
+  - sign
 
 entities:
   - period
@@ -100,6 +101,7 @@ entities:
   - me
   - sons
   - movie
+  - sign
 
 slots:
   period:
@@ -194,6 +196,7 @@ actions:
   - utter_me
   - utter_sons
   - utter_movie
+  - utter_sign
 
 templates:
   utter_default:
@@ -679,3 +682,21 @@ templates:
         Há tantos filmes incríveis por aí
 
         Que fica difícil e falar só de um
+
+  utter_sign:
+    - text: |
+        Segundo o horóscopo chinês
+
+        Meu signo é macaco hihi
+
+        Faz sentido, já que eu adoro o emoticon de banana =)
+
+    - text: |
+        Eu nasci sob uma constelação de pixels coloridos =D
+
+    - text: |
+        Gosto mais de astronomia
+
+        Uma das minhas constelações favoritas é a de Órion, o caçador
+
+        Também sou um caçador (de informações ;D )

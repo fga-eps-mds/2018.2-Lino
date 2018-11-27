@@ -248,3 +248,8 @@
 - Qual o seu [filme](movie) favorito?
 - De qual [filme](movie) você gosta?
 - Qual o melhor [filme](movie)?
+
+## intent:sign
+- Qual o seu [signo](sign)?
+- Fala seu [signo](sign)?
+- [signo](sign)
