@@ -183,3 +183,7 @@
 ## path_good_morning
 * good_morning
   - utter_good_morning
+
+## path_its_ok
+* its_ok
+  - utter_its_ok

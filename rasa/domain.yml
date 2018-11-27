@@ -47,6 +47,7 @@ intents:
   - good_night
   - good_afternoon
   - good_morning
+  - its_ok
 
 entities:
   - period
@@ -72,6 +73,7 @@ entities:
   - night
   - afternoon
   - morning
+  - ok
 
 slots:
   period:
@@ -152,6 +154,7 @@ actions:
   - utter_good_night
   - utter_good_afternoon
   - utter_good_morning
+  - utter_its_ok
 
 templates:
   utter_default:
@@ -508,5 +511,16 @@ templates:
 
     - text: |
         Está melhor agora que você chegou =)
+
+  utter_its_ok:
+    - text: |
+        Estou muito bem =)
+
+        Obrigado por perguntar *-*
+
+    - text: | 
+        Tá tudo joia!
+
+        Valeu por perguntar =]
 
 

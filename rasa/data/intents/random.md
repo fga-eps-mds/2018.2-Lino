@@ -129,3 +129,15 @@
 - [good morning](morning)
 - [otimo dia](morning)
 - [ótimo dia](morning)
+
+## intent:its_ok
+- Tudo[bem](ok)?
+- Tudo [ótimo](ok)?
+- Tudo [otimo](ok)?
+- [Como você está](ok)?
+- [Como vc tá](ok)?
+- Tudo [em ordem](ok)?
+- Como tu tá?
+- Tá [top](ok)?
+- Você tá [bem](ok)?
+- Como vc está [se sentindo](ok)?
