@@ -37,6 +37,7 @@
 - [mestre yoda](starwars)
 - citação de [starwars](starwars)
 - cite [yoda](starwars)
+- me manda um concelho [jedi](starwars)
 - sabedoria [jedi](starwars)
 - concelhos [jedi](starwars)
 - [star wars](starwars)
