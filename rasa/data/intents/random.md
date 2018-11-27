@@ -57,6 +57,16 @@
 
 ## intent:name
 ## intent:license
+- qual e a sua [licença](license)
+- voce e [licenciado](license)
+- sua [licenca de software](license)
+- posso copiar voce
+- posso ver seu [codigo](license)
+- voce e [opensource](license)
+- voce e um [software livre](license)
+- [software livre](license)
+- [licença](license)
+
 ## intent:where_u_liv
 
 ## intent:genre
@@ -84,5 +94,3 @@
 - linguagem [java](languages)
 - linguagem [php](languages)
 - linguagem [c#](languages)
-
-## intent:team

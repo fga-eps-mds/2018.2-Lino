@@ -159,3 +159,7 @@
 ## path_joke
 * joke
   - utter_joke
+
+## path_license
+* license
+  - utter_license

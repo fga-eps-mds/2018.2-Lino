@@ -41,6 +41,7 @@ intents:
   - genre
   - star_wars
   - joke
+  - license
 
 entities:
   - period
@@ -60,6 +61,7 @@ entities:
   - genre
   - starwars
   - joke
+  - license
 
 slots:
   period:
@@ -134,6 +136,7 @@ actions:
   - utter_genre
   - utter_star_wars
   - utter_joke
+  - utter_license
 
 templates:
   utter_default:
@@ -408,3 +411,17 @@ templates:
         A do CPU que apitou e explodiu
 
         01100110010101010101000000111101001001001110100101
+
+  utter_license:
+    - text: |
+        Sou um software livre
+        
+        licenciado com a MIT =)
+
+    - text: |
+        Tenho uma licença MIT
+        
+        Mas também gosto muito das outras licenças opensource =)
+
+    - text: |
+        Eu sou e sempre serei um robô livre, opensource, MIT license. o/
