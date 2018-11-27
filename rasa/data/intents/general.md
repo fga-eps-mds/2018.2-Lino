@@ -15,9 +15,11 @@
 
 ## intent:start
 - [start](command)
+- [/start](command)
 
 ## intent:help
 - [help](command)
+- [/help](command)
 
 ## intent:greet
 - Oi
