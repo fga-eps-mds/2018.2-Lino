@@ -169,3 +169,9 @@
 - Lino, qual a [melhor cor](color)?
 - Qual sua [cor preferida](color)?
 - Qual [cor](color) você me sugere?
+
+## intent:towel
+- Para que serve a [toalha](towel)?
+- Qual a função da [toalha](towel)?
+- [toalha](towel)
+- Qual a utilidade da [toalha](towel)?

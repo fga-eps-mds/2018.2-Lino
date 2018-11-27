@@ -51,6 +51,7 @@ intents:
   - playlist
   - food
   - color
+  - towel
 
 entities:
   - period
@@ -80,6 +81,7 @@ entities:
   - playlist
   - food
   - color
+  - towel
 
 slots:
   period:
@@ -164,6 +166,7 @@ actions:
   - utter_playlist
   - utter_food
   - utter_color
+  - utter_towel
 
 templates:
   utter_default:
@@ -567,3 +570,7 @@ templates:
 
     - text: |
         Rosa é top!
+
+  utter_towel:
+    - text: |
+        "[...] você pode usar a toalha como agasalho quando atravessar as frias luas de Beta de Jagla; pode deitar-se sobre ela nas reluzentes praias de areia marmórea de Santragino V, respirando os inebriantes vapores marítimos; você pode dormir debaixo dela sob as estrelas que brilham avermelhadas no mundo desértico de Kakrafoon; pode usá-la como vela para descer numa minijangada as águas lentas e pesadas do rio Moth; pode umedecê-la e utilizá-la para lutar em um combate corpo a corpo; enrolá-la em torno da cabeça para proteger-se de emanações tóxicas ou para evitar o olhar da Terrível Besta Voraz de Traal (animal estonteantemente burro, que acha que, se você não pode vê-lo, ele também não pode ver você - estúpido feito uma anta, mas muito, muito voraz); você pode agitar a toalha em situações de emergência para pedir socorro; e, naturalmente, pode usá-la para enxugar-se com ela se ainda estiver razoavelmente limpa"

@@ -199,3 +199,7 @@
 ## path_color
 * color
   - utter_color
+
+## path_towel
+* towel
+  - utter_towel
