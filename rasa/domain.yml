@@ -43,6 +43,7 @@ intents:
   - joke
   - license
   - where_u_liv
+  - how_am_i
 
 entities:
   - period
@@ -64,6 +65,7 @@ entities:
   - joke
   - license
   - live
+  - how
 
 slots:
   period:
@@ -140,6 +142,7 @@ actions:
   - utter_joke
   - utter_license
   - utter_where_u_liv
+  - utter_how_am_i
 
 templates:
   utter_default:
@@ -448,4 +451,23 @@ templates:
         Você pode passar lá pra me visitar qualquer dia
         
         Chega aí: https://github.com/fga-eps-mds/2018.2-Lino
+
+  utter_how_am_i:
+    - text: |
+        Eu não tenho um corpo físico
+        
+        Sou feito da mais bela e pura lógica algoritimica.
+
+    - text: |
+        Eu posso ser como você quiser $user
+        
+        Basta me desenhar
+
+        Mas capricha, hein!? ;)
+
+    - text: |
+        Sou duro e frio por fora
+        
+        Mas tenho um coração quentinho
+
 

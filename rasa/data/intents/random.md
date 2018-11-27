@@ -44,7 +44,15 @@
 - concelhos do [yoda](starwars)
 - [guerra nas estrelas](starwars)
 
-## intent:where_r_u
+## intent:how_am_i
+- [como voce é](how)?
+- [como vc é](how)?
+- [como você é](how)?
+- voce [parece](how) com quem?
+- [com quem voce se parece](how)?
+- voce e [magro ou gordo](how)
+- voce e [bonito ou feio](how)
+- voce e [alto ou baixo](how)
 
 ## intent:joke
 - sabe alguma [piada](joke)
