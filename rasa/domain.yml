@@ -39,6 +39,7 @@ intents:
   - team
   - languages
   - genre
+  - star_wars
 
 entities:
   - period
@@ -56,6 +57,7 @@ entities:
   - team
   - languages
   - genre
+  - starwars
 
 slots:
   period:
@@ -128,6 +130,7 @@ actions:
   - utter_team
   - utter_languages
   - utter_genre
+  - utter_star_wars
 
 templates:
   utter_default:
@@ -375,4 +378,22 @@ templates:
     
     - text: |
         Eu sou um robô, tire suas próprias conclusões...
-        
+
+  utter_star_wars:
+    - text: |
+        O medo é o caminho para o lado negro.
+
+    - text: |
+        O medo leva à raiva, a raiva leva ao ódio e o ódio leva ao sofrimento.
+
+    - text: |
+        Que a Força esteja com você!
+
+    - text: |
+        Grande guerreiro? Guerra não faz grande ninguém.
+
+    - text: |
+        Lembre-se sempre, o seu foco determina a sua realidade.
+
+    - text: |
+        Muito a aprender você ainda tem.

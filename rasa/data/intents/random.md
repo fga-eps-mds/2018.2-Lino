@@ -34,6 +34,16 @@
 - o que você acha do botafogo
 
 ## intent:star_wars
+- [mestre yoda](starwars)
+- citação de [starwars](starwars)
+- cite [yoda](starwars)
+- sabedoria [jedi](starwars)
+- concelhos [jedi](starwars)
+- [star wars](starwars)
+- [yoda] (starwars)
+- concelhos do [yoda](starwars)
+- [guerra nas estrelas](starwars)
+
 ## intent:where_r_u
 ## intent:joke
 ## intent:name

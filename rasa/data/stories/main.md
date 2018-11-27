@@ -151,3 +151,7 @@
 ## path_genre
 * genre
   - utter_genre
+
+## path_star_wars
+* star_wars
+  - utter_star_wars
