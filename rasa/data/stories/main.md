@@ -171,3 +171,7 @@
 ## path_how_am_i
 * how_am_i
   - utter_how_am_i
+
+## path_good_night
+* good_night
+  - utter_good_night

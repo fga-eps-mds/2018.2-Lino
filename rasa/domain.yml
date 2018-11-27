@@ -44,6 +44,7 @@ intents:
   - license
   - where_u_liv
   - how_am_i
+  - good_night
 
 entities:
   - period
@@ -66,6 +67,7 @@ entities:
   - license
   - live
   - how
+  - night
 
 slots:
   period:
@@ -143,6 +145,7 @@ actions:
   - utter_license
   - utter_where_u_liv
   - utter_how_am_i
+  - utter_good_night
 
 templates:
   utter_default:
@@ -459,7 +462,7 @@ templates:
         Sou feito da mais bela e pura lógica algoritimica.
 
     - text: |
-        Eu posso ser como você quiser $user
+        Eu posso ser como você quiser
         
         Basta me desenhar
 
@@ -469,5 +472,15 @@ templates:
         Sou duro e frio por fora
         
         Mas tenho um coração quentinho
+
+  utter_good_night:
+    - text: |
+        Uma boa noite pra ti também!
+
+    - text: |
+        Boa noite!!!
+
+    - text: |
+        Está uma noite boa mesmo!
 
 

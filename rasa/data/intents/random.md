@@ -110,3 +110,10 @@
 - linguagem [java](languages)
 - linguagem [php](languages)
 - linguagem [c#](languages)
+
+## intent:good_night
+- boa [noite](night)
+- [good night](night)
+- [good evening](night)
+- [noite](night)
+- otima [noite](night)
