@@ -50,6 +50,7 @@ intents:
   - its_ok
   - playlist
   - food
+  - color
 
 entities:
   - period
@@ -78,6 +79,7 @@ entities:
   - ok
   - playlist
   - food
+  - color
 
 slots:
   period:
@@ -161,6 +163,7 @@ actions:
   - utter_its_ok
   - utter_playlist
   - utter_food
+  - utter_color
 
 templates:
   utter_default:
@@ -553,3 +556,14 @@ templates:
 
         Nem lembro da última vez que comi alguma coisa hahaha
 
+  utter_color:
+    - text: |
+        Eu gosto de todas as cores
+
+        Você já viu o quanto o arco-iris é lindo?!
+
+    - text: |
+        A minha cor preferida é a sua cor preferida =D
+
+    - text: |
+        Rosa é top!

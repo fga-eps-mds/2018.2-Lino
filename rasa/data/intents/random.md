@@ -161,3 +161,11 @@
 - Qual comida você me sugere?
 - O que você [adora comer](food)?
 - O que você [gosta de comer](food)?
+
+## intent:color
+- Qual a sua [cor preferida](color)?
+- Que [cor você gosta](color)?
+- Que [cor vc gosta](color)?
+- Lino, qual a [melhor cor](color)?
+- Qual sua [cor preferida](color)?
+- Qual [cor](color) você me sugere?
