@@ -175,3 +175,10 @@
 - Qual a função da [toalha](towel)?
 - [toalha](towel)
 - Qual a utilidade da [toalha](towel)?
+
+## intent:book
+- Lino, qual o seu [livro](book) predileto?
+- Qual o seu [livro](book) favorito?
+- Qual [livro](book) você gosta?
+- Me indica um [livro](book)
+- Qual [livro](book) é bom?
