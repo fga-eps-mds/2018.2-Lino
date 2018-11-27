@@ -141,3 +141,13 @@
 - Tá [top](ok)?
 - Você tá [bem](ok)?
 - Como vc está [se sentindo](ok)?
+
+## intent:playlist
+- Lino, me indica uma música
+- Lino, manda uma [playlist](playlist)
+- me fala uma [playlist](playlist) boa
+- quero uma [playlist](playlist)
+- [playlist](playlist)
+- qual a melhor [playlist](playlist)
+- sabe qual [playlist](playlist) é boa?
+- diga uma [playlist](playlist) Lino

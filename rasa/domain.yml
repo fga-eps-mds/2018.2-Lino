@@ -48,6 +48,7 @@ intents:
   - good_afternoon
   - good_morning
   - its_ok
+  - playlist
 
 entities:
   - period
@@ -74,6 +75,7 @@ entities:
   - afternoon
   - morning
   - ok
+  - playlist
 
 slots:
   period:
@@ -155,6 +157,7 @@ actions:
   - utter_good_afternoon
   - utter_good_morning
   - utter_its_ok
+  - utter_playlist
 
 templates:
   utter_default:
@@ -523,4 +526,14 @@ templates:
 
         Valeu por perguntar =]
 
+  utter_playlist:
+    - text: |
+        Estava doido para que me preguntasse isso hahaha
+
+        Se liga nessa playlist: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw
+
+    - text: |
+        Até que enfim você me perguntou isso
+
+        Tá aí aquela playlist top: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw
 
