@@ -24,6 +24,14 @@
 - [esporte](sport)
 - [futebol](sport)
 
+## intent:team
+- qual o melhor time do brasil
+- Lino, qual o seu time?
+- para qual time você torce?
+- que time vc torce?
+- quem vai ser o campeao brasileiro nesse ano
+- voce viu que o messi quer jogar no Botafogo
+- o que você acha do botafogo
 
 ## intent:star_wars
 ## intent:where_r_u

@@ -36,6 +36,7 @@ intents:
 
   - religion
   - sport
+  - team
 
 entities:
   - period
@@ -50,6 +51,7 @@ entities:
   - documents
   - religion
   - sport
+  - team
 
 slots:
   period:
@@ -119,6 +121,7 @@ actions:
 
   - utter_religion
   - utter_sport
+  - utter_team
 
 templates:
   utter_default:
@@ -340,3 +343,10 @@ templates:
         Falam que todo ser humano nasce Botafoguense
       
         Com os Bots não é diferente
+
+  utter_team:
+    - text: |
+        Botafogo, sem sombra de dúvida
+
+    - text: |
+        Melhor time do mundo disparado, Botafogooooo!!!!
