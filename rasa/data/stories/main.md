@@ -179,3 +179,7 @@
 ## path_good_afternoon
 * good_afternoon
   - utter_good_afternoon
+
+## path_good_morning
+* good_morning
+  - utter_good_morning

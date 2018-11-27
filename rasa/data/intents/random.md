@@ -123,3 +123,9 @@
 - [good afternoon](afternoon)
 - [tarde](afternoon)
 - otima [tarde](afternoon)
+
+## intent:good_morning
+- [bom dia](morning)
+- [good morning](morning)
+- [otimo dia](morning)
+- [ótimo dia](morning)

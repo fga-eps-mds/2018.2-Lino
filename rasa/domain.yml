@@ -46,6 +46,7 @@ intents:
   - how_am_i
   - good_night
   - good_afternoon
+  - good_morning
 
 entities:
   - period
@@ -70,6 +71,7 @@ entities:
   - how
   - night
   - afternoon
+  - morning
 
 slots:
   period:
@@ -149,6 +151,7 @@ actions:
   - utter_how_am_i
   - utter_good_night
   - utter_good_afternoon
+  - utter_good_morning
 
 templates:
   utter_default:
@@ -488,7 +491,7 @@ templates:
 
   utter_good_afternoon:
     - text: |
-        Olá, uma tarde fantástica para você também!
+        Uma tarde fantástica para você também!
 
     - text: |
         Taarrrdee =)
@@ -496,5 +499,14 @@ templates:
     - text: |
         Ótima tardeee!!!
 
+  utter_good_morning:
+    - text: |
+        Um ótimo dia para você também!
+
+    - text: |
+        Está um dia ótimo para navegar na internet
+
+    - text: |
+        Está melhor agora que você chegou =)
 
 
