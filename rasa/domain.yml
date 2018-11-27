@@ -37,6 +37,7 @@ intents:
   - religion
   - sport
   - team
+  - languages
 
 entities:
   - period
@@ -52,6 +53,7 @@ entities:
   - religion
   - sport
   - team
+  - languages
 
 slots:
   period:
@@ -122,6 +124,7 @@ actions:
   - utter_religion
   - utter_sport
   - utter_team
+  - utter_languages
 
 templates:
   utter_default:
@@ -350,3 +353,11 @@ templates:
 
     - text: |
         Melhor time do mundo disparado, Botafogooooo!!!!
+
+  utter_languages:
+    - text: |
+        Poderíamos falar de algo melhor
+        
+        Não é mesmo, $user ?! kkk
+    - text: |
+        E isso lá é linguagem de programação!? kkk

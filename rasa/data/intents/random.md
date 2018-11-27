@@ -40,6 +40,21 @@
 ## intent:license
 ## intent:where_u_liv
 ## intent:who_am_i
+
 ## intent:languages
+- o que acha do [java](languages)
+- o que acha do [c#](languages)
+- o que acha do [php](languages)
+- você gosta de [java](languages)
+- você gosta de [c#](languages)
+- você gosta de [php](languages)
+- e o [php](languages)
+- e o [java](languages)
+- e o [c#](languages)
+- [java](languages)
+- [php](languages)
+- linguagem [java](languages)
+- linguagem [php](languages)
+- linguagem [c#](languages)
+
 ## intent:team
-## intent:sport
