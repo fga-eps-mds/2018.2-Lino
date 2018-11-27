@@ -72,16 +72,13 @@
 |US05|T02|Fazer comunicação WebCrawler com Lino para recebimento de JSONs| FT10| - |
 |US25|T01|Enviar mensagens sobre o cardápio do café da manhã diário para o usuário no Telegram|FT03|3|
 |US25|T02|Enviar mensagens sobre o cardápio do café da manhã diário para o usuário no Messenger|FT03|3|
-|US25|T03|Criar agendamento do envio do cardápio do café da manhã diário aos usuários do Telegram e do Messenger,
-informando-os em um horário determinado|FT03|2|
+|US25|T03|Criar agendamento do envio do cardápio do café da manhã diário aos usuários do Telegram e do Messenger, informando-os em um horário determinado|FT03|2|
 |US26|T01|Enviar mensagens sobre o cardápio do almoço diário para o usuário no Telegram|FT04|3|
 |US26|T02|Enviar mensagens sobre o cardápio do almoço diário para o usuário no Messenger|FT04|3|
-|US26|T03|Criar agendamento do envio do cardápio do almoço diário aos usuários do Telegram e do Messenger,
-informando-os em um horário determinado|FT04|2|
+|US26|T03|Criar agendamento do envio do cardápio do almoço diário aos usuários do Telegram e do Messenger, informando-os em um horário determinado|FT04|2|
 |US27|T01|Enviar mensagens sobre o cardápio do jantar diário para o usuário no Telegram|FT05|3|
 |US27|T02|Enviar mensagens sobre o cardápio do jantar diário para o usuário no Messenger|FT05|3|
-|US27|T03|Criar agendamento do envio do cardápio do jantar diário aos usuários do Telegram e do Messenger,
-informando-os em um horário determinado|FT05|2|
+|US27|T03|Criar agendamento do envio do cardápio do jantar diário aos usuários do Telegram e do Messenger, informando-os em um horário determinado|FT05|2|
 
 ## Intents
 
