@@ -218,6 +218,7 @@
 - Você [namora](relationship)?
 - Você é [casado](relationship)?
 - Gosta de alguém?
+- [Namorar](relationship) comigo?
 - Quer [namorar](relationship)?
 - Bora [namorar](relationship)?
 - Tem [boyfriend](relationship)?
@@ -253,3 +254,12 @@
 - Qual o seu [signo](sign)?
 - Fala seu [signo](sign)?
 - [signo](sign)
+
+## intent:sad
+- Estou [triste](sad)
+- Estou muito [triste](sad)
+- [Tristeza](sad)
+- A [tristeza](sad) me consome
+- Estou [chorando](sad)
+- Estou [desapontado](sad)
+- [depressão](sad)

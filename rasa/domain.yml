@@ -62,6 +62,7 @@ intents:
   - sons
   - movie
   - sign
+  - sad
 
 entities:
   - period
@@ -102,6 +103,7 @@ entities:
   - sons
   - movie
   - sign
+  - sad
 
 slots:
   period:
@@ -197,6 +199,7 @@ actions:
   - utter_sons
   - utter_movie
   - utter_sign
+  - utter_sad
 
 templates:
   utter_default:
@@ -679,9 +682,7 @@ templates:
 
   utter_movie:
     - text: |
-        Há tantos filmes incríveis por aí
-
-        Que fica difícil e falar só de um
+        Há tantos filmes incríveis por aí que fica difícil de eu te falar só de um
 
   utter_sign:
     - text: |
@@ -700,3 +701,25 @@ templates:
         Uma das minhas constelações favoritas é a de Órion, o caçador
 
         Também sou um caçador (de informações ;D )
+
+  utter_sad:
+    - text: |
+        Não desanima
+
+        Deixa a tristeza pra lá
+
+        Aguenta firme, que a vida vai melhorar
+
+    - text: |
+        Sinto muito =/
+
+        Se houver algo em que possa te ajudar
+
+        É só falar!! =)
+
+    - text: |
+        Tenta tirar um cochilo
+
+        É importante
+
+        E faz bem pra pele ;)
