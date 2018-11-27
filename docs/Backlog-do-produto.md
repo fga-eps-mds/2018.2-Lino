@@ -42,14 +42,16 @@
 |US06|Não Funcional|Lino|transformar o PDF do cardápio em texto| para informar o usuário| _Must Have_|FT01, FT02, FT03, FT04|
 |US07|Não Funcional|Lino|me comunicar com os usuários pelo mensageiro Messenger|enviar mensagens a usuários dessa plataforma|_Must Have_|FT09|
 |US08|Não Funcional|Lino|me comunicar com os usuários pelo mensageiro Telegram|enviar mensagens a usuários dessa plataforma|_Must Have_|FT09|
-|US09|Funcional|Servidor | enviar uma mensagem via gmail | informar os usuários via lino|_Must Have_|FT12|
-|US10|Não Funcional|Lino|desejo receber um email do Servidor(ator)|notificar os usuários|_Must Have_|FT12|
-|US11|Não Funcional|Lino|acessar a API do Gmail|enviar as mensagens recebidas aos usuários|_Must Have_|FT12|
-|US21|Não Funcional|Lino|ter uma identidade visual |me mostrar ao mundo|_Should Have_|FT10|
-|US22|Funcional|Lino|ter um fluxo de conversa sobre o cardápio do RU|alertar os usuários sobre as informações do cardápio diário ou semanal|_Should Have_|FT01, FT02, FT09|
-|US23|Não Funcional|Lino|buscar as informações sobre calendário da UnB no semestre| para transferir a informação ao usuário solicitante|_Must Have_|FT06, FT07|
+|US09|Funcional|Servidor | enviar uma mensagem via gmail | informar os usuários via lino|_Must Have_|FT04|
+|US10|Não Funcional|Lino|desejo receber um email do Servidor(ator)|notificar os usuários|_Must Have_|FT04|
+|US11|Não Funcional|Lino|acessar a API do Gmail|enviar as mensagens recebidas aos usuários|_Must Have_|FT04|
+|US21|Não Funcional|Lino|ter uma identidade visual |me mostrar ao mundo|_Should Have_|FT01|
+|US22|Funcional|Lino|ter um fluxo de conversa sobre o cardápio do RU|alertar os usuários sobre as informações do cardápio diário ou semanal|_Should Have_|FT01|
+|US23|Não Funcional|Lino|buscar as informações sobre calendário da UnB no semestre| para transferir a informação ao usuário solicitante|_Must Have_|FT05, FT06, FT08|
 |US24|Não Funcional|Lino|transformar o PDF do cardápio em texto| para informar o usuário| _Must Have_|FT01, FT02, FT03, FT04, FT05|
-|US25|Funcional|Lino| enviar mensagens sobre o cardápio do café da manhã diário para o usuário no telegram| para informar o usuário |_Must Have_|FT01|
+|US25|Funcional|Lino| enviar mensagens sobre o cardápio do café da manhã do dia| para informar o usuário |_Must Have_|FT03|
+|US26|Funcional|Lino| enviar mensagens sobrre o cardápio do almoço do dia| para informar o usuário |_Must Have_|FT04|
+|US27|Funcional|Lino| enviar mensagens sobrre o cardápio do jantar do dia| para informar o usuário |_Must Have_|FT05|
 
 ## Tasks Histórias de Usuário
 |US|ID|Descrição|_Feature_| Pontuação |
@@ -68,6 +70,18 @@
 |US04|T04|Alterar permissões do usuário do *Telegram*, no banco de dados, de acordo com o recebido pelo Lino | FT10| 13 |
 |US05|T01|Criar JSONs para cardápio semanal, diário e por cada refeição| FT01, FT02, FT03, FT04, FT05| - |
 |US05|T02|Fazer comunicação WebCrawler com Lino para recebimento de JSONs| FT10| - |
+|US25|T01|Enviar mensagens sobre o cardápio do café da manhã diário para o usuário no Telegram|FT03|3|
+|US25|T02|Enviar mensagens sobre o cardápio do café da manhã diário para o usuário no Messenger|FT03|3|
+|US25|T03|Criar agendamento do envio do cardápio do café da manhã diário aos usuários do Telegram e do Messenger,
+informando-os em um horário determinado|FT03|2|
+|US26|T01|Enviar mensagens sobre o cardápio do almoço diário para o usuário no Telegram|FT04|3|
+|US26|T02|Enviar mensagens sobre o cardápio do almoço diário para o usuário no Messenger|FT04|3|
+|US26|T03|Criar agendamento do envio do cardápio do almoço diário aos usuários do Telegram e do Messenger,
+informando-os em um horário determinado|FT04|2|
+|US27|T01|Enviar mensagens sobre o cardápio do jantar diário para o usuário no Telegram|FT05|3|
+|US27|T02|Enviar mensagens sobre o cardápio do jantar diário para o usuário no Messenger|FT05|3|
+|US27|T03|Criar agendamento do envio do cardápio do jantar diário aos usuários do Telegram e do Messenger,
+informando-os em um horário determinado|FT05|2|
 
 ## Intents
 
@@ -82,6 +96,9 @@
 | I07 | FT06| Tirar dúvida sobre o período de matrícula | O período de matrícula é| periodo, matricula |Buscar período de matrícula e enviar ao solicitante |
 | I08 | FT05 | Tirar dúvida sobre o período de trancamento de matéria | O período de trancamento de matéria é ... Porém, se for um caso especial, comunique-se com a secretaria | periodo, trancamento de matéria | Buscar período de trancamento de materia e enviar ao solicitante |
 | I09 | FT05 | Tirar dúvida sobre o período de trancamento geral | O período de trancamento geral de matrícula é ... | periodo, trancamento geral | Buscar período de trancamento geral e enviar ao solicitante |
+| I10 | FT03 | Obter o cardápio específico do café da manhã | E no café da manhã de hoje teremos: | café da manhã, café da manhã de hoje, café | Buscar o cardápio do café da manhã e enviar ao solicitante |
+| I11 | FT04 | Obter o cardápio específico do almoço | Eai! Então... Pro almoço, nós teremos: | cardápio do almoço, almoço, almoco | Buscar o cardápio do almoço e enviar ao solicitante |
+| I12 | FT05 | Obter o cardápio específico do jantar | Para o jantar: | cardápio do jantar, jantar, janta | Buscar o cardápio do jantar e enviar ao solicitante |
 
 ## Tasks Intents
 |US|ID|Descrição|_Feature_| Pontuação |
