@@ -68,6 +68,14 @@
 - [licença](license)
 
 ## intent:where_u_liv
+- onde voce [mora](live)
+- onde voce [vive](live)
+- em que lugar voce [vive](live)
+- [onde voce esta](live) agora
+- voce [mora](live) no computador
+- voce [vive](live) na internet
+- [onde vc esta](live), lino
+- [cade vc](live)
 
 ## intent:genre
 - voce é [homem ou mulher](genre)
