@@ -1,7 +1,10 @@
 import requests
+import os
 import time
 from rasa_core.actions.action import Action
 import logging
+
+CRAWLER_URL = os.getenv('CRAWLER_URL', '')
 
 
 class ActionDailyMenu(Action):
@@ -16,8 +19,8 @@ class ActionDailyMenu(Action):
         # Change the url if you have your own webcrawler server
         try:
             response = requests.get(
-                'http://webcrawler-ru.lappis.rocks/cardapio/{}'
-                .format(day)
+                '{}/cardapio/{}'
+                .format(CRAWLER_URL, day)
             ).json()
         except Exception as exception:
             logging.info(exception)

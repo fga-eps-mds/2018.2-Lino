@@ -5,6 +5,8 @@ import logging
 from rasa_core.actions.action import Action
 
 ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN', '')
+# Add crawler base url
+CRAWLER_URL = os.getenv('CRAWLER_URL', '')
 API_URL = 'https://api.telegram.org'
 PARSE = 'Markdown'
 
@@ -24,8 +26,8 @@ class ActionDailyBreakfast(Action):
 
         try:
             response = requests.get(
-                'http://webcrawler-ru.lappis.rocks/cardapio/{}'
-                .format(day)
+                '{}/cardapio/{}'
+                .format(CRAWLER_URL, day)
             ).json()
         except Exception as exception:
             logging.info(exception)
