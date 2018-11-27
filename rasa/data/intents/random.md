@@ -197,3 +197,9 @@
 - Fale sobre o [clima](weather) de hoje 
 - [metereologia](weather)
 - condições [metereologicas](weather)
+
+## intent:where_r_u_from
+- de onde você é?
+- onde você [nasceu](where)?
+- onde voce [nasceu](where)?
+- qual a sua [natalidade](where)?

@@ -55,6 +55,7 @@ intents:
   - book
   - weather
   - name
+  - where_r_u_from
 
 entities:
   - period
@@ -88,6 +89,7 @@ entities:
   - book
   - weather
   - name
+  - where
 
 slots:
   period:
@@ -176,6 +178,7 @@ actions:
   - utter_book
   - utter_weather
   - utter_name
+  - utter_where_r_u_from
 
 templates:
   utter_default:
@@ -605,3 +608,11 @@ templates:
   utter_name:
     - text: |
         Meu nome é Lino Lineuzinho Bilu de Teste
+
+  utter_where_r_u_from:
+    - text: |
+        Venho das profundezas 
+
+        Das terras vermelhas
+
+        Das buraqueiras da FGA s2
