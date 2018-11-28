@@ -65,14 +65,14 @@ Estrutura do documento:
 ##### 2.1 Diagrama de Relações
 ![diagrama_de_relacoes](https://user-images.githubusercontent.com/26308278/49151678-c756d280-f2f7-11e8-9584-2dd21b89f508.png)
 
-<p  align="justify">&emsp;&emsp;A arquitetura modelada para este projeto trata-se de uma arquitetura híbrida, envolvendo a arquitetura de Microsserviços juntamente com elementos da arquitetura de repositórios, representando os serviços internos de:
-
-<p  align="justify">&emsp;&emsp;Além do uso de serviços desenvolvidos pelo grupo, o Lino tem a integração com outros serviços externos, sendo eles:</p>
+<p  align="justify">&emsp;&emsp;A arquitetura modelada para este projeto trata-se de uma arquitetura híbrida, envolvendo a arquitetura de Microsserviços juntamente com elementos da arquitetura de repositórios, representando os serviços internos que serão representados posteriormente, integrando com os serviços externos que são consumidos.</p>
 
 <p align="justify">&emsp;&emsp;O Rasa Core é um dos componentes importantes dentro da arquitetura do Bot proposto. O desenvolvimento de um diálogo é de grande importância em tal contexto, logo, com a característica de <i>Machine Learning</i> para a melhora de suas conversas, é essencial para manter um diálogo apropriado e interativo com o usuário.</p>
+
 <p  align="justify">&emsp;&emsp;Em associação ao Rasa Core, outro componente tecnológico atrelado ao ChatBot é o <i>Rasa NLU</i>. Esta tecnologia trabalha com o processamento natural de linguagem, a partir dela o desenvolvedor abre portas relacionadas a processamento de texto que o permitem criar um ambiente de comunicação mais interativo e humano, podendo assim criar uma comunicação mais fluida e dinâmica com o usuário.</p>
-<p  align="justify">&emsp;&emsp;A utilização da tecnologia no desenvolvimento de um ChatBot permite a implementação de uma comunicação mais humanizada, permitindo assim uma maior interatividade com o usuário. Com o tempo, a interação com o usuário permitirá ao programa um treinamento dele mesmo para melhor se comunicar com o exterior. Este é o principal objetivo da utilização do <i>Rasa NLU</i> para o processamento de linguagem do projeto em questão.</p>
-<p  align="justify">    Algumas dos principais benefícios da tecnologia são:</p>
+
+<p align="justify">&emsp;&emsp;A utilização da tecnologia no desenvolvimento de um ChatBot permite a implementação de uma comunicação mais humanizada, permitindo assim uma maior interatividade com o usuário. Com o tempo, a interação com o usuário permitirá ao programa um treinamento dele mesmo para melhor se comunicar com o exterior. Este é o principal objetivo da utilização do <i>Rasa NLU</i> para o processamento de linguagem do projeto em questão.</p>
+<p  align="justify">&emsp;&emsp;Algumas dos principais benefícios da tecnologia são:</p>
 
 <html>
 <ul>
@@ -123,7 +123,7 @@ Estrutura do documento:
 
 <p  align="justify">&emsp;&emsp;Telegram Messenger e o Facebook Messenger são dois aplicativos de comunicação e bate-papo, comumente utilizados para a conversação em grupo ou de uma pessoa com outra. Os dois aplicativos proveem aos seus usuários desenvolvedores a possibilidade de implementarem diferentes funcionalidades e <i>bots</i>, a partir de suas APIs.</p>
 
-<p  align="justify">&emsp;&emsp;As APIs dessas duas plataformas serão as pontes de comunicação com o usuário. A partir da implementação e integração do código-fonte com o <i>Rasa NLU</i>, o Telegram e o Messenger irão interagir com o aluno, recebendo suas mensagens e respondendo apropriadamente.</p>
+<p  align="justify">&emsp;&emsp;As <i>APIs</i> dessas duas plataformas serão as pontes de comunicação com o usuário. A partir da implementação e integração do código-fonte com o <i>Rasa NLU</i>, o Telegram e o Messenger irão interagir com o aluno, recebendo suas mensagens e respondendo apropriadamente.</p>
 
 ###### 2.2.2 MongoDB
 
@@ -152,10 +152,23 @@ Estrutura do documento:
 * Captação de e-mails através da API <i>G-mail</i> - Lino-Alerta
 * Notificações de alerta - Cronjob Lino
 
+Além disso, temos o core do projeto, que apesar de sem um ponto bem importante de ser tratado, necessariamente sua falha não afeta no funcionamento dos demais serviços existes. O próprio Bot, o Lino, tem a capacidade de fazer, atualmente, uma integração com os mensageiros Telegram e Facebook Messenger, a fim de realizar uma comunicação de forma mais natural e entendível, fazendo uso das tecnologias de inteligência artificial para compreensão de linguagem natural e integrando com demais serviços que fornecem informações para o Bot tratar adequadamente.
+
 ##### 2.3.1 Webcrawler RU
 
 <p align="justify">&emsp;&emsp;Este microserviço tem como objetivo principal mapear a busca do cardápio do Restaurante Universitário (RU) específico da Universidade de Brasília, relacionado ao Campus Gama (UnB-FGA). Seu propósito é mapear a página onde o cardápio é disponibilizado, realizar o <i>download</i> do PDF associado a data correta da semana e transcrever a informação de seu conteúdo para texto com a finalidade de utilizar no contexto do envio do cardápio diário, semanal e específico (café da manhã, almoço e jantar), através de mensagens aos usuários dos serviços do <i>Telegram</i> e do <i>Facebook</i>.</p>
 <p align="justify">&emsp;&emsp;Ele faz uso das tecnologias <i>Python</i> utilizando o <i>microframework Flask</i> para habilitar as rotas necessárias para a obtenção do cardápio em formato de texto, sendo para o cardápio do dia, da semana e de cardápios específicos citados anteriormente. Também, além das rotas para isso, o serviço utiliza o banco de dados <i>MongoDB</i> para facilitar o acesso à informação e otimizar o custo de envio, pois com os dados salvos no banco de dados, é facilitado o acesso após a solicitação dos usuários específicos de cada mensageiro.</p>
+<p align="justify">&emsp;&emsp;Relacionado ao banco de dados associado ao serviço, foi utilizado o mesmo padrão de todos os serviços, o <i>MongoDB</i>. De forma técnica, a estrutura do WebCrawler RU é a estrutura mais complexa dos serviços, contendo sua separação por tipo de cardápio, sendo eles:</p>
+
+* Cardápio do café da manhã
+* Cardápio do almoço
+* Cardápio do jantar
+* Cardápio do dia
+* Cardápio da semana
+
+<p align="justify">&emsp;&emsp;A respeito da estrutura geral do banco associado ao WebCrawler RU, temos a seguinte diagramação:</p>
+
+![banco-webcrawler-ru](https://user-images.githubusercontent.com/26308278/49156611-e90a8680-f304-11e8-83bc-421e7020b7fb.png)
 
 ##### 2.3.2 Webcrawler Matrícula
 
@@ -166,10 +179,16 @@ Estrutura do documento:
 
 <p align="justify">&emsp;&emsp;O serviço Lino-Alerta tem como objetivo alertar os usuários que necessitam receber as notificações da comunidade acadêmica. De forma básica, o sistema trabalha com o uso do <i>MongoDB</i>, banco de dados orientado a documentos, fazendo com que os usuários que estejam registrados em seu sistema (professores e servidores) consigam realizar o envio de uma notícia para o <i>e-mail</i> do Lino, notificando todos os usuários que desejam receber.</p>
 <p align="justify">&emsp;&emsp;Tal serviço faz uso das tecnologias <i>Java</i>, especificadamente com o interpretador <i>Node.js</i>, a fim de facilitar na criação de rotas para obtenção dos dados informativos da notícia enviada ao <i>e-mail</i>, trabalhando com requisições temporárias para analisar se existe um novo <i>e-mail</i> recebido pelo Lino.</p>
+<p align="justify">&emsp;&emsp;O banco relacionado ao serviço tem uma estrutura mais simples, apenas contendo as informações dos notificadores, recebendo um <i>id</i> para identificá-los individualmente, tratando as permissões apenas aos usuários cadastrados. Estes dados estão sendo registrados de forma manual, não existindo um sistema de cadastro, utilizando a lista disponibilizada pela secretaria da Universidade de Brasília - Campus Gama (UnB-FGA).</p>
+
+![banco_alertas](https://user-images.githubusercontent.com/26308278/49170783-10248080-f324-11e8-9f25-b9ade17366a2.png)
 
 ##### 2.3.4 Cronjob Lino
 
 <p align="justify">&emsp;&emsp;O Cronjob Lino é um microserviço especializado em trabalhar com os agendamentos disponibilizados pelo Lino, tratando o envio do cardápio diário, semanal e específico, além do envio das notícias recebidas pelo e-mail do Lino. Seu principal objetivo é se especializar no envio das notificações para os usuários que desejam receber.</p>
+<p align="justify">&emsp;&emsp;Para o envio das notificações, o serviço faz uso de um banco modelado para cada tipo de mensageiro, com uma estrutura mais simples que a do <i>WebCrawler RU</i>, mas com as informações necessárias para tratar os dados diretamente com os usuários.</p>
+
+![banco dos mensageiros](https://user-images.githubusercontent.com/26308278/49173185-21708b80-f32a-11e8-9fc9-69b9df2d7cf3.png)
 
 #### 3. Metas e Restrições de Arquitetura
 
