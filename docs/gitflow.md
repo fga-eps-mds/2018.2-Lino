@@ -16,7 +16,7 @@ Para que a ideia tornar-se possível utilizamos algumas ferramentas para nos aux
 * Gitlab-CI
 * Rancher1.6
 
-(IMAGEM DO DEPLOY)
+![diagrama-gitflow](https://user-images.githubusercontent.com/26297247/49126838-5d650b80-f2ac-11e8-8745-9824c2255178.png)
 
 # Fluxo de Trabalho
 
@@ -86,8 +86,28 @@ A _branch_ principal tem como único dever servir para o ambiente de produção.
 Como exposto anteriormente, vale relembrar que não necessariamente todos os testes foram aplicados em todos os serviços. Tem serviços que funcionam apenas com o teste estático, outros com unitários, porém temos alguns que utilizam mais de um tipo de teste para verificar toda a funcionalidade.
 
 ### Estágio de Build
-  O estágio de Build é onde utilizamos o Docker criado para todos os serviços, pela equipe de DevOps.
+  O estágio de Build é onde utilizamos o Docker criado para todos os serviços.
 
-  É responsável por gerar as imagens do docker e enviá-las ao _registry_ do DockerHub.
+  É responsável por gerar as imagens do docker e enviá-las ao _registry_ do DockerHub, ferramenta a qual armazenará em seus respectivos repositórios.
 
-  Esse _stage_ é necessário somente em ambiente de homologação e de produção.
+  Esse _stage_ é necessário somente em ambiente de homologação e de produção. No início, utilizava-se a _branch_ da devel para buildar para testar se estava sendo gerada corretamente a imagem do docker. Nas versões mais atuais, a devel serve para gerar a imagem com uma tag de homologação, a qual utilizamos no nosso ambiente de homolog. Já na master, nossa ramificação principal, é o último local onde é rodado o estágio de build, e não se deve aceitar mais falhas, pois é onde enviaremos com a _tag latest_ para o DockerHub e será utilizado futuramente para o ambiente de produção.
+
+### Estágio de Deploy
+  É o último estágio do nosso _pipeline_, será usado somente se todos os estágios anteriores estiverem passando corretamente no gitlabCI.
+
+  Todos os serviços possuem o mesmo nível de _deploy_, ou seja, possuem todos os níveis anteriores e este _stage_.
+
+  É nesse _stage_ que fazemos o _deploy_ para os ambientes de produção e homologação. Nele definimos qual Rancher, _stack_, _environment_ e serviço atualizaremos.
+
+  Acessamos o Rancher a partir de uma imagem criada pela comunidade e assim conseguimos dar um _upgrade_ em cada serviço separadamente. Os quais foram inicializados antes da criação do _stage_ no Rancher.
+
+## Rancher1.6
+  O Rancher é uma ferramenta que serve como interface gráfica _web_ para os orquestradores de container Cattle e Kubernetes.
+
+  Os orquestradores facilitam manusear uma quantidade maior de containers. Assim, conseguimos criar com mais facilidade uma quantidade maior de serviços, então, trabalhamos melhor com a arquitetura definida por nossa equipe.
+
+  Como falado anteriormente, o Rancher aparece para nos dar uma interface gráfica na _web_ que facilita ainda mais o uso dos orquestradores. Pois eles geralmente são usados via linha de comando. Assim, torna-se mais fácil a disseminação da cultura de DevOps dentro da equipe, tendo em vista que não há necessidade de um esforço demasiado para aprender uma nova tecnologia por _command line_ pois a própria ferramenta já se encarrega de abstrair muitas informações para nós.
+
+  O Rancher é utilizado no estágio final da integração contínua, quando estamos prontos para realizar o _deploy_. Ele é acessado via uma API e então fazemos tudo o que precisamos para expor nossos serviços para o mundo.
+
+  Ademais, nos facilita muito também para gerar certificados seguros para sites. Pois abstrai muito a ideia de trabalhar com o Let's Encrypt, transformando toda a burocracia em apenas 3 _flags_.
