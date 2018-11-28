@@ -9,7 +9,10 @@
 | 05/09/2018 | 1.4    | Adição do tópico 3                              | Gabriel Filipe                |
 | 06/09/2018 | 1.5    | Atualiza tópicos 1 e 3                          | Matheus Blanco                |
 | 06/09/2018 | 1.6    | Revisão do Diagrama de Relações e do tópico 2.1 | Matheus Blanco, Gabriel Braga |
-| 07/09/2018 | 1.6    | Revisão do tópico 2.1                           | Matheus Blanco                |
+| 07/09/2018 | 1.7    | Revisão do tópico 2.1                           | Matheus Blanco                |
+| 28/11/2018 | 1.8 | Revisão dos textos adequando a atual arquitetura | Guilherme Augusto |
+| 28/11/2018 | 1.9 | Inclusão dos textos respectivos à nova arquitetura | Guilherme Augusto |
+| 28/11/2018 | 2.0 |Inclusão da parte relacionada ao banco de dados relacionado à nova arquitetura | Guilherme Augusto |
 
 #### 1. Introdução  
 
@@ -63,7 +66,7 @@ Estrutura do documento:
 #### 2. Representação da Arquitetura
 
 ##### 2.1 Diagrama de Relações
-![diagrama_de_relacoes](https://user-images.githubusercontent.com/26308278/49151678-c756d280-f2f7-11e8-9584-2dd21b89f508.png)
+<p align="center">![diagrama_de_relacoes](https://user-images.githubusercontent.com/26308278/49151678-c756d280-f2f7-11e8-9584-2dd21b89f508.png)</p>
 
 <p  align="justify">&emsp;&emsp;A arquitetura modelada para este projeto trata-se de uma arquitetura híbrida, envolvendo a arquitetura de Microsserviços juntamente com elementos da arquitetura de repositórios, representando os serviços internos que serão representados posteriormente, integrando com os serviços externos que são consumidos.</p>
 
@@ -168,7 +171,7 @@ Além disso, temos o core do projeto, que apesar de sem um ponto bem importante 
 
 <p align="justify">&emsp;&emsp;A respeito da estrutura geral do banco associado ao WebCrawler RU, temos a seguinte diagramação:</p>
 
-![banco-webcrawler-ru](https://user-images.githubusercontent.com/26308278/49156611-e90a8680-f304-11e8-83bc-421e7020b7fb.png)
+<p align="center">![banco-webcrawler-ru](https://user-images.githubusercontent.com/26308278/49156611-e90a8680-f304-11e8-83bc-421e7020b7fb.png)</p>
 
 ##### 2.3.2 Webcrawler Matrícula
 
@@ -181,14 +184,14 @@ Além disso, temos o core do projeto, que apesar de sem um ponto bem importante 
 <p align="justify">&emsp;&emsp;Tal serviço faz uso das tecnologias <i>Java</i>, especificadamente com o interpretador <i>Node.js</i>, a fim de facilitar na criação de rotas para obtenção dos dados informativos da notícia enviada ao <i>e-mail</i>, trabalhando com requisições temporárias para analisar se existe um novo <i>e-mail</i> recebido pelo Lino.</p>
 <p align="justify">&emsp;&emsp;O banco relacionado ao serviço tem uma estrutura mais simples, apenas contendo as informações dos notificadores, recebendo um <i>id</i> para identificá-los individualmente, tratando as permissões apenas aos usuários cadastrados. Estes dados estão sendo registrados de forma manual, não existindo um sistema de cadastro, utilizando a lista disponibilizada pela secretaria da Universidade de Brasília - Campus Gama (UnB-FGA).</p>
 
-![banco_alertas](https://user-images.githubusercontent.com/26308278/49170783-10248080-f324-11e8-9f25-b9ade17366a2.png)
+<p align="center">![banco_alertas](https://user-images.githubusercontent.com/26308278/49170783-10248080-f324-11e8-9f25-b9ade17366a2.png)</p>
 
 ##### 2.3.4 Cronjob Lino
 
 <p align="justify">&emsp;&emsp;O Cronjob Lino é um microserviço especializado em trabalhar com os agendamentos disponibilizados pelo Lino, tratando o envio do cardápio diário, semanal e específico, além do envio das notícias recebidas pelo e-mail do Lino. Seu principal objetivo é se especializar no envio das notificações para os usuários que desejam receber.</p>
 <p align="justify">&emsp;&emsp;Para o envio das notificações, o serviço faz uso de um banco modelado para cada tipo de mensageiro, com uma estrutura mais simples que a do <i>WebCrawler RU</i>, mas com as informações necessárias para tratar os dados diretamente com os usuários.</p>
 
-![banco dos mensageiros](https://user-images.githubusercontent.com/26308278/49173185-21708b80-f32a-11e8-9fc9-69b9df2d7cf3.png)
+<p align="center">![banco dos mensageiros](https://user-images.githubusercontent.com/26308278/49173185-21708b80-f32a-11e8-9fc9-69b9df2d7cf3.png)</p>
 
 #### 3. Metas e Restrições de Arquitetura
 
