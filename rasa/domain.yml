@@ -110,6 +110,7 @@ entities:
   - hobby
   - bff
   - story
+  - oi
 
 slots:
   period:

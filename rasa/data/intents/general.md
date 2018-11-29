@@ -22,37 +22,27 @@
 - [/help](command)
 
 ## intent:greet
-- Oi
-- Olá
-- Iae
-- eai
-- eae
+- [Oi](oi)
+- [oi](oi)
+- [oi](oi) amigo
+- [Olá](oi)
+- [Iae](oi)
+- [eai](oi)
+- [eae](oi)
 - Fala meu compatriota
 - KKK eae man
-- Olar
-- Tudo bão?
-- Fala migx
-- Oi migx
+- [Olar](oi)
 - Eae parça
-- yo
-- Oi Lino
-- hey
-- Oie
-- Turu bom?
+- [Oie](oi)
 - Olaaaa
-- Heeeey
-- Hey
 - Hello
 - Alo
-- Oi, tudo bom?
-- Olá Lino
 - Fala tu
 - e ae
 - e ai
 - fala consagrado
 - fala boy
 - diz ae
-- yo
 
 ## intent:goodbye
 - Tchau

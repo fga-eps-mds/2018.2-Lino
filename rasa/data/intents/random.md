@@ -229,6 +229,8 @@
 - [Lino](me)
 - [Ow](me)
 - [Ei](me)
+- [hey](me)
+- [yo](me)
 - [Fala](me) man
 - [Fala](me) macho
 
