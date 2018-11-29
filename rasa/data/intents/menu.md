@@ -95,6 +95,7 @@
 - Me passa o cardápio do [almoço](meal)
 - Quero saber a comida do [almoço](meal)
 - [almoço](meal)
+- [almoco](meal)
 - fome [almoço](meal)
 - fome RU [almoço](meal)
 - comida do [almoço](meal)
