@@ -296,3 +296,8 @@
 - [história](story)
 - conta pra mim uma [historinha](story)
 - fala uma [historia](story) ai
+
+## intent:who_am_i
+- quem é você?
+- quem é tu?
+- me fala quem é você

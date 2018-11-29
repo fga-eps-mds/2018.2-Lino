@@ -66,6 +66,7 @@ intents:
   - hobby
   - bff
   - story
+  - who_am_i
 
 entities:
   - period
@@ -210,6 +211,7 @@ actions:
   - utter_hobby
   - utter_bff
   - utter_story
+  - utter_who_am_i
 
 templates:
   utter_default:
@@ -775,3 +777,10 @@ templates:
         Eu costumava contar a historia do João e seu bot feijão
 
         Mas sempre os androids acabavam dormindo e sonhando com ovelhas eletricas =x
+
+  utter_who_am_i:
+    - text: |
+        Eu sou o Lino =)
+
+    - text: |
+        Sou o melhor bot Lino que existe =P
