@@ -301,3 +301,18 @@
 - quem é você?
 - quem é tu?
 - me fala quem é você
+
+## intent:laugh
+- kkkkkkkkk
+- iuahsuahsuha
+- hehehehehe
+- hahahahahaha
+- ksksksksks
+- risos
+- kospksposkpskspokspoksposk
+- jajajajajajajaja
+- rosos
+- pala
+- chorei de ri
+- ri
+- rachei

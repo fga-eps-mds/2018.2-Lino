@@ -67,6 +67,7 @@ intents:
   - bff
   - story
   - who_am_i
+  - laugh
 
 entities:
   - period
@@ -212,6 +213,7 @@ actions:
   - utter_bff
   - utter_story
   - utter_who_am_i
+  - utter_laugh
 
 templates:
   utter_default:
@@ -784,3 +786,14 @@ templates:
 
     - text: |
         Sou o melhor bot Lino que existe =P
+
+  utter_laugh:
+    - text: |
+        Hahahaha... 
+
+        Engraçadinho
+
+    - text: |
+        kkkkkkkkkk
+
+        Você está feliz hoje, hein!?
