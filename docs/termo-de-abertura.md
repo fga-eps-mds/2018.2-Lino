@@ -11,6 +11,7 @@
 | 07/09/2018 | 1.8 | Construção do tópico 6 | Ícaro Oliveira |
 | 08/09/2018 | 1.9 | Construção do tópico 7 | Ícaro Oliveira |
 | 08/09/2018 | 2.0 | Finalização do documento com os tópicos 9 e 10 | Guilherme Augusto |
+| 24/11/2018 | 2.1 | Refatoração da escrita de alguns tópicos | Letícia de Souza |
 
 
 # Termo de abertura de Projeto
@@ -21,30 +22,26 @@ O documento tem como objetivo informar os propósitos, objetivos e requisitos de
 
 ## 2. Descrição
 
-O projeto Lino é um bot que visa orientar, alertar e tirar dúvidas a respeito dos assuntos mais recorrentemente procurados na Universidade de Brasília - Campus FGA. Para apoio ao Bot, um painel de controle de métricas que acompanha sua eficiência durante seu uso em produção.
+O Lino é um bot disponibilizado nos mensageiros Telegram e Messenger, que visa orientar, alertar e tirar dúvidas a respeito de alguns assuntos relaciondaos à Universidade de Brasília - Campus FGA.
 
 ## 3. Propósito e Justificativa
 
-O público em geral da comunidade FGA possui dificuldades em relação à dúvidas frequentes sobre os sistemas contidos nela, como a secretaria e o Restaurante Universitário.
-Além disso, os servidores da FGA carecem de um canal de comunicação que seja rápido e mais informal que a tradicional lista de email.
-Logo, é ideal propor uma solução com foco em ter uma melhor experiência de usuário no processo das dúvidas, além de conter uma interação mais rápida e prática para avisos rápidos de servidores para alunos.
+A comunidade FGA possui uma certa dificuldade em acessar, de forma rápida e prática, algumas informações. O Lino surge para suprir a carência de um mecanismo fácil e informal de acessar algumas informações, surgindo com o propósito de disponibilizar algumas funcionalidades, como por exemplo: disponibilizar o cardápio do RU, explicar sobre o passo a passo para obter documentos acadêmicos e, também, enviar o calendário de matrícula. Além disso, o Lino também é capaz de possibilitar com que o usuário opte por receber notificações sobre algumas dessas informações.
 
 ## 4. Objetivos
-
-O Bot Lino visa facilitar o processo para tirar dúvidas frequentes da comunidade, tendo uma interação direta para que as dúvidas sejam supridas pelo Bot para economia de tempo e esforço de seus usuários, propondo também facilitar a comunicação entre o professor e o aluno através de mensagens rápidas.
+O objetivo do Lino é poder facilitar informações pontuais para o usuário. Informações essas que, sem o Lino, são disponibilizadas de forma mais burocrática e sem muita interação com o usuário. Com o acesso mais facilitado às informações que o Lino dispõe, a comunidade economiza tempo e esforço ao interagir com o bot, ao invés de ter que baixar alguma aplicativo para obrter informações sobre o cardápio, ou acessar um site para poder baixar um PDF e conferir informações sobre matrículas e trancamentos.
 
 ## 5. Requisitos de Alto Nível
 
 Estão entre os requisitos e alto nível:
 
-- [ ] Interação através de linguagem natural para uma melhor usabilidade
-- [ ] Os fluxos de conversas sejam objetivos e práticos
+- [ ] Interação através de linguagem natural para uma melhor usabilidade;
+- [ ] Fluxos de conversas objetivos e práticos;
 -	[ ] Construir personalidade do Bot
 - [ ] A captura de informações contidas em __websites__ para incrementar a capacidade do Bot
-- [ ] A coleta de métricas para evolução do Bot
 
 ## 6. Riscos
-Na estimativa de riscos deste projeto, opta-se por estipular um padrão para a avaliação de probabilidade e impacto, servindo assim na priorização de riscos. Sendo assim, seguem-se as tabelas:
+Na estimativa de riscos deste projeto, opta-se por estipular um padrão para a avaliação de probabilidade e impacto, servindo, também, para a priorização de riscos. Sendo assim, seguem-se as tabelas:
 
 | Probabilidade (P)         | Peso |
 |:---------------------:|:----:|
@@ -100,7 +97,7 @@ O cálculo de custos leva em conta três fatores: aquisição, pessoal e ferrame
 ### 7.1 Custo de aquisição
 ## 7. Estimativa de Custo
 
-O cálculo de custos leva em conta três fatores: aquisição, pessoal e ferramentas. Desta forma é levado em conta os custos reais de mercado: desde o custo com energia e aluguel de sala, até as ferramentas utilizadas pelos membros.
+O cálculo de custos leva em conta três fatores: aquisição, pessoal e ferramentas. Assim, é levado em conta os custos reais de mercado: desde o custo com energia e aluguel de sala, até as ferramentas utilizadas pelos membros.
 
 ### 7.1 Custo de aquisição
 Nesse fator, são considerados os seguintes tópicos: custos de equipamentos e aluguel de uma sala em um coworking na cidade de Brasília - DF.

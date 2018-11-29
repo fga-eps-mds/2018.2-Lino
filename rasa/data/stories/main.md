@@ -39,10 +39,6 @@
 * asks_register_proof{"documents": "Comprovante de matrícula", "documents": "comprovante de matrícula", "documents": "Comprovante de matricula", "documents": "Comprovante de Matrícula", "documents": "comprovante de Matrícula", "documents": "Comprovante de Matricula", "documents": "comprovante de Matricula"}
   - action_register_proof
 
-## path_asks_gmail
-* asks_about_gmail
-  - utter_gmail
-
 ## path_asks_schedule
 * asks_about_schedule{"documents": "grade horaria", "documents": "grade horária"}
   - action_schedule
@@ -135,3 +131,139 @@
 ## path_offenses
 * offenses
   - utter_offenses
+
+## path_religion
+* religion
+  - utter_religion
+
+## path_sport
+* sport
+  - utter_sport
+
+## path_team
+* team
+  - utter_team
+
+## path_languages
+* languages
+  - utter_languages
+
+## path_genre
+* genre
+  - utter_genre
+
+## path_star_wars
+* star_wars
+  - utter_star_wars
+
+## path_joke
+* joke
+  - utter_joke
+
+## path_license
+* license
+  - utter_license
+
+## path_where_u_liv
+* where_u_liv
+  - utter_where_u_liv
+
+## path_how_am_i
+* how_am_i
+  - utter_how_am_i
+
+## path_good_night
+* good_night
+  - utter_good_night
+
+## path_good_afternoon
+* good_afternoon
+  - utter_good_afternoon
+
+## path_good_morning
+* good_morning
+  - utter_good_morning
+
+## path_its_ok
+* its_ok
+  - utter_its_ok
+
+## path_playlist
+* playlist
+  - utter_playlist
+
+## path_food
+* food
+  - utter_food
+
+## path_color
+* color
+  - utter_color
+
+## path_towel
+* towel
+  - utter_towel
+
+## path_book
+* book
+  - utter_book
+
+## path_weather
+* weather
+  - utter_weather
+
+## path_name
+* name
+  - utter_name
+
+## path_where_r_u_from
+* where_r_u_from
+  - utter_where_r_u_from
+
+## path_creators
+* creators
+  - utter_creators
+
+## path_relationship
+* relationship
+  - utter_relationship
+
+## path_me
+* me
+  - utter_me
+
+## path_sons
+* sons
+  - utter_sons
+
+## path_movie
+* movie
+  - utter_movie
+
+## path_sign
+* sign
+  - utter_sign
+
+## path_sad
+* sad
+  - utter_sad
+
+## path_hobby
+* hobby
+  - utter_hobby
+
+## path_bff
+* bff
+  - utter_bff
+
+## path_story
+* story
+  - utter_story
+
+## path_who_am_i
+* who_am_i
+  - utter_who_am_i
+
+## path_laugh
+* laugh
+  - utter_laugh

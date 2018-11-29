@@ -18,12 +18,12 @@ RUN dpkg-reconfigure -f noninteractive tzdata
 
 RUN apt-get update && apt-get -y install cron
 
-ADD cron.requirements.txt .
+ADD requirements.txt .
 
-RUN pip install -r cron.requirements.txt
+RUN pip install -r requirements.txt
 
 # Adiciona todos os scripts
-ADD /rasa/scripts .
+ADD /cronjob/scripts .
 
 # Habilita todos os scripts
 RUN chmod +x notify.sh \
@@ -36,7 +36,7 @@ RUN chmod +x notify.sh \
 
 RUN python env_loader.py
 
-ADD /rasa/crontab /etc/cron.d/menu-cron
+ADD /cronjob/crontab /etc/cron.d/menu-cron
 
 RUN chmod 0644 /etc/cron.d/menu-cron
 RUN crontab /etc/cron.d/menu-cron

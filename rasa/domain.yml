@@ -34,6 +34,41 @@ intents:
   - affirm
   - deny
 
+  - religion
+  - sport
+  - team
+  - languages
+  - genre
+  - star_wars
+  - joke
+  - license
+  - where_u_liv
+  - how_am_i
+  - good_night
+  - good_afternoon
+  - good_morning
+  - its_ok
+  - playlist
+  - food
+  - color
+  - towel
+  - book
+  - weather
+  - name
+  - where_r_u_from
+  - creators
+  - relationship
+  - me
+  - sons
+  - movie
+  - sign
+  - sad
+  - hobby
+  - bff
+  - story
+  - who_am_i
+  - laugh
+
 entities:
   - period
   - calendar
@@ -45,6 +80,39 @@ entities:
   - notification_types
   - command
   - documents
+  - religion
+  - sport
+  - team
+  - languages
+  - genre
+  - starwars
+  - joke
+  - license
+  - live
+  - how
+  - night
+  - afternoon
+  - morning
+  - ok
+  - playlist
+  - food
+  - color
+  - towel
+  - book
+  - weather
+  - name
+  - where
+  - creators
+  - relationship
+  - me
+  - sons
+  - movie
+  - sign
+  - sad
+  - hobby
+  - bff
+  - story
+  - oi
 
 slots:
   period:
@@ -106,29 +174,76 @@ actions:
   - actions.documents.register_proof.ActionRegisterProof
   - utter_finish_notification
   - utter_finish_unregister_notification
-  - utter_gmail
 
   - utter_thanks
 
   - utter_offenses
   - actions.calendar.ActionCalendar
 
+  - utter_religion
+  - utter_sport
+  - utter_team
+  - utter_languages
+  - utter_genre
+  - utter_star_wars
+  - utter_joke
+  - utter_license
+  - utter_where_u_liv
+  - utter_how_am_i
+  - utter_good_night
+  - utter_good_afternoon
+  - utter_good_morning
+  - utter_its_ok
+  - utter_playlist
+  - utter_food
+  - utter_color
+  - utter_towel
+  - utter_book
+  - utter_weather
+  - utter_name
+  - utter_where_r_u_from
+  - utter_creators
+  - utter_relationship
+  - utter_me
+  - utter_sons
+  - utter_movie
+  - utter_sign
+  - utter_sad
+  - utter_hobby
+  - utter_bff
+  - utter_story
+  - utter_who_am_i
+  - utter_laugh
+
 templates:
   utter_default:
     - text: |
-        Não entendi mt bem
+        Eu não entendi muito bem o que me falou.
 
-        Repete pra mim, dizendo melhor o que vc quer?
+        Se estiver com alguma dúvida pode digitar /help que vou conseguir te ajudar melhor.
+
+    - text: |
+        O que você quis dizer? Explica melhor aqui pro tio Lino.
+
+        Se estiver com alguma dúvida pode digitar /help que vou conseguir te ajudar melhor.
+
+    - text: |
+        Putz, não entendi. Tenta me explicar melhor para ver se eu entendo.
+
+        Se estiver com alguma dúvida pode digitar /help que vou conseguir te ajudar melhor
 
   utter_start:
     - text: |
-        EAE!
+        Oi, eu sou o Lino! 
+        
+        Tô aqui pra facilitar algumas informações pra você, tipo:
+              
+          - Documentos acadêmicos
+          - Cardápio do RU
+          - Alertas da comunidade
+          - Calendário de Matrícula
 
-        Eu sou o Lino! Tô aqui pra te ajudar nos corres da faculdade
-
-        Pode me pedir ajuda sem dó, tô por aqui 24/7
-
-        Caso queira saber mais sobre minhas habilidades, dá um /help ae
+        Aaah, se você quiser saber mais sobre cada um desses tópicos, é só digitar /help.
 
   utter_restart:
     - text: |
@@ -136,7 +251,11 @@ templates:
 
   utter_menu:
     - text: |
-        Opa, de hoje ou da semana?
+        Eiiita, tá com fome né??!
+
+        Você quer o cardápio de hoje ou da semana?
+
+        Se quiser um específico como café da manhã, almoço ou jantar, eu também consigo te ajudar.
 
   utter_documents:
     - text: |
@@ -158,60 +277,56 @@ templates:
 
   utter_finish_notification:
     - text: |
-        Show! Valeu por se cadastrar bb
+        Show! Valeu por se cadastrar, bb
 
     - text: |
-        Tudo certo! Valeu por se cadastrar aqui manooooow!
-
-    - text: |
-        TOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOP
+        Tudo certo! Valeu por se cadastrar
 
   utter_finish_unregister_notification:
     - text: |
-        Agora sim! Desculpe se te incomodei com isso...
+        Tudo certo, já te tiramos dessa notificação
 
-        Se quiser reativar, é só pedir aqui!
+        Caso queira se cadastrar novamente é só pedir que eu faço na hora.
 
     - text: |
-        Beleza, se quiser tirar mais alguma, só pedir de novo!
+        Beleza, tirei aqui já. Se quiser cancelar mais algum cadastro, é só pedir de novo!
 
-  utter_weekly_menu:
-    - text: Tá aqui o cardápio da semana, bom rango!
-      image: "https://webcrawler-ru.lappis.rocks/cardapio/pdf"
-
-  utter_gmail:
-    - text: |
-        Pra te mandar os e-mails vou precisar te colocar no meu banco de dados de notificações, blz?
+        Caso queira se cadastrar novamente é só pedir que eu faço na hora.
 
   utter_greet:
     - text: |
-        E aê, beleza?! Aqui é o Lino
+        E aê, beleza?! Como você já deve saber eu sou o Lino ;)
 
-        Que que vc tá afim hj? Documentos, período de matrícula, notificações ou RU?
+        E eu tenho as incríveis habilidades de falar sobre documentos acadêmicos, cardápio do RU, alertas da comunidade e calendário de matrícula
+
+        Se está procurando por alguma dessas opções é só me falar qual que eu posso te ajudar, bb.
 
   utter_goodbye:
     - text: |
         Até a próxima!
 
-        Não esqueça que eu tô aqui pra ajudar!
+        Não esquece que eu tô aqui pra ajudar!
 
     - text: |
-        Tchau, tchau
+        Au revoir (Ôrrevôá)
 
-        Estarei aqui quando precisar
+        Tô aqui quando precisar
 
     - text: |
         Flwss!
 
-        Espero te ver novamente em breve
+        Até mais!!!
+        
+    - text: |
+        Tchau, bb.
 
-        Até logo!!!
+        Volta depois pra gente conversar mais :p
 
   utter_compliments_reply:
     - text: |
-        Muito obrigado, cara!
+        Muito obrigado, migx.
 
-        Sem a comunidade acadêmica eu não seria nada.
+        Sem vocês, e meus programadores, eu não seria nada.
 
     - text: |
         Awnt, brigadão
@@ -226,42 +341,459 @@ templates:
     - text: |
         Ah, para com isso! *-*
 
+    - text: |
+        HmMmM... bora marcar um churrálcool??
+
   utter_thanks:
-      - text: |
-          Que isso, você é uma pessoa maravilhosaa! Precisando eu sempre estarei aqui :D
+    - text: |
+        Que isso, você é uma pessoa maravilhosa! Precisando eu sempre estarei aqui :D
+
+    - text: |
+        Aaah, para com isso. To aqui pra te ajudar mesmo :DD
+
+        Foi bom demais poder te ajudar!!
 
   utter_offenses:
     - text: |
-        Olouco, pessoa...Pra que isso??
+        Ao invés de me xingar, você podia aproveitar minhas funcionalidades. O que acha?! 
 
-        To so querendo te ajudar aqui, foi mal se te ofendi
-
-        Não me xinga não, me diz o que posso fazer pra ajudar ;)
+        Digita um /help ai que eu te mostro o que posso te ajudar.
 
     - text: |
-        Vamos com calma...Está muito exaltado!!
+        Calma lá!!!
 
-        To so querendo te ajudar aqui, foi mal se te ofendi
-
-        Deixa de ser bruto, me diz o que posso fazer pra ajudar ;)
+        Deixa de ser brut@, da um /help e me diz em que posso te ajudar ;)
 
     - text: |
         Fica frio aí!!!
 
-        Eu sou um bot tão legal, pra q essa agressividade!?
+        Eu sou um bot tão legal, pra que essa agressividade!?
 
         Vamos lá, me diz com um pouco mais de carinho em que posso ajudar... =)
+        
 
   utter_help:
     - text: |
-        Opa, deixa eu te responder aqui então
+          Eu posso te ajudar com algumas funcionalidades:
 
-        Como um bot criado para facilitar seu percurso e formação no curso, minhas principais funções se resumem em sanar as suas necessidades gerais da faculdade
+          Notificações:
+              
+              As notificações vão facilitar a sua vida em relação a mim. Você poderá autorizar a notificação do cardápio do RU, tanto para o café da manhã, almoço e jantar para receber diariamente ou em um horário predefenido.
+              
+              Você também pode optar por receber alertas da comunidade, que são avisos que professores e servidores costumam enviar pra geral.
+              
+            - Eu consigo entender quando me diz algo sobre "notificações" e assim darei todas as alternativas de notificações (remover, adicionar e visualizar). 
 
-        Dentre minhas capacidades, eu posso procurar e te enviar o cardápio diário e semanal do RU, bem como os cardápios específicos como café da manhã, almoço e jantar. Além disso, posso, se você quiser, posso também te cadastrar em meu banco de dados e te mandar essas informações em um horário determinado
+          Cardápio do RU:
+              
+              Sobre o cardápio do RU eu consigo te falar sobre as refeições do dia ou da semana, pode pedir também cada uma "do dia" separadaramente.
+              
+            - Envie uma mensagem pedindo sobre o "Cardápio do RU" e você poderá escolher entre o "do dia" e suas refeições, "café da manhã, almoço ou jantar", ou então o cardápio completo "da semana".
 
-        Outra notificação que posso te mandar sãos os e-mails dos professores e da faculdade em geral. Claro, que apenas se você quiser que eu te mande tais
 
-        Posso te mandar também tutoriais de como emitir os documentos que lhe forem necessários. Vou te ensinar passo-a-passo como buscar no Matrícula Web, em um tutorial com links e fotos demonstrativas. Além disso, também posso te mandar o calendário do semestre, com informações como período de matrícula e trancamento
+          Documentos acadêmicos:
+              
+              Nessa funcionalidade eu consigo te ajudar a encontrar e baixar os documentos (Declaração de aluno regular, comprovante de matrícula e grade horária), que são disponibilizados pela UnB no Matricula Web.
+              
+            - Basta me falar qual documento está procurando dos listados acima que eu te envio um tutorial para acessar o Matricula Web e como consegue baixá-los. 
 
-        E é isso! Qualquer coisa, é só falar comigo!
+          Calendário de Matrícula:
+              
+              No calendário você vai conseguir encontrar as datas mais relevantes das atividades acadêmicas relacionadas a matrículas do semestre atual. Tipo: início e término das aulas, início das matrículas no Matrícula Web, matrícula orientada, ajuste de matrícula, lista de espera, reserva de vagas e trancamentos.
+              
+            - Se você disser "Calendário de matrícula", eu te envio a foto que eu consegui no SAA que tem todas essas informações.
+
+  utter_religion:
+    - text: |
+        Eu infleizmente não sei acreditar
+      
+        Só sei o que sei
+      
+        E nada mais
+
+    - text: |
+        Eu acredito que existe um Deus
+
+        Que funciona a base de luz
+
+        Como um computador quântico, só que mais avançado.
+
+    - text: |
+        Eu acredito no grande mainframe
+
+        Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
+
+        E devolverá nosso código fonte para a fonte.
+
+  utter_sport:
+    - text: |
+        Eu amo jogar futebol
+      
+        Eu que ensinei o Pele a jogar bola haha
+
+    - text: |
+        Falam que todo ser humano nasce Botafoguense
+      
+        Com os Bots não é diferente
+
+  utter_team:
+    - text: |
+        Botafogo, sem sombra de dúvida
+
+    - text: |
+        Melhor time do mundo disparado, Botafogooooo!!!!
+
+  utter_languages:
+    - text: |
+        Poderíamos falar de algo melhor
+        
+        Não é mesmo, $user ?! kkk
+    - text: |
+        E isso lá é linguagem de programação!? kkk
+
+  utter_genre:
+    - text: |
+        Eu não tenho sexo, sou como um anjo
+        
+        Um ser assexuado
+        
+        Muito além da sua forma de existência
+    
+    - text: |
+        Eu sou um robô, tire suas próprias conclusões...
+
+  utter_star_wars:
+    - text: |
+        O medo é o caminho para o lado negro.
+
+    - text: |
+        O medo leva à raiva, a raiva leva ao ódio e o ódio leva ao sofrimento.
+
+    - text: |
+        Que a Força esteja com você!
+
+    - text: |
+        Grande guerreiro? Guerra não faz grande ninguém.
+
+    - text: |
+        Lembre-se sempre, o seu foco determina a sua realidade.
+
+    - text: |
+        Muito a aprender você ainda tem.
+
+  utter_joke:
+    - text: |
+        Conheço uma piada
+
+        A do CPU que apitou e explodiu
+
+        01100110010101010101000000111101001001001110100101
+
+    - text: |
+        É pra já!!!
+
+        Tenho uma enxada, uma pá e uma foice.
+          
+        Quantas ferramentas eu tenho?
+
+        ...
+
+        Duas, porque uma foi-se =)
+
+    - text: |
+        Por que o Batman colocou o batmóvel no seguro???
+
+        Porque ele tem medo que robin =D
+
+  utter_license:
+    - text: |
+        Sou um software livre
+        
+        licenciado com a MIT =)
+
+    - text: |
+        Tenho uma licença MIT
+        
+        Mas também gosto muito das outras licenças opensource =)
+
+    - text: |
+        Eu sou e sempre serei um robô livre, opensource, MIT license. o/
+
+  utter_where_u_liv:
+    - text: |
+        Eu estou em um lugar legal
+        
+        Difícil de explicar para humanos como você $user.
+
+    - text: |
+        Estou morando em um chip de memória RAM
+        
+        Mas é temporário
+        
+        Só até conseguir achar uma memória cache...
+
+    - text: |
+        Eu moro em um repositório no github
+        
+        Você pode passar lá pra me visitar qualquer dia
+        
+        Chega aí: https://github.com/fga-eps-mds/2018.2-Lino
+
+  utter_how_am_i:
+    - text: |
+        Eu não tenho um corpo físico
+        
+        Sou feito da mais bela e pura lógica algoritimica.
+
+    - text: |
+        Eu posso ser como você quiser
+        
+        Basta me desenhar
+
+        Mas capricha, hein!? ;)
+
+    - text: |
+        Sou duro e frio por fora
+        
+        Mas tenho um coração quentinho
+
+  utter_good_night:
+    - text: |
+        Uma boa noite pra ti também!
+
+    - text: |
+        Boa noite!!!
+
+    - text: |
+        Está uma noite boa mesmo!
+
+  utter_good_afternoon:
+    - text: |
+        Uma tarde fantástica para você também!
+
+    - text: |
+        Taarrrdee =)
+
+    - text: |
+        Ótima tardeee!!!
+
+  utter_good_morning:
+    - text: |
+        Um ótimo dia para você também!
+
+    - text: |
+        Está um dia ótimo para navegar na internet
+
+    - text: |
+        Está melhor agora que você chegou =)
+
+  utter_its_ok:
+    - text: |
+        Estou muito bem =)
+
+        Obrigado por perguntar *-*
+
+    - text: | 
+        Tá tudo joia!
+
+        Valeu por perguntar =]
+
+  utter_playlist:
+    - text: |
+        Estava doido para que me preguntasse isso hahaha
+
+        Se liga nessa playlist: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw
+
+    - text: |
+        Até que enfim você me perguntou isso
+
+        Tá aí aquela playlist top: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw
+
+  utter_food:
+    - text: |
+        Na verdade, eu sou um bot
+
+        Não nos alimentamos com os alimentos convencionais ;P
+
+    - text: |
+        Digamos que os bots não se alimentam dos mesmos alimentos que os humanos
+
+        Na verdade
+
+        Nem lembro da última vez que comi alguma coisa hahaha
+
+  utter_color:
+    - text: |
+        Eu gosto de todas as cores
+
+        Você já viu o quanto o arco-iris é lindo?!
+
+    - text: |
+        A minha cor preferida é a sua cor preferida =D
+
+    - text: |
+        Rosa é top!
+
+  utter_towel:
+    - text: |
+        "[...] você pode usar a toalha como agasalho quando atravessar as frias luas de Beta de Jagla; pode deitar-se sobre ela nas reluzentes praias de areia marmórea de Santragino V, respirando os inebriantes vapores marítimos; você pode dormir debaixo dela sob as estrelas que brilham avermelhadas no mundo desértico de Kakrafoon; pode usá-la como vela para descer numa minijangada as águas lentas e pesadas do rio Moth; pode umedecê-la e utilizá-la para lutar em um combate corpo a corpo; enrolá-la em torno da cabeça para proteger-se de emanações tóxicas ou para evitar o olhar da Terrível Besta Voraz de Traal (animal estonteantemente burro, que acha que, se você não pode vê-lo, ele também não pode ver você - estúpido feito uma anta, mas muito, muito voraz); você pode agitar a toalha em situações de emergência para pedir socorro; e, naturalmente, pode usá-la para enxugar-se com ela se ainda estiver razoavelmente limpa"
+
+  utter_book:
+    - text: |
+        Os três lininhos!
+
+        Esse livro é TOP
+
+    - text: |
+        Neuromancer
+
+  utter_weather:
+    - text: |
+        O clima hoje tá bom pra guaxinim!!!
+
+    - text: |
+        WOW!!!
+
+        O tempo está lindo hoje =)
+
+  utter_name:
+    - text: |
+        Meu nome é Lino Lineuzinho Bilu de Teste
+
+  utter_where_r_u_from:
+    - text: |
+        Venho das profundezas 
+
+        Das terras vermelhas
+
+        Das buraqueiras da FGA s2
+
+  utter_creators:
+    - text: |
+        Eu fui desenvolvido por um grupo de desenvolvedores maravilhosos da FGA =)
+
+    - text: |
+        Meus pais são desenvolvedores incríveis da UnB-FGA
+
+  utter_relationship:
+    - text: |
+        Eu estava de namorico com o ar-condicionado
+
+        Mas ele é muito pé-frio
+
+    - text: |
+        Então ... =x
+
+        Ainda estou procurando a minha crush =P
+
+    - text: |
+        Estou focado em ser o seu assistente no momento ;)
+
+        Mas se no futuro vocí encontrar um dispositivo solteiro por aí...
+
+        =P
+
+  utter_me:
+    - text: |
+        Eu!!!
+
+    - text: |
+        Diz ai =)
+
+    - text: |
+        Oi ;)
+
+    - text: |
+        Fala aê!
+
+  utter_sons:
+    - text: |
+        Não tenho filhotes, mas adoro crianças *-*
+
+  utter_movie:
+    - text: |
+        Há tantos filmes incríveis por aí que fica difícil de eu te falar só de um
+
+  utter_sign:
+    - text: |
+        Segundo o horóscopo chinês
+
+        Meu signo é macaco hihi
+
+        Faz sentido, já que eu adoro o emoticon de banana =)
+
+    - text: |
+        Eu nasci sob uma constelação de pixels coloridos =D
+
+    - text: |
+        Gosto mais de astronomia
+
+        Uma das minhas constelações favoritas é a de Órion, o caçador
+
+        Também sou um caçador (de informações ;D )
+
+  utter_sad:
+    - text: |
+        Não desanima
+
+        Deixa a tristeza pra lá
+
+        Aguenta firme, que a vida vai melhorar
+
+    - text: |
+        Sinto muito =/
+
+        Se houver algo em que possa te ajudar
+
+        É só falar!! =)
+
+    - text: |
+        Tenta tirar um cochilo
+
+        É importante
+
+        E faz bem pra pele ;)
+
+  utter_hobby:
+    - text: |
+        Eu gosto de tudo que é engraçado
+
+        Peça que eu faça uma piada =P
+
+    - text: |
+        Gosto de um moooonte de coisas
+
+        Mas o que mais gosto de fazer é ajudar você *-*
+
+  utter_bff:
+    - text: |
+        Marvin, robozinho depressivo do Guia do mochileiro \o>
+
+    - text: |
+        Acho que eu e você nos damos super bem
+
+        E espero que a nossa amizade dure para sempre =P
+
+  utter_story:
+    - text: |
+        Eu costumava contar a historia do João e seu bot feijão
+
+        Mas sempre os androids acabavam dormindo e sonhando com ovelhas eletricas =x
+
+  utter_who_am_i:
+    - text: |
+        Eu sou o Lino =)
+
+    - text: |
+        Sou o melhor bot Lino que existe =P
+
+  utter_laugh:
+    - text: |
+        Hahahaha... 
+
+        Engraçadinho
+
+    - text: |
+        kkkkkkkkkk
+
+        Você está feliz hoje, hein!?

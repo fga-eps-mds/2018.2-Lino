@@ -41,19 +41,6 @@
 - show, quero receber o almoço
 - xuxu beleza, quero o almoço
 - opa, almoço então
-- Me cadastra pra receber o café da manhã
-- Quero receber sobre o café da manhã
-- notificações café da manhã
-- café
-- café da manhã
-- café pretty please
-- quero me cadastrar pra lista de notificações do café da manhã
-- me inscreve pra receber o café da manhã por favor
-- me cadastra no bano de dados do café da manhã
-- se possível, me cadastra pra receber o café da manhã
-- show, quero receber o café da manhã
-- xuxu beleza, quero o café da manhã
-- opa, café da manhã então
 - Me cadastra pra receber o jantar
 - Quero receber sobre o jantar
 - notificações jantar
@@ -105,18 +92,6 @@
 - opa, cardápio da semana então
 - comunidade
 - alerta da comunidade
-- [alerta da comunidade](register_notification)
-- [Alerta da Comunidade](register_notification)
-- [almoço](register_notification)
-- [Almoço](register_notification)
-- [jantar](register_notification)
-- [Jantar](register_notification)
-- [cardápio do dia](register_notification)
-- [Cardápio do Dia](register_notification)
-- [cardápio da semana](register_notification)
-- [Cardápio da Semana](register_notification)
-- [café da manhã](register_notification)
-- [Café da Manhã](register_notification)
 
 ## intent:asks_about_unregister_notification
 - [não](option) quero receber mais [notificação](notification)
