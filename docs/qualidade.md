@@ -19,7 +19,7 @@ Com esta dificuldade e riscos em mente, buscou-se mitigar os riscos da qualidade
 
 Durante o desenvolvimento da aplicação, encontramos diversos tipos de microsserviços, cada um com uma particularidade diferente. 
 
-Assim, aproveitamos a oportunidade da independência que cada microsserviço dá para utilizar a melhor linguagem de programação para cada problema. Por exemplo, para os _crawlers_ foi utilizado Python. Para o serviço de envio de _emails_, foi utilizado NodeJS devido à fácil integração com a API do Gmail.
+Assim, aproveitamos a oportunidade da independência que cada microsserviço dá para utilizar a melhor linguagem de programação para cada problema. Por exemplo, para os _crawlers_ foi utilizado Python. Para o serviço de envio de _emails_, foi utilizado NodeJS devido a fácil integração com a API do Gmail.
 
 Dado isso, pôde-se obter controle sobre cada objetivo do microsserviço e da categoria de testes para eles. É importante ressaltar que todos os serviços passaram pelo estágio de **testes estáticos**.
 
@@ -42,7 +42,39 @@ No contexto destes microsserviços, precisa-se garantir que a estrutura do JSON 
 
 Além destes, também houveram testes de unidade, da mesma forma e com o mesmo objetivo que o serviço de Alertas.
 
+## Tecnologias
+
+Nos serviços de Matricula e RU foi utilizado o Pytest, tanto para os testes quanto para os reports. No serviço de Alertas, foi utlizado o Mocha para testes e o Instambul para reports.
+
+Nos testes de usabilidade, foi utilizado um formulário no Google Forms.
+
 ## Resultados
 
-## Unitários
+Os resultados podem ser vistos em reports para cada tipo de teste, em cada serviço:
 
+### Core
+
+Os **resultados dos testes de usabilidade** tiveram bastante impacto em refatorações, principalmente de intents, pois o objetivo era manter a quantidade de informações enviadas suficiente.
+
+![](https://i.imgur.com/wdXkdJf.png)
+
+Acima, resultado no fluxo de notificação. Impacto das respostas motivou refatoração e utilização de botões para agilizar o fluxo. 
+
+
+![Imgur](https://i.imgur.com/OPU1Fod.png)
+
+Acima, os resultados para o fluxo de cardápio para uma refeição específica no fluxo do RU. Os valores indicam: 3 - Satisfatório; 1 - Muito pouco; 5 - Exagerado)
+
+
+![Imgur](https://i.imgur.com/ixnPKQ7.png)
+
+Acima, os feedbacks dos avaliadores e dos usuários para o fluxo de cardápio do RU. Estes motivaram a refatoração do fluxo para o RU.
+
+### Serviços
+A **cobertura de código** para testes nos **serviços** foi de:
+
+#### API Matricula
+![](https://i.imgur.com/mvYG6lT.png)
+
+### API Alertas
+![](https://i.imgur.com/kvqTZOr.png)
