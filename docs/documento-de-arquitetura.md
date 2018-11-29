@@ -13,6 +13,7 @@
 | 28/11/2018 | 1.8 | Revisão dos textos adequando a atual arquitetura | Guilherme Augusto |
 | 28/11/2018 | 1.9 | Inclusão dos textos respectivos à nova arquitetura | Guilherme Augusto |
 | 28/11/2018 | 2.0 |Inclusão da parte relacionada ao banco de dados relacionado à nova arquitetura | Guilherme Augusto |
+| 29/11/2018 | 2.1 |Reparação de alguns erros de escrita e entendimento no texto| Letícia de Souza |
 
 #### 1. Introdução  
 
@@ -20,11 +21,11 @@
 
 ##### 1.1 Finalidade  
 
-<p  align="justify">     Ao esboçar uma visão ampla da arquitetura do ChatBot, é possível esboçar seus aspectos. Sendo assim, nesse documento buscaremos transparecer as decisões arquiteturais que foram tomadas em relação ao Bot Lino.</p>
+<p  align="justify">     Ao esboçar uma visão ampla da arquitetura do ChatBot, é possível evidendiar seus aspectos. Sendo assim, nesse documento buscaremos transparecer as decisões arquiteturais que foram tomadas em relação ao Bot Lino.</p>
 
 ##### 1.2 Escopo
 
-<p  align="justify">    O Lino tem como principal objetivo auxiliar a comunidade do Campus do Gama da UnB(FGA) à partir da utilização de tecnologias de fluxo de conversa, mapeamento de sites da rede e de bancos de dados para o registro de usuário e gerenciamento de notificações desejadas. O Lino servirá como um assistente para a comunidade, enviando alertas e novidades relacionadas a comunidade acadêmica, além de ser capaz de informar aos alunos certos procedimentos para retirada de documentos; informar sobre o cardápio disponibilizado na semana pelo Restaurante Universitário (RU) da FGA, dando a opção de escolherem por uma refeição específica ou o cardápio completo do dia ou da semana.</p>
+<p  align="justify">    O Lino tem como principal objetivo auxiliar a comunidade do Campus do Gama da UnB(FGA) à partir da utilização de tecnologias de fluxo de conversa, mapeamento de sites da rede e de bancos de dados para o registro de usuário e gerenciamento de notificações desejadas. O Lino servirá como um assistente para a comunidade, enviando alertas e novidades relacionadas à comunidade acadêmica, informando alunos sobre determinados procedimentos para retirada de documentos e sobre o cardápio disponibilizado na semana pelo Restaurante Universitário (RU) da FGA, dando a opção de escolherem por uma refeição específica ou o cardápio completo do dia ou da semana.</p>
 
 ##### 1.3 Visão Geral
 
@@ -69,11 +70,11 @@ Estrutura do documento:
 
 <img src="https://user-images.githubusercontent.com/26308278/49151678-c756d280-f2f7-11e8-9584-2dd21b89f508.png" class="center">
 
-<p  align="justify">&emsp;&emsp;A arquitetura modelada para este projeto trata-se de uma arquitetura híbrida, envolvendo a arquitetura de Microsserviços juntamente com elementos da arquitetura de repositórios, representando os serviços internos que serão representados posteriormente, integrando com os serviços externos que são consumidos.</p>
+<p  align="justify">&emsp;&emsp;O projeto foi modelado para uma arquitetura híbrida, envolvendo a arquitetura de Microsserviços juntamente com elementos da arquitetura de repositórios, representando os serviços internos que serão mostrados posteriormente, integrando com os serviços externos que são consumidos.</p>
 
-<p align="justify">&emsp;&emsp;O Rasa Core é um dos componentes importantes dentro da arquitetura do Bot proposto. O desenvolvimento de um diálogo é de grande importância em tal contexto, logo, com a característica de <i>Machine Learning</i> para a melhora de suas conversas, é essencial para manter um diálogo apropriado e interativo com o usuário.</p>
+<p align="justify">&emsp;&emsp; O desenvolvimento de um diálogo é de grande importância pro contexto do bot, logo, com a característica de <i>Machine Learning</i> para a melhora de suas conversas, é essencial para manter um diálogo apropriado e interativo com o usuário.</p>
 
-<p  align="justify">&emsp;&emsp;Em associação ao Rasa Core, outro componente tecnológico atrelado ao ChatBot é o <i>Rasa NLU</i>. Esta tecnologia trabalha com o processamento natural de linguagem, a partir dela o desenvolvedor abre portas relacionadas a processamento de texto que o permitem criar um ambiente de comunicação mais interativo e humano, podendo assim criar uma comunicação mais fluida e dinâmica com o usuário.</p>
+<p  align="justify">&emsp;&emsp;O Rasa Core é um dos componentes importantes dentro da arquitetura do Bot, em associação ao Rasa Core, existe outro componente tecnológico atrelado ao ChatBot: <i>Rasa NLU</i>, que trabalha com o processamento natural de linguagem e, a partir dela, o desenvolvedor abre portas relacionadas ao processamento de texto que o permitem criar um ambiente de comunicação mais interativo e humano, podendo assim criar uma comunicação mais fluida e dinâmica com o usuário.</p>
 
 <p align="justify">&emsp;&emsp;A utilização da tecnologia no desenvolvimento de um ChatBot permite a implementação de uma comunicação mais humanizada, permitindo assim uma maior interatividade com o usuário. Com o tempo, a interação com o usuário permitirá ao programa um treinamento dele mesmo para melhor se comunicar com o exterior. Este é o principal objetivo da utilização do <i>Rasa NLU</i> para o processamento de linguagem do projeto em questão.</p>
 <p  align="justify">&emsp;&emsp;Algumas dos principais benefícios da tecnologia são:</p>
@@ -156,9 +157,9 @@ Estrutura do documento:
 * Captação de e-mails através da API <i>G-mail</i> - Lino-Alerta
 * Notificações de alerta - Cronjob Lino
 
-Além disso, temos o core do projeto, que apesar de sem um ponto bem importante de ser tratado, necessariamente sua falha não afeta no funcionamento dos demais serviços existes. O próprio Bot, o Lino, tem a capacidade de fazer, atualmente, uma integração com os mensageiros Telegram e Facebook Messenger, a fim de realizar uma comunicação de forma mais natural e entendível, fazendo uso das tecnologias de inteligência artificial para compreensão de linguagem natural e integrando com demais serviços que fornecem informações para o Bot tratar adequadamente.
+Além disso, temos o core do projeto, que apesar da relevância, uma suposta falha não afeta o funcionamento dos demais serviços existes. O Lino, tem a capacidade de fazer, atualmente, uma integração com os mensageiros Telegram e Facebook Messenger, buscando realizar uma comunicação de forma mais natural e entendível, fazendo uso das tecnologias de inteligência artificial para compreensão de linguagem natural e integrando com demais serviços que fornecem informações para o Bot tratar adequadamente.
 
-##### 2.3.1 Webcrawler RU
+##### 2.3.1 Webcrawler RU    
 
 <p align="justify">&emsp;&emsp;Este microserviço tem como objetivo principal mapear a busca do cardápio do Restaurante Universitário (RU) específico da Universidade de Brasília, relacionado ao Campus Gama (UnB-FGA). Seu propósito é mapear a página onde o cardápio é disponibilizado, realizar o <i>download</i> do PDF associado a data correta da semana e transcrever a informação de seu conteúdo para texto com a finalidade de utilizar no contexto do envio do cardápio diário, semanal e específico (café da manhã, almoço e jantar), através de mensagens aos usuários dos serviços do <i>Telegram</i> e do <i>Facebook</i>.</p>
 <p align="justify">&emsp;&emsp;Ele faz uso das tecnologias <i>Python</i> utilizando o <i>microframework Flask</i> para habilitar as rotas necessárias para a obtenção do cardápio em formato de texto, sendo para o cardápio do dia, da semana e de cardápios específicos citados anteriormente. Também, além das rotas para isso, o serviço utiliza o banco de dados <i>MongoDB</i> para facilitar o acesso à informação e otimizar o custo de envio, pois com os dados salvos no banco de dados, é facilitado o acesso após a solicitação dos usuários específicos de cada mensageiro.</p>
