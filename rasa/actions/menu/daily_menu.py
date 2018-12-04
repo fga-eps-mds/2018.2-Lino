@@ -21,7 +21,13 @@ class ActionDailyMenu(Action):
             ).json()
         except Exception as exception:
             logging.info(exception)
-            messages.append("É final de semana, amigo... Não tem RU não kkkk")
+
+            if day is 'Sunday' or day is 'Saturday':
+                messages.append(("É final de semana, amigo..."
+                                " Não tem RU não kkkk"))
+            else:
+                messages.append("Tive uns probleminhas aqui pra "
+                                "pegar o cardápio... Tenta de novo!")
 
             for message in messages:
                 dispatcher.utter_message(message)

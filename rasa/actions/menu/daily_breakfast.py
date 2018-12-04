@@ -29,9 +29,14 @@ class ActionDailyBreakfast(Action):
             ).json()
         except Exception as exception:
             logging.info(exception)
-            dispatcher.utter_message(
-                "É final de semana, amigo... Não tem RU não kkkk"
-                )
+
+            if day is 'Sunday' or day is 'Saturday':
+                messages.append(("É final de semana, amigo..."
+                                " Não tem RU não kkkk"))
+            else:
+                messages.append("Tive uns probleminhas aqui pra "
+                                "pegar o cardápio... Tenta de novo!")
+
             return []
 
         if day is not "Saturday" and day is not "Sunday":
