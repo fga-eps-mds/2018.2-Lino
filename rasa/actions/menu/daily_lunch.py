@@ -26,7 +26,7 @@ class ActionDailyLunch(Action):
             response = requests.get(
                 'http://webcrawler-ru.lappis.rocks/cardapio/{}'
                 .format(day)
-            ).json()    
+            ).json()
         except Exception as exception:
             logging.info(exception)
 
