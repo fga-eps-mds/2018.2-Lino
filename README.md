@@ -136,4 +136,4 @@ sudo docker-compose up --build
 
 ### Licença
 
-<p align="justify">&emsp;&emsp; Lino é distribuído sob a licença <a href="https://opensource.org/licenses/MIT">MIT</a>. Consulte <a href="https://github.com/fga-eps-mds/2018.2-Lino/blob/master/LICENSE.md">LICENSE</a> para obter detalhes.</p>
+<p align="justify">&emsp;&emsp; Lino é distribuído sob a licença GPLv3. Consulte <a href="https://github.com/fga-eps-mds/2018.2-Lino/blob/master/LICENSE.md">LICENSE</a> para obter detalhes.</p>
