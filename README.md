@@ -1,3 +1,8 @@
+Este repositório não será mais atualizado. As atualizações serão feitas na nova organização do Lino: https://github.com/botlino/lino
+
+
+
+
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/18364727/46375175-19b5a300-c669-11e8-898e-00b4f5a1fed4.png">
